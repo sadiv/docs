@@ -1,6 +1,6 @@
 site_name: Документация Green API
-repo_name: ripreal/greenApiDocs
-repo_url: https://github.com/ripreal/greenApiDocs
+repo_name:  green-api/docs 
+repo_url: https://github.com/green-api/docs
 edit_uri: edit/master/docs/
 
 nav:
