@@ -1,4 +1,4 @@
-# GREEN API DOCS PORTAL HOISTED WITH MKDOCS
+# GREEN API DOCUMENT PORTAL BASED ON MKDOCS
 
 ![`media/exampleDocs.png`](media/exampleDocs.png)
 
@@ -32,7 +32,7 @@ pip install mkdocs-minify-plugin
 ```
 
 
-## Run a  built-in dev-server
+## Run a built-in dev-server
 
 It lets you preview your documentation as you work on it. Make sure you're in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve command:
 
@@ -48,7 +48,14 @@ INFO    -  Cleaning site directory
 Open up http://127.0.0.1:8000/ in your browser, and you'll see the default home page being displayed:
 
 ## Adding pages
-Simply add new .md files to [docs](docs)
+1. Open file [mkdocs.yml](mkdocs.yml)
+2. Create new list element to related pages together under a section title. For example:
+```
+ 'Аккаунт':
+    - 'getData': 'account/getData.md'
+```
+3. Add new md file by path relative to docs. For example: docs/account/getData.md
+
 
 ## Building the site
 ```

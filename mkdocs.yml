@@ -1,8 +1,13 @@
-site_name: Green API Documentation
+site_name: Документация Green API
 repo_name: ripreal/greenApiDocs
 repo_url: https://github.com/ripreal/greenApiDocs
 edit_uri: edit/master/docs/
 
+nav:
+    - 'Оглавление': 'index.md'
+    - 'Отправка':
+        - 'sendMessage': 'sending/sendMessage.md'
+    
 theme:
   name: material
 
@@ -23,7 +28,6 @@ theme:
 # Plugins
 plugins:
   - search
-  - awesome-pages
   - minify:
       minify_html: true
 
