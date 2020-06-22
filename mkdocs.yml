@@ -7,9 +7,23 @@ site_url: http://localhost:8000
 
 nav:
     - 'На главную': '../'
-    - 'Список методов': 'index.md'
-    - 'Отправка':
-        - 'sendMessage': 'sending/sendMessage.md'
+    - 'Оглавление': 'index.md'
+    - 'Быстрый старт':
+        - 'Настройка': 'api/sending/sendMessage.md'
+        - 'Как отправить текстовое сообщение': 'api/sending/sendMessage.md'
+        - 'Как отправить картинку': 'api/sending/sendMessage.md'
+        - 'Как получить статус отправленного сообщения': 'api/sending/sendMessage.md'
+        - 'Как написать чат-бота': 'api/sending/sendMessage.md'
+    - 'Документация API':
+        - 'Авторизация': 'api/sending/sendMessage.md'
+        - 'Аккаунт': 'api/sending/sendMessage.md'
+        - 'Отправка':
+            - 'sendMessage': 'api/sending/sendMessage.md'
+        - 'Получение': 'api/sending/sendMessage.md'
+    - 'Интеграция':
+        - '1С': 'api/sending/sendMessage.md'
+        - 'NodeJS': 'api/sending/sendMessage.md'
+        - 'HTML': 'api/sending/sendMessage.md'
     
 theme:
   name: material
