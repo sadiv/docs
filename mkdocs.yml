@@ -2,9 +2,12 @@ site_name: Документация Green API
 repo_name:  green-api/docs 
 repo_url: https://github.com/green-api/docs
 edit_uri: edit/master/docs/
+site_dir: build
+site_url: http://localhost:8000
 
 nav:
-    - 'Оглавление': 'index.md'
+    - 'На главную': '../'
+    - 'Список методов': 'index.md'
     - 'Отправка':
         - 'sendMessage': 'sending/sendMessage.md'
     
@@ -41,7 +44,7 @@ markdown_extensions:
   - markdown.extensions.footnotes
   - markdown.extensions.meta
   - markdown.extensions.toc:
-      permalink: true
+      permalink:  "#"
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
