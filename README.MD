@@ -61,7 +61,7 @@ Open up http://127.0.0.1:8000/ in your browser, and you'll see the default home 
 ```
 mkdocs build
 ```
-This will create a new directory, named site.
+This will create a new directory, named ```build```.
 
 ## Additional docs:
 
