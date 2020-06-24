@@ -9,21 +9,20 @@ nav:
     - 'На главную': '../'
     - 'Оглавление': 'index.md'
     - 'Быстрый старт':
-        - 'Настройка': 'api/sending/sendMessage.md'
-        - 'Как отправить текстовое сообщение': 'api/sending/sendMessage.md'
-        - 'Как отправить картинку': 'api/sending/sendMessage.md'
-        - 'Как получить статус отправленного сообщения': 'api/sending/sendMessage.md'
-        - 'Как написать чат-бота': 'api/sending/sendMessage.md'
+        - 'Настройка': 'api/sending/SendMessage.md'
+        - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
+        - 'Как отправить картинку': 'api/sending/SendMessage.md'
+        - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
+        - 'Как написать чат-бота': 'api/sending/SendMessage.md'
     - 'Документация API':
-        - 'Авторизация': 'api/sending/sendMessage.md'
-        - 'Аккаунт': 'api/sending/sendMessage.md'
+        - 'Аккаунт': 'api/sending/SendMessage.md'
         - 'Отправка':
-            - 'sendMessage': 'api/sending/sendMessage.md'
-        - 'Получение': 'api/sending/sendMessage.md'
+            - 'Отправить текст': 'api/sending/SendMessage.md'
+        - 'Получение': 'api/sending/SendMessage.md'
     - 'Интеграция':
-        - '1С': 'api/sending/sendMessage.md'
-        - 'NodeJS': 'api/sending/sendMessage.md'
-        - 'HTML': 'api/sending/sendMessage.md'
+        - '1С': 'api/sending/SendMessage.md'
+        - 'NodeJS': 'api/sending/SendMessage.md'
+        - 'HTML': 'api/sending/SendMessage.md'
     
 theme:
   name: material
