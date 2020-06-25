@@ -1,3 +1,3 @@
 # Оглавление
 
-1. [sendMessage](sending/sendMessage.md)
+1. [sendMessage](api/sending/sendMessage.md)

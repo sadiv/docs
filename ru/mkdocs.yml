@@ -15,10 +15,58 @@ nav:
         - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
         - 'Как написать чат-бота': 'api/sending/SendMessage.md'
     - 'Документация API':
-        - 'Аккаунт': 'api/sending/SendMessage.md'
+        - 'Аккаунт':
+            - 'Получить настройки аккаунта': 'api/account/getSettings.md'
+            - 'Сохранить настройки аккаунта': 'api/account/setSettings.md'
+            - 'Получить состояние аккаунта': 'api/account/getStateInstance.md'
+            - 'Перезапустить аккаунт': 'api/account/reboot.md'
+            - 'Разлогинить аккаунт': 'api/account/logout.md'
+            - 'Авторизовать аккаунт (через websocket)': 'api/account/scanqrcode.md'
         - 'Отправка':
-            - 'Отправить текст': 'api/sending/SendMessage.md'
-        - 'Получение': 'api/sending/SendMessage.md'
+            - 'Отправить текст': 'api/sending/sendMessage.md'
+            - 'Отправить видео, аудио, изображение, документ': 'api/sending/sendFileByUpload.md'
+            - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/sendFileByUrl.md'
+            - 'Отправить геолокацию': 'api/sending/sendLocation.md'
+            - 'Отправить контакт': 'api/sending/sendContact.md'
+            - 'Отправить ссылку': 'api/sending/sendLink.md'
+        - 'Получение':
+            - 'Webhook':
+                - 'Входящее сообщение':
+                    - 'Входящее сообщение: текст': 'api/receiving/webhook/incomingMessage/textMessage.md'
+                    - 'Входящее сообщение: текст с URL': 'api/receiving/webhook/incomingMessage/extendedTextMessage.md'
+                    - 'Входящее сообщение: видео, аудио, изображение, документ': 'api/receiving/webhook/incomingMessage/imageMessage.md'
+                    - 'Входящее сообщение: геопозиция': 'api/receiving/webhook/incomingMessage/locationMessage.md'
+                    - 'Входящее сообщение: контакт': 'api/receiving/webhook/incomingMessage/contactMessage.md'
+                - 'Отправленное сообщение':
+                    - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoingMessage/outgoingMessageStatus.md'
+                - 'Статус аккаунта': 'api/receiving/webhook/stateInstanceChanged.md'
+                - 'Статус устройства': 'api/receiving/webhook/deviceInfo.md'
+            - 'Получение файлов':
+                - 'Скачать файл из входящего сообщения': 'api/receiving/receivingFiles/downloadFile.md'
+        - 'Журналы':
+            - 'Получить журнал входящих сообщений': 'api/journals/lastIncomingMessages.md'
+            - 'Получить журнал отправленных сообщений': 'api/journals/lastOutgoingMessages.md'
+        - 'Очереди':
+            - 'Получить очередь сообщений к отправке': 'api/queues/showMessagesQueue.md'
+            - 'Очистить очередь сообщений к отправке': 'api/queues/clearMessagesQueue.md'
+        - 'Группы':
+            - 'Создать группу': 'api/groups/createGroup.md'
+            - 'Изменить имя группы': 'api/groups/updateGroupName.md'
+            - 'Получить информацию о группе': 'api/groups/getGroupData.md'
+            - 'Добавить участника в группу': 'api/groups/addGroupParticipant.md'
+            - 'Удалить участника из группы': 'api/groups/removeGroupParticipant.md'
+            - 'Назначить права администратора группы': 'api/groups/setGroupAdmin.md'
+            - 'Отозвать права администратора группы': 'api/groups/removeAdmin.md'
+            - 'Выйти из группы': 'api/groups/leaveGroup.md'
+        - 'Отметка прочтения':
+            - 'Отметить чат прочитанным': 'api/readingTracing/readChat.md'
+            - 'Отметить сообщение прочитанным': 'api/readingTracing/readChatMessage.md'
+        - 'Устройство (телефон)':
+            - 'Получить информацию об устройстве': 'api/phone/getDeviceInfo.md'
+        - 'Сервисные методы':
+            - 'Проверить наличие WhatsApp': 'api/serviceMethods/checkWhatsapp.md'
+            - 'Получить аватар': 'api/serviceMethods/getAvatar.md'
+            - 'Получить контакты': 'api/serviceMethods/getContacts.md'
     - 'Интеграция':
         - '1С': 'api/sending/SendMessage.md'
         - 'NodeJS': 'api/sending/SendMessage.md'
