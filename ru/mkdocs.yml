@@ -32,11 +32,11 @@ nav:
         - 'Получение':
             - 'Webhook':
                 - 'Входящее сообщение':
-                    - 'Входящее сообщение: текст': 'api/receiving/webhook/incomingMessage/textMessage.md'
-                    - 'Входящее сообщение: текст с URL': 'api/receiving/webhook/incomingMessage/extendedTextMessage.md'
-                    - 'Входящее сообщение: видео, аудио, изображение, документ': 'api/receiving/webhook/incomingMessage/imageMessage.md'
-                    - 'Входящее сообщение: геопозиция': 'api/receiving/webhook/incomingMessage/locationMessage.md'
-                    - 'Входящее сообщение: контакт': 'api/receiving/webhook/incomingMessage/contactMessage.md'
+                    - 'Текст': 'api/receiving/webhook/incomingMessage/textMessage.md'
+                    - 'Текст с URL': 'api/receiving/webhook/incomingMessage/extendedTextMessage.md'
+                    - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incomingMessage/imageMessage.md'
+                    - 'Геопозиция': 'api/receiving/webhook/incomingMessage/locationMessage.md'
+                    - 'Контакт': 'api/receiving/webhook/incomingMessage/contactMessage.md'
                 - 'Отправленное сообщение':
                     - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoingMessage/outgoingMessageStatus.md'
                 - 'Статус аккаунта': 'api/receiving/webhook/stateInstanceChanged.md'
