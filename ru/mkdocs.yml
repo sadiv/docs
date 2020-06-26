@@ -32,17 +32,17 @@ nav:
         - 'Получение':
             - 'Webhook':
                 - 'Входящее сообщение':
-                    - 'Текст': 'api/receiving/webhook/incomingMessage/TextMessage.md'
-                    - 'Текст с URL': 'api/receiving/webhook/incomingMessage/ExtendedTextMessage.md'
-                    - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incomingMessage/ImageMessage.md'
-                    - 'Геопозиция': 'api/receiving/webhook/incomingMessage/LocationMessage.md'
-                    - 'Контакт': 'api/receiving/webhook/incomingMessage/ContactMessage.md'
+                    - 'Текст': 'api/receiving/webhook/incoming-message/TextMessage.md'
+                    - 'Текст с URL': 'api/receiving/webhook/incoming-message/ExtendedTextMessage.md'
+                    - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incoming-message/ImageMessage.md'
+                    - 'Геопозиция': 'api/receiving/webhook/incoming-message/LocationMessage.md'
+                    - 'Контакт': 'api/receiving/webhook/incoming-message/ContactMessage.md'
                 - 'Отправленное сообщение':
-                    - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoingMessage/OutgoingMessageStatus.md'
+                    - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoing-message/OutgoingMessageStatus.md'
                 - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
                 - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
             - 'Получение файлов':
-                - 'Скачать файл из входящего сообщения': 'api/receiving/receivingFiles/DownloadFile.md'
+                - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
             - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
             - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
@@ -59,14 +59,14 @@ nav:
             - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
             - 'Выйти из группы': 'api/groups/LeaveGroup.md'
         - 'Отметка прочтения':
-            - 'Отметить чат прочитанным': 'api/readingTracing/ReadChat.md'
-            - 'Отметить сообщение прочитанным': 'api/readingTracing/ReadChatMessage.md'
+            - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
+            - 'Отметить сообщение прочитанным': 'api/marks/ReadChatMessage.md'
         - 'Устройство (телефон)':
             - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
         - 'Сервисные методы':
-            - 'Проверить наличие WhatsApp': 'api/serviceMethods/CheckWhatsapp.md'
-            - 'Получить аватар': 'api/serviceMethods/GetAvatar.md'
-            - 'Получить контакты': 'api/serviceMethods/GetContacts.md'
+            - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
+            - 'Получить аватар': 'api/service/GetAvatar.md'
+            - 'Получить контакты': 'api/service/GetContacts.md'
     - 'Интеграция':
         - '1С': 'api/sending/SendMessage.md'
         - 'NodeJS': 'api/sending/SendMessage.md'
