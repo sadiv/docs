@@ -20,7 +20,7 @@
 ```json
 {
     "phoneNumber": 79001234567,
-    urlLink": "https://my.site.com"
+    "urlLink": "https://my.site.com"
 }
 ```
 
@@ -28,7 +28,7 @@
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
-    urlLink": "https://my.site.com"
+    "urlLink": "https://my.site.com"
 }
 ```
 

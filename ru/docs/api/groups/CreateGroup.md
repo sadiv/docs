@@ -14,7 +14,6 @@
 
 ### Пример тела запроса {#request-example-body}
 
-Описание
 ```json
 {
     "groupName": "From API Group created",
