@@ -1,0 +1,115 @@
+# LastOutgoingMessages
+
+Метод возвращает крайние исходящие сообщения аккаунта Whatsapp.
+Срок хранения исходящих сообщений на сервере равен 24 часа.
+
+## Запрос {#request}
+
+Отсутствуют
+
+## Ответ {#response}
+
+### Поля ответа {#response-parameters}
+
+Массив объектов с полями:
+
+Поле | Тип |  Описание
+----- | ----- | ----- 
+`idMessage` | **string** | Идентификатор исходящего сообщения
+`timestamp` | **integer** | Время крайнего действия по сообщению в UNIX
+`statusMessage` | **string** | Статус исходящего сообщения, возможные значения:
+| | noAccount - нет аккаунта на номере телефона
+| | notInGroup - не состоите в данной группе
+| | sent - отправлено
+| | delivered - доставлено
+| | read - прочитано/просмотрено/прослушано
+`typeMessage` | **string** | Тип сообщения, возможные значения:
+| | textMessage - текстовое сообщение
+| | imageMessage - сообщение с изображением
+| | videoMessage - видео сообщение
+| | documentMessage - сообщение с файлом документа
+| | audioMessage - аудио сообщение
+| | locationMessage - сообщение геолокации
+| | contactMessage - сообщение с контактом
+| | extendedTextMessage - сообщение со ссылкой и превью
+`chatId` | **string** | Идентификатор чата в который сообщение было отправлено
+`textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
+`downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
+`caption` | **string** | Описание файла
+`location` | **object** | Объект о структуре локации
+`contact` | **object** | Объект о структуре контакта
+`extendedTextMessage` | **object** | Объект о структуре данных ссылки
+
+Поля объекта location:
+
+Поле | Тип |  Описание
+----- | ----- | ----- 
+`nameLocation` | **string** | Название локации
+`address` | **string** | Адрес локации
+`latitude` | **double** | Широта локации
+`longitude` | **double** | Долгота локации
+`jpegThumbnail` | **string** | Превью изображения в base64 кодировке
+
+Поля объекта contact:
+
+Поле | Тип |  Описание
+----- | ----- | ----- 
+`displayName` | **string** | Отображаемое имя контакта
+`vcard` | **string** | Структура VCard (визитной карточки контакта)
+
+Поля объекта extendedTextMessage:
+
+Поле | Тип |  Описание
+----- | ----- | ----- 
+`text` | **string** | Текст ссылки
+`description` | **string** | Описание ссылки
+`title` | **string** | Заголовок ссылки
+`previewType` | **string** | Тип превью ссылки
+`jpegThumbnail` | **string** | Превью изображения в base64 кодировке
+
+### Пример тела ответа {#response-example-body}
+
+```json
+[
+    {
+        "idMessage": "3EB0BDDC94BFDFB3D4FA",
+        "timestamp": 1587133830,
+        "statusMessage": "read",
+        "typeMessage": "textMessage",
+        "chatId": "79001234567@c.us",
+        "textMessage": "Привет",
+    },
+    {
+        "idMessage": "3EB0BDDC94BFDFB3D4FA",
+        "timestamp": 1587133830,
+        "statusMessage": "read",
+        "typeMessage": "imageMessage",
+        "chatId": "79001234567@c.us",
+        "downloadUrl": "https://wapi.apisender.com/waInstance1/downloadFile/3EB0BDDC94BFDFB3D4FA",
+        "caption": "Как тебе?"
+    }
+]
+```
+
+### Ошибки LastOutgoingMessages {#errors}
+
+Код HTTP | Идентификатор ошибки | Описание
+----- | ----- | -----
+400 | `instance in starting process try later` | Аккаунт находится в процессе запуска/перезапуска. Попробуйте повторить попытку спустя несколько секунд.
+400 | `instance account not authorized` | Аккаунт не авторизован. Для авторизации аккаунта перейдите в [Личный кабинет](https://cabinet.green-api.com) и считайте QR-код из приложения `WhatsApp Business` на телефоне.
+400 | `bad request data` | Данные запроса не валидны. Исправьте ошибку в параметрах запроса и повторите попытку.
+
+## Пример кода на Python  {#request-example-python}
+
+```python
+import requests
+
+url = "https://api.green-api.com/waInstance{{idInstance}}/lastOutgoingMessages/{{apiTokenInstance}}"
+
+payload = {}
+headers= {}
+
+response = requests.request("GET", url, headers=headers, data = payload)
+
+print(response.text.encode('utf8'))
+```
