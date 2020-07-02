@@ -1,3 +1,4 @@
-# Оглавление
+# Green API
 
-1. [sendMessage](api/sending/SendMessage.md)
+## [Документация API](api/index.md)
+Полное описание методов Green API с примерами

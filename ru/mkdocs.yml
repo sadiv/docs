@@ -1,5 +1,5 @@
-site_name: Документация Green API
-repo_name:  green-api/docs 
+site_name: Green API
+repo_name: green-api/docs 
 repo_url: https://github.com/green-api/docs
 edit_uri: edit/master/ru/docs/
 site_dir: build
@@ -8,13 +8,14 @@ site_url: http://localhost:8000
 nav:
     - 'На главную': '../'
     - 'Оглавление': 'index.md'
-    - 'Быстрый старт':
-        - 'Настройка': 'api/sending/SendMessage.md'
-        - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
-        - 'Как отправить картинку': 'api/sending/SendMessage.md'
-        - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
-        - 'Как написать чат-бота': 'api/sending/SendMessage.md'
+    # - 'Быстрый старт':
+    #     - 'Настройка': 'api/sending/SendMessage.md'
+    #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
+    #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
+    #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
+    #     - 'Как написать чат-бота': 'api/sending/SendMessage.md'
     - 'Документация API':
+        - 'Обзор': 'api/index.md'
         - 'Аккаунт':
             - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
             - 'Сохранить настройки аккаунта': 'api/account/SetSettings.md'
@@ -67,10 +68,10 @@ nav:
             - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
             - 'Получить аватар': 'api/service/GetAvatar.md'
             - 'Получить контакты': 'api/service/GetContacts.md'
-    - 'Интеграция':
-        - '1С': 'api/sending/SendMessage.md'
-        - 'NodeJS': 'api/sending/SendMessage.md'
-        - 'HTML': 'api/sending/SendMessage.md'
+    # - 'Интеграция':
+    #     - '1С': 'api/sending/SendMessage.md'
+    #     - 'NodeJS': 'api/sending/SendMessage.md'
+    #     - 'HTML': 'api/sending/SendMessage.md'
     
 theme:
   name: material
