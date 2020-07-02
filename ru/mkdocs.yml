@@ -8,8 +8,9 @@ site_url: http://localhost:8000
 nav:
     - 'На главную': '../'
     - 'Оглавление': 'index.md'
-    # - 'Быстрый старт':
-    #     - 'Настройка': 'api/sending/SendMessage.md'
+    - 'Быстрый старт':
+         - 'Перед началом работы': 'before-start.md'
+         - 'Коллекция Postman': 'postman-collection.md'
     #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
     #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
     #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
