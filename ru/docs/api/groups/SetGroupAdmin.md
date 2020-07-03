@@ -1,32 +1,30 @@
 # SetGroupAdmin
 
-Метод назначает участника группы администратором
+Метод назначает участника группового чата администратором.
 
 ## Запрос {#request}
+
+Для назначения участника группового чата администратором требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Если не указан participantPhone | Идентификатор участника группы, назначаемого в качестве администратора
-`participantPhone` | **integer** | Если не указан participantChatId | Номер телефона участника группы, назначаемого в качестве администратора
+`participantChatId` | **string** | Да | Идентификатор участника группы, назначаемого в качестве администратора.
 
 ### Пример тела запроса {#request-example-body}
 
-Назначение администратором по id:
+Назначение участника группового чата администратором:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
-    "participantChatId": "79001234568-1112131415@g.us",
-}
-```
-
-Назначение администратором  по телефону:
-```json
-{
-    "groupId": "79001234567-1587570015@g.us",
-    "participantPhone": 79001234568
+    "participantChatId": "79001234568@c.us"
 }
 ```
 
@@ -57,7 +55,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/setGroupAdmin/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568-1112131415@g.us\",\r\n}"
+payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568@c.us\",\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

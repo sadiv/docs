@@ -1,12 +1,15 @@
 # Logout
 
-Метод предназначен для разлогинивания аккаунта Whatsapp
+Метод предназначен для разлогинивания аккаунта.
 
 ## Запрос {#request}
 
-### Параметры запроса {#request-parameters}
+Для разлогинивания аккаунта требуется выполнить запрос по адресу:
+```
+GET https://api.green-api.com/waInstance{{idInstance}}/Logout/{{apiTokenInstance}}
+```
 
-Отсутствуют
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ## Ответ {#response}
 

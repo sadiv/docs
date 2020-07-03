@@ -4,6 +4,13 @@
 
 ## Запрос {#request}
 
+Для смены настроек аккаунта требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
+
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
@@ -22,7 +29,7 @@
 
 ```json
 {
-    "countryInstance": "uk",
+    "countryInstance": "ru",
     "webhookUrl": "https://mysite.ru",
     "delaySendMessagesMilliseconds": 1000,
     "markIncomingMessagesReaded": "no",
@@ -61,7 +68,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"countryInstance\": \"uk\",\r\n\t\"webhookUrl\": \"https://mysite.ru\",\r\n\t\"delaySendMessagesMilliseconds\": 1000,\r\n\t\"markIncomingMessagesReaded\": \"no\",\r\n\t\"proxyInstance\": \"123.456.78.910:39898:qGKqCo:Jb26Xz\",\r\n\t\"outgoingWebhook\": \"yes\",\r\n\t\"stateWebhook\": \"yes\",\r\n\t\"incomingWebhook\": \"yes\",\r\n\t\"deviceWebhook\": \"no\"\r\n}"
+payload = "{\r\n\t\"countryInstance\": \"ru\",\r\n\t\"webhookUrl\": \"https://mysite.ru\",\r\n\t\"delaySendMessagesMilliseconds\": 1000,\r\n\t\"markIncomingMessagesReaded\": \"no\",\r\n\t\"proxyInstance\": \"123.456.78.910:39898:qGKqCo:Jb26Xz\",\r\n\t\"outgoingWebhook\": \"yes\",\r\n\t\"stateWebhook\": \"yes\",\r\n\t\"incomingWebhook\": \"yes\",\r\n\t\"deviceWebhook\": \"no\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

@@ -1,15 +1,13 @@
 # Scanqrcode
 
-Метод предназначен для сканирования QR кода для авторизации аккаунта Whatsapp.
-Аккаунт WhatsApp должен быть в неавторизованном состоянии, если он не новый, нужно предварительно разлогинить аккаунт методом logout.
+Метод предназначен для сканирования QR-кода для авторизации аккаунта.
+Аккаунт должен быть в неавторизованном состоянии. Если аккаунт авторизован, то предварительно требуется разлогинить аккаунт методом [Logout](/api/account/Logout).
 
-Необходимо установить websocket соединение по адресу: {{host-websocket}}/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
+Необходимо установить websocket соединение по адресу: 
 
-Например: wss://api.green-api.com/waInstance123/scanqrcode/7716c760bb1b9853bcc126bc1b133fac489ccf1b3dc969d4b1
-
-Авторизовать аккаунт можно по ссылке вида: {{host}}/waInstance{{idInstance}}/{{apiTokenInstance}}
-
-Например: https://api.green-api.com/waInstance123/7716c760bb1b9853bcc126bc1b133fac489ccf1b3dc969d4b1
+```
+wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
+```
 
 ## Ответ {#response}
 

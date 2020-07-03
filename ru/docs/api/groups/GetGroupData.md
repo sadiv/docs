@@ -1,8 +1,15 @@
 # GetGroupData
 
-Метод получает данные о группе Whatsapp
+Метод получает данные группового чата.
 
 ## Запрос {#request}
+
+Для получения данных группового чата требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 

@@ -1,15 +1,22 @@
 # UpdateGroupName
 
-Метод изменяет название группы Whatsapp
+Метод изменяет наименование группового чата.
 
 ## Запрос {#request}
+
+Для изменения наименования группового чата требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | Идентификатор группы
-`groupName` | **string** | Да | Название группы
+`groupName` | **string** | Да | Наименование группового чата.
 
 ### Пример тела запроса {#request-example-body}
 

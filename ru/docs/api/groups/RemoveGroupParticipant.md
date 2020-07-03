@@ -1,35 +1,32 @@
 # RemoveGroupParticipant
 
-Метод удаляет участника из группы Whatsapp
+Метод удаляет участника из группового чата.
 
 ## Запрос {#request}
+
+Для удаления участника из группового чата требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/RemoveGroupParticipant/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Если не указан participantPhone | Идентификатор участника, удаляемого из группы
-`participantPhone` | **integer** | Если не указан participantChatId | Номер телефона участника, удаляемого из группы
+`participantChatId` | **string** | Да | Идентификатор участника, удаляемого из группы.
 
 ### Пример тела запроса {#request-example-body}
 
-Удаление по id:
+Удаление участника группового чата:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
-    "participantChatId": "79001234568-1112131415@g.us",
+    "participantChatId": "79001234568@c.us"
 }
 ```
-
-Удаление по телефону:
-```json
-{
-    "groupId": "79001234567-1587570015@g.us",
-    "participantPhone": 79001234568
-}
-```
-
 
 ## Ответ {#response}
 
@@ -58,7 +55,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/removeGroupParticipant/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568-1112131415@g.us\",\r\n}"
+payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568@c.us\",\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

@@ -1,26 +1,31 @@
 # CreateGroup
 
-Метод предназначен для создания группы Whatsapp.
+Метод предназначен для создания группового чата.
 
 ## Запрос {#request}
+
+Для создания группового чата требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupName` | **string** | Да | Название группы
-`chatIds` | **array<string>** | Если не указано поле phones | Коллекция идентификаторов участников группы
-`phones` | **array<integer>** | Если не указано поле chatIds | Коллекция номеров телефонов участников группы
+`groupName` | **string** | Да | Наименование нового группового чата
+`chatIds` | **array<string>** | Да | Коллекция идентификаторов участников группы
 
 ### Пример тела запроса {#request-example-body}
 
 ```json
 {
-    "groupName": "From API Group created",
-    "chatIds": [],
-    "phones": [
-        79001234567,
-        79001234568
+    "groupName": "Group created by Green API",
+    "chatIds": [
+        "79001234567@c.us",
+        "79001234568@c.us"
     ]
 }
 ```
@@ -56,7 +61,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/createGroup/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupName\": \"From API Group created\",\r\n    \"chatIds\": [],\r\n    \"phones\": [\r\n        79001234567,\r\n        79001234568\r\n    ]\r\n}\r\n"
+payload = "{\r\n\t\"groupName\": \"Group created by Green API\",\r\n    \"chatIds\": [\r\n        \"79001234567@c.us\",\r\n        \"79001234568@c.us\"\r\n    ]\r\n}\r\n"
 headers = {
   'Content-Type': 'application/json'
 }

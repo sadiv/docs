@@ -5,6 +5,13 @@
 
 ## Запрос {#request}
 
+Для отправки сообщения геолокации требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
+
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание

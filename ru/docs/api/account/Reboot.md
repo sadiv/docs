@@ -1,12 +1,15 @@
 # Reboot
 
-Метод предназначен для перезагрузки (перезапуска) аккаунта Whatsapp
+Метод предназначен для перезапуска аккаунта.
 
 ## Запрос {#request}
 
-### Параметры запроса {#request-parameters}
+Для перезапуска аккаунта требуется выполнить запрос по адресу:
+```
+GET https://api.green-api.com/waInstance{{idInstance}}/Reboot/{{apiTokenInstance}}
+```
 
-Отсутствуют
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ## Ответ {#response}
 

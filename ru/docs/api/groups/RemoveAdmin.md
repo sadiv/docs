@@ -1,32 +1,30 @@
 # RemoveAdmin
 
-Метод лишает участника прав администрирования группы
+Метод лишает участника прав администрирования группового чата.
 
 ## Запрос {#request}
+
+Для лишения участника прав администрирования группового чата требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Если не указан participantPhone | Идентификатор участника группы, которого лишают прав администрирования группы
-`participantPhone` | **integer** | Если не указан participantChatId | Номер телефона участника группы, которого лишают прав администрирования группы
+`participantChatId` | **string** | Да | Идентификатор участника группы, которого требуется лишить прав администрирования группы
 
 ### Пример тела запроса {#request-example-body}
 
-Лишение участника прав администрирования группы по id:
+Лишение участника прав администрирования группы:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
-    "participantChatId": "79001234568-1112131415@g.us",
-}
-```
-
-Лишение участника прав администрирования группы по телефону:
-```json
-{
-    "groupId": "79001234567-1587570015@g.us",
-    "participantPhone": 79001234568
+    "participantChatId": "79001234568@c.us"
 }
 ```
 
@@ -57,7 +55,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568-1112131415@g.us\",\r\n}"
+payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568@c.us\",\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

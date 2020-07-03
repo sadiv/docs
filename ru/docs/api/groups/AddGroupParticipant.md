@@ -1,32 +1,30 @@
 # AddGroupParticipant
 
-Метод добавляет участника в группу Whatsapp
+Метод добавляет участника в групповой чат.
 
 ## Запрос {#request}
+
+Для добавления участника в групповой чат требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Если не указан participantPhone | Идентификатор участника, добавляемого в группу
-`participantPhone` | **integer** | Если не указан participantChatId | Номер телефона участника, добавляемого в группу
+`participantChatId` | **string** | Да | Идентификатор участника, добавляемого в групповой чат.
 
 ### Пример тела запроса {#request-example-body}
 
-Добавление по id:
+Добавление участника в групповой чат:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
-    "participantChatId": "79001234568-1112131415@g.us",
-}
-```
-
-Добавление по телефону:
-```json
-{
-    "groupId": "79001234567-1587570015@g.us",
-    "participantPhone": 79001234568
+    "participantChatId": "79001234568@c.us"
 }
 ```
 
@@ -57,7 +55,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantPhone\": 79001234568\r\n}"
+payload = "{\r\n\t\"groupId\": \"79001234567-1581234048@g.us\",\r\n\t\"participantChatId\": \"79001234568@c.us\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

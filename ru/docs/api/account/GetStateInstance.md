@@ -1,12 +1,15 @@
 # GetStateInstance
 
-Метод предназначен для получения состояния аккаунта Whatsapp
+Метод предназначен для получения состояния аккаунта.
 
 ## Запрос {#request}
 
-### Параметры запроса {#request-parameters}
+Для получения состояния аккаунта требуется выполнить запрос по адресу:
+```
+GET https://api.green-api.com/waInstance{{idInstance}}/GetStateInstance/{{apiTokenInstance}}
+```
 
-Отсутствуют
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ## Ответ {#response}
 
