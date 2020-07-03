@@ -27,9 +27,3 @@
 `pushname` | **string** | Имя аккаунта в Whatsapp, когда type=accountData
 `proxy` | **string** |  ip адрес закрепленного прокси за аккаунтом, когда type=accountData
 `webhookUrl` | **string** | URL для получения webhook уведомлений, когда type=accountData
-
-## Пример кода на Python  {#request-example-python}
-
-```python
-? (код Романа)
-```
