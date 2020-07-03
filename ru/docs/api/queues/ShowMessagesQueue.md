@@ -25,7 +25,7 @@
 | | locationMessage - сообщение геолокации
 | | contactMessage - сообщение с контактом
 | | extendedTextMessage - сообщение со ссылкой и превью
-`chatId` | **string** | Идентификатор чата в который сообщение будет отправлено
+`chatId` | **string** | [Идентификатор чата](/api/chat-id) в который сообщение будет отправлено
 `message` | **string** |  текст сообщения, если typeMessage = textMessage/locationMessage/contactMessage/extendedTextMessage
 `fileName` | **string** | Имя отправляемого файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
 

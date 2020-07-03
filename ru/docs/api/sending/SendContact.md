@@ -10,8 +10,7 @@
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Если не указан `phoneNumber` | Идентификатор личного чата в формате `00000000000@c.us` или идентификатор группы в формате `00000000000-0000000000@g.us`; Пример: `79001234567@c.us` или `79001234567-1581234048@g.us`
-`phoneNumber` | **integer** | Если не указан `chatId` | Номер телефона получателя в международном формате: 11 или 12 цифр; Пример: `79001234567` или `380123456789`
+`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id) Пример: `79001234567` или `380123456789`
 `contact` | **object** | Да | Объект о контакте
 
 Параметры объекта contact:
@@ -29,7 +28,7 @@
 Отправка сообщения в личный чат:
 ```json
 {
-    "phoneNumber": 79001234567,
+    "chatId": "79001234567@c.us",
     "contact": {
         "phoneContact": 79001234568,
         "firstName": "Артем",
@@ -40,7 +39,7 @@
 }
 ```
 
-Отправка сообщения в группу:
+Отправка сообщения в групповой чат:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -81,7 +80,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n"
+payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"contact\": {\r\n\t\t\"phoneContact\": 79001234568,\r\n    \t\"firstName\": \"Артем\",\r\n\t\t\"middleName\": \"Петрович\",\r\n\t\t\"lastName\": \"Евпаторийский\",\r\n\t\t\"company\": \"Велосипед\"\r\n\t}\r\n}\r\n"
 headers = {
   'Content-Type': 'application/json'
 }

@@ -32,7 +32,7 @@
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `created` | **boolean** | Флаг создания группы
-`chatId` | **string** | Идентификатор группы
+`chatId` | **string** | [Идентификатор чата](/api/chat-id)
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
 ### Пример тела ответа {#response-example-body}

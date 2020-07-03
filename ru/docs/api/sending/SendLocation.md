@@ -9,8 +9,7 @@
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Если не указан `phoneNumber` | Идентификатор личного чата в формате `00000000000@c.us` или идентификатор группы в формате `00000000000-0000000000@g.us`; Пример: `79001234567@c.us` или `79001234567-1581234048@g.us`
-`phoneNumber` | **integer** | Если не указан `chatId` | Номер телефона получателя в международном формате: 11 или 12 цифр; Пример: `79001234567` или `380123456789`
+`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
 `nameLocation` | **string** | Нет | Название локации
 `address` | **string** | Нет | Адрес локации
 `latitude` | **double** | Да | Широта локации
@@ -21,7 +20,7 @@
 Отправка сообщения в личный чат:
 ```json
 {
-    "phoneNumber": 79001234567,
+    "chatId": "79001234567@c.us",
     "nameLocation": "Restaurant",
     "address": "123456, Perm",
     "latitude": 12.3456789,
@@ -29,7 +28,7 @@
 }
 ```
 
-Отправка сообщения в группу:
+Отправка сообщения в групповой чат:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -66,7 +65,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"phoneNumber\": 79001234567,\r\n    \"nameLocation\": \"Restaurant\",\r\n    \"address\": \"123456, Perm\",\r\n   \t\"latitude\": 12.3456789,\r\n    \"longitude\": 10.1112131\r\n}\r\n"
+payload = "{\r\n    \"chatId\": \"79001234567@c.us\",\r\n    \"nameLocation\": \"Я здесь, приезжай\",\r\n    \"address\": \"613123, Perm\",\r\n   \t\"latitude\": 44.9370129,\r\n    \"longitude\": 89.8728409\r\n}\r\n"
 headers = {
   'Content-Type': 'application/json'
 }

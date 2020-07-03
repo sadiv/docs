@@ -62,7 +62,6 @@ nav:
             - 'Выйти из группы': 'api/groups/LeaveGroup.md'
         - 'Отметка прочтения':
             - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
-            - 'Отметить сообщение прочитанным': 'api/marks/ReadChatMessage.md'
         - 'Устройство (телефон)':
             - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
         - 'Сервисные методы':

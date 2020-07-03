@@ -10,8 +10,7 @@
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Если не указан `phoneNumber` | Идентификатор личного чата в формате `00000000000@c.us` или идентификатор группы в формате `00000000000-0000000000@g.us`; Пример: `79001234567@c.us` или `79001234567-1581234048@g.us`
-`phoneNumber` | **integer** | Если не указан `chatId` | Номер телефона получателя в международном формате: 11 или 12 цифр; Пример: `79001234567` или `380123456789`
+`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
 `urlLink` | **string** | Да | Адрес ссылки
 
 ### Пример тела запроса {#request-example-body}
@@ -19,12 +18,12 @@
 Отправка сообщения в личный чат:
 ```json
 {
-    "phoneNumber": 79001234567,
+    "chatId": "79001234567@c.us",
     "urlLink": "https://my.site.com"
 }
 ```
 
-Отправка сообщения в группу:
+Отправка сообщения в групповой чат:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -59,7 +58,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"chatId\": \"\",\r\n\t\"phoneNumber\": 79001234567,\r\n\t\"urlLink\": \"https://my.site.com\"\r\n}\r\n"
+payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://www.youtube.com/watch?v=00000000000\"\r\n}\r\n"
 headers = {
   'Content-Type': 'application/json'
 }

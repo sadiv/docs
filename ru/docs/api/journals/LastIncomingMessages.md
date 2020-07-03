@@ -28,7 +28,7 @@
 | | locationMessage - сообщение геолокации
 | | contactMessage - сообщение с контактом
 | | extendedTextMessage - сообщение со ссылкой и превью
-`chatId` | **string** | Идентификатор чата в котором получено сообщение
+`chatId` | **string** | [Идентификатор чата](/api/chat-id) в котором получено сообщение
 `senderName` | **string** | Имя отправителя сообщения
 `textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
 `downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
