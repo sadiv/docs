@@ -85,7 +85,7 @@
         "statusMessage": "read",
         "typeMessage": "imageMessage",
         "chatId": "79001234567@c.us",
-        "downloadUrl": "https://wapi.apisender.com/waInstance1/downloadFile/3EB0BDDC94BFDFB3D4FA",
+        "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/3EB0BDDC94BFDFB3D4FA",
         "caption": "Как тебе?"
     }
 ]

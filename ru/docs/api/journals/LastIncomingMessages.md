@@ -29,6 +29,7 @@
 | | contactMessage - сообщение с контактом
 | | extendedTextMessage - сообщение со ссылкой и превью
 `chatId` | **string** | [Идентификатор чата](/api/chat-id) в котором получено сообщение
+`senderId` | **string** | Идентификатор отправителя сообщения в формате [Идентификатора чата](/api/chat-id)
 `senderName` | **string** | Имя отправителя сообщения
 `textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
 `downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
@@ -84,7 +85,7 @@
         "chatId": "79001234567@c.us",
         "senderId": "79001234567@c.us",
         "senderName": "Николай",
-        "downloadUrl": "https://wapi.apisender.com/waInstance1/downloadFile/EA0BD1AE042DC4F3609867126309D67C",
+        "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C",
         "caption": "Как тебе?"
     }
 ]
