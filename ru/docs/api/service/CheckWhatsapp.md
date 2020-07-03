@@ -1,8 +1,15 @@
 # CheckWhatsapp
 
-Метод проверяет наличие аккаунта Whatsapp на номере телефона
+Метод проверяет наличие аккаунта Whatsapp на номере телефона.
 
 ## Запрос {#request}
+
+Для проверки наличия аккаунта Whatsapp требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 

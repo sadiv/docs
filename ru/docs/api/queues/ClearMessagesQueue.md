@@ -1,12 +1,15 @@
 # ClearMessagesQueue
 
-Метод предназначен для очистки очереди отправки сообщений
+Метод предназначен для очистки очереди сообщений на отправку.
 
 ## Запрос {#request}
 
-### Параметры запроса {#request-parameters}
+Для очистки очереди сообщений требуется выполнить запрос по адресу:
+```
+GET https://api.green-api.com/waInstance{{idInstance}}/ClearMessagesQueue/{{apiTokenInstance}}
+```
 
-Отсутствуют
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ## Ответ {#response}
 

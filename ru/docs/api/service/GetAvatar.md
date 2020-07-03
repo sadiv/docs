@@ -1,8 +1,15 @@
 # GetAvatar
 
-Метод возвращает аватар аккаунта Whatsapp или группы
+Метод возвращает аватар аккаунта Whatsapp или группового чата.
 
 ## Запрос {#request}
+
+Для получения аватара требуется выполнить запрос по адресу:
+```
+POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInstance}}
+```
+
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ### Параметры запроса {#request-parameters}
 

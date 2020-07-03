@@ -1,12 +1,15 @@
 # GetDeviceInfo
 
-Метод предназначен для получения информации об устройстве на котором запущено приложение Whatsapp
+Метод предназначен для получения информации об устройстве, на котором запущено приложение Whatsapp.
 
 ## Запрос {#request}
 
-### Параметры запроса {#request-parameters}
+Для получения информации об устройстве требуется выполнить запрос по адресу:
+```
+GET https://api.green-api.com/waInstance{{idInstance}}/GetDeviceInfo/{{apiTokenInstance}}
+```
 
-Отсутствуют
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
 
 ## Ответ {#response}
 
