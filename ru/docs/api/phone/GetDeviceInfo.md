@@ -1,6 +1,6 @@
 # GetDeviceInfo
 
-Метод предназначен для получения информации об устройстве, на котором запущено приложение Whatsapp.
+Метод предназначен для получения информации об устройстве (телефоне), на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/).
 
 ## Запрос {#request}
 
@@ -17,11 +17,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetDeviceInfo/{{apiTokenI
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`platform` | **string** | Операционная система устройства на котором запущено приложение Whatsapp
+`platform` | **string** | Операционная система устройства на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
 `deviceManufacturer` | **string** | Производитель устройства
 `deviceModel` | **string** | Модель устройства
 `osVersion` | **string** | Версия операционной системы
-`waVersion` | **string** | Версия приложения Whatsapp
+`waVersion` | **string** | Версия приложения [WhatsApp Business](https://www.whatsapp.com/business/) или [WhatsApp](https://www.whatsapp.com/)
 `battery` | **integer** | Уровень заряда батареи
 
 ### Пример тела ответа {#response-example-body}

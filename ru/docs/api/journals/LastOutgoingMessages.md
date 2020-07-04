@@ -22,31 +22,31 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `idMessage` | **string** | Идентификатор исходящего сообщения
-`timestamp` | **integer** | Время крайнего действия по сообщению в UNIX
+`timestamp` | **integer** | Время крайнего действия по сообщению в UNIX-формате
 `statusMessage` | **string** | Статус исходящего сообщения, возможные значения:
-| | noAccount - нет аккаунта на номере телефона
-| | notInGroup - не состоите в данной группе
-| | sent - отправлено
-| | delivered - доставлено
-| | read - прочитано/просмотрено/прослушано
+| | `noAccount` - нет аккаунта WhatsApp на номере телефона
+| | `notInGroup` - не состоите в данной группе
+| | `sent` - отправлено
+| | `delivered` - доставлено
+| | `read` - прочитано/просмотрено/прослушано
 `typeMessage` | **string** | Тип сообщения, возможные значения:
-| | textMessage - текстовое сообщение
-| | imageMessage - сообщение с изображением
-| | videoMessage - видео сообщение
-| | documentMessage - сообщение с файлом документа
-| | audioMessage - аудио сообщение
-| | locationMessage - сообщение геолокации
-| | contactMessage - сообщение с контактом
-| | extendedTextMessage - сообщение со ссылкой и превью
+| | `textMessage` - текстовое сообщение
+| | `imageMessage` - сообщение с изображением
+| | `videoMessage` - видео сообщение
+| | `documentMessage` - сообщение с файлом документа
+| | `audioMessage` - аудио сообщение
+| | `locationMessage` - сообщение геолокации
+| | `contactMessage` - сообщение с контактом
+| | `extendedTextMessage` - сообщение со ссылкой и превью
 `chatId` | **string** | [Идентификатор чата](/api/chat-id), в который сообщение было отправлено
-`textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
-`downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
+`textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
+`downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
 `caption` | **string** | Описание файла
 `location` | **object** | Объект о структуре локации
 `contact` | **object** | Объект о структуре контакта
 `extendedTextMessage` | **object** | Объект о структуре данных ссылки
 
-Поля объекта location:
+Поля объекта `location`:
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
@@ -54,16 +54,16 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 `address` | **string** | Адрес локации
 `latitude` | **double** | Широта локации
 `longitude` | **double** | Долгота локации
-`jpegThumbnail` | **string** | Превью изображения в base64 кодировке
+`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
 
-Поля объекта contact:
+Поля объекта `contact`:
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `displayName` | **string** | Отображаемое имя контакта
 `vcard` | **string** | Структура VCard (визитной карточки контакта)
 
-Поля объекта extendedTextMessage:
+Поля объекта `extendedTextMessage`:
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
@@ -71,7 +71,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 `description` | **string** | Описание ссылки
 `title` | **string** | Заголовок ссылки
 `previewType` | **string** | Тип превью ссылки
-`jpegThumbnail` | **string** | Превью изображения в base64 кодировке
+`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
 
 ### Пример тела ответа {#response-example-body}
 

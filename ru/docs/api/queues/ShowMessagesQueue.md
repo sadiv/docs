@@ -1,6 +1,7 @@
 # ShowMessagesQueue
 
 Метод предназначен для получения списка сообщений, находящихся в очереди на отправку.
+Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](/api/send-messages-delay).
 
 ## Запрос {#request}
 
@@ -20,17 +21,17 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ShowMessagesQueue/{{apiTo
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `typeMessage` | **string** | Тип сообщения, возможные значения:
-| | textMessage - текстовое сообщение
-| | imageMessage - сообщение с изображением
-| | videoMessage - видео сообщение
-| | documentMessage - сообщение с файлом документа
-| | audioMessage - аудио сообщение
-| | locationMessage - сообщение геолокации
-| | contactMessage - сообщение с контактом
-| | extendedTextMessage - сообщение со ссылкой и превью
+| | `textMessage` - текстовое сообщение
+| | `imageMessage` - сообщение с изображением
+| | `videoMessage` - видео сообщение
+| | `documentMessage` - сообщение с файлом документа
+| | `audioMessage` - аудио сообщение
+| | `locationMessage` - сообщение геолокации
+| | `contactMessage` - сообщение с контактом
+| | `extendedTextMessage` - сообщение со ссылкой и превью
 `chatId` | **string** | [Идентификатор чата](/api/chat-id) в который сообщение будет отправлено
-`message` | **string** |  текст сообщения, если typeMessage = textMessage/locationMessage/contactMessage/extendedTextMessage
-`fileName` | **string** | Имя отправляемого файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
+`message` | **string** |  текст сообщения, если `typeMessage` = `textMessage`/`locationMessage`/`contactMessage`/`extendedTextMessage`
+`fileName` | **string** | Имя отправляемого файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
 
 ### Пример тела ответа {#response-example-body}
 
@@ -39,7 +40,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ShowMessagesQueue/{{apiTo
     {
         "typeMessage": "textMessage",
         "chatId": "79001234567@c.us",
-        "message": "Hello man"
+        "message": "I use Green-API to send this message to you!"
     },
     {
         "typeMessage": "imageMessage",

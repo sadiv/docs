@@ -21,7 +21,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 ```json
 {
-    "groupId": "12345678910-1112131415@g.us"
+    "groupId": "79001234567-1587570015@g.us"
 }
 ```
 
@@ -32,12 +32,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `groupId` | **string** | [Идентификатор группового чата](/api/chat-id#gus)
-`owner` | **string** | Владелец группы
-`subject` | **string** | Тема (название) группы
-`creation` | **integer** | Время создания группы в Unix
+`owner` | **string** | [Идентификатор](/api/chat-id#corr) владельца группы
+`subject` | **string** | Наименование группы
+`creation` | **integer** | Время создания группы в Unix-формате
 `participants` | **array** | Коллекция участников группы
-`subjectTime` | **integer** | Время создание темы (названия) группы в Unix
-`subjectOwner` | **string** | Идентификатор пользователя создавшего тему группы
+`subjectTime` | **integer** | Время создания наименования группы в Unix-формате
+`subjectOwner` | **string** | [Идентификатор](/api/chat-id#corr) пользователя создавшего наименование группы
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
 Поля объектов из массива `participants`
@@ -45,16 +45,16 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `id` | **string** | [Идентификатор](/api/chat-id#corr) участника группового чата
-`isAdmin` | **boolean** | Флаг является ли пользователь администратором группы
-`isSuperAdmin` | **boolean** | Флаг является ли пользователь супер администратором группы
+`isAdmin` | **boolean** | Флаг, является ли пользователь администратором группы
+`isSuperAdmin` | **boolean** | Флаг, является ли пользователь супер администратором группы
 
 ### Пример тела ответа {#response-example-body}
 
 ```json
 {
-	"groupId": "12345678910-1112131415@g.us",
-	"owner": "12345678910@c.us",
-	"subject": "Changed name by API",
+	"groupId": "79001234567-1587570015@g.us",
+	"owner": "79001234567@c.us",
+	"subject": "Green API Group",
 	"creation": 1587570015,
 	"participants": [
 		{
@@ -74,7 +74,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 		}
 	],
 	"subjectTime": 1587737715,
-	"subjectOwner": "12345678910@c.us",
+	"subjectOwner": "79001234567@c.us",
 	"groupInviteLink": "https://chat.whatsapp.com/xxxxxxxxxxxxxxxxxxxxxx"
 }
 ```
@@ -90,7 +90,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"groupId\": \"12345678910-1112131415@g.us\"\r\n}"
+payload = "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

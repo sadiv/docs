@@ -37,7 +37,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `created` | **boolean** | Флаг создания группы
-`chatId` | **string** | [Идентификатор чата](/api/chat-id)
+`chatId` | **string** | [Идентификатор группового чата](/api/chat-id#gus)
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
 ### Пример тела ответа {#response-example-body}
@@ -45,7 +45,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 ```json
 {
     "created": true,
-    "chatId": "12345678910-1112131415@g.us",
+    "chatId": "79001234567-1587570015@g.us",
     "groupInviteLink": "https://chat.whatsapp.com/xxxxxxxxxxxxxxxxxxxxxx"
 }
 ```

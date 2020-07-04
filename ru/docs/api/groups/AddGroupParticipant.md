@@ -34,7 +34,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{ap
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`addParticipant` | **boolean** | Флаг добавления участника в группу
+`addParticipant` | **boolean** | Флаг добавления участника в групповой чат
 
 ### Пример тела ответа {#response-example-body}
 

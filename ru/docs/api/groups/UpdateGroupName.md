@@ -16,14 +16,14 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
-`groupName` | **string** | Да | Наименование группового чата.
+`groupName` | **string** | Да | Наименование группового чата
 
 ### Пример тела запроса {#request-example-body}
 
 ```json
 {
     "groupId": "12345678910-1112131415@g.us",
-    "groupName":"Changed name by API"
+    "groupName": "Group created by Green API"
 }
 ```
 
@@ -54,7 +54,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"12345678910-1112131415@g.us\",\r\n    \"groupName\":\"Changed name by API\"\r\n}"
+payload = "{\r\n    \"groupId\": \"12345678910-1112131415@g.us\",\r\n    \"groupName\":\"Group created by Green API\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }
