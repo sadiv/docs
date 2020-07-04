@@ -1,15 +1,14 @@
 # Входящие сообщения
 
-Описание общих полей входящих сообщений. Входящие сообщения могут быть следующих типов:
+В данном разделе приводится описание общих полей входящих сообщений webhook с типом `incomingMessageReceived`. Описание всех типов webhook уведолмений представлено в разделе [Типы webhook уведомлений](/api/receiving/webhook/type-webhook).
 
-- `textMessage` - текстовое сообщение
-- `imageMessage` - сообщение с изображением
-- `videoMessage` - видео сообщение
-- `documentMessage` - сообщение с файлом документа
-- `audioMessage` - аудио сообщение
-- `locationMessage` - сообщение геолокации
-- `contactMessage` - сообщение с контактом
-- `extendedTextMessage` - сообщение со ссылкой и превью
+Система предусматривает получение webhook уведомлений о входящих сообщениях следующих видов:
+
+- [Входящее текстовое сообщение](/api/receiving/webhook/incoming-message/TextMessage)
+- [Входящее текстовое сообщение с URL](/api/receiving/webhook/incoming-message/ExtendedTextMessage)
+- [Входящее сообщение с изображением, видео, аудио, документом](/api/receiving/webhook/incoming-message/ImageMessage)
+- [Входящее сообщение с геолокацией](/api/receiving/webhook/incoming-message/LocationMessage)
+- [Входящее сообщение с контактом](/api/receiving/webhook/incoming-message/ContactMessage)
 
 ## Поля webhook incomingMessageReceived {#webhook-parameters}
 

@@ -1,10 +1,4 @@
-# Webhook IncomingMessageReceived TextMessage
-
-Входящее текстовое сообщение.
-
-## Webhook {#webhook}
-
-### Поля webhook {#webhook-parameters}
+# Входящее текстовое сообщение
 
 В данном разделе описываются поля webhook уведомления объекта `messageData` специфичные для входящего текстового сообщения. Для получения описания общих полей входящих сообщений обратитесь к разделу [Входящие сообщения](/api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived). 
 
@@ -14,6 +8,9 @@
 
 `messageData.typeMessage` = `textMessage`
 
+## Webhook {#webhook}
+
+### Поля webhook {#webhook-parameters}
 
 Поля объекта `messageData`
 

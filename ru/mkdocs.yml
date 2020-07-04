@@ -34,6 +34,7 @@ nav:
         - 'Получение':
             - 'Webhook':
                 - 'Входящее сообщение':
+                    - 'Входящие сообщения': 'api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived.md'
                     - 'Текст': 'api/receiving/webhook/incoming-message/TextMessage.md'
                     - 'Текст с URL': 'api/receiving/webhook/incoming-message/ExtendedTextMessage.md'
                     - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incoming-message/ImageMessage.md'

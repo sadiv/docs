@@ -1,10 +1,4 @@
-# Webhook IncomingMessageReceived ContactMessage
-
-Входящее сообщение с контактом.
-
-## Webhook {#webhook}
-
-### Поля webhook {#webhook-parameters}
+# Входящее сообщение с контактом
 
 В данном разделе описываются поля webhook уведомления объекта `messageData` специфичные для входящего сообщения с контактом. Для получения описания общих полей входящих сообщений обратитесь к разделу [Входящие сообщения](/api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived). 
 
@@ -13,6 +7,11 @@
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `contactMessage`
+
+
+## Webhook {#webhook}
+
+### Поля webhook {#webhook-parameters}
 
 Поля объекта `messageData`
 
