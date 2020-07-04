@@ -11,9 +11,7 @@
 - `contactMessage` - сообщение с контактом
 - `extendedTextMessage` - сообщение со ссылкой и превью
 
-## Webhook {#webhook}
-
-### Поля webhook incomingMessageReceived {#webhook-parameters}
+## Поля webhook incomingMessageReceived {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
@@ -40,7 +38,7 @@
 `sender` | **string** | [Идентификатор](/api/chat-id#corr) отправителя сообщения или файла
 `senderName` | **string** | Имя отправителя
 
-#### Поля объекта `messageData`
+### Поля объекта `messageData`
 
 Объект `messageData` имеет разные поля в зависимости от типа входящего сообщения:
 
@@ -50,4 +48,28 @@
 - [Входящее сообщение с геолокацией](/api/receiving/webhook/incoming-message/LocationMessage)
 - [Входящее сообщение с контактом](/api/receiving/webhook/incoming-message/ContactMessage)
 
+### Пример тела webhook {#webhook-example-body}
 
+```json
+{
+    "typeWebhook": "incomingMessageReceived",
+    "instanceData": {
+        "idInstance": 1234,
+        "wid": "79001234567@c.us",
+        "typeInstance": "whatsapp"
+    },
+    "timestamp": 1588091580,
+    "idMessage": "F7AEC1B7086ECDC7E6E45923F5EDB825",
+    "senderData": {
+        "chatId": "79001234568@c.us",
+        "sender": "79001234568@c.us",
+        "senderName": "Green API"
+    },
+    "messageData":{
+       ...
+       ...
+       ...
+        }
+    }
+}
+```
