@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
 `groupName` | **string** | Да | Наименование группового чата.
 
 ### Пример тела запроса {#request-example-body}

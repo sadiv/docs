@@ -15,8 +15,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{ap
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Да | Идентификатор участника, добавляемого в групповой чат.
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
+`participantChatId` | **string** | Да | [Идентификатор](/api/chat-id#corr) участника, добавляемого в групповой чат.
 
 ### Пример тела запроса {#request-example-body}
 

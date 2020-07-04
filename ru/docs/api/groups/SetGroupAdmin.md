@@ -15,8 +15,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Да | Идентификатор участника группы, назначаемого в качестве администратора.
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
+`participantChatId` | **string** | Да | [Идентификатор](/api/chat-id#corr) участника группы, назначаемого в качестве администратора
 
 ### Пример тела запроса {#request-example-body}
 

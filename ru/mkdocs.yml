@@ -19,7 +19,7 @@ nav:
         - 'Обзор': 'api/index.md'
         - 'Аккаунт':
             - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
-            - 'Сохранить настройки аккаунта': 'api/account/SetSettings.md'
+            - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
             - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
             - 'Перезапустить аккаунт': 'api/account/Reboot.md'
             - 'Разлогинить аккаунт': 'api/account/Logout.md'

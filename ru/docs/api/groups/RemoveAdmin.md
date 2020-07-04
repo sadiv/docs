@@ -15,8 +15,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenIn
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы
-`participantChatId` | **string** | Да | Идентификатор участника группы, которого требуется лишить прав администрирования группы
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
+`participantChatId` | **string** | Да | [Идентификатор](/api/chat-id#corr) участника группы, которого требуется лишить прав администрирования группы
 
 ### Пример тела запроса {#request-example-body}
 

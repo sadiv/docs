@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenIns
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы, из которой необходимо выйти.
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus), из которого необходимо выйти.
 
 ### Пример тела запроса {#request-example-body}
 

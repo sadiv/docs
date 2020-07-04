@@ -1,7 +1,8 @@
 # LastIncomingMessages
 
 Метод возвращает крайние входящие сообщения аккаунта.
-Срок хранения входящих сообщений на сервере составляет 24 часа.
+
+> Срок хранения входящих сообщений на сервере составляет 24 часа.
 
 ## Запрос {#request}
 
@@ -31,8 +32,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
 | | locationMessage - сообщение геолокации
 | | contactMessage - сообщение с контактом
 | | extendedTextMessage - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](/api/chat-id) в котором получено сообщение
-`senderId` | **string** | Идентификатор отправителя сообщения в формате [Идентификатора чата](/api/chat-id)
+`chatId` | **string** | [Идентификатор чата](/api/chat-id), в котором получено сообщение
+`senderId` | **string** | [Идентификатор](/api/chat-id#corr) отправителя сообщения
 `senderName` | **string** | Имя отправителя сообщения
 `textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
 `downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage

@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | Идентификатор группы
+`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
 
 ### Пример тела запроса {#request-example-body}
 
@@ -31,7 +31,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`groupId` | **string** | Идентификатор группы
+`groupId` | **string** | [Идентификатор группового чата](/api/chat-id#gus)
 `owner` | **string** | Владелец группы
 `subject` | **string** | Тема (название) группы
 `creation` | **integer** | Время создания группы в Unix
@@ -40,11 +40,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 `subjectOwner` | **string** | Идентификатор пользователя создавшего тему группы
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
-Поля объектов из массива participants
+Поля объектов из массива `participants`
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`id` | **string** | Идентификатор пользователя
+`id` | **string** | [Идентификатор](/api/chat-id#corr) участника группового чата
 `isAdmin` | **boolean** | Флаг является ли пользователь администратором группы
 `isSuperAdmin` | **boolean** | Флаг является ли пользователь супер администратором группы
 

@@ -16,7 +16,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupName` | **string** | Да | Наименование нового группового чата
-`chatIds` | **array<string>** | Да | Коллекция идентификаторов участников группы
+`chatIds` | **array<string>** | Да | Коллекция [идентификаторов](/api/chat-id#corr) участников группы
 
 ### Пример тела запроса {#request-example-body}
 

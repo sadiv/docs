@@ -15,7 +15,7 @@ wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`type` | **string** | Тип сообщения, возможные значения qrCode || error || accountData || alreadyLogged || timeoutExpired
+`type` | **string** | Тип сообщения, возможные значения qrCode, error, accountData, alreadyLogged, timeoutExpired
 `message` | **string** | Содержание сообщения 
 | | если type=qrCode, message=изображение QR кода в base64 кодировке. Для вывода в браузере нужно добавить "data:image/png;base64, {message}";
 | | если type=error, message=описание ошибки;

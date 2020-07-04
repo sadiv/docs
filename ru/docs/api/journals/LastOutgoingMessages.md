@@ -1,7 +1,8 @@
 # LastOutgoingMessages
 
 Метод возвращает крайние отправленные сообщения аккаунта.
-Срок хранения отправленных сообщений на сервере составляет 24 часа.
+
+> Срок хранения отправленных сообщений на сервере составляет 24 часа.
 
 ## Запрос {#request}
 
@@ -37,7 +38,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 | | locationMessage - сообщение геолокации
 | | contactMessage - сообщение с контактом
 | | extendedTextMessage - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](/api/chat-id) в который сообщение было отправлено
+`chatId` | **string** | [Идентификатор чата](/api/chat-id), в который сообщение было отправлено
 `textMessage` | **string** | Текст сообщения, если typeMessage=textMessage
 `downloadUrl` | **string** | Ссылка на скачивание файла, если typeMessage = imageMessage/videoMessage/documentMessage/audioMessage
 `caption` | **string** | Описание файла
