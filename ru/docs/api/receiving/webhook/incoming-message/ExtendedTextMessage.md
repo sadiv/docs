@@ -1,44 +1,25 @@
-# ExtendedTextMessage
+# Входящее текстовое сообщение с URL
 
-Получено входящее сообщение о ссылке с данными
+В данном разделе описываются поля webhook уведомления объекта `messageData` специфичные для входящего текстового сообщение с URL. Для получения описания общих полей входящих сообщений обратитесь к разделу [Входящие сообщения](/api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived). 
 
-## webhook {#webhook}
+Для получения webhook уведомлений данного вида требуется выполнение двух условий:
+
+`typeWebhook` = `incomingMessageReceived`
+
+`messageData.typeMessage` = `extendedTextMessage`
+
+## Webhook {#webhook}
 
 ### Поля webhook {#webhook-parameters}
 
-Параметр | Тип | Описание
------ | ----- | -----
-`typeWebhook` | **string** | Тип webhook уведомления. Возможные варианты stateInstanceChanged, outgoingMessageStatus, incomingMessageReceived, deviceInfo. В данном случае поле равняется incomingMessageReceived.
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX формате
-`idMessage` | **string** | Идентификатор входящего сообщения
-`senderData` | **object** | Данные об отправителе сообщения/файла
-`messageData` | **object** | Данные о принятом сообщении/файле
-
-Поля объекта instanceData
+Поля объекта `messageData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате Whatsapp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `extendedTextMessage`
+`extendedTextMessageData` | **object** | Объект данных о принятой ссылке с метаданными
 
-Поля объекта senderData
-
-Параметр | Тип | Описание
------ | ----- | -----
-`chatId` | **string** | [Идентификатор чата](/api/chat-id), в котором получено сообщение или файл
-`sender` | **string** | [Идентификатор](/api/chat-id#corr) отправителя сообщения или файла
-`senderName` | **string** | Имя отправителя
-
-Поля объекта messageData
-
-Параметр | Тип | Описание
------ | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения, возможные значения: textMessage, imageMessage, videoMessage, documentMessage, audioMessage, locationMessage, contactMessage, extendedTextMessage. В данном случае поле принимает значение extendedTextMessage
-`extendedTextMessageData` | **object** | Объект данных о принятой ссылке с метаданными, когда typeMessage = extendedTextMessage
-
-Поля объекта extendedTextMessageData
+Поля объекта `extendedTextMessageData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
@@ -46,7 +27,7 @@
 `description` | **string** | Описание ссылки
 `title` | **string** | Заголовок ссылки
 `previewType` | **string** | Тип превью ссылки
-`jpegThumbnail` | **string** | Превью изображения в base64 кодировке
+`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
 
 ### Пример тела webhook {#webhook-example-body}
 
@@ -54,7 +35,7 @@
 {
     "typeWebhook": "incomingMessageReceived",
     "instanceData": {
-        "idInstance": 1,
+        "idInstance": 1234,
         "wid": "79001234567@c.us",
         "typeInstance": "whatsapp"
     },
@@ -63,14 +44,14 @@
     "senderData": {
         "chatId": "79001234568@c.us",
         "sender": "79001234568@c.us",
-        "senderName": "МТС Мой"
+        "senderName": "Green API"
     },
     "messageData": {
         "typeMessage": "extendedTextMessage",
         "extendedTextMessageData": {
             "text": "https://www.youtube.com/xxxxxxxxxxxxxxxxxxx",
-            "description": "Друзья! Это новый проект на канале Чердак. Вы увидите как я купил Ford Mustang по цене Iphone. Я начинаю строить настоящий американский Muscle Car. Сейчас у ...",
-            "title": "Как купить Ford Mustang по цене Iphone XS",
+            "description": "Green API docs shows how you can develop the WhatsApp bot",
+            "title": "How to develop WhatsApp bot",
             "previewType": "video",
             "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYG=="
         }
