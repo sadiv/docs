@@ -1,6 +1,6 @@
-# OutgoingMessageStatus
+# Статус отправленного сообщения
 
-Получен статус отправленного исходящего сообщения или файла
+Webhook уведомление данного типа содержит статус ранее отправленного сообщения: отправлено, доставлено, прочитано и др.
 
 ## webhook {#webhook}
 
@@ -8,23 +8,23 @@
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | Тип webhook уведомления. Возможные варианты stateInstanceChanged, outgoingMessageStatus, incomingMessageReceived, deviceInfo. В данном случае поле равняется outgoingMessageStatus.
+`typeWebhook` | **string** | Тип webhook уведомления. Для уведомлений данного типа поле принимает значение `outgoingMessageStatus`
 `instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX формате
-`idMessage` | **string** | Идентификатор исходящего сообщения или файла, отправленного методами sendMessage, sendFileByUrl, sendFileByUpload, sendLocation, sendContact, sendLink
-`status` | **string** | Статус отправленного исходящего сообщения или файла, которое может принимать пять значений:
-| | noAccount - нет аккаунта на номере телефона;
-| | notInGroup - не состоите в данной группе;
-| | sent - отправлено;
-| | delivered - доставлено;
-| | read - прочитано/просмотрено/прослушано
+`timestamp` | **integer** | Время наступления события в UNIX-формате
+`idMessage` | **string** | Идентификатор отправленного сообщения или файла. Идентификатор отправленного сообщения возвращается методами: [SendMessage](/api/sending/SendMessage), [SendFileByUrl](/api/sending/SendFileByUrl), [SendFileByUpload](/api/sending/SendFileByUpload), [SendLocation](/api/sending/SendLocation), [SendContact](/api/sending/SendContact), [SendLink](/api/sending/SendLink)
+`status` | **string** | Статус отправленного сообщения или файла. Статус принимает значения:
+| | `sent` - сообщение отправлено
+| | `delivered` - сообщение доставлено до получателя
+| | `read` - сообщение прочитано/просмотрено/прослушано получателем
+| | `noAccount` - на номере телефона получателя не зарегистрирован аккаунт WhatsApp
+| | `notInGroup` - отправитель не является участником группового чата, в который выполняется отправка сообщения
 
-Поля объекта instanceData
+Поля объекта `instanceData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
 `idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате Whatsapp
+`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
 `typeInstance` | **string** | Тип мессенджера для аккаунта
 
 ### Пример тела webhook {#webhook-example-body}
@@ -34,7 +34,7 @@
     "typeWebhook": "outgoingMessageStatus",
     "timestamp": 1586700802,
     "instanceData": {
-        "idInstance": 1,
+        "idInstance": 1234,
         "wid": "79001234567@c.us",
         "typeInstance": "whatsapp"
     },

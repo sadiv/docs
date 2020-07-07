@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/Reboot/{{apiTokenInstance
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`isReboot` | **boolean** | Результат перезапуска аккаунта Whatsapp
+`isReboot` | **boolean** | Результат перезапуска аккаунта WhatsApp
 
 ### Пример тела ответа {#response-example-body}
 

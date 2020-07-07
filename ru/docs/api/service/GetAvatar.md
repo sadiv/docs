@@ -1,6 +1,6 @@
 # GetAvatar
 
-Метод возвращает аватар аккаунта Whatsapp или группового чата.
+Метод возвращает аватар аккаунта WhatsApp или группового чата.
 
 ## Запрос {#request}
 
@@ -19,7 +19,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 
 ### Пример тела запроса {#request-example-body}
 
-Получить аватар аккаунта Whatsapp:
+Получить аватар аккаунта WhatsApp:
 ```json
 {
     "chatId": "79001234567@c.us"
@@ -39,7 +39,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`existsWhatsapp` | **boolean** | Флаг наличия Whatsapp на номере телефона
+`existsWhatsapp` | **boolean** | Флаг наличия WhatsApp на номере телефона
 `urlAvatar` | **string** | Ссылка на аватар пользователя/группы, пустое значение когда аватара нет или existsWhatsapp=false
 `reason` | **string** | Причина почему аватар не был проверен, присутствует когда не удалось выполнить проверку, возможные значения:
 | | bad request data - неверный формат номера телефона, должен быть 11 или 12 цифр. Или идентификатора чата;

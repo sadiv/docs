@@ -1,6 +1,6 @@
-# DeviceInfo
+# Статус устройства
 
-Получены данные об устройстве и уровне заряда батареи, на котором запущено приложение Whatsapp
+Webhook уведомление данного типа содержит данные об устройстве и уровне заряда батареи, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
 
 ## webhook {#webhook}
 
@@ -8,28 +8,28 @@
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | Тип webhook уведомления. Возможные варианты stateInstanceChanged, outgoingMessageStatus, incomingMessageReceived, deviceInfo. В данном случае поле равняется deviceInfo.
+`typeWebhook` | **string** | Тип webhook уведомления. Для уведомлений данного типа поле принимает значение `deviceInfo`
 `instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX формате
+`timestamp` | **integer** | Время наступления события в UNIX-формате
 `deviceData` | **object** | Данные об устройстве
 
-Поля объекта instanceData
+Поля объекта `instanceData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
 `idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате Whatsapp
+`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
 `typeInstance` | **string** | Тип мессенджера для аккаунта
 
-Поля объекта deviceData
+Поля объекта `deviceData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`platform` | **string** | Операционная система устройства на котором запущено приложение Whatsapp
+`platform` | **string** | Операционная система устройства, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
 `deviceManufacturer` | **string** | Производитель устройства
 `deviceModel` | **string** | Модель устройства
 `osVersion` | **string** | Версия операционной системы
-`waVersion` | **string** | Версия приложения Whatsapp
+`waVersion` | **string** | Версия приложения [WhatsApp Business](https://www.whatsapp.com/business/) или [WhatsApp](https://www.whatsapp.com/)
 `battery` | **integer** | Уровень заряда батареи
 
 ### Пример тела webhook {#webhook-example-body}
@@ -38,7 +38,7 @@
 {
     "typeWebhook": "deviceInfo",
     "instanceData": {
-        "idInstance": 1,
+        "idInstance": 1234,
         "wid": "79001234567@c.us",
         "typeInstance": "whatsapp"
     },

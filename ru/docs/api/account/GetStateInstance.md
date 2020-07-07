@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetStateInstance/{{apiTok
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`stateInstance` | **string** | Состояние авторизации аккаунта, возможные варианты: notAuthorized - аккаунт не авторизован, authorized - аккаунт авторизован, sleepMode - аккаунт в спящем режиме (когда устройство, на котором работает приложение Whatsapp, выключено)
+`stateInstance` | **string** | Состояние авторизации аккаунта, возможные варианты: notAuthorized - аккаунт не авторизован, authorized - аккаунт авторизован, sleepMode - аккаунт в спящем режиме (когда устройство, на котором работает приложение WhatsApp, выключено)
 
 ### Пример тела ответа {#response-example-body}
 

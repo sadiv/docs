@@ -19,9 +19,9 @@ wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 `message` | **string** | Содержание сообщения 
 | | если type=qrCode, message=изображение QR кода в base64 кодировке. Для вывода в браузере нужно добавить "data:image/png;base64, {message}";
 | | если type=error, message=описание ошибки;
-| | если type=alreadyLogged значит аккаунт Whatsapp уже авторизован, вызов QR кода невозможен;
+| | если type=alreadyLogged значит аккаунт WhatsApp уже авторизован, вызов QR кода невозможен;
 | | если type=timeoutExpired значит стекло время за которое QR код должен был отсканирован;
-`wid` | **string** | Идентификатор аккаунта в формате Whatsapp, когда type=accountData;
-`pushname` | **string** | Имя аккаунта в Whatsapp, когда type=accountData
+`wid` | **string** | Идентификатор аккаунта в формате WhatsApp, когда type=accountData;
+`pushname` | **string** | Имя аккаунта в WhatsApp, когда type=accountData
 `proxy` | **string** |  ip адрес закрепленного прокси за аккаунтом, когда type=accountData
 `webhookUrl` | **string** | URL для получения webhook уведомлений, когда type=accountData

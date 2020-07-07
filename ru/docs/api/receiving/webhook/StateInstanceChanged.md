@@ -21,7 +21,7 @@
 Параметр | Тип | Описание
 ----- | ----- | -----
 `idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате Whatsapp
+`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
 `typeInstance` | **string** | Тип мессенджера для аккаунта
 
 ### Пример тела webhook {#webhook-example-body}

@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/Logout/{{apiTokenInstance
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`isLogout` | **boolean** | Результат разлогинивания аккаунта Whatsapp
+`isLogout` | **boolean** | Результат разлогинивания аккаунта WhatsApp
 
 ### Пример тела ответа {#response-example-body}
 

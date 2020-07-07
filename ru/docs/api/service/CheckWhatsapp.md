@@ -1,10 +1,10 @@
 # CheckWhatsapp
 
-Метод проверяет наличие аккаунта Whatsapp на номере телефона.
+Метод проверяет наличие аккаунта WhatsApp на номере телефона.
 
 ## Запрос {#request}
 
-Для проверки наличия аккаунта Whatsapp требуется выполнить запрос по адресу:
+Для проверки наличия аккаунта WhatsApp требуется выполнить запрос по адресу:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiTokenInstance}}
 ```
@@ -31,7 +31,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiToken
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`existsWhatsapp` | **boolean** | Флаг наличия Whatsapp на номере телефона
+`existsWhatsapp` | **boolean** | Флаг наличия WhatsApp на номере телефона
 
 ### Пример тела ответа {#response-example-body}
 

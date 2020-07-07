@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`wid` | **string** | Идентификатор аккаунта в Whatsapp
+`wid` | **string** | Идентификатор аккаунта в WhatsApp
 `countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
 `webhookUrl` | **string** | URL для получения webhook уведомлений
