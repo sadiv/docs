@@ -23,7 +23,7 @@
 {% import "partials/language.html" as lang with context %}
 
 <!-- Application footer -->
-<footer class="md-footer mdl-mega-footer sg-header">
+<footer class="md-footer mdl-mega-footer sg-header" style="height: inherit">
 
   <!-- Link to previous and/or next page -->
   {% if page.previous_page or page.next_page %}
@@ -85,40 +85,27 @@
 
         <div class="mdl-mega-footer__drop-down-section">
             
-            <h1 class="mdl-mega-footer__heading">Документация</h1>
-            <ul class="mdl-mega-footer__link-list">
-                <li>
-                    <a href="/documents/quick-start.html" target="_self">
-                        Быстрый старт
-                    </a>
-                </li>
-                <li>
-                    <a href="/documents/green-api.html" target="_self">
-                        Документация Green API
-                    </a>
-                </li>
-                <li>
-                    <a href="https://documenter.getpostman.com/view/11185176/Szme3xf1" target="_blank">
-                        Документация Green API (полная)
-                    </a>
-                </li>
-            </ul>
+          <h1 class="mdl-mega-footer__heading">Документация</h1>
+          <ul class="mdl-mega-footer__link-list">
+              <li><a href="/docs/index.html" target="_self">Документация Green API</a></li>
+          </ul>
         </div>
 
         <div class="mdl-mega-footer__drop-down-section">
             
-            <h1 class="mdl-mega-footer__heading">Правовая информация</h1>
+    
+          <h1 class="mdl-mega-footer__heading">Правовая информация</h1>
 
-            <ul class="mdl-mega-footer__link-list">
-                <li><a href="/info/user-agreement.html" target="_blank">Пользовательское соглашение</a></li>
-                <li><a href="/info/service-agreement.html" target="_blank">Договор оферта</a></li>
-                <li><a href="/info/licence-agreement.html" target="_blank">Лицензионный договор</a></li>
-            </ul>
+          <ul class="mdl-mega-footer__link-list">
+              <li><a href="/info/user-agreement.html" target="_blank">Пользовательское соглашение</a></li>
+              <li><a href="/info/service-agreement.html" target="_blank">Договор оферта</a></li>
+              <li><a href="/info/licence-agreement.html" target="_blank">Лицензионный договор</a></li>
+          </ul>
+
         </div>
-
     </div>
 
-    <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-mega-footer__bottom-section" style="height: 56px">
         <div class="mdl-mega-footer__left-section">
             <div class="mdl-logo" style="color: #01dc08;">
                 © 2020 GREEN API
@@ -127,9 +114,38 @@
         <div class="mdl-mega-footer__right-section" style="margin-bottom: 0;">
             <a href="mailto:support@green-api.com" title="mailto:support@green-api.com" class="sb-email-support"><u>support@green-api.com</u></a>
             <a class="sb-contacts-whatsapp" href="https://wa.me/79057229701" target="_blank">
-                <img alt="Напишите нам по WhatsApp" src="/stylesheets/whatsapp.svg">
+                <img alt="Напишите нам по WhatsApp" src="/stylesheets/assets/whatsapp.svg">
             </a>
         </div>
+    </div>
+
+    <div class="mdl-mega-footer__bottom-section">
+      <div class="mdl-mega-footer__left-section">
+          ИП МАРЧЕНКО КРИСТИНА АЛЕКСАНДРОВНА<br>
+          ИНН 713602821887, ОГРНИП 319784700107785<br>
+          Фактический адрес: 192102, Санкт-Петербург, Волковский пр. 32, офис 5-5<br>
+          Телефон: 8-965-003-55-66
+      </div>
+      <div class="footer-payment_line">
+          <span>
+              <img src="/stylesheets/assets/1.png" alt="mir accept">
+          </span>
+          <span>
+              <img src="/stylesheets/assets/2.png" alt="mir accept">
+          </span>
+          <span>
+              <img src="/stylesheets/assets/3.png" alt="mir accept">
+          </span>
+          <span>
+              <img src="/stylesheets/assets/4.png" alt="mir accept">
+          </span>
+          <span>
+              <img src="/stylesheets/assets/5.png" alt="mir accept">
+          </span>
+          <span>
+              <img src="/stylesheets/assets/6.png" alt="mir accept">
+          </span>
+      </div>
     </div>
 </div>
 
