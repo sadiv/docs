@@ -1,6 +1,6 @@
-# StateInstanceChanged
+# Статус аккаунта
 
-Изменено состояние авторизации аккаунта
+Webhook уведомление данного типа содержит данные о состоянии авторизации аккаунта
 
 ## webhook {#webhook}
 
@@ -8,15 +8,15 @@
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | Тип webhook уведомления. Возможные варианты stateInstanceChanged, outgoingMessageStatus, incomingMessageReceived, deviceInfo. В данном случае поле равняется stateInstanceChanged.
+`typeWebhook` | **string** | Тип webhook уведомления. Для уведомлений данного типа поле принимает значение `stateInstanceChanged`
 `instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX формате
-`stateInstance` | **string** | Может принимать три значения:
-| | notAuthorized - аккаунт не авторизован;
-| | authorized - аккаунт авторизован;
-| | sleepMode - аккаунт ушел в спящий режим, возможен когда выключен телефон
+`timestamp` | **integer** | Время наступления события в UNIX-формате
+`stateInstance` | **string** | Состояние аккаунта. Принимает значения:
+| | `notAuthorized` - Аккаунт не авторизован. Для авторизации аккаунта обратитесь к разделу [Перед началом работы](/before-start#qr)
+| | `authorized` - Аккаунт авторизован
+| | `sleepMode` - Аккаунт ушел в спящий режим, возможен когда выключен телефон. После включения телефона может потребоваться до 5 минут для перевода состояния аккаунта в значение `authorized`.
 
-Поля объекта instanceData
+Поля объекта `instanceData`
 
 Параметр | Тип | Описание
 ----- | ----- | -----
