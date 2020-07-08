@@ -11,7 +11,7 @@
 GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](/before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
 
 ## Ответ {#response}
 

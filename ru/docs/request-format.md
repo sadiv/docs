@@ -6,7 +6,7 @@
 https://api.green-api.com/waInstance{{idInstance}}/{{method}}/{{apiTokenInstance}}
 ```
 
-Адрес запроса формируется из номера аккаунта `idInstance` и ключа доступа `apiTokenInstance`, которые требуется предварительно получить в [Личном кабинете](https://cabinet.green-api.com) согласно разделу [Перед началом работы](/before-start#parameters).
+Адрес запроса формируется из номера аккаунта `idInstance` и ключа доступа `apiTokenInstance`, которые требуется предварительно получить в [Личном кабинете](https://cabinet.green-api.com) согласно разделу [Перед началом работы](before-start#parameters).
 
 В качестве параметра `method` используется требуемый метод API, описанный в [Документации API](/api).
 
@@ -24,4 +24,4 @@ https://api.green-api.com/waInstance1234/SendMessage/bde035edae3fc00bc116bd11229
 
 ## Отладка запросов
 
-Для отладки запросов к Green API рекомендуется использовать [Коллекцию Postman](/postman-collection)
+Для отладки запросов к Green API рекомендуется использовать [Коллекцию Postman](postman-collection)
