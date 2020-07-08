@@ -1,5 +1,5 @@
-site_name: Документация Green API
-repo_name:  green-api/docs 
+site_name: Green API
+repo_name: green-api/docs 
 repo_url: https://github.com/green-api/docs
 edit_uri: edit/master/ru/docs/
 site_dir: build
@@ -9,20 +9,70 @@ nav:
     - 'На главную': '../'
     - 'Оглавление': 'index.md'
     - 'Быстрый старт':
-        - 'Настройка': 'api/sending/SendMessage.md'
-        - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
-        - 'Как отправить картинку': 'api/sending/SendMessage.md'
-        - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
-        - 'Как написать чат-бота': 'api/sending/SendMessage.md'
+         - 'Перед началом работы': 'before-start.md'
+         - 'Коллекция Postman': 'postman-collection.md'
+    #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
+    #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
+    #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
+    #     - 'Как написать чат-бота': 'api/sending/SendMessage.md'
     - 'Документация API':
-        - 'Аккаунт': 'api/sending/SendMessage.md'
+        - 'Обзор': 'api/index.md'
+        - 'Аккаунт':
+            - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
+            - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
+            - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
+            - 'Перезапустить аккаунт': 'api/account/Reboot.md'
+            - 'Разлогинить аккаунт': 'api/account/Logout.md'
+            - 'Авторизовать аккаунт (через websocket)': 'api/account/Scanqrcode.md'
         - 'Отправка':
             - 'Отправить текст': 'api/sending/SendMessage.md'
-        - 'Получение': 'api/sending/SendMessage.md'
-    - 'Интеграция':
-        - '1С': 'api/sending/SendMessage.md'
-        - 'NodeJS': 'api/sending/SendMessage.md'
-        - 'HTML': 'api/sending/SendMessage.md'
+            - 'Отправить видео, аудио, изображение, документ': 'api/sending/SendFileByUpload.md'
+            - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/SendFileByUrl.md'
+            - 'Отправить геолокацию': 'api/sending/SendLocation.md'
+            - 'Отправить контакт': 'api/sending/SendContact.md'
+            - 'Отправить ссылку': 'api/sending/SendLink.md'
+        - 'Получение':
+            - 'Webhook':
+                - 'Входящее сообщение':
+                    - 'Входящие сообщения': 'api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived.md'
+                    - 'Текст': 'api/receiving/webhook/incoming-message/TextMessage.md'
+                    - 'Текст с URL': 'api/receiving/webhook/incoming-message/ExtendedTextMessage.md'
+                    - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incoming-message/ImageMessage.md'
+                    - 'Геопозиция': 'api/receiving/webhook/incoming-message/LocationMessage.md'
+                    - 'Контакт': 'api/receiving/webhook/incoming-message/ContactMessage.md'
+                - 'Отправленное сообщение':
+                    - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoing-message/OutgoingMessageStatus.md'
+                - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
+                - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
+            - 'Получение файлов':
+                - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
+        - 'Журналы':
+            - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
+            - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
+        - 'Очереди':
+            - 'Получить очередь сообщений к отправке': 'api/queues/ShowMessagesQueue.md'
+            - 'Очистить очередь сообщений к отправке': 'api/queues/ClearMessagesQueue.md'
+        - 'Группы':
+            - 'Создать группу': 'api/groups/CreateGroup.md'
+            - 'Изменить имя группы': 'api/groups/UpdateGroupName.md'
+            - 'Получить информацию о группе': 'api/groups/GetGroupData.md'
+            - 'Добавить участника в группу': 'api/groups/AddGroupParticipant.md'
+            - 'Удалить участника из группы': 'api/groups/RemoveGroupParticipant.md'
+            - 'Назначить права администратора группы': 'api/groups/SetGroupAdmin.md'
+            - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
+            - 'Выйти из группы': 'api/groups/LeaveGroup.md'
+        - 'Отметка прочтения':
+            - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
+        - 'Устройство (телефон)':
+            - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
+        - 'Сервисные методы':
+            - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
+            - 'Получить аватар': 'api/service/GetAvatar.md'
+            - 'Получить контакты': 'api/service/GetContacts.md'
+    # - 'Интеграция':
+    #     - '1С': 'api/sending/SendMessage.md'
+    #     - 'NodeJS': 'api/sending/SendMessage.md'
+    #     - 'HTML': 'api/sending/SendMessage.md'
     
 theme:
   name: material
