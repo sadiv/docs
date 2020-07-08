@@ -3,7 +3,7 @@ repo_name: green-api/docs
 repo_url: https://github.com/green-api/docs
 edit_uri: edit/master/ru/docs/
 site_dir: build
-site_url: http://localhost:8000
+site_url: https://green-api.com
 
 nav:
     - 'На главную': '../'
