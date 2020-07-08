@@ -42,8 +42,9 @@ nav:
                     - 'Контакт': 'api/receiving/webhook/incoming-message/ContactMessage.md'
                 - 'Отправленное сообщение':
                     - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoing-message/OutgoingMessageStatus.md'
-                - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
-                - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
+                - 'Прочие':
+                    - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
+                    - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
             - 'Получение файлов':
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
