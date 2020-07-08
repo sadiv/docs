@@ -9,8 +9,9 @@ nav:
     - 'На главную': '../'
     - 'Оглавление': 'index.md'
     - 'Быстрый старт':
-         - 'Перед началом работы': 'before-start.md'
-         - 'Коллекция Postman': 'postman-collection.md'
+        - 'Перед началом работы': 'before-start.md'
+        - 'Выполнение запросов': 'request-format.md'
+        - 'Коллекция Postman': 'postman-collection.md'
     #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
     #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
     #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
@@ -18,6 +19,7 @@ nav:
     - 'Документация API':
         - 'Обзор': 'api/index.md'
         - 'Аккаунт':
+            - 'Аккаунт обзор': 'api/account/index.md'
             - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
             - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
             - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
@@ -25,6 +27,7 @@ nav:
             - 'Разлогинить аккаунт': 'api/account/Logout.md'
             - 'Авторизовать аккаунт (через websocket)': 'api/account/Scanqrcode.md'
         - 'Отправка':
+            - 'Отправка обзор': 'api/sending/index.md'
             - 'Отправить текст': 'api/sending/SendMessage.md'
             - 'Отправить видео, аудио, изображение, документ': 'api/sending/SendFileByUpload.md'
             - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/SendFileByUrl.md'
@@ -32,6 +35,7 @@ nav:
             - 'Отправить контакт': 'api/sending/SendContact.md'
             - 'Отправить ссылку': 'api/sending/SendLink.md'
         - 'Получение':
+            - 'Получение обзор': 'api/receiving/index.md'
             - 'Webhook':
                 - 'Входящее сообщение':
                     - 'Входящие сообщения': 'api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived.md'
@@ -48,12 +52,15 @@ nav:
             - 'Получение файлов':
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
+            - 'Журналы обзор': 'api/journals/index.md'
             - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
             - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
         - 'Очереди':
+            - 'Очереди обзор': 'api/queues/index.md'
             - 'Получить очередь сообщений к отправке': 'api/queues/ShowMessagesQueue.md'
             - 'Очистить очередь сообщений к отправке': 'api/queues/ClearMessagesQueue.md'
         - 'Группы':
+            - 'Группы обзор': 'api/groups/index.md'
             - 'Создать группу': 'api/groups/CreateGroup.md'
             - 'Изменить имя группы': 'api/groups/UpdateGroupName.md'
             - 'Получить информацию о группе': 'api/groups/GetGroupData.md'
@@ -63,10 +70,13 @@ nav:
             - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
             - 'Выйти из группы': 'api/groups/LeaveGroup.md'
         - 'Отметка прочтения':
+            - 'Отметка прочтения обзор': 'api/marks/index.md'
             - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
         - 'Устройство (телефон)':
+            - 'Устройство обзор': 'api/phone/index.md'
             - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
         - 'Сервисные методы':
+            - 'Сервисные методы обзор': 'api/service/index.md'
             - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
             - 'Получить аватар': 'api/service/GetAvatar.md'
             - 'Получить контакты': 'api/service/GetContacts.md'
