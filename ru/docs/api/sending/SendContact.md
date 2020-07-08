@@ -21,7 +21,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenIn
 `chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
 `contact` | **object** | Да | Объект о контакте
 
-Параметры объекта contact:
+Параметры объекта `contact`:
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
