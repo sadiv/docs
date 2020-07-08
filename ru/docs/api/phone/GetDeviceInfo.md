@@ -39,7 +39,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetDeviceInfo/{{apiTokenI
 
 ### Ошибки GetDeviceInfo {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

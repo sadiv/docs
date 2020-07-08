@@ -32,8 +32,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
 | | `locationMessage` - сообщение геолокации
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](/api/chat-id), в котором получено сообщение
-`senderId` | **string** | [Идентификатор](/api/chat-id#corr) отправителя сообщения
+`chatId` | **string** | [Идентификатор чата](../chat-id), в котором получено сообщение
+`senderId` | **string** | [Идентификатор](../chat-id#corr) отправителя сообщения
 `senderName` | **string** | Имя отправителя сообщения
 `textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
 `downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
@@ -97,7 +97,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
 
 ### Ошибки LastIncomingMessages {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

@@ -8,7 +8,7 @@ Webhook уведомление данного типа содержит данн
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | Тип webhook уведомления. Для уведомлений данного типа поле принимает значение `deviceInfo`
+`typeWebhook` | **string** | [Тип webhook уведомления](type-webhook). Для уведомлений данного типа поле принимает значение `deviceInfo`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `deviceData` | **object** | Данные об устройстве

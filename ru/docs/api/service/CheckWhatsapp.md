@@ -43,7 +43,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiToken
 
 ### Ошибки CheckWhatsapp {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 Код HTTP | Идентификатор ошибки | Описание
 ----- | ----- | -----

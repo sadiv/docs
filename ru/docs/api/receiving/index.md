@@ -4,23 +4,23 @@
 
 ## Webhook
 
-### [Входящее сообщение](/api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived)
+### [Входящее сообщение](./webhook/incoming-message/Webhook-IncomingMessageReceived)
 
-- [Входящее текстовое сообщение](/api/receiving/webhook/incoming-message/TextMessage)
-- [Входящее текстовое сообщение с URL](/api/receiving/webhook/incoming-message/ExtendedTextMessage)
-- [Входящее сообщение с изображением, видео, аудио, документом](/api/receiving/webhook/incoming-message/ImageMessage)
-- [Входящее сообщение с геолокацией](/api/receiving/webhook/incoming-message/LocationMessage)
-- [Входящее сообщение с контактом](/api/receiving/webhook/incoming-message/ContactMessage)
+- [Входящее текстовое сообщение](./webhook/incoming-message/TextMessage)
+- [Входящее текстовое сообщение с URL](./webhook/incoming-message/ExtendedTextMessage)
+- [Входящее сообщение с изображением, видео, аудио, документом](./webhook/incoming-message/ImageMessage)
+- [Входящее сообщение с геолокацией](./webhook/incoming-message/LocationMessage)
+- [Входящее сообщение с контактом](./webhook/incoming-message/ContactMessage)
 
 ### Отправленное сообщение
 
-- [Статус отправленного сообщения](/api/receiving/webhook/outgoing-message/OutgoingMessageStatus)
+- [Статус отправленного сообщения](./webhook/outgoing-message/OutgoingMessageStatus)
 
 ### Прочие
 
-- [Статус аккаунта](/api/receiving/webhook/StateInstanceChanged)
-- [Статус устройства](/api/receiving/webhook/DeviceInfo)
+- [Статус аккаунта](./webhook/StateInstanceChanged)
+- [Статус устройства](./webhook/DeviceInfo)
 
 ## Получение файлов
 
-- [Скачать файл из входящего сообщения](/api/receiving/files/DownloadFile)
+- [Скачать файл из входящего сообщения](./files/DownloadFile)

@@ -15,8 +15,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
-`participantChatId` | **string** | Да | [Идентификатор](/api/chat-id#corr) участника группы, назначаемого в качестве администратора
+`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id#gus)
+`participantChatId` | **string** | Да | [Идентификатор](../chat-id#corr) участника группы, назначаемого в качестве администратора
 
 ### Пример тела запроса {#request-example-body}
 
@@ -46,7 +46,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 
 ### Ошибки SetGroupAdmin {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

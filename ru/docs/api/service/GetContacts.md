@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenIns
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор корреспондента или группового чата](/api/chat-id)
+`id` | **string** | [Идентификатор корреспондента или группового чата](../chat-id)
 `name` | **string** | Имя контакта
 `type` | **string** | Тип контакта. Возможные значения:
 ||`user` - контакт приналдежит корреспонденту
@@ -48,7 +48,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenIns
 
 ### Ошибки GetContacts {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

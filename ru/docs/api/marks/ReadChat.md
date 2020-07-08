@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/ReadChat/{{apiTokenInsta
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
+`chatId` | **string** | Да | [Идентификатор чата](../chat-id)
 `idMessage` | **string** | Нет | Идентификатор входящего сообщения, которое необходимо отметить прочитанным. Если не указан, то все непрочитанные сообщения в чате будут отмечены прочитанными.
 
 ### Пример тела запроса {#request-example-body}
@@ -53,7 +53,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/ReadChat/{{apiTokenInsta
 
 ### Ошибки ReadChatMessage {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

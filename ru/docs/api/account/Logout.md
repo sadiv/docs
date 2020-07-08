@@ -29,7 +29,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/Logout/{{apiTokenInstance
 
 ### Ошибки Logout {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

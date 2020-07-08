@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
+`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id#gus)
 `groupName` | **string** | Да | Наименование группового чата
 
 ### Пример тела запроса {#request-example-body}
@@ -45,7 +45,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 
 ### Ошибки UpdateGroupName {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

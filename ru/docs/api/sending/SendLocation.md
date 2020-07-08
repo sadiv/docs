@@ -2,7 +2,7 @@
 
 Метод предназначен для отправки сообщения геолокации.
 Сообщение будет добавлено в очередь на отправку.
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](/api/send-messages-delay).
+Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay).
 
 ## Запрос {#request}
 
@@ -17,7 +17,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenI
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
+`chatId` | **string** | Да | [Идентификатор чата](../chat-id)
 `nameLocation` | **string** | Нет | Название локации
 `address` | **string** | Нет | Адрес локации
 `latitude` | **double** | Да | Широта локации
@@ -64,7 +64,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenI
 
 ### Ошибки SendLocation {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

@@ -15,7 +15,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](/api/chat-id)
+`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](../chat-id)
 
 ### Пример тела запроса {#request-example-body}
 
@@ -56,7 +56,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 
 ### Ошибки GetAvatar {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 Код HTTP | Идентификатор ошибки | Описание
 ----- | ----- | -----

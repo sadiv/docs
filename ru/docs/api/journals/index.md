@@ -2,5 +2,5 @@
 
 В данном разделе представлены методы по работе с журналами входящих и отправленных сообщений
 
-- [Получить журнал входящих сообщений](/api/journals/LastIncomingMessages)
-- [Получить журнал отправленных сообщений](/api/journals/LastOutgoingMessages)
+- [Получить журнал входящих сообщений](./journals/LastIncomingMessages)
+- [Получить журнал отправленных сообщений](./journals/LastOutgoingMessages)

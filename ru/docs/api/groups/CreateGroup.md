@@ -16,7 +16,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
 `groupName` | **string** | Да | Наименование нового группового чата
-`chatIds` | **array<string>** | Да | Коллекция [идентификаторов](/api/chat-id#corr) участников группы
+`chatIds` | **array<string>** | Да | Коллекция [идентификаторов](../chat-id#corr) участников группы
 
 ### Пример тела запроса {#request-example-body}
 
@@ -37,7 +37,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 Поле | Тип |  Описание
 ----- | ----- | ----- 
 `created` | **boolean** | Флаг создания группы
-`chatId` | **string** | [Идентификатор группового чата](/api/chat-id#gus)
+`chatId` | **string** | [Идентификатор группового чата](../chat-id#gus)
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
 ### Пример тела ответа {#response-example-body}
@@ -52,7 +52,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 
 ### Ошибки CreateGroup {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
 
 ## Пример кода на Python  {#request-example-python}
 

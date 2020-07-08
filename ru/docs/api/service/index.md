@@ -2,6 +2,6 @@
 
 В данном разделе представлены различные сервисные методы
 
-- [Проверить наличие WhatsApp](/api/service/CheckWhatsapp)
-- [Получить аватар](/api/service/GetAvatar)
-- [Получить контакты](/api/service/GetContacts)
+- [Проверить наличие WhatsApp](CheckWhatsapp)
+- [Получить аватар](GetAvatar)
+- [Получить контакты](GetContacts)
