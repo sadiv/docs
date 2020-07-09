@@ -8,9 +8,9 @@ Webhook уведомления могут быть следующих типов
 - `deviceInfo` - уведомление об устройстве (телефоне) и уровне заряда батареи
 
 ## Получение webhook уведомлений разных типов
-Для включения или отключения webhook уведомлений по типам используйте метод [SetSettings](/api/account/SetSettings)
+Для включения или отключения webhook уведомлений по типам используйте метод [SetSettings](../../../api/account/SetSettings.md)
 
-### Пример тела запроса метода [SetSettings](/api/account/SetSettings) {#request-example-body}
+### Пример тела запроса метода [SetSettings](../../../api/account/SetSettings.md) {#request-example-body}
 
 ```json
 {

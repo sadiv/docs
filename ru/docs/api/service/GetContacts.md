@@ -9,7 +9,7 @@
 GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ## Ответ {#response}
 
@@ -17,7 +17,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenIns
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор корреспондента или группового чата](/api/chat-id)
+`id` | **string** | [Идентификатор корреспондента или группового чата](../chat-id.md)
 `name` | **string** | Имя контакта
 `type` | **string** | Тип контакта. Возможные значения:
 ||`user` - контакт приналдежит корреспонденту
@@ -48,7 +48,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenIns
 
 ### Ошибки GetContacts {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

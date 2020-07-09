@@ -2,12 +2,12 @@
 
 В данном разделе представлены методы по работе с Аккаунтом
 
-- [Получить настройки аккаунта](/api/account/GetSettings)
-- [Установить настройки аккаунта](/api/account/SetSettings)
-- [Получить состояние аккаунта](/api/account/GetStateInstance)
-- [Перезапустить аккаунт](/api/account/Reboot)
-- [Разлогинить аккаунт](/api/account/Logout)
-- [Авторизовать аккаунт (через websocket)](/api/account/Scanqrcode)
+- [Получить настройки аккаунта](./account/GetSettings.md)
+- [Установить настройки аккаунта](./account/SetSettings.md)
+- [Получить состояние аккаунта](./account/GetStateInstance.md)
+- [Перезапустить аккаунт](./account/Reboot.md)
+- [Разлогинить аккаунт](./account/Logout.md)
+- [Авторизовать аккаунт (через websocket)](./account/Scanqrcode.md)
 
 
 

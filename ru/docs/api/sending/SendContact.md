@@ -3,7 +3,7 @@
 Метод предназначен для отправки сообщения с контактом.
 Формируется визитная карточка контакта и отправляется в чат.
 Сообщение будет добавлено в очередь на отправку.
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](/api/send-messages-delay).
+Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
 
 ## Запрос {#request}
 
@@ -12,13 +12,13 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
+`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
 `contact` | **object** | Да | Объект о контакте
 
 Параметры объекта `contact`:
@@ -79,7 +79,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenIn
 
 ### Ошибки SendContact {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

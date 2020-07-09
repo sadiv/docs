@@ -9,7 +9,7 @@
 GET https://api.green-api.com/waInstance{{idInstance}}/GetStateInstance/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ## Ответ {#response}
 
@@ -29,7 +29,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetStateInstance/{{apiTok
 
 ### Ошибки GetStateInstance {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

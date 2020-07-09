@@ -9,13 +9,13 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](/api/chat-id#gus)
+`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
 
 ### Пример тела запроса {#request-example-body}
 
@@ -31,20 +31,20 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`groupId` | **string** | [Идентификатор группового чата](/api/chat-id#gus)
-`owner` | **string** | [Идентификатор](/api/chat-id#corr) владельца группы
+`groupId` | **string** | [Идентификатор группового чата](../chat-id.md#gus)
+`owner` | **string** | [Идентификатор](../chat-id.md#corr) владельца группы
 `subject` | **string** | Наименование группы
 `creation` | **integer** | Время создания группы в Unix-формате
 `participants` | **array** | Коллекция участников группы
 `subjectTime` | **integer** | Время создания наименования группы в Unix-формате
-`subjectOwner` | **string** | [Идентификатор](/api/chat-id#corr) пользователя создавшего наименование группы
+`subjectOwner` | **string** | [Идентификатор](../chat-id.md#corr) пользователя создавшего наименование группы
 `groupInviteLink` | **string** | Ссылка приглашения в группу
 
 Поля объектов из массива `participants`
 
 Поле | Тип |  Описание
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор](/api/chat-id#corr) участника группового чата
+`id` | **string** | [Идентификатор](../chat-id.md#corr) участника группового чата
 `isAdmin` | **boolean** | Флаг, является ли пользователь администратором группы
 `isSuperAdmin` | **boolean** | Флаг, является ли пользователь супер администратором группы
 
@@ -81,7 +81,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 ### Ошибки GetGroupData {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

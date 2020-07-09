@@ -2,7 +2,7 @@
 
 Метод предназначен для отправки сообщения со ссылкой, по которой будут добавлены превью изображения, заголовок и описание.
 Картинка, заголовок и описание получаются из [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) разметки страницы, на которую указывает ссылка.
-Сообщение будет добавлено в очередь на отправку. Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](/api/send-messages-delay).
+Сообщение будет добавлено в очередь на отправку. Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
 
 ## Запрос {#request}
 
@@ -11,13 +11,13 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/SendLink/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](/api/chat-id)
+`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
 `urlLink` | **string** | Да | Адрес ссылки
 
 > Рекомендуется, чтобы страница, на которую указыает ссылка `urlLink` содержала разметку [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol). В этом случае сообщение будет дополнено картинкой, заголовком и кратким описанием.
@@ -58,7 +58,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLink/{{apiTokenInsta
 
 ### Ошибки SendLink {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

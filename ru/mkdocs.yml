@@ -6,7 +6,7 @@ site_dir: build
 site_url: https://green-api.com
 
 nav:
-    - 'На главную': '../'
+    - 'На главную': '/'
     - 'Оглавление': 'index.md'
     - 'Быстрый старт':
         - 'Перед началом работы': 'before-start.md'

@@ -1,20 +1,20 @@
 # Входящие сообщения
 
-В данном разделе приводится описание общих полей входящих сообщений webhook с типом `incomingMessageReceived`. Описание всех типов webhook уведолмений представлено в разделе [Типы webhook уведомлений](/api/receiving/webhook/type-webhook).
+В данном разделе приводится описание общих полей входящих сообщений webhook с типом `incomingMessageReceived`. Описание всех типов webhook уведолмений представлено в разделе [Типы webhook уведомлений](../type-webhook.md).
 
 Система предусматривает получение webhook уведомлений о входящих сообщениях следующих видов:
 
-- [Входящее текстовое сообщение](/api/receiving/webhook/incoming-message/TextMessage)
-- [Входящее текстовое сообщение с URL](/api/receiving/webhook/incoming-message/ExtendedTextMessage)
-- [Входящее сообщение с изображением, видео, аудио, документом](/api/receiving/webhook/incoming-message/ImageMessage)
-- [Входящее сообщение с геолокацией](/api/receiving/webhook/incoming-message/LocationMessage)
-- [Входящее сообщение с контактом](/api/receiving/webhook/incoming-message/ContactMessage)
+- [Входящее текстовое сообщение](TextMessage)
+- [Входящее текстовое сообщение с URL](ExtendedTextMessage)
+- [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage)
+- [Входящее сообщение с геолокацией](LocationMessage)
+- [Входящее сообщение с контактом](ContactMessage)
 
 ## Поля webhook incomingMessageReceived {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип webhook уведомления](/api/receiving/webhook/type-webhook). Для webhook уведомления данного типа поле принимает значение `incomingMessageReceived`
+`typeWebhook` | **string** | [Тип webhook уведомления](../type-webhook.md). Для webhook уведомления данного типа поле принимает значение `incomingMessageReceived`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `idMessage` | **string** | Идентификатор входящего сообщения
@@ -33,19 +33,19 @@
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`chatId` | **string** | [Идентификатор чата](/api/chat-id), в котором получено сообщение или файл
-`sender` | **string** | [Идентификатор](/api/chat-id#corr) отправителя сообщения или файла
+`chatId` | **string** | [Идентификатор чата](../../../chat-id.md), в котором получено сообщение или файл
+`sender` | **string** | [Идентификатор](../../../chat-id.md#corr) отправителя сообщения или файла
 `senderName` | **string** | Имя отправителя
 
 ### Поля объекта `messageData`
 
 Объект `messageData` имеет разные поля в зависимости от типа входящего сообщения:
 
-- [Входящее текстовое сообщение](/api/receiving/webhook/incoming-message/TextMessage)
-- [Входящее текстовое сообщение с URL](/api/receiving/webhook/incoming-message/ExtendedTextMessage)
-- [Входящее сообщение с изображением, видео, аудио, документом](/api/receiving/webhook/incoming-message/ImageMessage)
-- [Входящее сообщение с геолокацией](/api/receiving/webhook/incoming-message/LocationMessage)
-- [Входящее сообщение с контактом](/api/receiving/webhook/incoming-message/ContactMessage)
+- [Входящее текстовое сообщение](TextMessage)
+- [Входящее текстовое сообщение с URL](ExtendedTextMessage)
+- [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage)
+- [Входящее сообщение с геолокацией](LocationMessage)
+- [Входящее сообщение с контактом](ContactMessage)
 
 ### Пример тела webhook {#webhook-example-body}
 

@@ -11,7 +11,7 @@
 GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ## Ответ {#response}
 
@@ -38,7 +38,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 | | `locationMessage` - сообщение геолокации
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](/api/chat-id), в который сообщение было отправлено
+`chatId` | **string** | [Идентификатор чата](../chat-id.md), в который сообщение было отправлено
 `textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
 `downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
 `caption` | **string** | Описание файла
@@ -99,7 +99,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 
 ### Ошибки LastOutgoingMessages {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](/api/common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 
