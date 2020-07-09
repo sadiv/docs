@@ -4,23 +4,23 @@
 
 ## Webhook
 
-### [Входящее сообщение](./webhook/incoming-message/Webhook-IncomingMessageReceived.md)
+### [Входящее сообщение](webhook/incoming-message/Webhook-IncomingMessageReceived.md)
 
-- [Входящее текстовое сообщение](./webhook/incoming-message/TextMessage)
-- [Входящее текстовое сообщение с URL](./webhook/incoming-message/ExtendedTextMessage)
-- [Входящее сообщение с изображением, видео, аудио, документом](./webhook/incoming-message/ImageMessage)
-- [Входящее сообщение с геолокацией](./webhook/incoming-message/LocationMessage)
-- [Входящее сообщение с контактом](./webhook/incoming-message/ContactMessage)
+- [Входящее текстовое сообщение](webhook/incoming-message/TextMessage.md)
+- [Входящее текстовое сообщение с URL](webhook/incoming-message/ExtendedTextMessage.md)
+- [Входящее сообщение с изображением, видео, аудио, документом](webhook/incoming-message/ImageMessage.md)
+- [Входящее сообщение с геолокацией](webhook/incoming-message/LocationMessage.md)
+- [Входящее сообщение с контактом](webhook/incoming-message/ContactMessage.md)
 
 ### Отправленное сообщение
 
-- [Статус отправленного сообщения](./webhook/outgoing-message/OutgoingMessageStatus)
+- [Статус отправленного сообщения](webhook/outgoing-message/OutgoingMessageStatus.md)
 
 ### Прочие
 
-- [Статус аккаунта](./webhook/StateInstanceChanged)
-- [Статус устройства](./webhook/DeviceInfo)
+- [Статус аккаунта](webhook/StateInstanceChanged.md)
+- [Статус устройства](webhook/DeviceInfo.md)
 
 ## Получение файлов
 
-- [Скачать файл из входящего сообщения](./files/DownloadFile)
+- [Скачать файл из входящего сообщения](files/DownloadFile.md)

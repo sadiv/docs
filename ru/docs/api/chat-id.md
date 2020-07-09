@@ -23,10 +23,10 @@
 
 Идентификатор группового чата может быть получен различными методами Green&nbsp;API, например:
 
-- [Создать группу](groups/CreateGroup)
-- [Получить журнал отправленных сообщений](journals/LastOutgoingMessages)
-- [Получить журнал входящих сообщений](journals/LastIncomingMessages)
-- [Входящее сообщение: Текст](receiving/webhook/incoming-message/TextMessage)
+- [Создать группу](groups/CreateGroup.md)
+- [Получить журнал отправленных сообщений](journals/LastOutgoingMessages.md)
+- [Получить журнал входящих сообщений](journals/LastIncomingMessages.md)
+- [Входящее сообщение: Текст](receiving/webhook/incoming-message/TextMessage.md)
 - и др.
 
 > **Важно**

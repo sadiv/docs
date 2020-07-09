@@ -11,7 +11,7 @@ Webhook уведомление данного типа содержит стат
 `typeWebhook` | **string** | [Тип webhook уведомления](../type-webhook.md). Для уведомлений данного типа поле принимает значение `outgoingMessageStatus`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
-`idMessage` | **string** | Идентификатор отправленного сообщения или файла. Идентификатор отправленного сообщения возвращается методами: [SendMessage](../../../../api/sending/SendMessage.md), [SendFileByUrl](../../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../../api/sending/SendFileByUpload.md), [SendLocation](../../../../api/sending/SendLocation), [SendContact](../../../../api/sending/SendContact), [SendLink](../../../../api/sending/SendLink)
+`idMessage` | **string** | Идентификатор отправленного сообщения или файла. Идентификатор отправленного сообщения возвращается методами: [SendMessage](../../../../api/sending/SendMessage.md), [SendFileByUrl](../../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../../api/sending/SendFileByUpload.md), [SendLocation](../../../../api/sending/SendLocation.md), [SendContact](../../../../api/sending/SendContact.md), [SendLink](../../../../api/sending/SendLink.md)
 `status` | **string** | Статус отправленного сообщения или файла. Статус принимает значения:
 | | `sent` - сообщение отправлено
 | | `delivered` - сообщение доставлено до получателя
