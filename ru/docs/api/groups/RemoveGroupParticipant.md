@@ -9,14 +9,14 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/RemoveGroupParticipant/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id#gus)
-`participantChatId` | **string** | Да | [Идентификатор](../chat-id#corr) участника, удаляемого из группы
+`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
+`participantChatId` | **string** | Да | [Идентификатор](../chat-id.md#corr) участника, удаляемого из группы
 
 ### Пример тела запроса {#request-example-body}
 
@@ -46,7 +46,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/RemoveGroupParticipant/{
 
 ### Ошибки RemoveGroupParticipant {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

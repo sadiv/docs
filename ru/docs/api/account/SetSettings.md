@@ -11,7 +11,7 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
@@ -21,7 +21,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 ----- | ----- | ----- | -----
 `countryInstance` | **string** | Нет | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `webhookUrl` | **string** | Нет | URL для отправки webhook уведомлений. Если требуется отключить получение webhook уведомлений, то укажите пустую строку
-`delaySendMessagesMilliseconds` | **integer** | Нет | [Интервал отправки сообщений](../send-messages-delay) в миллисекундах. Минимальное значение 500 мсек
+`delaySendMessagesMilliseconds` | **integer** | Нет | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах. Минимальное значение 500 мсек
 `markIncomingMessagesReaded` | **string** | Нет | Отмечать входящие сообщения прочитанными. Возможные значения: `yes`, `no`
 `proxyInstance` | **string** | Нет | Прокси для аккаунта в формате `{ip}:{port}:{login}:{password}`, если вы хотите что бы аккаунт работал на вашем прокси, по умолчанию используются системные прокси
 `outgoingWebhook` | **string** | Нет |Получать webhook уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
@@ -63,7 +63,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 
 ### Ошибки SetSettings {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

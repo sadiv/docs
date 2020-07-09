@@ -9,7 +9,7 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
@@ -43,7 +43,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiToken
 
 ### Ошибки CheckWhatsapp {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 Код HTTP | Идентификатор ошибки | Описание
 ----- | ----- | -----

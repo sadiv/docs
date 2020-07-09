@@ -4,7 +4,7 @@
 
 ## Webhook
 
-### [Входящее сообщение](./webhook/incoming-message/Webhook-IncomingMessageReceived)
+### [Входящее сообщение](./webhook/incoming-message/Webhook-IncomingMessageReceived.md)
 
 - [Входящее текстовое сообщение](./webhook/incoming-message/TextMessage)
 - [Входящее текстовое сообщение с URL](./webhook/incoming-message/ExtendedTextMessage)

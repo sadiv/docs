@@ -9,13 +9,13 @@
 POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id#gus), из которого необходимо выйти.
+`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus), из которого необходимо выйти.
 
 ### Пример тела запроса {#request-example-body}
 
@@ -43,7 +43,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenIns
 
 ### Ошибки LeaveGroup {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример кода на Python  {#request-example-python}
 

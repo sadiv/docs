@@ -9,7 +9,7 @@
 GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start#parameters).
+Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
 ## Ответ {#response}
 
@@ -21,7 +21,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
 `webhookUrl` | **string** | URL для получения webhook уведомлений
-`delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay) в миллисекундах
+`delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay.md.md) в миллисекундах
 `markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`
 `proxyInstance` | **string** | Параметры прокси аккаунта. Отображаются в зависимости от настроек прокси. Если прокси собственное, отдаются все параметры в виде `ip:port:login:password`. Если прокси системное, отдается в зависимости от системных настроек прокси. Может принимать значения: `ip:port:login:password` или `system proxy`.
 `outgoingWebhook` | **string** | Получать webhook уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
@@ -49,7 +49,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 
 ### Ошибки GetSettings {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors)
+Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md.md)
 
 ## Пример кода на Python  {#request-example-python}
 
