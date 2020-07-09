@@ -21,6 +21,10 @@
 - [Статус аккаунта](webhook/StateInstanceChanged.md)
 - [Статус устройства](webhook/DeviceInfo.md)
 
+### Объекты
+
+- [Типы webhook уведомлений](webhook/type-webhook.md)
+
 ## Получение файлов
 
 - [Скачать файл из входящего сообщения](files/DownloadFile.md)

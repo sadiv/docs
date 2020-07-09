@@ -43,6 +43,10 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 - [Статус аккаунта](./receiving/webhook/StateInstanceChanged.md)
 - [Статус устройства](./receiving/webhook/DeviceInfo.md)
 
+### Объекты
+
+- [Типы webhook уведомлений](./receiving/webhook/type-webhook.md)
+
 ### Получение файлов {#receiving-files}
 
 - [Скачать файл из входящего сообщения](./receiving/files/DownloadFile.md)
@@ -81,3 +85,9 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 - [Проверить наличие WhatsApp](./service/CheckWhatsapp.md)
 - [Получить аватар](./service/GetAvatar.md)
 - [Получить контакты](./service/GetContacts.md)
+
+## Прочее {#dif}
+
+- [Идентификатор чата](chat-id.md)
+- [Интервал отправки сообщений](send-messages-delay.md)
+- [Стандартные ошибки](common-errors.md)

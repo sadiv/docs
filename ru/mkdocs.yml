@@ -49,6 +49,8 @@ nav:
                 - 'Прочие':
                     - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
                     - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
+                - 'Объекты':
+                    - 'Типы webhook уведомлений': 'api/receiving/webhook/type-webhook.md'
             - 'Получение файлов':
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
@@ -80,6 +82,10 @@ nav:
             - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
             - 'Получить аватар': 'api/service/GetAvatar.md'
             - 'Получить контакты': 'api/service/GetContacts.md'
+        - 'Прочее':
+            - 'Идентификатор чата': 'api/chat-id.md'
+            - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
+            - 'Стандартные ошибки': 'api/common-errors.md'
     # - 'Интеграция':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
