@@ -22,9 +22,7 @@ section {
 }
 
 .mdl-mega-footer__drop-down-section {
-    width: 24%;
     display: block;
-    position: relative;
     float: left;
 }
 .mdl-mega-footer__heading {
