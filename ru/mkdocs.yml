@@ -109,7 +109,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/green-api-logo.png
-  logo: assets/green-api-logo.png
 
 extra_css:
   - stylesheets/styles.css
