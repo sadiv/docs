@@ -4,10 +4,6 @@
     background-color: #424242;
 }
 
-.sg-header {
-    background-color: black;
-}
-
 .mdl-color-text--grey-700 {
     color: #969696 !important;
 }
@@ -86,6 +82,6 @@ img {
     vertical-align: middle;
 }
 
-.sg-header {
+.sg-footer {
     background-color:  black;
 }
