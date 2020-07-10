@@ -100,7 +100,7 @@ theme:
   search_index_only: true
 
   # Default values, taken from mkdocs_theme.yml
-  language: en
+  language: ru
   palette:
     scheme: default
     primary: green
@@ -116,7 +116,10 @@ extra_css:
   
 # Plugins
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - ru
   - minify:
       minify_html: true
 
