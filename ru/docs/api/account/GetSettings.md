@@ -33,7 +33,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 
 ```json
 {
-    "wid": "1234567891@c.us", 
+    "wid": "79001234567@c.us", 
     "countryInstance": "ru",
     "typeAccount": "vip",
     "webhookUrl": "https://mysite.com/webhook/green-api/",
@@ -43,7 +43,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "outgoingWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
-    "deviceWebhook": "no",
+    "deviceWebhook": "no"
 }
 ```
 

@@ -28,7 +28,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLink/{{apiTokenInsta
 ```json
 {
     "chatId": "79001234567@c.us",
-    "urlLink": "https://my.site.com"
+    "urlLink": "https://green-api.com"
 }
 ```
 
@@ -36,7 +36,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLink/{{apiTokenInsta
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
-    "urlLink": "https://my.site.com"
+    "urlLink": "https://green-api.com"
 }
 ```
 
@@ -67,7 +67,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://www.youtube.com/watch?v=00000000000\"\r\n}\r\n"
+payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"urlLink\": \"https://green-api.com\"\r\n}\r\n"
 headers = {
   'Content-Type': 'application/json'
 }

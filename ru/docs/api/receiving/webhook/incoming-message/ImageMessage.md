@@ -46,7 +46,7 @@
     "messageData":{
         "typeMessage":"imageMessage",
         "fileMessageData":{
-            "downloadUrl":"https://my.site.com/img",
+            "downloadUrl":"https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF",
             "caption":"Картинка"
         }
     }

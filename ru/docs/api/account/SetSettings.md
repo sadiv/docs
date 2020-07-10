@@ -37,7 +37,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
     "webhookUrl": "https://mysite.com/webhook/green-api/",
     "delaySendMessagesMilliseconds": 1000,
     "markIncomingMessagesReaded": "no",
-    "proxyInstance": "123.45.67.891:3435:hdhhd:i3ji3",
+    "proxyInstance": "100.100.100.100:3535:login:password",
     "outgoingWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",

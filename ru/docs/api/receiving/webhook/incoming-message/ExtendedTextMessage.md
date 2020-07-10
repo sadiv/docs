@@ -49,9 +49,9 @@
     "messageData": {
         "typeMessage": "extendedTextMessage",
         "extendedTextMessageData": {
-            "text": "https://www.youtube.com/xxxxxxxxxxxxxxxxxxx",
-            "description": "Green API docs shows how you can develop the WhatsApp bot",
-            "title": "How to develop WhatsApp bot",
+            "text": "https://green-api.com/docs/video",
+            "description": "Green API docs shows how you can develop the WhatsApp Bot",
+            "title": "How to develop WhatsApp Bot",
             "previewType": "video",
             "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYG=="
         }
