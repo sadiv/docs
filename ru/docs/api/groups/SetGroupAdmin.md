@@ -24,7 +24,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
-    "participantChatId": "79001234568@c.us"
+    "participantChatId": "79001234565@c.us"
 }
 ```
 

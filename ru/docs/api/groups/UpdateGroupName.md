@@ -22,8 +22,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 
 ```json
 {
-    "groupId": "12345678910-1112131415@g.us",
-    "groupName": "Group created by Green API"
+    "groupId": "79001234567-1587570015@g.us",
+    "groupName": "Group created by Green API+"
 }
 ```
 

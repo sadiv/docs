@@ -24,8 +24,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 {
     "groupName": "Group created by Green API",
     "chatIds": [
-        "79001234567@c.us",
-        "79001234568@c.us"
+        "79001234568@c.us",
+        "79001234569@c.us"
     ]
 }
 ```
