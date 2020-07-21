@@ -1,8 +1,8 @@
 # Входящие сообщения
 
-В данном разделе приводится описание общих полей входящих сообщений webhook с типом `incomingMessageReceived`. Описание всех типов webhook уведолмений представлено в разделе [Типы webhook уведомлений](../type-webhook.md).
+В данном разделе приводится описание общего формата входящих уведомлений с типом `incomingMessageReceived`. Описание всех типов входящих уведолмений представлено в разделе [Типы входящих уведомлений](../type-webhook.md).
 
-Система предусматривает получение webhook уведомлений о входящих сообщениях следующих видов:
+Система предусматривает получение уведомлений о входящих сообщениях следующих видов:
 
 - [Входящее текстовое сообщение](TextMessage.md)
 - [Входящее текстовое сообщение с URL](ExtendedTextMessage.md)
@@ -10,11 +10,11 @@
 - [Входящее сообщение с геолокацией](LocationMessage.md)
 - [Входящее сообщение с контактом](ContactMessage.md)
 
-## Поля webhook incomingMessageReceived {#webhook-parameters}
+## Поля уведомления incomingMessageReceived {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип webhook уведомления](../type-webhook.md). Для webhook уведомления данного типа поле принимает значение `incomingMessageReceived`
+`typeWebhook` | **string** | [Тип входящего уведомления](../type-webhook.md). Для уведомления данного типа поле принимает значение `incomingMessageReceived`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `idMessage` | **string** | Идентификатор входящего сообщения
@@ -47,7 +47,7 @@
 - [Входящее сообщение с геолокацией](LocationMessage.md)
 - [Входящее сообщение с контактом](ContactMessage.md)
 
-### Пример тела webhook {#webhook-example-body}
+### Пример тела уведомления {#webhook-example-body}
 
 ```json
 {

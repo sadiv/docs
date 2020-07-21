@@ -1,14 +1,14 @@
 # Статус отправленного сообщения
 
-Webhook уведомление данного типа содержит статус ранее отправленного сообщения: отправлено, доставлено, прочитано и др.
+Входящее уведомление данного типа содержит статус ранее отправленного сообщения: отправлено, доставлено, прочитано и др.
 
-## webhook {#webhook}
+## Уведомление {#webhook}
 
-### Поля webhook {#webhook-parameters}
+### Формат уведомления {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип webhook уведомления](../type-webhook.md). Для уведомлений данного типа поле принимает значение `outgoingMessageStatus`
+`typeWebhook` | **string** | [Тип входящего уведомления](../type-webhook.md). Для уведомлений данного типа поле принимает значение `outgoingMessageStatus`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `idMessage` | **string** | Идентификатор отправленного сообщения или файла. Идентификатор отправленного сообщения возвращается методами: [SendMessage](../../../../api/sending/SendMessage.md), [SendFileByUrl](../../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../../api/sending/SendFileByUpload.md), [SendLocation](../../../../api/sending/SendLocation.md), [SendContact](../../../../api/sending/SendContact.md), [SendLink](../../../../api/sending/SendLink.md)
@@ -27,7 +27,7 @@ Webhook уведомление данного типа содержит стат
 `wid` | **string** | Идентификатор аккаунта в формате WhatsApp
 `typeInstance` | **string** | Тип мессенджера для аккаунта
 
-### Пример тела webhook {#webhook-example-body}
+### Пример тела уведомления {#webhook-example-body}
 
 ```json
 {

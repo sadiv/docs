@@ -24,4 +24,4 @@ wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 `wid` | **string** | Идентификатор аккаунта в формате WhatsApp, когда type=accountData;
 `pushname` | **string** | Имя аккаунта в WhatsApp, когда type=accountData
 `proxy` | **string** |  ip адрес закрепленного прокси за аккаунтом, когда type=accountData
-`webhookUrl` | **string** | URL для получения webhook уведомлений, когда type=accountData
+`webhookUrl` | **string** | URL для получения уведомлений, когда type=accountData

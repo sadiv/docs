@@ -1,7 +1,7 @@
 # DownloadFile
 
 Метод предназначен для скачивания принятых и отправленных файлов.
-Ссылки на принятые файлы передаются во [Входящих сообщениях](../webhook/incoming-message/Webhook-IncomingMessageReceived.md), а также их можно получить методом [LastIncomingMessages](../../../api/journals/LastIncomingMessages.md).
+Ссылки на принятые файлы передаются во [Входящих сообщениях](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md), а также их можно получить методом [LastIncomingMessages](../../../api/journals/LastIncomingMessages.md).
 Ссылки на отправленные файлы можно получить методом [LastOutgoingMessages](../../../api/journals/LastOutgoingMessages.md).
 
 > Срок хранения файлов и соответственно возможность их скачивания ограничено 24 часами.
@@ -12,7 +12,7 @@
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`idMessage` | **string** | Да | Идентификатор сообщения, передаваемый во [Входящих сообщениях](../webhook/incoming-message/Webhook-IncomingMessageReceived.md) или при отправки файлов методами [SendFileByUrl](../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../api/sending/SendFileByUpload.md). Данный параметр передаётся как завершающая часть url запроса
+`idMessage` | **string** | Да | Идентификатор сообщения, передаваемый во [Входящих сообщениях](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) или при отправки файлов методами [SendFileByUrl](../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../api/sending/SendFileByUpload.md). Данный параметр передаётся как завершающая часть url запроса
 
 ## Ответ {#response}
 

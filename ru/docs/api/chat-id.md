@@ -26,7 +26,7 @@
 - [Создать группу](groups/CreateGroup.md)
 - [Получить журнал отправленных сообщений](journals/LastOutgoingMessages.md)
 - [Получить журнал входящих сообщений](journals/LastIncomingMessages.md)
-- [Входящее сообщение: Текст](receiving/webhook/incoming-message/TextMessage.md)
+- [Входящее сообщение: Текст](receiving/notifications-format/incoming-message/TextMessage.md)
 - и др.
 
 > **Важно**

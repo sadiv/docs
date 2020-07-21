@@ -20,7 +20,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiT
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`receiptId` | **integer** | Да | Идентификатор для удаления входящего уведомления, полученный методом [ReceiveNotification](ReceiveNotification.md)
+`receiptId` | **integer** | Да | Идентификатор доставки для удаления входящего уведомления, полученный методом [ReceiveNotification](ReceiveNotification.md)
 
 
 ## Ответ {#response}
@@ -46,7 +46,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiT
 
 Код HTTP | Идентификатор ошибки | Описание
 ----- | ----- | -----
-500 | `Parameter receiptId must be a Number` | В качестве параметра `receiptId` требуется указывать число
+400 | `Parameter receiptId must be a Number` | В качестве параметра `receiptId` требуется указывать число
 
 
 ## Пример кода на Python  {#request-example-python}
@@ -63,3 +63,5 @@ response = requests.request("GET", url, headers=headers, data = payload)
 
 print(response.text.encode('utf8'))
 ```
+
+Пример кода получения уведомлений на [NodeJS](https://nodejs.org) можно посмотреть в файле [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js)

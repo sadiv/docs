@@ -36,8 +36,12 @@ nav:
             - 'Отправить ссылку': 'api/sending/SendLink.md'
         - 'Получение':
             - 'Концепция': 'api/receiving/index.md'
-            - 'Получение через HTTP API': 'api/receiving/technology-http-api.md'
-            - 'Получение через Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
+            - 'HTTP API':
+                - 'Технология HTTP API': 'api/receiving/technology-http-api.md'
+                - 'Получить уведомление': 'api/receiving/technology-http-api/ReceiveNotification.md'
+                - 'Удалить уведомление': 'api/receiving/technology-http-api/DeleteNotification.md'
+            - 'Webhook Endpoint':
+                - 'Технология Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
             - 'Формат входящих уведомлений':
                 - 'Обзор': 'api/receiving/notifications-format/index.md'
                 - 'Входящее сообщение':
