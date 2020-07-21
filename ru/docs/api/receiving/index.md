@@ -4,8 +4,8 @@
 
 Для получения входящих уведомлений в Green API предусмотрено две технологии:
 
-- [Получение через HTTP API (рекомендуется)](technology-http-api.md)
-- [Получение через Webhook Endpoint](technology-webhook-endpoint.md)
+- [Получение уведомлений через HTTP API (рекомендуется)](technology-http-api.md)
+- [Получение уведомлений через Webhook Endpoint](technology-webhook-endpoint.md)
 
 Формат уведомлений подробно описан в разделе [Формат входящих уведомлений](notifications-format/index.md)
 
