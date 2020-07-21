@@ -1,14 +1,14 @@
 # Статус аккаунта
 
-Webhook уведомление данного типа содержит данные о состоянии авторизации аккаунта
+Входящее уведомление данного типа содержит данные о состоянии авторизации аккаунта
 
-## webhook {#webhook}
+## Уведомление {#webhook}
 
-### Поля webhook {#webhook-parameters}
+### Формат уведомления {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип webhook уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `stateInstanceChanged`
+`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `stateInstanceChanged`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `stateInstance` | **string** | Состояние аккаунта. Принимает значения:
@@ -24,7 +24,7 @@ Webhook уведомление данного типа содержит данн
 `wid` | **string** | Идентификатор аккаунта в формате WhatsApp
 `typeInstance` | **string** | Тип мессенджера для аккаунта
 
-### Пример тела webhook {#webhook-example-body}
+### Пример тела уведомления {#webhook-example-body}
 
 ```json
 {

@@ -1,14 +1,14 @@
 # Статус устройства
 
-Webhook уведомление данного типа содержит данные об устройстве и уровне заряда батареи, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
+Входящее уведомление данного типа содержит данные об устройстве и уровне заряда батареи, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
 
-## webhook {#webhook}
+## Уведомление {#webhook}
 
-### Поля webhook {#webhook-parameters}
+### Формат уведомления {#webhook-parameters}
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип webhook уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `deviceInfo`
+`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `deviceInfo`
 `instanceData` | **object** | Данные об аккаунте
 `timestamp` | **integer** | Время наступления события в UNIX-формате
 `deviceData` | **object** | Данные об устройстве
@@ -32,7 +32,7 @@ Webhook уведомление данного типа содержит данн
 `waVersion` | **string** | Версия приложения [WhatsApp Business](https://www.whatsapp.com/business/) или [WhatsApp](https://www.whatsapp.com/)
 `battery` | **integer** | Уровень заряда батареи
 
-### Пример тела webhook {#webhook-example-body}
+### Пример тела уведомления {#webhook-example-body}
 
 ```json
 {

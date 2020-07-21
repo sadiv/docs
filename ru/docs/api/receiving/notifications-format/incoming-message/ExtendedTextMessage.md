@@ -1,16 +1,16 @@
 # Входящее текстовое сообщение с URL
 
-В данном разделе описываются поля webhook уведомления объекта `messageData` специфичные для входящего текстового сообщение с URL. Для получения описания общих полей входящих сообщений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего текстового сообщение с URL. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
 
-Для получения webhook уведомлений данного вида требуется выполнение двух условий:
+Для получения входящих уведомлений данного вида требуется выполнение двух условий:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `extendedTextMessage`
 
-## Webhook {#webhook}
+## Уведомление {#webhook}
 
-### Поля webhook {#webhook-parameters}
+### Формат уведомления {#webhook-parameters}
 
 Поля объекта `messageData`
 
@@ -29,7 +29,7 @@
 `previewType` | **string** | Тип превью ссылки
 `jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
 
-### Пример тела webhook {#webhook-example-body}
+### Пример тела уведомления {#webhook-example-body}
 
 ```json
 {

@@ -24,32 +24,39 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 
 ## [Получение](./receiving/index.md) {#receiving}
 
-### Webhook {#receiving-webhook}
+### [Получение уведомлений через HTTP API (рекомендуется)](receiving/technology-http-api.md) {#technology-http-api}
+- [Получить уведомление](receiving/technology-http-api/ReceiveNotification.md)
+- [Удалить уведомление](receiving/technology-http-api/DeleteNotification.md)
 
-#### [Входящее сообщение](./receiving/webhook/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
+### [Получение уведомлений через Webhook Endpoint](receiving/technology-webhook-endpoint.md) {#technology-webhook-endpoint}
 
-- [Входящее текстовое сообщение](./receiving/webhook/incoming-message/TextMessage.md)
-- [Входящее текстовое сообщение с URL](./receiving/webhook/incoming-message/ExtendedTextMessage.md)
-- [Входящее сообщение с изображением, видео, аудио, документом](./receiving/webhook/incoming-message/ImageMessage.md)
-- [Входящее сообщение с геолокацией](./receiving/webhook/incoming-message/LocationMessage.md)
-- [Входящее сообщение с контактом](./receiving/webhook/incoming-message/ContactMessage.md)
+### [Формат входящих уведомлений](receiving/notifications-format/index.md) {#notifications-format}
+
+#### [Входящее сообщение](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
+
+- [Входящее текстовое сообщение](./receiving/notifications-format/incoming-message/TextMessage.md)
+- [Входящее текстовое сообщение с URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
+- [Входящее сообщение с изображением, видео, аудио, документом](./receiving/notifications-format/incoming-message/ImageMessage.md)
+- [Входящее сообщение с геолокацией](./receiving/notifications-format/incoming-message/LocationMessage.md)
+- [Входящее сообщение с контактом](./receiving/notifications-format/incoming-message/ContactMessage.md)
 
 #### Отправленное сообщение {#receiving-outgoing-message}
 
-- [Статус отправленного сообщения](./receiving/webhook/outgoing-message/OutgoingMessageStatus.md)
+- [Статус отправленного сообщения](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
 #### Прочие {#receiving-dif}
 
-- [Статус аккаунта](./receiving/webhook/StateInstanceChanged.md)
-- [Статус устройства](./receiving/webhook/DeviceInfo.md)
+- [Статус аккаунта](./receiving/notifications-format/StateInstanceChanged.md)
+- [Статус устройства](./receiving/notifications-format/DeviceInfo.md)
 
-### Объекты
+#### Объекты {#receiving-obj}
 
-- [Типы webhook уведомлений](./receiving/webhook/type-webhook.md)
+- [Типы входящих уведомлений](./receiving/notifications-format/type-webhook.md)
 
 ### Получение файлов {#receiving-files}
 
 - [Скачать файл из входящего сообщения](./receiving/files/DownloadFile.md)
+
 
 ## [Журналы](./journals/index.md) {#journals}
 

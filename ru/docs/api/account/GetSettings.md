@@ -20,14 +20,14 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `wid` | **string** | Идентификатор аккаунта в WhatsApp
 `countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
-`webhookUrl` | **string** | URL для получения webhook уведомлений
+`webhookUrl` | **string** | URL для получения входящих уведомлений
 `delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах
 `markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`
 `proxyInstance` | **string** | Параметры прокси аккаунта. Отображаются в зависимости от настроек прокси. Если прокси собственное, отдаются все параметры в виде `ip:port:login:password`. Если прокси системное, отдается в зависимости от системных настроек прокси. Может принимать значения: `ip:port:login:password` или `system proxy`.
-`outgoingWebhook` | **string** | Получать webhook уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
-`stateWebhook` | **string** | Получать webhook уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
-`incomingWebhook` | **string** | Получать webhook уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
-`deviceWebhook` | **string** | Получать webhook уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
+`outgoingWebhook` | **string** | Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
+`stateWebhook` | **string** | Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
+`incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
+`deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
 
 ### Пример тела ответа {#response-example-body}
 
