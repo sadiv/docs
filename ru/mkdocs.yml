@@ -35,22 +35,25 @@ nav:
             - 'Отправить контакт': 'api/sending/SendContact.md'
             - 'Отправить ссылку': 'api/sending/SendLink.md'
         - 'Получение':
-            - 'Получение обзор': 'api/receiving/index.md'
-            - 'Webhook':
+            - 'Концепция': 'api/receiving/index.md'
+            - 'Получение через HTTP API': 'api/receiving/technology-http-api.md'
+            - 'Получение через Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
+            - 'Формат входящих уведомлений':
+                - 'Обзор': 'api/receiving/notifications-format/index.md'
                 - 'Входящее сообщение':
-                    - 'Входящие сообщения': 'api/receiving/webhook/incoming-message/Webhook-IncomingMessageReceived.md'
-                    - 'Текст': 'api/receiving/webhook/incoming-message/TextMessage.md'
-                    - 'Текст с URL': 'api/receiving/webhook/incoming-message/ExtendedTextMessage.md'
-                    - 'Видео, аудио, изображение, документ': 'api/receiving/webhook/incoming-message/ImageMessage.md'
-                    - 'Геопозиция': 'api/receiving/webhook/incoming-message/LocationMessage.md'
-                    - 'Контакт': 'api/receiving/webhook/incoming-message/ContactMessage.md'
+                    - 'Входящие сообщения': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
+                    - 'Текст': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
+                    - 'Текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
+                    - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
+                    - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
+                    - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
                 - 'Отправленное сообщение':
-                    - 'Статус отправленного сообщения': 'api/receiving/webhook/outgoing-message/OutgoingMessageStatus.md'
+                    - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
                 - 'Прочие':
-                    - 'Статус аккаунта': 'api/receiving/webhook/StateInstanceChanged.md'
-                    - 'Статус устройства': 'api/receiving/webhook/DeviceInfo.md'
+                    - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
+                    - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
                 - 'Объекты':
-                    - 'Типы webhook уведомлений': 'api/receiving/webhook/type-webhook.md'
+                    - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
             - 'Получение файлов':
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
