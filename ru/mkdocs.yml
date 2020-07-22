@@ -25,7 +25,8 @@ nav:
             - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
             - 'Перезапустить аккаунт': 'api/account/Reboot.md'
             - 'Разлогинить аккаунт': 'api/account/Logout.md'
-            - 'Авторизовать аккаунт (через websocket)': 'api/account/Scanqrcode.md'
+            - 'Получить QR-код': 'api/account/QR.md'
+            - 'Получить QR-код через websocket': 'api/account/Scanqrcode.md'
         - 'Отправка':
             - 'Отправка обзор': 'api/sending/index.md'
             - 'Отправить текст': 'api/sending/SendMessage.md'

@@ -62,6 +62,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ReceiveNotification/{{api
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../../common-errors.md)
 
+Код HTTP | Идентификатор ошибки | Описание
+----- | ----- | -----
+400 | `Parameter idInstance not an integer` | Не задан параметр `idInstance` или содержит нецифровые символы
+400 | `Parameter apiTokenInstance not define` | Не задан параметр `apiTokenInstance`
+
 ## Пример кода на Python  {#request-example-python}
 
 ```python

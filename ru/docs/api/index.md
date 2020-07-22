@@ -11,7 +11,8 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 - [Получить состояние аккаунта](./account/GetStateInstance.md)
 - [Перезапустить аккаунт](./account/Reboot.md)
 - [Разлогинить аккаунт](./account/Logout.md)
-- [Авторизовать аккаунт (через websocket)](./account/Scanqrcode.md)
+- [Получить QR-код](./account/QR.md)
+- [Получить QR-код через websocket](./account/Scanqrcode.md)
 
 ## [Отправка](./sending/index.md) {#sending}
 

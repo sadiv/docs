@@ -1,6 +1,6 @@
 # DeleteNotification
 
-Метод предназначен для удаления входящего уведомления из очереди уведомлений.
+Метод предназначен для удаления входящего уведомления из очереди уведомлений. Чтобы указать, какое уведомление следует удалить, используйте параметр `receiptId`.
 После получения и обработки входящего уведомления требуется удалить уведомление из очереди. Для этого требуется выполнить данный метод. После вызова метода уведомление будет считаться принятым и обработанным и будет безвозвратно удалено из очереди. Таким образом следующий вызов метода [ReceiveNotification](ReceiveNotification.md) вернет следующее уведомление из очереди в порядке поступления уведомлений в очередь.
 
 > Срок хранения входящих уведомлений в очереди составляет 24 часа.
@@ -11,8 +11,10 @@
 
 Для удаления входящего уведомления из очереди требуется выполнить запрос по адресу:
 ```
-GET https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiTokenInstance}}/{{receiptId}}
+DELETE https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiTokenInstance}}/{{receiptId}}
 ```
+
+> Обратите внимание, что требуется использовать запрос вида `DELETE`
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../../before-start.md#parameters).
 
@@ -46,7 +48,9 @@ GET https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiT
 
 Код HTTP | Идентификатор ошибки | Описание
 ----- | ----- | -----
-400 | `Parameter receiptId must be a Number` | В качестве параметра `receiptId` требуется указывать число
+400 | `Parameter receiptId must be a Number` | Не задан параметр `receiptId` или содержит нецифровые символы
+400 | `Parameter idInstance not an integer` | Не задан параметр `idInstance` или содержит нецифровые символы
+400 | `Parameter apiTokenInstance not define` | Не задан параметр `apiTokenInstance`
 
 
 ## Пример кода на Python  {#request-example-python}
@@ -59,7 +63,7 @@ url = "https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{a
 payload = {}
 headers= {}
 
-response = requests.request("GET", url, headers=headers, data = payload)
+response = requests.request("DELETE", url, headers=headers, data = payload)
 
 print(response.text.encode('utf8'))
 ```
