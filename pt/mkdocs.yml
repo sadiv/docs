@@ -1,0 +1,170 @@
+site_name: Green API
+#repo_name: green-api/docs 
+#repo_url: https://github.com/green-api/docs
+edit_uri: edit/master/pt/docs/
+site_dir: build
+site_url: https://green-api.com.br
+
+nav:
+    - 'Principal': '/'
+    - 'Tabela de Conteúdo': 'index.md'
+    - 'Início Rápido':
+        - 'Antes de começar': 'before-start.md'
+        - 'Executando uma requisição': 'request-format.md'
+        - 'Depurando Métodos da API': 'postman-collection.md'
+    #     - 'Como enviar uma mensagem': 'api/sending/SendMessage.md'
+    #     - 'Como enviar uma imagem': 'api/sending/SendMessage.md'
+    #     - 'Como pegar o status de uma mensagem': 'api/sending/SendMessage.md'
+    #     - 'Como fazer um Chatbot': 'api/sending/SendMessage.md'
+    - 'Documentação da API':
+        - 'Visão Inicial': 'api/index.md'
+        - 'Conta':
+            - 'Visão Inicial': 'api/account/index.md'
+            - 'Acessando a Configuração da Conta': 'api/account/GetSettings.md'
+            - 'Definindo as configurações da sua Conta': 'api/account/SetSettings.md'
+            - 'Obtendo o status de sua Conta': 'api/account/GetStateInstance.md'
+            - 'Reiniciando sua Conta': 'api/account/Reboot.md'
+            - 'Efetuando um logout de sua Conta': 'api/account/Logout.md'
+            - 'Obter o QR code': 'api/account/QR.md'
+            - 'Autorizando o acesso via QR code via websocket': 'api/account/Scanqrcode.md'
+        - 'Envio de Mensagens':
+            - 'Visão Inicial': 'api/sending/index.md'
+            - 'Enviando mensagens de texto': 'api/sending/SendMessage.md'
+            - 'Enviando vídeo, audio, imagens e documentos': 'api/sending/SendFileByUpload.md'
+            - 'Enviando vídeo, audio, imagens e documentos através de uma URL': 'api/sending/SendFileByUrl.md'
+            - 'Enviando geo-localização': 'api/sending/SendLocation.md'
+            - 'Enviando contatos': 'api/sending/SendContact.md'
+            - 'Enviando links': 'api/sending/SendLink.md'
+        - 'Recebendo Respostas':
+            - 'Visão Inicial': 'api/receiving/index.md'
+            - 'HTTP API':
+                - 'Tecnologia API HTTP': 'api/receiving/technology-http-api.md'
+                - 'Receber notificação': 'api/receiving/technology-http-api/ReceiveNotification.md'
+                - 'Excluir notificação': 'api/receiving/technology-http-api/DeleteNotification.md'
+            - 'Webhook Endpoint':
+                - 'Tecnologia Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
+            - 'Formato de notificação de entrada':
+                - 'Visão Inicial': 'api/receiving/notifications-format/index.md'
+                - 'Recebendo Mensagens':
+                    - 'Mensagem recebida': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
+                    - 'Texto': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
+                    - 'Texto com URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
+                    - 'Vídeo, áudio, imagem, documento': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
+                    - 'Posição Geográfica': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
+                    - 'Contatos': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
+                - 'Mensagens Enviadas':
+                    - 'Status da Mensagem Enviada': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
+                - 'Outros':
+                    - 'Status da Conta': 'api/receiving/notifications-format/StateInstanceChanged.md'
+                    - 'Status do Dispositivo (Telefone)': 'api/receiving/notifications-format/DeviceInfo.md'
+                - 'Objetos':
+                    - 'Tipo de notificações do Webhook': 'api/receiving/notifications-format/type-webhook.md'
+            - 'Recebendo Arquivos':
+                - 'Baixar arquivo da mensagem recebida': 'api/receiving/files/DownloadFile.md'
+        - 'Listas Mensagens':
+            - 'Visão Inicial': 'api/journals/index.md'
+            - 'Últimas Mensagens Recebidas': 'api/journals/LastIncomingMessages.md'
+            - 'Últimas Mensagens Enviadas': 'api/journals/LastOutgoingMessages.md'
+        - 'Fila de Envio':
+            - 'Visão Inicial': 'api/queues/index.md'
+            - 'Obter a fila de mensagens a serem enviadas': 'api/queues/ShowMessagesQueue.md'
+            - 'Limpando a fila de mensagens': 'api/queues/ClearMessagesQueue.md'
+        - 'Grupos':
+            - 'Visão Inicial': 'api/groups/index.md'
+            - 'Criando um Grupo': 'api/groups/CreateGroup.md'
+            - 'Alterando o nome do Grupo': 'api/groups/UpdateGroupName.md'
+            - 'Obtendo informações do Grupo': 'api/groups/GetGroupData.md'
+            - 'Adicionar membro ao Grupo': 'api/groups/AddGroupParticipant.md'
+            - 'Remover Membro do Grupo': 'api/groups/RemoveGroupParticipant.md'
+            - 'Atribuir direitos de administrador do Grupo': 'api/groups/SetGroupAdmin.md'
+            - 'Revogar direitos de administrador do Grupo': 'api/groups/RemoveAdmin.md'
+            - 'Sair do Grupo': 'api/groups/LeaveGroup.md'
+        - 'Mensagens Lidas':
+            - 'Visão Inicial': 'api/marks/index.md'
+            - 'Marcar conversa como lida': 'api/marks/ReadChat.md'
+        - 'Dispositivo (Telefone)':
+            - 'Visão Inicial': 'api/phone/index.md'
+            - 'Obtendo informações do Dispositivo': 'api/phone/GetDeviceInfo.md'
+        - 'Métodos de Serviço':
+            - 'Visão Inicial': 'api/service/index.md'
+            - 'Verificando se é uma conta WhatsApp': 'api/service/CheckWhatsapp.md'
+            - 'Obtendo Imagem do Perfil': 'api/service/GetAvatar.md'
+            - 'Obter contatos': 'api/service/GetContacts.md'
+        - 'Outros':
+            - 'ID da Conversa': 'api/chat-id.md'
+            - 'Intervalo de Envio de Mensagens': 'api/send-messages-delay.md'
+            - 'Erros Comuns': 'api/common-errors.md'
+    # - 'Integrações':
+    #     - '1С': 'api/sending/SendMessage.md'
+    #     - 'NodeJS': 'api/sending/SendMessage.md'
+    #     - 'HTML': 'api/sending/SendMessage.md'
+    
+theme:
+  name: material
+  custom_dir: overrides
+
+   # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: pt
+  palette:
+    scheme: default
+    primary: green
+    accent: green
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/green-api-logo.png
+  logo: assets/green-api-logo.png
+
+extra_css:
+  - stylesheets/styles.css
+  - stylesheets/extra.css
+  
+# Plugins
+plugins:
+  - search:
+      lang:
+        - pt
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink:  "#"
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+  #    repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
