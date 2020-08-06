@@ -39,6 +39,10 @@ Para executar solicitações da API HTTP do WhatsApp, você precisa usar as conf
 
 A chave de acesso à conta pode ser alterada se necessário.
 
+## 6. Configurar o recebimento de dados {#receiving}
+
+Se você deseja receber dado(mensagens recebidas, status de mensagens enviadas anteriormente etc.), você deve primeiro executar [configurações da conta](api/receiving/index.md). As notificações da API podem ser recebidas [via HTTP API (recomendado)](api/receiving/technology-http-api.md) ou [via Webhook Endpoint](api/receiving/technology-webhook-endpoint.md).
+
 ## Tudo Pronto!
 
 Está tudo pronto para começar a enviar e receber mensagens do WhatsApp!
