@@ -7,6 +7,7 @@ Antes de começar a trabalhar com a API Verde, você deve concluir as seguintes 
 3. [Instalar o aplicativo WhatsApp Business](#mobile)
 4. [Autorizar conta do WhatsApp](#qr)
 5. [Obter configurações de acesso à conta](#parameters)
+6. [Configurar o recebimento de dados](#receiving)
 
 ## 1. Crie uma conta em nosso painel {#cabinet}
 
