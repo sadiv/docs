@@ -15,7 +15,7 @@
 Для настройки получения входящих уведомлений по технологии HTTP API требуется указать в качестве параметра `webhookUrl` значение:
 
 ```
-https://webhook.green-api.com/v1/
+https://webhook.green-api.com
 ```
 
 Также требуется указать какие виды уведомлений необходимо получать. Для включения входящих уведомлений по видам, а также для указания параметра `webhookUrl` воспользуйтесь методом [SetSettings](../account/SetSettings.md).
@@ -24,7 +24,7 @@ https://webhook.green-api.com/v1/
 
 ```json
 {
-    "webhookUrl": "https://webhook.green-api.com/v1/",
+    "webhookUrl": "https://webhook.green-api.com",
     "outgoingWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
