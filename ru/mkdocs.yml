@@ -6,7 +6,11 @@ site_dir: build
 site_url: https://green-api.com
 
 nav:
-    - 'На главную': '/'
+  - "Главная":
+    - Главная: "/"
+  - "Блог":
+    - Блог: "blog/index.html"
+  - "Документация": 
     - 'Оглавление': 'index.md'
     - 'Быстрый старт':
         - 'Перед началом работы': 'before-start.md'
@@ -109,6 +113,8 @@ theme:
 
   # Default values, taken from mkdocs_theme.yml
   language: ru
+  features:
+    - tabs
   palette:
     scheme: default
     primary: green
