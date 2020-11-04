@@ -34,7 +34,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 ```json
 {
     "chatId": "79001234567@c.us",
-    "urlFile": "https://my.site.com/img",
+    "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Лошадка"
 }
@@ -44,7 +44,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
-    "urlFile": "https://my.site.com/img",
+    "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Лошадка"
 }

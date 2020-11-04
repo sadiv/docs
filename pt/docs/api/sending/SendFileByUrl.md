@@ -34,7 +34,7 @@ Envio de uma mensagem para um contato em particular:
 ```json
 {
     "chatId": "5521999990000@c.us",
-    "urlFile": "https://my.site.com/img",
+    "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Isso é um cavalo"
 }
@@ -44,7 +44,7 @@ Envio de uma mensagem para um grupo:
 ```json
 {
     "chatId": "5521999990000-1581234048@g.us",
-    "urlFile": "https://my.site.com/img",
+    "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Isso é um cavalo"
 }
@@ -77,7 +77,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}"
 
-payload = "{\r\n   \t\"chatId\": \"5521999990000@c.us\",\r\n\t\"urlFile\": \"https://my.site.com/img\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"Isso é um cavalo\"\r\n}"
+payload = "{\r\n   \t\"chatId\": \"5521999990000@c.us\",\r\n\t\"urlFile\": \"https://my.site.com/img/horse.png\",\r\n\t\"fileName\": \"horse.png\",\r\n\t\"caption\": \"Isso é um cavalo\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }
