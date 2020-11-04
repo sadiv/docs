@@ -26,6 +26,7 @@ nav:
             - 'Аккаунт обзор': 'api/account/index.md'
             - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
             - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
+            - 'Установить системный прокси': 'api/account/SetSystemProxy.md'
             - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
             - 'Перезапустить аккаунт': 'api/account/Reboot.md'
             - 'Разлогинить аккаунт': 'api/account/Logout.md'

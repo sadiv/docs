@@ -4,10 +4,12 @@
 
 - [Получить настройки аккаунта](GetSettings.md)
 - [Установить настройки аккаунта](SetSettings.md)
+- [Установить системный прокси](SetSystemProxy.md)
 - [Получить состояние аккаунта](GetStateInstance.md)
 - [Перезапустить аккаунт](Reboot.md)
 - [Разлогинить аккаунт](Logout.md)
-- [Авторизовать аккаунт (через websocket)](Scanqrcode.md)
+- [Получить QR-код](QR.md)
+- [Получить QR-код через websocket](Scanqrcode.md)
 
 
 
