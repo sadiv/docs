@@ -57,35 +57,14 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
 `chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-
-`textMessage` | **string** | ХХХ
-`downloadUrl` | **string** | ХХХ
-
-`senderId` | **string** | ХХХ
-`senderName` | **string** | ХХХ
-
-
-
-`idMessage` | **string** | Идентификатор входящего сообщения
-`timestamp` | **integer** | Время принятия сообщения в UNIX-формате
-`typeMessage` | **string** | Тип сообщения, возможные значения:
-| | `textMessage` - текстовое сообщение
-| | `imageMessage` - сообщение с изображением
-| | `videoMessage` - видео сообщение
-| | `documentMessage` - сообщение с файлом документа
-| | `audioMessage` - аудио сообщение
-| | `locationMessage` - сообщение геолокации
-| | `contactMessage` - сообщение с контактом
-| | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](../chat-id.md), в котором получено сообщение
-`senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения
-`senderName` | **string** | Имя отправителя сообщения
+`senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения входящего сообщения. Присутствует только для `type` = `incoming`
+`senderName` | **string** | Имя отправителя входящего сообщения. Присутствует только для `type` = `incoming`
 `textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
 `downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
-`caption` | **string** | Описание файла
-`location` | **object** | Объект о структуре локации
-`contact` | **object** | Объект о структуре контакта
-`extendedTextMessage` | **object** | Объект о структуре данных ссылки
+`caption` | **string** | Описание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`
+`location` | **object** | Объект о структуре локации, если `typeMessage`=`locationMessage`
+`contact` | **object** | Объект о структуре контакта, если `typeMessage`=`contactMessage`
+`extendedTextMessage` | **object** | Объект о структуре данных ссылки, если `typeMessage`=`extendedTextMessage`
 
 Поля объекта `location`:
 
@@ -119,28 +98,39 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 ```json
 [
     {
-        "idMessage": "DE8CFFA93B95237B077F8FA08331A0B5",
-        "timestamp": 1587129319,
+        "type": "incoming",
+        "timestamp": 1603964449,
+        "idMessage": "3AADDD555CB0822C0539",
         "typeMessage": "textMessage",
         "chatId": "79001234567@c.us",
         "senderId": "79001234567@c.us",
-        "senderName": "Николай",
-        "textMessage": "Привет"
+        "senderName": "Andrew Sh",
+        "textMessage": "I use Green-API to get this message from you!"
     },
     {
-        "idMessage": "EA0BD1AE042DC4F3609867126309D67C",
-        "timestamp": 1587147598,
+        "type": "outgoing",
+        "timestamp": 1604316706,
+        "idMessage": "3EB08816FEBCCC3FACD2",
+        "statusMessage": "read",
+        "typeMessage": "textMessage",
+        "chatId": "79001234567@c.us",
+        "textMessage": "I use Green-API to send this message to you!"
+    },
+    {
+        "type": "incoming",
+        "timestamp": 1604466117,
+        "idMessage": "3AA45F9F285C5249CDFC",
         "typeMessage": "imageMessage",
         "chatId": "79001234567@c.us",
         "senderId": "79001234567@c.us",
-        "senderName": "Николай",
-        "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C",
-        "caption": "Как тебе?"
+        "senderName": "Andrew Sh",
+        "downloadUrl": "https://api.green-api.com/waInstance9075/downloadFile/download-file-id",
+        "caption": "Green API Logo"
     }
 ]
 ```
 
-### Ошибки LastIncomingMessages {#errors}
+### Ошибки GetChatHistory {#errors}
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
@@ -149,12 +139,14 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 ```python
 import requests
 
-url = "https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}"
+url = "https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiTokenInstance}}"
 
-payload = {}
-headers= {}
+payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"count\": 100\r\n}"
+headers = {
+  'Content-Type': 'application/json'
+}
 
-response = requests.request("GET", url, headers=headers, data = payload)
+response = requests.request("POST", url, headers=headers, data = payload)
 
 print(response.text.encode('utf8'))
 ```

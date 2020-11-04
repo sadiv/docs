@@ -67,6 +67,7 @@ nav:
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
         - 'Журналы':
             - 'Журналы обзор': 'api/journals/index.md'
+            - 'Получить историю сообщений чата': 'api/journals/GetChatHistory.md'
             - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
             - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
         - 'Очереди':
