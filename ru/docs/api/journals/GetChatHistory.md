@@ -56,7 +56,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 | | `locationMessage` - сообщение геолокации
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
+`chatId` | **string** | [Идентификатор чата](../chat-id.md)
 `senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения входящего сообщения. Присутствует только для `type` = `incoming`
 `senderName` | **string** | Имя отправителя входящего сообщения. Присутствует только для `type` = `incoming`
 `textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
