@@ -57,7 +57,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
 `chatId` | **string** | [Идентификатор чата](../chat-id.md)
-`senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения входящего сообщения. Присутствует только для `type` = `incoming`
+`senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя входящего сообщения. Присутствует только для `type` = `incoming`
 `senderName` | **string** | Имя отправителя входящего сообщения. Присутствует только для `type` = `incoming`
 `textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
 `downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
@@ -109,7 +109,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
     },
     {
         "type": "outgoing",
-        "timestamp": 1604316706,
+        "timestamp": 1603964445,
         "idMessage": "3EB08816FEBCCC3FACD2",
         "statusMessage": "read",
         "typeMessage": "textMessage",
@@ -118,14 +118,14 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
     },
     {
         "type": "incoming",
-        "timestamp": 1604466117,
+        "timestamp": 1603964444,
         "idMessage": "3AA45F9F285C5249CDFC",
         "typeMessage": "imageMessage",
         "chatId": "79001234567@c.us",
         "senderId": "79001234567@c.us",
         "senderName": "Andrew Sh",
         "downloadUrl": "https://api.green-api.com/waInstance9075/downloadFile/download-file-id",
-        "caption": "Green API Logo"
+        "caption": "Green-API Logo"
     }
 ]
 ```
