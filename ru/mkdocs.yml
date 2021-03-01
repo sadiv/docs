@@ -101,6 +101,7 @@ nav:
             - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
             - 'Стандартные ошибки': 'api/common-errors.md'
     - 'FAQ':
+        - 'Все вопросы': 'faq/index.md'
         - 'Как защитить номер от бана?': 'faq/how-to-protect-number-from-ban.md'
     # - 'Интеграция':
     #     - '1С': 'api/sending/SendMessage.md'
