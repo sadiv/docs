@@ -5,6 +5,7 @@
 - `stateInstanceChanged` - уведомление об изменении состояния авторизации аккаунта 
 - `outgoingMessageStatus` - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
 - `incomingMessageReceived` - уведомление о входящих сообщениях и файлах
+- `outgoingMessageReceived` - уведомление о сообщениях, отправленных с телефона вручную 
 - `deviceInfo` - уведомление об устройстве (телефоне) и уровне заряда батареи
 
 ## Получение уведомлений разных типов
@@ -15,6 +16,7 @@
 ```json
 {
     "outgoingWebhook": "yes",
+    "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
     "deviceWebhook": "no"

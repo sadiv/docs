@@ -44,6 +44,7 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 
 #### Отправленное сообщение {#receiving-outgoing-message}
 
+- [Отправленное с телефона сообщение](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
 - [Статус отправленного сообщения](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
 #### Прочие {#receiving-dif}

@@ -25,6 +25,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`
 `proxyInstance` | **string** | Параметры прокси аккаунта. Отображаются в зависимости от настроек прокси. Если прокси собственное, отдаются все параметры в виде `ip:port:login:password`. Если прокси системное, отдается в зависимости от системных настроек прокси. Может принимать значения: `ip:port:login:password` или `system proxy`.
 `outgoingWebhook` | **string** | Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
+`outgoingMessageWebhook` | **string** | Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
 `stateWebhook` | **string** | Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
 `incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
@@ -41,6 +42,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "markIncomingMessagesReaded": "yes",
     "proxyInstance": "123.45.67.891:3435:hdhhd:i3ji3",
     "outgoingWebhook": "yes",
+    "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
     "deviceWebhook": "no"

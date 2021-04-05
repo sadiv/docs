@@ -25,6 +25,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 `markIncomingMessagesReaded` | **string** | Нет | Отмечать входящие сообщения прочитанными. Возможные значения: `yes`, `no`
 `proxyInstance` | **string** | Нет | Прокси для аккаунта в формате `{ip}:{port}:{login}:{password}`, если вы хотите что бы аккаунт работал на вашем прокси, по умолчанию используются системные прокси
 `outgoingWebhook` | **string** | Нет |Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
+`outgoingMessageWebhook` | **string** | Нет |Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
 `stateWebhook` | **string** | Нет |Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
 `incomingWebhook` | **string** | Нет |Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Нет |Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
@@ -39,6 +40,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
     "markIncomingMessagesReaded": "no",
     "proxyInstance": "100.100.100.100:3535:login:password",
     "outgoingWebhook": "yes",
+    "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
     "deviceWebhook": "no"
