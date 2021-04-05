@@ -1,6 +1,6 @@
 # Отправленное с телефона сообщение
 
-Формат сообщения, отправленного с телефона идентично формату [входящего сообщения](../incoming-message/Webhook-IncomingMessageReceived.md), при этом [тип входящего уведомления](../type-webhook.md) принимает значение `outgoingMessageReceived`.
+Формат сообщения, отправленного с телефона, идентичен формату [входящего сообщения](../incoming-message/Webhook-IncomingMessageReceived.md), при этом [тип входящего уведомления](../type-webhook.md) принимает значение `outgoingMessageReceived`.
 
 ### Пример тела уведомления {#webhook-example-body}
 
