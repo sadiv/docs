@@ -63,6 +63,7 @@ nav:
                 - 'Прочие':
                     - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
                     - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
+                    - 'Входящий звонок': 'api/receiving/notifications-format/IncomingCall.md'
                 - 'Объекты':
                     - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
             - 'Получение файлов':

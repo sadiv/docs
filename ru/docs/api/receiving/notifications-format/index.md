@@ -12,12 +12,14 @@
 
 ## Отправленное сообщение
 
+- [Отправленное с телефона сообщение](outgoing-message/OutgoingMessage.md)
 - [Статус отправленного сообщения](outgoing-message/OutgoingMessageStatus.md)
 
 ## Прочие
 
 - [Статус аккаунта](StateInstanceChanged.md)
 - [Статус устройства](DeviceInfo.md)
+- [Входящий звонок](IncomingCall.md)
 
 ## Объекты
 

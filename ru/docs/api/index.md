@@ -26,7 +26,7 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 
 ## [Получение](./receiving/index.md) {#receiving}
 
-### [Получение уведомлений через HTTP API (рекомендуется)](receiving/technology-http-api.md) {#technology-http-api}
+### [Получение уведомлений через HTTP API](receiving/technology-http-api.md) {#technology-http-api}
 - [Получить уведомление](receiving/technology-http-api/ReceiveNotification.md)
 - [Удалить уведомление](receiving/technology-http-api/DeleteNotification.md)
 
@@ -51,6 +51,7 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 
 - [Статус аккаунта](./receiving/notifications-format/StateInstanceChanged.md)
 - [Статус устройства](./receiving/notifications-format/DeviceInfo.md)
+- [Входящий звонок](./receiving/notifications-format/IncomingCall.md)
 
 #### Объекты {#receiving-obj}
 

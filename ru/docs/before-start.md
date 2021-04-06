@@ -43,7 +43,7 @@
 
 ## 6. Настроить получение входящих данных {#receiving}
 
-Если требуется получать входящие данные (входящие сообщения, статусы ранее отправленных сообщений и др.), то предварительно необходимо выполнить [настройку аккаунта](api/receiving/index.md). Получать входящие уведомления можно [через HTTP API (рекомендуется)](api/receiving/technology-http-api.md) или [через Webhook Endpoint](api/receiving/technology-webhook-endpoint.md).
+Если требуется получать входящие данные (входящие сообщения, статусы ранее отправленных сообщений и др.), то предварительно необходимо выполнить [настройку аккаунта](api/receiving/index.md). Получать входящие уведомления можно [через HTTP API](api/receiving/technology-http-api.md) или [через Webhook Endpoint](api/receiving/technology-webhook-endpoint.md).
 
 ## Готово!
 
