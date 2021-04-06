@@ -2,12 +2,12 @@
 
 Входящие уведомления могут быть следующих типов:
 
-- `stateInstanceChanged` - уведомление об изменении состояния авторизации аккаунта 
-- `outgoingMessageStatus` - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
-- `incomingMessageReceived` - уведомление о входящих сообщениях и файлах
-- `outgoingMessageReceived` - уведомление о сообщениях, отправленных с телефона вручную 
-- `deviceInfo` - уведомление об устройстве (телефоне) и уровне заряда батареи
-- `incomingCall` - уведомление о входящем звонке
+- [incomingMessageReceived](incoming-message/Webhook-IncomingMessageReceived.md) - уведомление о входящих сообщениях и файлах
+- [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
+- [outgoingMessageReceived](outgoing-message/OutgoingMessage.md) - уведомление о сообщении, отправленного с телефона
+- [stateInstanceChanged](StateInstanceChanged.md) - уведомление об изменении состояния авторизации аккаунта
+- [deviceInfo](DeviceInfo.md) - уведомление об устройстве (телефоне) и уровне заряда батареи
+- [incomingCall](IncomingCall.md) - уведомление о входящем звонке
 
 ## Получение уведомлений разных типов
 Для включения или отключения уведомлений по типам используйте метод [SetSettings](../../../api/account/SetSettings.md)
