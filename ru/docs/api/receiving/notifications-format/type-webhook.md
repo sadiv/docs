@@ -3,8 +3,8 @@
 Входящие уведомления могут быть следующих типов:
 
 - [incomingMessageReceived](incoming-message/Webhook-IncomingMessageReceived.md) - уведомление о входящих сообщениях и файлах
-- [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
 - [outgoingMessageReceived](outgoing-message/OutgoingMessage.md) - уведомление о сообщении, отправленного с телефона
+- [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
 - [stateInstanceChanged](StateInstanceChanged.md) - уведомление об изменении состояния авторизации аккаунта
 - [deviceInfo](DeviceInfo.md) - уведомление об устройстве (телефоне) и уровне заряда батареи
 - [incomingCall](IncomingCall.md) - уведомление о входящем звонке
