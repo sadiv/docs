@@ -26,7 +26,6 @@
 `text` | **string** | Текст ссылки
 `description` | **string** | Описание ссылки
 `title` | **string** | Заголовок ссылки
-`previewType` | **string** | Тип превью ссылки
 `jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
 
 ### Пример тела уведомления {#webhook-example-body}
@@ -52,7 +51,6 @@
             "text": "https://green-api.com/docs/video",
             "description": "Green API docs shows how you can develop the WhatsApp Bot",
             "title": "How to develop WhatsApp Bot",
-            "previewType": "video",
             "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYG=="
         }
     }
