@@ -10,6 +10,7 @@
 - [Разлогинить аккаунт](Logout.md)
 - [Получить QR-код](QR.md)
 - [Получить QR-код через websocket](Scanqrcode.md)
+- [Установка аватара аккаунта](SetProfilePicture.md)
 
 
 

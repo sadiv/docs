@@ -32,6 +32,7 @@ nav:
             - 'Разлогинить аккаунт': 'api/account/Logout.md'
             - 'Получить QR-код': 'api/account/QR.md'
             - 'Получить QR-код через websocket': 'api/account/Scanqrcode.md'
+            - 'Установить аватар аккаунта': 'api/account/SetProfilePicture.md'
         - 'Отправка':
             - 'Отправка обзор': 'api/sending/index.md'
             - 'Отправить текст': 'api/sending/SendMessage.md'
