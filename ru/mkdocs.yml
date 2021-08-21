@@ -58,6 +58,7 @@ nav:
                     - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
                     - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
+                    - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
                 - 'Отправленное сообщение':
                     - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
                     - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'

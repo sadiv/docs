@@ -28,6 +28,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 `urlFile` | **string** | Да | Ссылка на отправляемый файл
 `fileName` | **string** | Да | Название файла. Должно содержать расширение файла
 `caption` | **string** | Нет | Описание под файлом. Описание добавляется к видео, изображениям.
+`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
 
 ### Пример тела запроса {#request-example-body}
 
@@ -48,6 +49,17 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
     "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Лошадка"
+}
+```
+
+Отправка сообщения с цитированием:
+```json
+{
+    "chatId": "79001234567@с.us",
+    "urlFile": "https://my.site.com/img/horse.png",
+    "fileName": "horse.png",
+    "caption": "Лошадка",
+    "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
 

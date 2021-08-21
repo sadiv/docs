@@ -27,6 +27,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUpload/{{apiTo
 `chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
 `file` | **file** | Да | Отправляемый файл
 `caption` | **string** | Нет | Описание под файлом. Описание добавляется к видео, изображениям.
+`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата.
 
 ### Пример тела запроса {#request-example-body}
 

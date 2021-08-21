@@ -9,6 +9,8 @@
 - [Входящее сообщение с изображением, видео, аудио, документом](incoming-message/ImageMessage.md)
 - [Входящее сообщение с геолокацией](incoming-message/LocationMessage.md)
 - [Входящее сообщение с контактом](incoming-message/ContactMessage.md)
+- [Входящее сообщение с цитированием](incoming-message/QuotedMessage.md)
+
 
 ## Отправленное сообщение
 
