@@ -9,4 +9,5 @@
 - [Удалить участника из группы](RemoveGroupParticipant.md)
 - [Назначить права администратора группы](SetGroupAdmin.md)
 - [Отозвать права администратора группы](RemoveAdmin.md)
+- [Установить аватар группы](SetGroupPicture.md)
 - [Выйти из группы](LeaveGroup.md)

@@ -88,6 +88,7 @@ nav:
             - 'Удалить участника из группы': 'api/groups/RemoveGroupParticipant.md'
             - 'Назначить права администратора группы': 'api/groups/SetGroupAdmin.md'
             - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
+            - 'Установить Аватар группы': 'api/groups/SetGroupPicture.md'
             - 'Выйти из группы': 'api/groups/LeaveGroup.md'
         - 'Отметка прочтения':
             - 'Отметка прочтения обзор': 'api/marks/index.md'
