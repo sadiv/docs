@@ -30,6 +30,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `stateWebhook` | **string** | Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
 `incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
+`statusInstanceWebhook` | **string** | Получать уведомления об изменении состояния соединения сокета аккаунта, возможные значения: `yes`, `no`
 
 ### Пример тела ответа {#response-example-body}
 
@@ -47,7 +48,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
-    "deviceWebhook": "no"
+    "deviceWebhook": "no",
+    "statusInstanceWebhook": "yes" 
 }
 ```
 

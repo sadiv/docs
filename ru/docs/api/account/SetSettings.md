@@ -22,14 +22,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 `countryInstance` | **string** | Нет | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `webhookUrl` | **string** | Нет | URL для отправки уведомлений. Если требуется отключить получение уведомлений, то укажите пустую строку
 `delaySendMessagesMilliseconds` | **integer** | Нет | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах. Минимальное значение 500 мсек
-`markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
-`markIncomingMessagesReadedOnReply` | **string** | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
+`markIncomingMessagesReaded` | **string** | Нет | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
+`markIncomingMessagesReadedOnReply` | **string** | Нет | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
 `proxyInstance` | **string** | Нет | Прокси для аккаунта в формате `{ip}:{port}:{login}:{password}`, если вы хотите что бы аккаунт работал на вашем прокси, по умолчанию используются системные прокси
 `outgoingWebhook` | **string** | Нет |Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
 `outgoingMessageWebhook` | **string** | Нет |Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
 `stateWebhook` | **string** | Нет |Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
 `incomingWebhook` | **string** | Нет |Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Нет |Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
+`statusInstanceWebhook` | **string** | Нет | Получать уведомления об изменении состояния сокет соединения аккаунта, возможные значения: `yes`, `no`
 
 ### Пример тела запроса {#request-example-body}
 
@@ -45,7 +46,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
     "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
-    "deviceWebhook": "no"
+    "deviceWebhook": "no",
+    "statusInstanceWebhook": "yes" 
 }
 ```
 

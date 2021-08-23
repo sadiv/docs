@@ -22,6 +22,7 @@
 - [Статус аккаунта](StateInstanceChanged.md)
 - [Статус устройства](DeviceInfo.md)
 - [Входящий звонок](IncomingCall.md)
+- [Статус доступности сокета](StatusInstanceChanged.md)
 
 ## Объекты
 
