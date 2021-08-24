@@ -31,6 +31,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
 `statusInstanceWebhook` | **string** | Получать уведомления об изменении состояния соединения сокета аккаунта, возможные значения: `yes`, `no`
+`sendFromUTC` | **string** | Получить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), возможные значения: `09:00`
+`sendToUTC` | **string** |  Получить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), возможные значения: `12:00`
 
 ### Пример тела ответа {#response-example-body}
 
@@ -49,7 +51,9 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
     "deviceWebhook": "no",
-    "statusInstanceWebhook": "yes" 
+    "statusInstanceWebhook": "yes",
+    "sendFromUTC": "12:00",
+    "sendToUTC": "18:00"
 }
 ```
 
