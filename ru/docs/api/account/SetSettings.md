@@ -21,6 +21,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 ----- | ----- | ----- | -----
 `countryInstance` | **string** | Нет | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `webhookUrl` | **string** | Нет | URL для отправки уведомлений. Если требуется отключить получение уведомлений, то укажите пустую строку
+`webhookUrlToken` | **string** | Нет | Токен для доступа к вашему серверу уведомлений, если не требуется, то укажите пустую строку 
 `delaySendMessagesMilliseconds` | **integer** | Нет | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах. Минимальное значение 500 мсек
 `markIncomingMessagesReaded` | **string** | Нет | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
 `markIncomingMessagesReadedOnReply` | **string** | Нет | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
@@ -40,6 +41,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 {
     "countryInstance": "ru",
     "webhookUrl": "https://mysite.com/webhook/green-api/",
+    "webhookUrlToken": "",
     "delaySendMessagesMilliseconds": 1000,
     "markIncomingMessagesReaded": "no",
     "markIncomingMessagesReadedOnReply": "no",

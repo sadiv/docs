@@ -21,6 +21,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
 `webhookUrl` | **string** | URL для получения входящих уведомлений
+`webhookUrlToken` | **string** | Токен для подключения к вашему вебхук серверу
 `delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах
 `markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
 `markIncomingMessagesReadedOnReply` | **string** | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
@@ -42,6 +43,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "countryInstance": "ru",
     "typeAccount": "vip",
     "webhookUrl": "https://mysite.com/webhook/green-api/",
+    "webhookUrlToken": "",
     "delaySendMessagesMilliseconds": 3000,
     "markIncomingMessagesReaded": "yes",
     "markIncomingMessagesReadedOnReply": "no",
