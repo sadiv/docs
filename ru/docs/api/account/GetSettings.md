@@ -21,14 +21,19 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 `countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
 `webhookUrl` | **string** | URL для получения входящих уведомлений
+`webhookUrlToken` | **string** | Токен для подключения к вашему вебхук серверу
 `delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах
-`markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`
+`markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
+`markIncomingMessagesReadedOnReply` | **string** | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
 `proxyInstance` | **string** | Параметры прокси аккаунта. Отображаются в зависимости от настроек прокси. Если прокси собственное, отдаются все параметры в виде `ip:port:login:password`. Если прокси системное, отдается в зависимости от системных настроек прокси. Может принимать значения: `ip:port:login:password` или `system proxy`.
 `outgoingWebhook` | **string** | Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
 `outgoingMessageWebhook` | **string** | Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
 `stateWebhook` | **string** | Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
 `incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
 `deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
+`statusInstanceWebhook` | **string** | Получать уведомления об изменении состояния соединения сокета аккаунта, возможные значения: `yes`, `no`
+`sendFromUTC` | **string** | Получить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), возможные значения: `09:00`
+`sendToUTC` | **string** |  Получить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), возможные значения: `12:00`
 
 ### Пример тела ответа {#response-example-body}
 
@@ -38,14 +43,19 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
     "countryInstance": "ru",
     "typeAccount": "vip",
     "webhookUrl": "https://mysite.com/webhook/green-api/",
+    "webhookUrlToken": "",
     "delaySendMessagesMilliseconds": 3000,
     "markIncomingMessagesReaded": "yes",
+    "markIncomingMessagesReadedOnReply": "no",
     "proxyInstance": "123.45.67.891:3435:hdhhd:i3ji3",
     "outgoingWebhook": "yes",
     "outgoingMessageWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",
-    "deviceWebhook": "no"
+    "deviceWebhook": "no",
+    "statusInstanceWebhook": "yes",
+    "sendFromUTC": "12:00",
+    "sendToUTC": "18:00"
 }
 ```
 

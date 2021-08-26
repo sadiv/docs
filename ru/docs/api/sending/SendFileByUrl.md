@@ -7,6 +7,7 @@
 Файлы видео, аудио и изображений отправляются как и в родном WhatsApp с возможностью просмотра и прослушки.
 Документы отправляются так же как в родном WhatsApp.
 Тип отправляемого файла и способ его отправки определяется по расширению файла.
+Описание добавляется только к изображениям и видео.
 
 > Максимальный размер отправляемых файлов равен 37 Мбайт.
 
@@ -26,7 +27,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 `chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
 `urlFile` | **string** | Да | Ссылка на отправляемый файл
 `fileName` | **string** | Да | Название файла. Должно содержать расширение файла
-`caption` | **string** | Нет | Описание под файлом. Описание добавляется к видео, изображениям и документам
+`caption` | **string** | Нет | Описание под файлом. Описание добавляется к видео, изображениям.
+`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
 
 ### Пример тела запроса {#request-example-body}
 
@@ -47,6 +49,17 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
     "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
     "caption": "Лошадка"
+}
+```
+
+Отправка сообщения с цитированием:
+```json
+{
+    "chatId": "79001234567@с.us",
+    "urlFile": "https://my.site.com/img/horse.png",
+    "fileName": "horse.png",
+    "caption": "Лошадка",
+    "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
 
