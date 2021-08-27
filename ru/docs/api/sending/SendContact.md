@@ -9,7 +9,7 @@
 
 Для отправки сообщения с контактом требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
@@ -20,6 +20,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenIn
 ----- | ----- | ----- | -----
 `chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
 `contact` | **object** | Да | Объект о контакте
+`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
 
 Параметры объекта `contact`:
 
@@ -51,6 +52,21 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendContact/{{apiTokenIn
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
+    "contact": {
+        "phoneContact": 79001234568,
+        "firstName": "Артем",
+        "middleName": "Петрович",
+        "lastName": "Евпаторийский",
+        "company": "Велосипед"
+    }
+}
+```
+
+Отправка сообщения с цитированием:
+```json
+{
+    "chatId": "79001234567@c.us",
+    "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B",
     "contact": {
         "phoneContact": 79001234568,
         "firstName": "Артем",

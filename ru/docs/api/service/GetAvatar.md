@@ -19,6 +19,8 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 
 ### Пример тела запроса {#request-example-body}
 
+Для получения своего аватара - укажите в chatId свой номер ("{ваш номер}@c.us").
+
 Получить аватар корреспондента:
 ```json
 {

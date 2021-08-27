@@ -8,7 +8,7 @@
 
 Для отправки сообщения геолокации требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
@@ -22,6 +22,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenI
 `address` | **string** | Нет | Адрес локации
 `latitude` | **double** | Да | Широта локации
 `longitude` | **double** | Да | Долгота локации
+`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
 
 ### Пример тела запроса {#request-example-body}
 
@@ -44,6 +45,18 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendLocation/{{apiTokenI
     "address": "123456, Perm",
     "latitude": 12.3456789,
     "longitude": 10.1112131
+}
+```
+
+Отправка сообщения с цитированием:
+```json
+{
+    "chatId": "79001234567@c.us",
+    "nameLocation": "Restaurant",
+    "address": "123456, Perm",
+    "latitude": 12.3456789,
+    "longitude": 10.1112131,
+    "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
 ## Ответ {#response}

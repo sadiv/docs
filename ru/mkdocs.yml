@@ -28,10 +28,12 @@ nav:
             - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
             - 'Установить системный прокси': 'api/account/SetSystemProxy.md'
             - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
+            - 'Получить состояние соединения аккаунта': 'api/account/GetStatusInstance.md'
             - 'Перезапустить аккаунт': 'api/account/Reboot.md'
             - 'Разлогинить аккаунт': 'api/account/Logout.md'
             - 'Получить QR-код': 'api/account/QR.md'
             - 'Получить QR-код через websocket': 'api/account/Scanqrcode.md'
+            - 'Установить аватар аккаунта': 'api/account/SetProfilePicture.md'
         - 'Отправка':
             - 'Отправка обзор': 'api/sending/index.md'
             - 'Отправить текст': 'api/sending/SendMessage.md'
@@ -57,12 +59,14 @@ nav:
                     - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
                     - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
+                    - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
                 - 'Отправленное сообщение':
                     - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
                     - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
                 - 'Прочие':
                     - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
                     - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
+                    - 'Статус сокета аккаунта': 'api/receiving/notifications-format/StatusInstanceChanged.md'
                     - 'Входящий звонок': 'api/receiving/notifications-format/IncomingCall.md'
                 - 'Объекты':
                     - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
@@ -86,6 +90,7 @@ nav:
             - 'Удалить участника из группы': 'api/groups/RemoveGroupParticipant.md'
             - 'Назначить права администратора группы': 'api/groups/SetGroupAdmin.md'
             - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
+            - 'Установить Аватар группы': 'api/groups/SetGroupPicture.md'
             - 'Выйти из группы': 'api/groups/LeaveGroup.md'
         - 'Отметка прочтения':
             - 'Отметка прочтения обзор': 'api/marks/index.md'
