@@ -1,0 +1,182 @@
+site_name: Green API
+repo_name: green-api/docs 
+repo_url: https://github.com/green-api/docs
+edit_uri: edit/master/en/docs/
+site_dir: build
+site_url: https://green-api.com
+
+nav:
+  - "Главная":
+    - Главная: "/"
+  - "Блог":
+    - Блог: "/blog/index.html"
+  - "Документация": 
+    - 'Оглавление': 'index.md'
+    - 'Быстрый старт':
+        - 'Перед началом работы': 'before-start.md'
+        - 'Выполнение запросов': 'request-format.md'
+        - 'Коллекция Postman': 'postman-collection.md'
+    #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
+    #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
+    #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
+    #     - 'Как написать чат-бота': 'api/sending/SendMessage.md'
+    - 'Документация API':
+        - 'Обзор': 'api/index.md'
+        - 'Аккаунт':
+            - 'Аккаунт обзор': 'api/account/index.md'
+            - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
+            - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
+            - 'Установить системный прокси': 'api/account/SetSystemProxy.md'
+            - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
+            - 'Перезапустить аккаунт': 'api/account/Reboot.md'
+            - 'Разлогинить аккаунт': 'api/account/Logout.md'
+            - 'Получить QR-код': 'api/account/QR.md'
+            - 'Получить QR-код через websocket': 'api/account/Scanqrcode.md'
+        - 'Отправка':
+            - 'Отправка обзор': 'api/sending/index.md'
+            - 'Отправить текст': 'api/sending/SendMessage.md'
+            - 'Отправить видео, аудио, изображение, документ': 'api/sending/SendFileByUpload.md'
+            - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/SendFileByUrl.md'
+            - 'Отправить геолокацию': 'api/sending/SendLocation.md'
+            - 'Отправить контакт': 'api/sending/SendContact.md'
+            - 'Отправить ссылку': 'api/sending/SendLink.md'
+        - 'Получение':
+            - 'Концепция': 'api/receiving/index.md'
+            - 'HTTP API':
+                - 'Технология HTTP API': 'api/receiving/technology-http-api.md'
+                - 'Получить уведомление': 'api/receiving/technology-http-api/ReceiveNotification.md'
+                - 'Удалить уведомление': 'api/receiving/technology-http-api/DeleteNotification.md'
+            - 'Webhook Endpoint':
+                - 'Технология Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
+            - 'Формат входящих уведомлений':
+                - 'Обзор': 'api/receiving/notifications-format/index.md'
+                - 'Входящее сообщение':
+                    - 'Входящие сообщения': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
+                    - 'Текст': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
+                    - 'Текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
+                    - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
+                    - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
+                    - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
+                - 'Отправленное сообщение':
+                    - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
+                    - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
+                - 'Прочие':
+                    - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
+                    - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
+                    - 'Входящий звонок': 'api/receiving/notifications-format/IncomingCall.md'
+                - 'Объекты':
+                    - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
+            - 'Получение файлов':
+                - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
+        - 'Журналы':
+            - 'Журналы обзор': 'api/journals/index.md'
+            - 'Получить историю сообщений чата': 'api/journals/GetChatHistory.md'
+            - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
+            - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
+        - 'Очереди':
+            - 'Очереди обзор': 'api/queues/index.md'
+            - 'Получить очередь сообщений к отправке': 'api/queues/ShowMessagesQueue.md'
+            - 'Очистить очередь сообщений к отправке': 'api/queues/ClearMessagesQueue.md'
+        - 'Группы':
+            - 'Группы обзор': 'api/groups/index.md'
+            - 'Создать группу': 'api/groups/CreateGroup.md'
+            - 'Изменить имя группы': 'api/groups/UpdateGroupName.md'
+            - 'Получить информацию о группе': 'api/groups/GetGroupData.md'
+            - 'Добавить участника в группу': 'api/groups/AddGroupParticipant.md'
+            - 'Удалить участника из группы': 'api/groups/RemoveGroupParticipant.md'
+            - 'Назначить права администратора группы': 'api/groups/SetGroupAdmin.md'
+            - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
+            - 'Выйти из группы': 'api/groups/LeaveGroup.md'
+        - 'Отметка прочтения':
+            - 'Отметка прочтения обзор': 'api/marks/index.md'
+            - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
+        - 'Устройство (телефон)':
+            - 'Устройство обзор': 'api/phone/index.md'
+            - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
+        - 'Сервисные методы':
+            - 'Сервисные методы обзор': 'api/service/index.md'
+            - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
+            - 'Получить аватар': 'api/service/GetAvatar.md'
+            - 'Получить контакты': 'api/service/GetContacts.md'
+        - 'Прочее':
+            - 'Идентификатор чата': 'api/chat-id.md'
+            - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
+            - 'Стандартные ошибки': 'api/common-errors.md'
+    - 'FAQ':
+        - 'Все вопросы': 'faq/index.md'
+        - 'Как защитить номер от бана?': 'faq/how-to-protect-number-from-ban.md'
+    # - 'Интеграция':
+    #     - '1С': 'api/sending/SendMessage.md'
+    #     - 'NodeJS': 'api/sending/SendMessage.md'
+    #     - 'HTML': 'api/sending/SendMessage.md'
+    
+theme:
+  name: material
+  custom_dir: overrides
+
+   # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - tabs
+  palette:
+    scheme: default
+    primary: green
+    accent: green
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/green-api-logo.png
+
+extra_css:
+  - stylesheets/styles.css
+  - stylesheets/extra.css
+  
+# Plugins
+plugins:
+  - search:
+      lang:
+        - en
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink:  "#"
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
