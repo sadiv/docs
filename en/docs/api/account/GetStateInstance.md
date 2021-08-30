@@ -6,7 +6,7 @@
 
 Для получения состояния аккаунта требуется выполнить запрос по адресу:
 ```
-GET https://api.green-api.com/waInstance{{idInstance}}/GetStateInstance/{{apiTokenInstance}}
+GET https://api.green-api.com/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).

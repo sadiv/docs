@@ -6,10 +6,12 @@
 - [Установить настройки аккаунта](SetSettings.md)
 - [Установить системный прокси](SetSystemProxy.md)
 - [Получить состояние аккаунта](GetStateInstance.md)
+- [Получить состояние сокета аккаунта](GetStatusInstance.md)
 - [Перезапустить аккаунт](Reboot.md)
 - [Разлогинить аккаунт](Logout.md)
 - [Получить QR-код](QR.md)
 - [Получить QR-код через websocket](Scanqrcode.md)
+- [Установка аватара аккаунта](SetProfilePicture.md)
 
 
 
