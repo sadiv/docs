@@ -9,6 +9,7 @@
 - [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage.md)
 - [Входящее сообщение с геолокацией](LocationMessage.md)
 - [Входящее сообщение с контактом](ContactMessage.md)
+- [Входящее сообщение с цитированием](QuotedMessage.md)
 
 ## Поля уведомления incomingMessageReceived {#webhook-parameters}
 
@@ -46,6 +47,7 @@
 - [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage.md)
 - [Входящее сообщение с геолокацией](LocationMessage.md)
 - [Входящее сообщение с контактом](ContactMessage.md)
+- [Входящее сообщение с цитированием](QuotedMessage.md)
 
 ### Пример тела уведомления {#webhook-example-body}
 
@@ -65,7 +67,7 @@
         "senderName": "Green API"
     },
     "messageData":{
-       // В зависимости от typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage
+       // В зависимости от typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage || quotedMessage
        ...
        ...
        ...

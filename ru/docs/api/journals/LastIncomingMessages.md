@@ -8,7 +8,7 @@
 
 Для получения входящих сообщений требуется выполнить запрос по адресу:
 ```
-GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{apiTokenInstance}}
+GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
@@ -32,6 +32,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
 | | `locationMessage` - сообщение геолокации
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
+| | `quotedMessage` - сообщение с цитированием
 `chatId` | **string** | [Идентификатор чата](../chat-id.md), в котором получено сообщение
 `senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения
 `senderName` | **string** | Имя отправителя сообщения
@@ -68,6 +69,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
 `title` | **string** | Заголовок ссылки
 `previewType` | **string** | Тип превью ссылки
 `jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`stanzaId` | **string** | ID цитируемого сообщения
+`participant` | **string** | ID чата получателя
 
 ### Пример тела ответа {#response-example-body}
 
@@ -91,6 +94,61 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastIncomingMessages/{{ap
         "senderName": "Николай",
         "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/EA1BD1AE042DC4F3609867126309D67C",
         "caption": "Как тебе?"
+    },
+    {
+		"idMessage": "DE8CFFA93B95237B077F8FA08331A0B5",
+		"timestamp": 1587129319,
+        "typeMessage": "locationMessage",
+        "chatId": "71234567891@c.us",
+        "senderId": "1234567891@c.us",
+        "senderName": "Николай",
+        "location": {
+            "nameLocation": "Я здесь, приезжай",
+    	    "address": "614111, Perm",
+   		    "latitude": 53.9370129,
+    		"longitude": 54.8728409,
+            "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wB=="
+        }
+	},
+    {
+		"idMessage": "DE8CFFA93B95237B077F8FA08331A0B5",
+		"timestamp": 1587129319,
+        "typeMessage": "contactMessage",
+        "chatId": "1234567891@c.us",
+        "senderId": "71234567891@c.us",
+        "senderName": "Николай",
+        "contact": {
+            "displayName": "Виктор Петров",
+    	    "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Андреевич;Виктор;;;\nFN:Виктор Андреевич\nORG:Image\nTITLE:\nitem1.TEL;waid=79099291652:+7 123 456-78-91\nitem1.X-ABLabel:Мобильный\nEND:VCARD"
+        }
+	},
+    {
+		"idMessage": "DE8CFFA93B95237B077F8FA08331A0B5",
+		"timestamp": 1587129319,
+        "typeMessage": "extendedTextMessage",
+        "chatId": "1234567891@c.us",
+        "senderId": "71234567891@c.us",
+        "senderName": "Николай",
+        "extendedTextMessage": {
+            "text": "https://www.youtube.com/watch?v=9lO06Zxhu8*8*",
+    	    "description": "Ролик",
+            "title": "Офигенный ролик",
+            "previewType": "video",
+            "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wB=="
+        }
+	},
+    {
+        "idMessage": "6195B3523153621DFDFC184D3317E80D",
+        "timestamp": 1603182280,
+        "typeMessage": "quotedMessage",
+        "chatId": "71234567891@c.us",
+        "senderId": "71234567891@c.us",
+        "senderName": "Мой",
+        "textMessage": "Цитата тест",
+        "extendedTextMessage": {
+            "stanzaId": "3A6424373F90A939B3C8",
+            "participant": "71987654321@c.us"
+        }
     }
 ]
 ```
