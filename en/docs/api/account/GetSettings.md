@@ -9,7 +9,7 @@ To get the current account settings you have to execute a request at:
 GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenInstance}}
 ```
 
-For `idInstance` and `apiTokenInstance` request parameters, please refer to [Before you start] section (../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, please refer to section [Before you start](../../before-start.md#parameters).
 
 ## Response {#response}
 
@@ -18,7 +18,7 @@ For `idInstance` and `apiTokenInstance` request parameters, please refer to [Bef
 Parameter | Type |  Description
 ----- | ----- | ----- 
 `wid` | **string** | Account ID in WhatsApp
-`countryInstance` | **string** | Account country code in accordance with [ISO 3166-2] standard (https://ru.wikipedia.org/wiki/ISO_3166-2)
+`countryInstance` | **string** | Account country code in accordance with standard [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
 `typeAccount` | **string** | Account type, possible variants: `trial`, `production`, `vip`
 `webhookUrl` | **string** | URL to receive incoming notifications
 `webhookUrlToken` | **string** | Token for connecting to your webhook server
