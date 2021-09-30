@@ -9,7 +9,7 @@ To get the account state, you have to execute a request at:
 GET https://api.green-api.com/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}
 ```
 
-For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start] section (../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to section [Before you start](../../before-start.md#parameters).
 
 ## Response {#response}
 
@@ -18,7 +18,7 @@ For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you
 Parameter | Type |  Description
 ----- | ----- | ----- 
 `stateInstance` | **string** | Account state. Have variants:
-| | `notAuthorized` - Account is not authorized. For account authorization refer to [Before you start] section (../../before-start.md#qr)
+| | `notAuthorized` - Account is not authorized. For account authorization refer to section [Before you start](../../before-start.md#qr)
 | | `authorized` - Account is authorized
 | | `sleepMode` - Account is in sleep mode. The state is possible when the phone is switched off. After the phone is switched on, it may take up to 5 minutes for the account state to be changed to `authorized`.
 
@@ -32,7 +32,7 @@ Parameter | Type |  Description
 
 ### Errors GetStateInstance {#errors}
 
-For a list of errors common to all methods, refer to [Stansdard errors] section (../common-errors.md)
+For a list of errors common to all methods, refer to section [Stansdard errors](../common-errors.md)
 
 ## Python request example {#request-example-python}
 
