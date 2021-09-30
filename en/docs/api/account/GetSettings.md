@@ -61,7 +61,7 @@ Parameter | Type |  Description
 
 ### Errors GetSettings {#errors}
 
-For a list of errors common to all methods, refer to [Standard errors] section (../common-errors.md)
+For a list of errors common to all methods, refer to section [Standard errors](../common-errors.md)
 
 ## Python request example {#request-example-python}
 
