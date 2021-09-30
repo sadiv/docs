@@ -1,41 +1,41 @@
 # GetSettings
 
-Метод предназначен для получения текущих настроек аккаунта.
+The method is aimed for getting the current account settings.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения текущих настроек аккаунта требуется выполнить запрос по адресу:
+To get the current account settings you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, please refer to [Before you start] section (../../before-start.md#parameters).
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`wid` | **string** | Идентификатор аккаунта в WhatsApp
-`countryInstance` | **string** | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
-`typeAccount` | **string** | Тип аккаунта, возможные значения: `trial`, `production`, `vip`
-`webhookUrl` | **string** | URL для получения входящих уведомлений
-`webhookUrlToken` | **string** | Токен для подключения к вашему вебхук серверу
-`delaySendMessagesMilliseconds` | **integer** | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах
-`markIncomingMessagesReaded` | **string** | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
-`markIncomingMessagesReadedOnReply` | **string** | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
-`proxyInstance` | **string** | Параметры прокси аккаунта. Отображаются в зависимости от настроек прокси. Если прокси собственное, отдаются все параметры в виде `ip:port:login:password`. Если прокси системное, отдается в зависимости от системных настроек прокси. Может принимать значения: `ip:port:login:password` или `system proxy`.
-`outgoingWebhook` | **string** | Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
-`outgoingMessageWebhook` | **string** | Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
-`stateWebhook` | **string** | Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
-`incomingWebhook` | **string** | Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
-`deviceWebhook` | **string** | Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
-`statusInstanceWebhook` | **string** | Получать уведомления об изменении состояния соединения сокета аккаунта, возможные значения: `yes`, `no`
-`sendFromUTC` | **string** | Получить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), возможные значения: `09:00`
-`sendToUTC` | **string** |  Получить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), возможные значения: `12:00`
+`wid` | **string** | Account ID in WhatsApp
+`countryInstance` | **string** | Account country code in accordance with [ISO 3166-2] standard (https://ru.wikipedia.org/wiki/ISO_3166-2)
+`typeAccount` | **string** | Account type, possible variants: `trial`, `production`, `vip`
+`webhookUrl` | **string** | URL to receive incoming notifications
+`webhookUrlToken` | **string** | Token for connecting to your webhook server
+`delaySendMessagesMilliseconds` | **integer** | [Message sending delay](../send-messages-delay.md) is in milliseconds
+`markIncomingMessagesReaded` | **string** | Mark incoming messages as read or not, possible variants: `yes`, `no`. Ignored if markIncomingMessagesReadedOnReply is 'yes'.
+`markIncomingMessagesReadedOnReply` | **string** | Mark incoming messages as read when sending a message to the chat via API, possible variants: `yes`, `no`. If 'yes', then markIncomingMessagesReaded setting is ignored.
+`proxyInstance` | **string** | Account proxy parameters. Displayed depending on proxy settings. If the proxy is your own, all parameters are given as follows:  `ip:port:login:password`. If the proxy is system, it is given depending on proxy system settings. Can have the following variants: `ip:port:login:password` or `system proxy`.
+`outgoingWebhook` | **string** | Get notifications about outgoing messages sending / delivering / reading status, possible variants: `yes`, `no`
+`outgoingMessageWebhook` | **string** | Get notifications about messages sent from phone, possible variants: `yes`, `no`
+`stateWebhook` | **string** | Get notifications about changes in the account authorization status, possible variants: `yes`, `no`
+`incomingWebhook` | **string** | Get notifications about incoming messages and files, possible variants: `yes`, `no`
+`deviceWebhook` | **string** | Get notifications about the device (phone) and battery level, possible variants: `yes`, `no`
+`statusInstanceWebhook` | **string** | Get notifications about the account socket connection status change, possible variants: `yes`, `no`
+`sendFromUTC` | **string** | Get the account setting - the delay of sending from the queue within the time interval AFTER the specified one (Attention, the time is indicated in UTC), possible variants: `09:00`
+`sendToUTC` | **string** |  Get the account setting - the delay of sending from the queue within the time interval BEFORE the specified one (Attention, the time is indicated in UTC), possible variants: `12:00`
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -59,11 +59,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenIns
 }
 ```
 
-### Ошибки GetSettings {#errors}
+### Errors GetSettings {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Standard errors] section (../common-errors.md)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
