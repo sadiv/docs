@@ -1,28 +1,28 @@
 # GetStatusInstance
 
-Метод предназначен для получения состояния сокета соединения инстанса аккаунта с WhatsApp.
+The method is aimed for getting the status of the account instance socket connection with WhatsApp.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения состояния сокета аккаунта требуется выполнить запрос по адресу:
+To get account socket status, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/getStatusInstance/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to section [Before you start](../../before-start.md#parameters).
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`statusInstance` | **string** | Состояние соединения сокета аккаунта. Принимает значения:
-| | `online` - Аккаунт может принимать/отправлять сообщения, сокет открыт
-| | `offline` - Аккаунт не может принимать/отправлять сообщения, сокет закрыт
+`statusInstance` | **string** | Account socket connection status. Have variants:
+| | `online` - Account can get/post messages, socket is open
+| | `offline` - Account can't get/post messages, socket is closed
 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -30,11 +30,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getStatusInstance/{{apiTo
 }
 ```
 
-### Ошибки GetStatusInstance {#errors}
+### Errors GetStatusInstance {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to section [Standard errors](../common-errors.md)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
