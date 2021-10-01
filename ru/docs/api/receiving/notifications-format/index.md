@@ -21,6 +21,7 @@
 
 - [Статус аккаунта](StateInstanceChanged.md)
 - [Статус устройства](DeviceInfo.md)
+- [Ававтар контакта](AvatarInfo.md)
 - [Входящий звонок](IncomingCall.md)
 - [Статус доступности сокета](StatusInstanceChanged.md)
 
