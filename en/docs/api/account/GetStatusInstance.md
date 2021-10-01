@@ -32,7 +32,7 @@ Parameter | Type |  Description
 
 ### Errors GetStatusInstance {#errors}
 
-For a list of errors common to all methods, refer to section [Standard errors](../common-errors.md)
+For a list of errors common to all methods, refer to section [Common errors](../common-errors.md)
 
 ## Python request example {#request-example-python}
 
