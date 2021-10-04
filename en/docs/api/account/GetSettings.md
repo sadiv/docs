@@ -9,7 +9,7 @@ To get the current account settings you have to execute a request at:
 GET https://api.green-api.com/waInstance{{idInstance}}/GetSettings/{{apiTokenInstance}}
 ```
 
-For `idInstance` and `apiTokenInstance` request parameters, please refer to section [Before you start](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, please refer to [Before you start](../../before-start.md#parameters) section.
 
 ## Response {#response}
 
@@ -61,7 +61,7 @@ Parameter | Type |  Description
 
 ### Errors GetSettings {#errors}
 
-For a list of errors common to all methods, refer to section [Common errors](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
 ## Python request example {#request-example-python}
 
