@@ -1,74 +1,73 @@
 # QR
 
-Метод предназначен для получения QR-кода. 
-Для авторизации аккаунта требуется считать QR-код из приложения [WhatsApp Business](https://www.whatsapp.com/business/) на телефоне.
-Также получить QR-код и авторизовать аккаунт можно в личном кабинете. Процедура авторизации аккаунта через личный кабинет описана в разделе [Перед началом работы](../../before-start.md#qr).
+The method is aimed for getting QR code. 
+To authorize your account, you have to scan a QR code from application [WhatsApp Business](https://www.whatsapp.com/business/) on your phone.
+You can also get a QR code and authorize your account in your profile. The procedure for authorizing an account in your profile is described in section [Before you start](../../before-start.md#qr).
 
-> QR-код обновляется каждые 20 сек., поэтому вызывать метод получения QR-кода рекомендуется с интервалом в 1 сек.
+> QR code is updated every 20 seconds, therefore, it is recommended to request the method for getting a QR code with a delay in 1 second.
 
-Для получения QR-кода аккаунт должен быть в неавторизованном состоянии. Если аккаунт авторизован, то предварительно требуется разлогинить аккаунт методом [Logout](Logout.md).
+To get a QR code, the account must have an unauthorized status. If the account is authorized, you have first to log out the account using [Logout](Logout.md) method.
+After sucessful scanning a QR code and authorizing the account [incoming notification](../receiving/index.md) in form of [Account Status](../receiving/notifications-format/StateInstanceChanged.md) is generated.
 
-После успешного сканирования QR-кода и авторизации аккаунта формируется [входящее уведомление](../receiving/index.md) с видом [Статус аккаунта](../receiving/notifications-format/StateInstanceChanged.md).
+> You can also get a QR code via [websocket-connection](Scanqrcode.md) 
 
-> Также получить QR-код можно через [websocket-соединение](Scanqrcode.md) 
+## Request {#request}
 
-## Запрос {#request}
-
-Для получения QR-кода требуется выполнить запрос по адресу:
+To get a QR code, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/qr/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to section [Before you start](../../before-start.md#parameters).
 
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | Тип сообщения, возможные значения `qrCode`, `error`, `alreadyLogged`
-`message` | **string** | Содержание сообщения. Принимает различные значения в зависимости от значения поля `type`
+`type` | **string** | Message type, possible variants `qrCode`, `error`, `alreadyLogged`
+`message` | **string** | Message content. Can have different variants depending on `type`
 
 
-#### Получено изображение QR-кода {#response-type-qrCode}
+#### Got QR code {#response-type-qrCode}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `qrCode` - получено изображение QR-кода
-`message` | **string** | Изображение QR-кода в кодировке `base64`. Для вывода в браузере нужно добавить строку `data:image/png;base64, {message}`
+`type` | **string** | `qrCode` - got QR code image
+`message` | **string** | `base64` QR code image. To display in the browser, you need to add a string `data:image/png;base64, {message}`
 
 
-#### Возникла ошибка {#response-type-error}
+#### Error occurred {#response-type-error}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `error` - возникла ошибка
-`message` | **string** | Описание ошибки
+`type` | **string** | `error` - an error is occurred
+`message` | **string** | Error description
 
 
-#### Аккаунт уже авторизован {#response-type-alreadyLogged}
+#### Account already authorized {#response-type-alreadyLogged}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `alreadyLogged` - аккаунт уже авторизован. Для получения QR-кода требуется предварительно разлогинить аккаунт методом [Logout](Logout.md)
-`message` | **string** | Принимает значение `instance account already authorized`
+`type` | **string** | `alreadyLogged` - account is already authorized. To get a QR code, you have first to log out of your account using [Logout](Logout.md) method
+`message` | **string** | Takes on the value `instance account already authorized`
 
 
-### Ошибки QR {#errors}
+### QR errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to section [Common errors](../common-errors.md)
 
-## Пример получения QR-кода в браузере {#request-example-js}
+## Example of getting a QR code in a browser {#request-example-js}
 
 ```js
 // ...
 ```
 
-Также пример получения QR-кода в браузере можно посмотреть в файле [browserExampleQRcode](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExampleQRCode.html) 
+You can also see an example of getting a QR code in a browser in the file [browserExampleQRcode](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExampleQRCode.html) 
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
