@@ -25,13 +25,13 @@ Parameter | Type | Mandatory | Description
 `delaySendMessagesMilliseconds` | **integer** | No | [Message sending delay](../send-messages-delay.md) is in milliseconds. Minimum value is 500 msec
 `markIncomingMessagesReaded` | **string** | No | Mark incoming messages as read or not, possible variants: `yes`,` no`. Ignored if markIncomingMessagesReadedOnReply is 'yes'.
 `markIncomingMessagesReadedOnReply` | **string** | No | Mark incoming messages as read when posting a message to the chat via API, possible variants: `yes`,` no`. If it is 'yes', then the markIncomingMessagesReaded setting is ignored.
-`proxyInstance` | **string** | No | Прокси для аккаунта в формате `{ip}:{port}:{login}:{password}`, если вы хотите что бы аккаунт работал на вашем прокси, по умолчанию используются системные прокси
-`outgoingWebhook` | **string** | No |Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
-`outgoingMessageWebhook` | **string** | No |Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
-`stateWebhook` | **string** | No |Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
-`incomingWebhook` | **string** | No |Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
-`deviceWebhook` | **string** | No |Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
-`statusInstanceWebhook` | **string** | No | Получать уведомления об изменении состояния сокет соединения аккаунта, возможные значения: `yes`, `no`
+`proxyInstance` | **string** | No | Proxy for the account in the format {ip}:{port}:{login}:{password}, if you want the account to work on your proxy; system proxies are used by default
+`outgoingWebhook` | **string** | No |Get notifications about outgoing messages sending/delivering/reading statuses, possible variants: `yes`,` no`
+`outgoingMessageWebhook` | **string** | No |Get notifications about messages sent from the phone, possible variants: `yes`,` no`
+`stateWebhook` | **string** | No |Get notifications about the account authorization state change, possible variants: `yes`,` no`
+`incomingWebhook` | **string** | No |Get notifications about incoming messages and files, possible variants: `yes`,` no`
+`deviceWebhook` | **string** | No |Get notifications about the device (phone) and battery level, possible variants: `yes`,` no`
+`statusInstanceWebhook` | **string** | No | Get notifications about the account socket connection status change, possible variants: `yes`,` no`
 `sendFromUTC` | **string** | No | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), обязателен, если указано `sendToUTC`, возможные значения: `09:00`
 `sendToUTC` | **string** |  No | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), обязателен, если указано `sendFromUTC`, возможные значения: `12:00`
 
