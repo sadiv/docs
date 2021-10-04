@@ -1,25 +1,25 @@
 # Logout
 
-Метод предназначен для разлогинивания аккаунта.
+The method is aimed for logging out an account. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для разлогинивания аккаунта требуется выполнить запрос по адресу:
+To log out the account, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/Logout/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refet to section [Before you begin](../../before-start.md#parameters).
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`isLogout` | **boolean** | Результат разлогинивания аккаунта WhatsApp
+`isLogout` | **boolean** | WhatsApp account logging out result
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -27,11 +27,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/Logout/{{apiTokenInstance
 }
 ```
 
-### Ошибки Logout {#errors}
+### Logout errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to section [Common errors](../common-errors.md)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
