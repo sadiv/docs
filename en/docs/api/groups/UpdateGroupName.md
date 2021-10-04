@@ -1,24 +1,24 @@
 # UpdateGroupName
 
-Метод изменяет наименование группового чата.
+The method changes a group chat name.
 
-## Запрос {#request}
+## Request {#request}
 
-Для изменения наименования группового чата требуется выполнить запрос по адресу:
+To change a group chat name, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
-`groupName` | **string** | Да | Наименование группового чата
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
+`groupName` | **string** | Yes | Group chat name
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -27,15 +27,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`updateGroupName` | **boolean** | Флаг изменения названия группы
+`updateGroupName` | **boolean** | Group name change flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -43,11 +43,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 }
 ```
 
-### Ошибки UpdateGroupName {#errors}
+### UpdateGroupName errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
