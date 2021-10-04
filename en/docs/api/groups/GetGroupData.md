@@ -1,23 +1,23 @@
-# GetGroupData
+# GetGro# GetGroupData
 
-Метод получает данные группового чата.
+The method gets group chat data. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения данных группового чата требуется выполнить запрос по адресу:
+To get group chat data, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance`, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,30 +25,30 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`groupId` | **string** | [Идентификатор группового чата](../chat-id.md#gus)
-`owner` | **string** | [Идентификатор](../chat-id.md#corr) владельца группы
-`subject` | **string** | Наименование группы
+`groupId` | **string** | [Group chat Id](../chat-id.md#gus)
+`owner` | **string** | Group owner [Id](../chat-id.md#corr)
+`subject` | **string** | Group name
 `creation` | **integer** | Время создания группы в Unix-формате
-`participants` | **array** | Коллекция участников группы
+`participants` | **array** | Group participants collection
 `subjectTime` | **integer** | Время создания наименования группы в Unix-формате
 `subjectOwner` | **string** | [Идентификатор](../chat-id.md#corr) пользователя создавшего наименование группы
-`groupInviteLink` | **string** | Ссылка приглашения в группу
+`groupInviteLink` | **string** | Group invitation link
 
 Поля объектов из массива `participants`
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
 `id` | **string** | [Идентификатор](../chat-id.md#corr) участника группового чата
 `isAdmin` | **boolean** | Флаг, является ли пользователь администратором группы
 `isSuperAdmin` | **boolean** | Флаг, является ли пользователь супер администратором группы
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
