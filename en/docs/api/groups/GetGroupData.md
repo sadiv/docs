@@ -79,11 +79,11 @@ Parameter | Type |  Description
 }
 ```
 
-### Ошибки GetGroupData {#errors}
+### GetGroupData errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
