@@ -66,7 +66,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/qr/{{apiTokenInstance}}
 // ...
 ```
 
-Также пример получения QR-кода в браузере можно посмотреть в файле [browserExample](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExample.html) 
+Также пример получения QR-кода в браузере можно посмотреть в файле [browserExampleQRcode](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExampleQRCode.html) 
 
 ## Пример кода на Python  {#request-example-python}
 
