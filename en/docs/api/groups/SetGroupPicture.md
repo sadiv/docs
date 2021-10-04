@@ -1,15 +1,15 @@
 # SetGroupPicture
 
-Метод устанавливает аватар группы.
+The method sets a group picture.
 
-## Запрос {#request}
+## Request {#request}
 
-Для установки аватара группового чата требуется выполнить запрос по адресу:
+To set a group chat picture, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setGroupPicture/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
 ### Request parameters {#request-parameters}
 
