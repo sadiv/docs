@@ -18,7 +18,7 @@ To get a QR code, you have to execute a request at:
 GET https://api.green-api.com/waInstance{{idInstance}}/qr/{{apiTokenInstance}}
 ```
 
-For `idInstance` and `apiTokenInstance` request parameters, refer to section [Before you start](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
 
 ## Response {#response}
@@ -57,7 +57,7 @@ Parameter | Type |  Description
 
 ### QR errors {#errors}
 
-For a list of errors common to all methods, refer to section [Common errors](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
 ## Example of getting a QR code in a browser {#request-example-js}
 
