@@ -11,14 +11,14 @@ POST https://api.green-api.com/waInstance{{idInstance}}/setGroupPicture/{{apiTok
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`file` | **file** | Да | Отправляемый файл в формате *.jpg
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
+`file` | **file** | Yes | Sent file in *.jpg
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
@@ -38,17 +38,17 @@ response = requests.request("POST", url, headers=headers, data = payload, files=
 print(response.text.encode('utf8'))
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
 `setGroupPicture` | **boolean** | флаг результата установки аватара группы
 `urlAvatar` | **string** | url  на установленное изображение
 `reason` | **string** | причина почему аватар не был установлен
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -59,7 +59,7 @@ print(response.text.encode('utf8'))
 
 ```
 
-### Ошибки SetGroupPicture {#errors}
+### SetGroupPicture errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
