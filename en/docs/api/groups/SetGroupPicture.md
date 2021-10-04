@@ -44,9 +44,9 @@ print(response.text.encode('utf8'))
 
 Parameter | Type |  Description
 ----- | ----- | ----- 
-`setGroupPicture` | **boolean** | флаг результата установки аватара группы
-`urlAvatar` | **string** | url  на установленное изображение
-`reason` | **string** | причина почему аватар не был установлен
+`setGroupPicture` | **boolean** | group picture setting result flag
+`urlAvatar` | **string** | set picture url
+`reason` | **string** | reason why the picture hasn't been set
 
 ### Response body example {#response-example-body}
 
