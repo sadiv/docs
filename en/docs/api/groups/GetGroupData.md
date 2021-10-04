@@ -34,19 +34,19 @@ Parameter | Type |  Description
 `groupId` | **string** | [Group chat Id](../chat-id.md#gus)
 `owner` | **string** | Group owner [Id](../chat-id.md#corr)
 `subject` | **string** | Group name
-`creation` | **integer** | Время создания группы в Unix-формате
+`creation` | **integer** | Group creation time in Unix format 
 `participants` | **array** | Group participants collection
-`subjectTime` | **integer** | Время создания наименования группы в Unix-формате
-`subjectOwner` | **string** | [Идентификатор](../chat-id.md#corr) пользователя создавшего наименование группы
+`subjectTime` | **integer** | Group name creation time in Unix format
+`subjectOwner` | **string** | User [Id](../chat-id.md#corr) who created the group name 
 `groupInviteLink` | **string** | Group invitation link
 
-Поля объектов из массива `participants`
+`Participants`array subjects parameters
 
 Parameter | Type |  Description
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор](../chat-id.md#corr) участника группового чата
-`isAdmin` | **boolean** | Флаг, является ли пользователь администратором группы
-`isSuperAdmin` | **boolean** | Флаг, является ли пользователь супер администратором группы
+`id` | **string** | Group chat participant [Id](../chat-id.md#corr)
+`isAdmin` | **boolean** | Flag whether the user is a group administrator
+`isSuperAdmin` | **boolean** | Flag whether the user is a group super administrator
 
 ### Response body example {#response-example-body}
 
