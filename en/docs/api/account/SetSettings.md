@@ -32,10 +32,10 @@ Parameter | Type | Mandatory | Description
 `incomingWebhook` | **string** | No |Get notifications about incoming messages and files, possible variants: `yes`,` no`
 `deviceWebhook` | **string** | No |Get notifications about the device (phone) and battery level, possible variants: `yes`,` no`
 `statusInstanceWebhook` | **string** | No | Get notifications about the account socket connection status change, possible variants: `yes`,` no`
-`sendFromUTC` | **string** | No | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), обязателен, если указано `sendToUTC`, возможные значения: `09:00`
-`sendToUTC` | **string** |  No | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), обязателен, если указано `sendFromUTC`, возможные значения: `12:00`
+`sendFromUTC` | **string** | No | Set the account setting - the delay of sending from the queue within the time interval AFTER the specified one (Attention, the time is indicated in UTC), mandatory if specified `sendToUTC`, possible variants: `09:00`
+`sendToUTC` | **string** |  No | Set the account setting - the delay of sending from the queue within the time interval BEFORE the specified one (Attention, the time is indicated in UTC), mandatory if specified `sendFromUTC`, possible variants: `12:00`
 
-### Пример тела запроса общий {#request-example-body}
+### General request body example {#request-example-body}
 
 ```json
 {
@@ -54,10 +54,10 @@ Parameter | Type | Mandatory | Description
     "statusInstanceWebhook": "yes" 
 }
 ```
-### Пример тела запроса для установки временного интервала {#request-example-body-time-interval}
+### Request body example for setting time interval {#request-example-body-time-interval}
 
-Обязательно указывать параметры sendFromUTC и sendToUTC вместе, в противном случае возникнет ошибка.
-Если требуется отправлять сообщения только в интервале с 12:00 до 18:00 по мск, то требуется указать такие значения параметров:
+It is mandatory to specify sendFromUTC and sendToUTC parameters together, otherwise an error will occur.
+If you need to send messages only in the interval from 12:00 to 18:00 Moscow time, then you have to specify the following parameter values:
 
 ```json
 {
