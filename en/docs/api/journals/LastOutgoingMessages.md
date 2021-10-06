@@ -1,79 +1,79 @@
 # LastOutgoingMessages
 
-Метод возвращает крайние отправленные сообщения аккаунта.
+The method returns the last outgoing messages of the account.
 
-> Срок хранения отправленных сообщений на сервере составляет 24 часа.
+> Outgoing messages are stored on the server for 24 hours.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения отправленных сообщений требуется выполнить запрос по адресу:
+To get outgoing messages, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Массив объектов с полями:
+Array of objects with parameters:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`idMessage` | **string** | Идентификатор исходящего сообщения
-`timestamp` | **integer** | Время крайнего действия по сообщению в UNIX-формате
-`statusMessage` | **string** | Статус исходящего сообщения, возможные значения:
-| | `noAccount` - нет аккаунта WhatsApp на номере телефона
-| | `notInGroup` - не состоите в данной группе
-| | `sent` - отправлено
-| | `delivered` - доставлено
-| | `read` - прочитано/просмотрено/прослушано
-`typeMessage` | **string** | Тип сообщения, возможные значения:
-| | `textMessage` - текстовое сообщение
-| | `imageMessage` - сообщение с изображением
-| | `videoMessage` - видео сообщение
-| | `documentMessage` - сообщение с файлом документа
-| | `audioMessage` - аудио сообщение
-| | `locationMessage` - сообщение геолокации
-| | `contactMessage` - сообщение с контактом
-| | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](../chat-id.md), в который сообщение было отправлено
-`textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
-`downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
-`caption` | **string** | Описание файла
-`location` | **object** | Объект о структуре локации
-`contact` | **object** | Объект о структуре контакта
-`extendedTextMessage` | **object** | Объект о структуре данных ссылки
+`idMessage` | **string** | Outgoing message Id
+`timestamp` | **integer** | Time of the last action on a message in UNIX format
+`statusMessage` | **string** | Outgoing message status, possible variants:
+| | `noAccount` - no WhatsApp account on phone number 
+| | `notInGroup` - not in this group
+| | `sent` - sent
+| | `delivered` - delivered
+| | `read` - read/seen/heard
+`typeMessage` | **string** | Message type, possible variants:
+| | `textMessage` - text message
+| | `imageMessage` - image message
+| | `videoMessage` - video message
+| | `documentMessage` - document file message
+| | `audioMessage` - audio message
+| | `locationMessage` - location message
+| | `contactMessage` - contact message
+| | `extendedTextMessage` - link and preview message
+`chatId` | **string** | [Chat Id](../chat-id.md), where message has been sent to
+`textMessage` | **string** | Message text, if `typeMessage`=`textMessage`
+`downloadUrl` | **string** | Link to download a file, if `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
+`caption` | **string** | File caption
+`location` | **object** | Location structure object
+`contact` | **object** | Contact structure object
+`extendedTextMessage` | **object** | Link data structure object
 
-Поля объекта `location`:
+Parameters of `location` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`nameLocation` | **string** | Название локации
-`address` | **string** | Адрес локации
-`latitude` | **double** | Широта локации
-`longitude` | **double** | Долгота локации
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`nameLocation` | **string** | Location name
+`address` | **string** | Location address
+`latitude` | **double** | Location latitude
+`longitude` | **double** | Location longitude
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-Поля объекта `contact`:
+Parameters of `contact` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`displayName` | **string** | Отображаемое имя контакта
-`vcard` | **string** | Структура VCard (визитной карточки контакта)
+`displayName` | **string** | Contact display name
+`vcard` | **string** | VCard structure (contact visit card)
 
-Поля объекта `extendedTextMessage`:
+Parameters of `extendedTextMessage` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`text` | **string** | Текст ссылки
-`description` | **string** | Описание ссылки
-`title` | **string** | Заголовок ссылки
-`previewType` | **string** | Тип превью ссылки
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`text` | **string** | Link text
+`description` | **string** | Link description
+`title` | **string** | Link title
+`previewType` | **string** | Link preview type
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 [
@@ -83,7 +83,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
         "statusMessage": "read",
         "typeMessage": "textMessage",
         "chatId": "79001234567@c.us",
-        "textMessage": "Привет",
+        "textMessage": "Hi",
     },
     {
         "idMessage": "3EB0BDDC94BFDFB3D4FA",
@@ -92,16 +92,16 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
         "typeMessage": "imageMessage",
         "chatId": "79001234567@c.us",
         "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/3EB0BDDC94BFDFB3D4FA",
-        "caption": "Как тебе?"
+        "caption": "What do you think?"
     }
 ]
 ```
 
-### Ошибки LastOutgoingMessages {#errors}
+### LastOutgoingMessages errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
