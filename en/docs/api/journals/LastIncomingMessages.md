@@ -50,7 +50,7 @@ Parameter | Type |  Description
 `nameLocation` | **string** | Location name 
 `address` | **string** | Location address
 `latitude` | **double** | Location latitude
-`longitude` | **double** | Долгота локации
+`longitude` | **double** | Location longitude
 `jpegThumbnail` | **string** | `base64`-coded image preview
 
 Parameters of `contact` object:
