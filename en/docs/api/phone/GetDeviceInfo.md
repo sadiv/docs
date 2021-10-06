@@ -1,30 +1,30 @@
 # GetDeviceInfo
 
-Метод предназначен для получения информации об устройстве (телефоне), на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/).
+The method is aimed for getting information about the device (phone) running [WhatsApp Business](https://www.whatsapp.com/business/) application.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения информации об устройстве требуется выполнить запрос по адресу:
+To get device info, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/GetDeviceInfo/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`platform` | **string** | Операционная система устройства на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
-`deviceManufacturer` | **string** | Производитель устройства
-`deviceModel` | **string** | Модель устройства
-`osVersion` | **string** | Версия операционной системы
-`waVersion` | **string** | Версия приложения [WhatsApp Business](https://www.whatsapp.com/business/) или [WhatsApp](https://www.whatsapp.com/)
-`battery` | **integer** | Уровень заряда батареи
+`platform` | **string** | Operating system of the device running [WhatsApp Business](https://www.whatsapp.com/business/) application
+`deviceManufacturer` | **string** | Device manufacturer
+`deviceModel` | **string** | Device model
+`osVersion` | **string** | Operating system version
+`waVersion` | **string** | Application version - [WhatsApp Business](https://www.whatsapp.com/business/) or [WhatsApp](https://www.whatsapp.com/)
+`battery` | **integer** | Battery level
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -37,11 +37,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/GetDeviceInfo/{{apiTokenI
 }
 ```
 
-### Ошибки GetDeviceInfo {#errors}
+### GetDeviceInfo errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
