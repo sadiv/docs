@@ -1,39 +1,39 @@
 # ShowMessagesQueue
 
-Метод предназначен для получения списка сообщений, находящихся в очереди на отправку.
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for getting a list of messages in the queue to be sent. 
+Messages sending rate is managed by [Messages sending delay](../send-messages-delay.md) parameter.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения списка сообщений требуется выполнить запрос по адресу:
+To get a messages queue, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/ShowMessagesQueue/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Массив объектов с полями:
+Array of objects with parameters:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`typeMessage` | **string** | Тип сообщения, возможные значения:
-| | `textMessage` - текстовое сообщение
-| | `imageMessage` - сообщение с изображением
-| | `videoMessage` - видео сообщение
-| | `documentMessage` - сообщение с файлом документа
-| | `audioMessage` - аудио сообщение
-| | `locationMessage` - сообщение геолокации
-| | `contactMessage` - сообщение с контактом
-| | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](../chat-id.md) в который сообщение будет отправлено
-`message` | **string** |  текст сообщения, если `typeMessage` = `textMessage`/`locationMessage`/`contactMessage`/`extendedTextMessage`
-`fileName` | **string** | Имя отправляемого файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
+`typeMessage` | **string** | Message type, possible variants:
+| | `textMessage` - text message
+| | `imageMessage` - image message
+| | `videoMessage` - video message
+| | `documentMessage` - document file message
+| | `audioMessage` - audio message
+| | `locationMessage` - location message
+| | `contactMessage` - contact message
+| | `extendedTextMessage` - link and preview message
+`chatId` | **string** | [Chat Id](../chat-id.md) where the message will be sent to
+`message` | **string** |  message text, if `typeMessage` = `textMessage`/`locationMessage`/`contactMessage`/`extendedTextMessage`
+`fileName` | **string** | outgoing file name, if `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 [
@@ -50,11 +50,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ShowMessagesQueue/{{apiTo
 ]
 ```
 
-### Ошибки ShowMessagesQueue {#errors}
+### ShowMessagesQueue errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
