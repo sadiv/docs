@@ -16,7 +16,7 @@ Parameter | Type | Mandatory | Description
 
 ## Response {#response}
 
-Файл из сообщения
+File from message
 
 ### DownloadFile errors {#errors}
 
