@@ -1,26 +1,26 @@
 # ReadChat
 
-Метод предназначен для отметки сообщений в чате прочитанными. Могут быть отмечены прочитанными все сообщения в чате или только одно заданное сообщение.
+The method is aimed for marking messages in a chat as read. Either all messages or a specified message in a chat can be marked as read.
 
-## Запрос {#request}
+## Request {#request}
 
-Для отметки сообщений в чате прочитанными требуется выполнить запрос по адресу:
+To mark messages in a chat as read, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/ReadChat/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`idMessage` | **string** | Нет | Идентификатор входящего сообщения, которое необходимо отметить прочитанным. Если не указан, то все непрочитанные сообщения в чате будут отмечены прочитанными.
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`idMessage` | **string** | No | ID of the incoming message to be marked as read. If not specified, then all unread messages in the chat will be marked as read.
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Отметка прочтения одного сообщения в чате:
+Read mark of a single message in the chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -28,22 +28,22 @@ POST https://api.green-api.com/waInstance{{idInstance}}/ReadChat/{{apiTokenInsta
 }
 ```
 
-Отметка прочтения всех сообщений в чате:
+Read mark of all messages in the chat:
 ```json
 {
     "chatId": "79001234567@c.us"
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`setRead` | **boolean** | Флаг отметки сообщений прочитанными
+`setRead` | **boolean** | Messages read mark flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -51,11 +51,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/ReadChat/{{apiTokenInsta
 }
 ```
 
-### Ошибки ReadChatMessage {#errors}
+### ReadChatMessage errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
