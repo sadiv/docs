@@ -1,25 +1,25 @@
 # ClearMessagesQueue
 
-Метод предназначен для очистки очереди сообщений на отправку.
+The method is aimed for clearing the queue of messages to be sent.
 
-## Запрос {#request}
+## Request {#request}
 
-Для очистки очереди сообщений требуется выполнить запрос по адресу:
+To clear messages queue, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/ClearMessagesQueue/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`isCleared` | **boolean** | Флаг очистки очереди сообщений
+`isCleared` | **boolean** | Messages queue clearing flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -27,9 +27,9 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ClearMessagesQueue/{{apiT
 }
 ```
 
-### Ошибки ClearMessagesQueue {#errors}
+### ClearMessagesQueue errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
 ## Пример кода на Python  {#request-example-python}
 
