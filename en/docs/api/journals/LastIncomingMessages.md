@@ -2,7 +2,7 @@
 
 The method returns the last incoming messages of the account.
 
-> The storage period for incoming messages on the server is 24 hours.
+> Incoming messages are stored on the server for 24 hours.
 
 ## Request {#request}
 
