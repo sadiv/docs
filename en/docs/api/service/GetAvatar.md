@@ -1,53 +1,53 @@
 # GetAvatar
 
-Метод возвращает аватар корреспондента или группового чата.
+The method returns the avatar of a correspondent or a group chat.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения аватара требуется выполнить запрос по адресу:
+To get avatar, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](../chat-id.md)
+`chatId` | **string** | Yes | [Correspondent or group chat Id](../chat-id.md)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Для получения своего аватара - укажите в chatId свой номер ("{ваш номер}@c.us").
+To get your avatar - specify your number in chatId ("{your number}@c.us").
 
-Получить аватар корреспондента:
+Get the correspondent's avatar:
 ```json
 {
     "chatId": "79001234567@c.us"
 }
 ```
 
-Получить аватар группового чата:
+Get a group chat avatar:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us"
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`existsWhatsapp` | **boolean** | Флаг наличия учетной записи WhatsApp на номере телефона корреспондента
-`urlAvatar` | **string** | Ссылка на аватар корреспондента или группового чата. Параметр принимает пустое значение в случае, если аватар не установлен или у корреспондента нет учетной записи WhatsApp (`existsWhatsapp`=`false`)
-`reason` | **string** | Причина почему аватар не был проверен. Присутствует когда не удалось выполнить проверку, возможные значения:
-| | `bad request data` - Неверный формат номера телефона. Номер телефона должен содержать 11 или 12 цифр. Или идентификатора чата
-| | `get avatar timeout limit exceeded` - Превышен лимит времени ожидания ответа о наличии аватара
+`existsWhatsapp` | **boolean** | Flag of WhatsApp account availability on the correspondent's phone number
+`urlAvatar` | **string** | Link to a correspondent or a group chat avatar. The parameter takes an empty value if the avatar is not set or the correspondent does not have a WhatsApp account (`existsWhatsapp`=`false`)
+`reason` | **string** | Reason why avatar has not been checked. Присутствует когда не удалось выполнить проверку, possible variants:
+| | `bad request data` - Invalid phone number format. Telephone number must be 11 or 12 digits. Or chat Id
+| | `get avatar timeout limit exceeded` - The timeout for a response to check avatar availabiity has been exceeded
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -56,16 +56,16 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 }
 ```
 
-### Ошибки GetAvatar {#errors}
+### GetAvatar errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error Id | Description
 ----- | ----- | -----
-200|`bad request data`| Неверный формат номера телефона. Номер телефона должен содержать 11 или 12 цифр. Или идентификатора чата
-200|`get avatar timeout limit exceeded`| Превышен лимит времени ожидания ответа о наличии аватара
+200|`bad request data`| Invalid phone number format. Telephone number must be 11 or 12 digits. Or chat Id
+200|`get avatar timeout limit exceeded`| The timeout for a response to check avatar availabiity has been exceeded
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
