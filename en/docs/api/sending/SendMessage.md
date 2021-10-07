@@ -1,6 +1,6 @@
 # SendMessage
 
-The method is aimed for sending a text message to a personal or group chat.
+The method is aimed for sending a text message to a personal or a group chat.
 The message will be added to the send queue. 
 The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md).
 
