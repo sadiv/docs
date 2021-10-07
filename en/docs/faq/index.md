@@ -1,3 +1,3 @@
 # FAQ
 
-## [Как защитить номер от бана?](how-to-protect-number-from-ban.md)
+## [How to protect number from ban?](how-to-protect-number-from-ban.md)
