@@ -21,14 +21,14 @@ Parameter | Type | Mandatory | Description
 
 To get your avatar - specify your number in chatId ("{your number}@c.us").
 
-Get the correspondent's avatar:
+Get correspondent avatar:
 ```json
 {
     "chatId": "79001234567@c.us"
 }
 ```
 
-Get a group chat avatar:
+Get group chat avatar:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us"
