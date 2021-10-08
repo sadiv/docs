@@ -2,7 +2,7 @@
 
 The method is aimed for sending a text message to a personal or a group chat.
 The message will be added to the send queue. 
-The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md).
+The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
 ## Request {#request}
 
@@ -19,7 +19,7 @@ Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
 `chatId` | **string** | Yes | [Chat Id](../chat-id.md)
 `message` | **string** | Yes | Message text. Emoji 😃 characters supported 
-`quotedMessageId` | **string** | No | Quoted message ID. If any, the message will be sent quoting the specified chat message
+`quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
 
 > The maximum length of a text message is 4096 characters
 
