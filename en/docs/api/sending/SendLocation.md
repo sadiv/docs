@@ -1,32 +1,32 @@
 # SendLocation
 
-Метод предназначен для отправки сообщения геолокации.
-Сообщение будет добавлено в очередь на отправку.
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for sending location message. 
+The message will be added to the send queue. 
+The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
-## Запрос {#request}
+## Request {#request}
 
-Для отправки сообщения геолокации требуется выполнить запрос по адресу:
+To send location message, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`nameLocation` | **string** | Нет | Название локации
-`address` | **string** | Нет | Адрес локации
-`latitude` | **double** | Да | Широта локации
-`longitude` | **double** | Да | Долгота локации
-`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`nameLocation` | **string** | No | Location name
+`address` | **string** | No | Location address
+`latitude` | **double** | Yes | Location latitude
+`longitude` | **double** | Yes | Location longitude
+`quotedMessageId` | **string** | No | Quoted message Id, if present the message will be sent quoting the specified chat message
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Отправка сообщения в личный чат:
+Sending messages to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -37,7 +37,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenI
 }
 ```
 
-Отправка сообщения в групповой чат:
+Sending messages to a group chat:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -48,7 +48,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenI
 }
 ```
 
-Отправка сообщения с цитированием:
+Sending quoted messages:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -59,15 +59,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenI
     "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`idMessage ` | **string** | Идентификатор отправленного сообщения 
+`idMessage ` | **string** | Outgoing message Id 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -75,11 +75,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenI
 }
 ```
 
-### Ошибки SendLocation {#errors}
+### SendLocation errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
