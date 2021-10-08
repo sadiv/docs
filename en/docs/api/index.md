@@ -1,105 +1,105 @@
-# Документация API
+# API documents
 
-Green API предоставляет HTTP API WhatsApp для отправки и получения сообщений, файлов, работы с групповыми чатами, получения списка контактов и других методов.
+Green API presents HTTP API WhatsApp for sending and receiving messages, files, working with group chats, getting contacts and other methods. 
 
-Перед выполнением запросов убедитесь, что выполнены все шаги раздела [Перед началом работы](../before-start.md). Ознакомьтесь с разделом [Выполнение запросов](../request-format.md). Для отладки запросов к Green API воспользуйтесь [Коллекцией Postman](../postman-collection.md).
+Перед выполнением запросов убедитесь, что выполнены все шаги раздела [Before you start](../before-start.md) section. Ознакомьтесь с разделом [Выполнение запросов](../request-format.md). Для отладки запросов к Green API воспользуйтесь [Коллекцией Postman](../postman-collection.md).
 
-## [Аккаунт](./account/index.md) {#account}
+## [Account](./account/index.md) {#account}
 
-- [Получить настройки аккаунта](./account/GetSettings.md)
-- [Установить настройки аккаунта](./account/SetSettings.md)
-- [Установить системный прокси](./account/SetSystemProxy.md)
-- [Получить состояние аккаунта](./account/GetStateInstance.md)
-- [Перезапустить аккаунт](./account/Reboot.md)
-- [Разлогинить аккаунт](./account/Logout.md)
-- [Получить QR-код](./account/QR.md)
-- [Получить QR-код через websocket](./account/Scanqrcode.md)
+- [Get account settings](./account/GetSettings.md)
+- [Set account settings](./account/SetSettings.md)
+- [Set system proxy](./account/SetSystemProxy.md)
+- [Get account state](./account/GetStateInstance.md)
+- [Reboot account](./account/Reboot.md)
+- [Logout account](./account/Logout.md)
+- [Get QR code](./account/QR.md)
+- [Get QR code via websocket](./account/Scanqrcode.md)
 
-## [Отправка](./sending/index.md) {#sending}
+## [Sending](./sending/index.md) {#sending}
 
-- [Отправить текст](./sending/SendMessage.md)
-- [Отправить видео, аудио, изображение, документ](./sending/SendFileByUpload.md)
-- [Отправить видео, аудио, изображение, документ по URL](./sending/SendFileByUrl.md)
-- [Отправить геолокацию](./sending/SendLocation.md)
-- [Отправить контакт](./sending/SendContact.md)
-- [Отправить ссылку](./sending/SendLink.md)
+- [Send text message](./sending/SendMessage.md)
+- [Send video, audio, image, document](./sending/SendFileByUpload.md)
+- [Send video, audio, image, document by URL](./sending/SendFileByUrl.md)
+- [Send location](./sending/SendLocation.md)
+- [Send contact](./sending/SendContact.md)
+- [Send link](./sending/SendLink.md)
 
-## [Получение](./receiving/index.md) {#receiving}
+## [Receiving](./receiving/index.md) {#receiving}
 
-### [Получение уведомлений через HTTP API](receiving/technology-http-api.md) {#technology-http-api}
-- [Получить уведомление](receiving/technology-http-api/ReceiveNotification.md)
-- [Удалить уведомление](receiving/technology-http-api/DeleteNotification.md)
+### [Receiving notifications via HTTP API](receiving/technology-http-api.md) {#technology-http-api}
+- [Receive notification](receiving/technology-http-api/ReceiveNotification.md)
+- [Delete notification](receiving/technology-http-api/DeleteNotification.md)
 
-### [Получение уведомлений через Webhook Endpoint](receiving/technology-webhook-endpoint.md) {#technology-webhook-endpoint}
+### [Receiving notofications via Webhook Endpoint](receiving/technology-webhook-endpoint.md) {#technology-webhook-endpoint}
 
-### [Формат входящих уведомлений](receiving/notifications-format/index.md) {#notifications-format}
+### [Incoming notifications format](receiving/notifications-format/index.md) {#notifications-format}
 
-#### [Входящее сообщение](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
+#### [Incoming message](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
 
-- [Входящее текстовое сообщение](./receiving/notifications-format/incoming-message/TextMessage.md)
-- [Входящее текстовое сообщение с URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
-- [Входящее сообщение с изображением, видео, аудио, документом](./receiving/notifications-format/incoming-message/ImageMessage.md)
-- [Входящее сообщение с геолокацией](./receiving/notifications-format/incoming-message/LocationMessage.md)
-- [Входящее сообщение с контактом](./receiving/notifications-format/incoming-message/ContactMessage.md)
+- [Incoming text message](./receiving/notifications-format/incoming-message/TextMessage.md)
+- [Incoming text message with URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
+- [Incoming image, video, audio, document message](./receiving/notifications-format/incoming-message/ImageMessage.md)
+- [Incoming location message](./receiving/notifications-format/incoming-message/LocationMessage.md)
+- [Incoming contact message](./receiving/notifications-format/incoming-message/ContactMessage.md)
 
-#### Отправленное сообщение {#receiving-outgoing-message}
+#### Outgoing message {#receiving-outgoing-message}
 
 - [Отправленное с телефона сообщение](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
-- [Статус отправленного сообщения](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
+- [Outgoing message status](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
-#### Прочие {#receiving-dif}
+#### Others {#receiving-dif}
 
-- [Статус аккаунта](./receiving/notifications-format/StateInstanceChanged.md)
-- [Статус устройства](./receiving/notifications-format/DeviceInfo.md)
-- [Входящий звонок](./receiving/notifications-format/IncomingCall.md)
+- [Account status](./receiving/notifications-format/StateInstanceChanged.md)
+- [Device status](./receiving/notifications-format/DeviceInfo.md)
+- [Incoming call](./receiving/notifications-format/IncomingCall.md)
 
-#### Объекты {#receiving-obj}
+#### Objects {#receiving-obj}
 
-- [Типы входящих уведомлений](./receiving/notifications-format/type-webhook.md)
+- [Incoming notifications types](./receiving/notifications-format/type-webhook.md)
 
-### Получение файлов {#receiving-files}
+### Receiving files {#receiving-files}
 
-- [Скачать файл из входящего сообщения](./receiving/files/DownloadFile.md)
+- [Download file from an incoming message](./receiving/files/DownloadFile.md)
 
 
-## [Журналы](./journals/index.md) {#journals}
+## [Journals](./journals/index.md) {#journals}
 
-- [Получить историю сообщений чата](./journals/GetChatHistory.md)
-- [Получить журнал входящих сообщений](./journals/LastIncomingMessages.md)
-- [Получить журнал отправленных сообщений](./journals/LastOutgoingMessages.md)
+- [Get chat messages history](./journals/GetChatHistory.md)
+- [Get incoming messages journal](./journals/LastIncomingMessages.md)
+- [Get outgoing messages journal](./journals/LastOutgoingMessages.md)
 
-## [Очереди](./queues/index.md) {#queues}
+## [Queues](./queues/index.md) {#queues}
 
-- [Получить очередь сообщений к отправке](./queues/ShowMessagesQueue.md)
-- [Очистить очередь сообщений к отправке](./queues/ClearMessagesQueue.md)
+- [Get messages queue](./queues/ShowMessagesQueue.md)
+- [Clear messages queue](./queues/ClearMessagesQueue.md)
 
-## [Группы](./groups/index.md) {#groups}
+## [Groups](./groups/index.md) {#groups}
 
-- [Создать группу](./groups/CreateGroup.md)
-- [Изменить имя группы](./groups/UpdateGroupName.md)
-- [Получить информацию о группе](./groups/GetGroupData.md)
-- [Добавить участника в группу](./groups/AddGroupParticipant.md)
-- [Удалить участника из группы](./groups/RemoveGroupParticipant.md)
-- [Назначить права администратора группы](./groups/SetGroupAdmin.md)
-- [Отозвать права администратора группы](./groups/RemoveAdmin.md)
-- [Выйти из группы](./groups/LeaveGroup.md)
+- [Create a group](./groups/CreateGroup.md)
+- [Change group name](./groups/UpdateGroupName.md)
+- [Get group info](./groups/GetGroupData.md)
+- [Add group participant](./groups/AddGroupParticipant.md)
+- [Remove group participant](./groups/RemoveGroupParticipant.md)
+- [Set group admin rights](./groups/SetGroupAdmin.md)
+- [Remove group admin rights](./groups/RemoveAdmin.md)
+- [Leave group](./groups/LeaveGroup.md)
 
-## [Отметка прочтения](./marks/index.md) {#marks}
+## [Read mark](./marks/index.md) {#marks}
 
-- [Отметить чат прочитанным](./marks/ReadChat.md)
+- [Mark chat read](./marks/ReadChat.md)
 
-## [Устройство (телефон)](./phone/index.md) {#phone}
+## [Device (phone)](./phone/index.md) {#phone}
 
-- [Получить информацию об устройстве](./phone/GetDeviceInfo.md)
+- [Get device info](./phone/GetDeviceInfo.md)
 
-## [Сервисные методы](./service/index.md) {#service}
+## [Service methods](./service/index.md) {#service}
 
-- [Проверить наличие WhatsApp](./service/CheckWhatsapp.md)
-- [Получить аватар](./service/GetAvatar.md)
-- [Получить контакты](./service/GetContacts.md)
+- [Check WhatsApp availability](./service/CheckWhatsapp.md)
+- [Get avatar](./service/GetAvatar.md)
+- [Get contacts](./service/GetContacts.md)
 
-## Прочее {#dif}
+## Other {#dif}
 
-- [Идентификатор чата](chat-id.md)
-- [Интервал отправки сообщений](send-messages-delay.md)
-- [Стандартные ошибки](common-errors.md)
+- [Chat Id](chat-id.md)
+- [Messages sending delay](send-messages-delay.md)
+- [Common errors](common-errors.md)
