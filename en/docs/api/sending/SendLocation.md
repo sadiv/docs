@@ -26,7 +26,7 @@ Parameter | Type | Mandatory | Description
 
 ### Request body example {#request-example-body}
 
-Sending messages to a personal chat:
+Sending a message to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -37,7 +37,7 @@ Sending messages to a personal chat:
 }
 ```
 
-Sending messages to a group chat:
+Sending a message to a group chat:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
