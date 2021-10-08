@@ -1,16 +1,16 @@
 # GetContacts
 
-Метод предназначен для получения списка контактов текущего аккаунта.
+The method is aimed for getting a list of the current account contacts.
 
-Присылает контакты всех получателей, с кем была связь на аккаунте.
-Поле "имя контакта" 'name' принимает значение исходя из следующих условий:
-1) Если аккаунт записан в телефонную книгу, то получаем имя из книги;
-2) Если аккаунт не записан в телефонную книгу, то получаем имя из профиля WhatsApp;
-3) Если аккаунт не записан в телефонную книгу и не назначено имя профиля в WhatsApp, то получаем пустое поле.
+Sends contacts of all recipients whom the account connected with.
+Parameter "contact name" 'name' takes on a value based on the below criteria:
+1) If the account is recorded in the phonebook, then we get the name from the book;
+2) If the account is not recorded in the phonebook, then we get the name from WhatsApp account;
+3) If the account is not recorded in the phone book and WhatsApp account name is not assigned, then we get an empty field. 
 
 ## Request {#request}
 
-Для получения списка контактов требуется выполнить запрос по адресу:
+To get contacts, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenInstance}}
 ```
@@ -23,11 +23,11 @@ For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you
 
 Parameter | Type |  Description
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор корреспондента или группового чата](../chat-id.md)
+`id` | **string** | [User or group chat Id](../chat-id.md)
 `name` | **string** | Contact name
-`type` | **string** | Тип контакта. Возможные значения:
-||`user` - контакт приналдежит корреспонденту
-||`group` - контакт является групповым чатом
+`type` | **string** | Contact type. Possible variants:
+||`user` - contact belongs to a user
+||`group` - contact is a group chat 
 
 
 ### Response body example {#response-example-body}
