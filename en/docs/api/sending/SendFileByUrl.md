@@ -1,38 +1,38 @@
 # SendFileByUrl
 
-Метод предназначен для отправки файла, загружаемого по ссылке.
-Сообщение будет добавлено в очередь на отправку.
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for sending a file downloaded by Url.
+The message will be added to the send queue.
+The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
-Файлы видео, аудио и изображений отправляются как и в родном WhatsApp с возможностью просмотра и прослушки.
-Документы отправляются так же как в родном WhatsApp.
-Тип отправляемого файла и способ его отправки определяется по расширению файла.
-Описание добавляется только к изображениям и видео.
+Video, audio and image files available for viewing and listening to are sent as in native-mode WhatsApp.
+Documents are sent in the same way as in native-mode WhatsApp.
+Outgoing file type and send method is determined by the file extension. 
+Description is only added to images and video.
 
-> Максимальный размер отправляемых файлов равен 37 Мбайт.
+> The maximum size of outgoing files is 37 MB. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для отправки файла требуется выполнить запрос по адресу:
+To send a file, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`urlFile` | **string** | Да | Ссылка на отправляемый файл
-`fileName` | **string** | Да | Название файла. Должно содержать расширение файла
-`caption` | **string** | Нет | Описание под файлом. Описание добавляется к видео, изображениям.
-`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`urlFile` | **string** | Yes | Link to outgoing file
+`fileName` | **string** | Yes | File name. Must contain the file extension
+`caption` | **string** | No | File caption. Caption added to video, images.
+`quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Отправка сообщения в личный чат:
+Sending a message to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -42,36 +42,36 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 }
 ```
 
-Отправка сообщения в групповой чат:
+Sending a message to a group chat:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
     "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
-    "caption": "Лошадка"
+    "caption": "Little horse"
 }
 ```
 
-Отправка сообщения с цитированием:
+Sending a quoted message:
 ```json
 {
     "chatId": "79001234567@с.us",
     "urlFile": "https://my.site.com/img/horse.png",
     "fileName": "horse.png",
-    "caption": "Лошадка",
+    "caption": "Little horse",
     "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`idMessage ` | **string** | Идентификатор отправленного сообщения 
+`idMessage ` | **string** | Outgoing message Id 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -79,11 +79,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendFileByUrl/{{apiToken
 }
 ```
 
-### Ошибки SendFileByUrl {#errors}
+### SendFileByUrl errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
