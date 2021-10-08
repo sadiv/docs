@@ -1,6 +1,6 @@
 # Account socket status
 
-This type webhook contains socket state data (whether instance is ready send/receive messages)
+This type webhook contains socket state data (whether instance is ready to send/receive messages)
 
 ## Webhook {#webhook}
 
