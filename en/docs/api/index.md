@@ -2,7 +2,7 @@
 
 Green API presents HTTP API WhatsApp for sending and receiving messages, files, working with group chats, getting contacts and other methods. 
 
-Перед выполнением запросов убедитесь, что выполнены все шаги раздела [Before you start](../before-start.md) section. Ознакомьтесь с разделом [Выполнение запросов](../request-format.md). Для отладки запросов к Green API воспользуйтесь [Коллекцией Postman](../postman-collection.md).
+Make sure you have completed all the steps in [Before you start](../before-start.md) section before executing requests. Check out [Requests execution](../request-format.md) section. Use [Postman collection](../postman-collection.md) to debug requests to Green API. 
 
 ## [Account](./account/index.md) {#account}
 
@@ -44,7 +44,7 @@ Green API presents HTTP API WhatsApp for sending and receiving messages, files, 
 
 #### Outgoing message {#receiving-outgoing-message}
 
-- [Отправленное с телефона сообщение](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
+- [Outgoing message](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
 - [Outgoing message status](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
 #### Others {#receiving-dif}
