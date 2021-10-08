@@ -1,29 +1,29 @@
-# Статус сокета аккаунта
+# Account socket status
 
-Входящее уведомление данного типа содержит данные о состоянии сокета (готов или нет инстанс отправлять/принимать сообщения)
+This type webhook contains socket state data (whether instance is ready send/receive messages)
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `statusInstanceChanged`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`statusInstance` | **string** | Состояние аккаунта. Принимает значения:
-| | `online` - Аккаунт может принимать/отправлять сообщения, сокет открыт
-| | `offline` - Аккаунт не может принимать/отправлять сообщения, сокет закрыт
+`typeWebhook` | **string** | [Webhook type](type-webhook.md). For this type notifications the parameter takes on value `statusInstanceChanged`
+`instanceData` | **object** | Account data
+`timestamp` | **integer** | Event timestamp in UNIX format
+`statusInstance` | **string** | Account status. Takes on values:
+| | `online` - Account can receive/send messages, socket is open
+| | `offline` - Account can't receive/send messages, socet is closed
 
-Поля объекта `instanceData`
+`instanceData` object parameter
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Messenger type for account
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
