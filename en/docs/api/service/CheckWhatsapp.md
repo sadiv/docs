@@ -50,7 +50,7 @@ HTTP code | Error Id | Description
 400 | `bad phone number, valid 11 or 12 digits` | Invalid phone number format, must be 11 or 12 digits
 400 | `check phone number timeout limit exceeded` | The timeout for a response to check a phone number has been exceeded
 
-## Python request example  {#request-example-python}The time limit for waiting for a response to verify a phone number has been exceeded
+## Python request example  {#request-example-python}
 
 ```python
 import requests
