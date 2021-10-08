@@ -1,6 +1,6 @@
 # SendFileByUrl
 
-The method is aimed for sending a file downloaded by Url.
+The method is aimed for sending a file uploaded by Url.
 The message will be added to the send queue.
 The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
