@@ -15,7 +15,7 @@ For `idInstance` or `apiTokenInstance` request parameters, refer to [Before you 
 
 Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Yes | [Correspondent or group chat Id](../chat-id.md)
+`chatId` | **string** | Yes | [User or group chat Id](../chat-id.md)
 
 ### Request body example {#request-example-body}
 
