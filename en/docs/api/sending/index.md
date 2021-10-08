@@ -1,6 +1,6 @@
 # Sending
 
-В данном разделе представлены методы для отправки текстовых сообщений, видео, аудио, изображений, документов, геолокации, контактов и ссылок
+This section presents methods for sending text messages, video, audio, images, documents, locations, contacts and links
 
 - [Send text message](SendMessage.md)
 - [Send video, audio, image, document](SendFileByUpload.md)
