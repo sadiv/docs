@@ -21,7 +21,7 @@ Parameter | Type | Mandatory | Description
 
 To get your avatar - specify your number in chatId ("{your number}@c.us").
 
-Get correspondent's avatar:
+Get user avatar:
 ```json
 {
     "chatId": "79001234567@c.us"
