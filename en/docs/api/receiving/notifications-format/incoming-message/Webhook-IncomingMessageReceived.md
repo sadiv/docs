@@ -1,55 +1,55 @@
-# Входящие сообщения
+# Incoming messages
 
-В данном разделе приводится описание общего формата входящих уведомлений с типом `incomingMessageReceived`. Описание всех типов входящих уведолмений представлено в разделе [Типы входящих уведомлений](../type-webhook.md).
+This section describes the general format of incoming webhooks with the `incomingMessageReceived` type. Description of all incoming webhooks types is given in [Incoming webhooks types](../type-webhook.md) section.
 
-Система предусматривает получение уведомлений о входящих сообщениях следующих видов:
+The system provides for receiving notifications about incoming messages of the below types:
 
-- [Входящее текстовое сообщение](TextMessage.md)
-- [Входящее текстовое сообщение с URL](ExtendedTextMessage.md)
-- [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage.md)
-- [Входящее сообщение с геолокацией](LocationMessage.md)
-- [Входящее сообщение с контактом](ContactMessage.md)
-- [Входящее сообщение с цитированием](QuotedMessage.md)
+- [Incoming text message](TextMessage.md)
+- [Incoming text message with URL](ExtendedTextMessage.md)
+- [Incoming image, video, audio, document message](ImageMessage.md)
+- [Incoming location message](LocationMessage.md)
+- [Incoming contact message](ContactMessage.md)
+- [Incoming quoted message](QuotedMessage.md)
 
-## Поля уведомления incomingMessageReceived {#webhook-parameters}
+## incomingMessageReceived webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип входящего уведомления](../type-webhook.md). Для уведомления данного типа поле принимает значение `incomingMessageReceived`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`idMessage` | **string** | Идентификатор входящего сообщения
-`senderData` | **object** | Данные об отправителе сообщения или файла
-`messageData` | **object** | Данные о принятом сообщении или файле
+`typeWebhook` | **string** | [Incoming webhook type](../type-webhook.md). For a webhook of this type, the paramaeter takes on the value `incomingMessageReceived`
+`instanceData` | **object** | Account data
+`timestamp` | **integer** | Event timestamp in UNIX format
+`idMessage` | **string** | Incoming message Id
+`senderData` | **object** | Message or file sender data
+`messageData` | **object** | Received message or file data
 
-Поля объекта `instanceData`
+`instanceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Messenger type for the account
 
-Поля объекта `senderData`
+`senderData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`chatId` | **string** | [Идентификатор чата](../../../chat-id.md), в котором получено сообщение или файл
-`sender` | **string** | [Идентификатор](../../../chat-id.md#corr) отправителя сообщения или файла
-`senderName` | **string** | Имя отправителя
+`chatId` | **string** | [Chat Id](../../../chat-id.md), where a message or fie has been received
+`sender` | **string** | Message or file sender [Id](../../../chat-id.md#corr) 
+`senderName` | **string** | Sender name
 
-### Поля объекта `messageData`
+### `messageData` object parameters
 
-Объект `messageData` имеет разные поля в зависимости от типа входящего сообщения:
+`messageData` object has different parameters depending on incoming message type:
 
-- [Входящее текстовое сообщение](TextMessage.md)
-- [Входящее текстовое сообщение с URL](ExtendedTextMessage.md)
-- [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage.md)
-- [Входящее сообщение с геолокацией](LocationMessage.md)
-- [Входящее сообщение с контактом](ContactMessage.md)
-- [Входящее сообщение с цитированием](QuotedMessage.md)
+- [Incoming text message](TextMessage.md)
+- [Incoming text message with URL](ExtendedTextMessage.md)
+- [Incoming image, video, audio, document message](ImageMessage.md)
+- [Incoming location message](LocationMessage.md)
+- [Incoming contact message](ContactMessage.md)
+- [Incoming quoed message](QuotedMessage.md)
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -67,7 +67,7 @@
         "senderName": "Green API"
     },
     "messageData":{
-       // В зависимости от typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage || quotedMessage
+       // Depending on typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage || quotedMessage
        ...
        ...
        ...
