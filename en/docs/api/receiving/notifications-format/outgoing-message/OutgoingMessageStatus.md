@@ -1,34 +1,34 @@
-# Статус отправленного сообщения
+# Outgoing message status
 
-Входящее уведомление данного типа содержит статус ранее отправленного сообщения: отправлено, доставлено, прочитано и др.
+Incoming webhook of this type contains the status of a previously sent message: sent, delivered, read, etc.
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип входящего уведомления](../type-webhook.md). Для уведомлений данного типа поле принимает значение `outgoingMessageStatus`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`idMessage` | **string** | Идентификатор отправленного сообщения или файла. Идентификатор отправленного сообщения возвращается методами: [SendMessage](../../../../api/sending/SendMessage.md), [SendFileByUrl](../../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../../api/sending/SendFileByUpload.md), [SendLocation](../../../../api/sending/SendLocation.md), [SendContact](../../../../api/sending/SendContact.md), [SendLink](../../../../api/sending/SendLink.md)
-`status` | **string** | Статус отправленного сообщения или файла. Статус принимает значения:
-| | `sent` - сообщение отправлено
-| | `delivered` - сообщение доставлено до получателя
-| | `read` - сообщение прочитано/просмотрено/прослушано получателем
-| | `fail` - произошла ошибка при отправке сообщения на сервер WhatsApp
-| | `noAccount` - на номере телефона получателя не зарегистрирован аккаунт WhatsApp
-| | `notInGroup` - отправитель не является участником группового чата, в который выполняется отправка сообщения
+`typeWebhook` | **string** | [Incoming webhook type](../type-webhook.md). For webhooks of this type the parameter takes on the value `outgoingMessageStatus`
+`instanceData` | **object** | Account data 
+`timestamp` | **integer** | Event timestamp in UNIX format
+`idMessage` | **string** | Outgoing message or file Id. Outgoing message Id is returned by methods: [SendMessage](../../../../api/sending/SendMessage.md), [SendFileByUrl](../../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../../api/sending/SendFileByUpload.md), [SendLocation](../../../../api/sending/SendLocation.md), [SendContact](../../../../api/sending/SendContact.md), [SendLink](../../../../api/sending/SendLink.md)
+`status` | **string** | Outgoing message or file status. Status takes on the values:
+| | `sent` - message sent
+| | `delivered` - message delivered to the recipient
+| | `read` - message read/viewed/heard by the recipient
+| | `fail` - an error occurred while sending a message to WhatsApp server
+| | `noAccount` - the recipient's phone number does not have a WhatsApp account 
+| | `notInGroup` - the sender is not a participant of a group chat where the message is being sent to
 
-Поля объекта `instanceData`
+`instanceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Account messenger type
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
