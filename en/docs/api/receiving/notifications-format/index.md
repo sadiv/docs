@@ -1,6 +1,6 @@
 # Incoming webhooks format
 
-В данном разделе представлено описание формата входящих уведомлений: сообщений, файлов, статусов отправленных сообщений, статуса аккаунта и устройства (телефона).
+This section describes incoming webhooks format: messages, files, outgoing messages statuses, account and device (phone) status.
 
 ## [Incoming message](incoming-message/Webhook-IncomingMessageReceived.md)
 
