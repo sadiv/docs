@@ -28,7 +28,7 @@ For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you
 Parameter | Type |  Description
 ----- | ----- | ----- 
 `type` | **string** | Message type, possible variants `qrCode`, `error`, `alreadyLogged`
-`message` | **string** | Message content. Can have different variants depending on `type`
+`message` | **string** | Message content. Takes on different values depending on `type`
 
 
 #### Got QR code {#response-type-qrCode}
