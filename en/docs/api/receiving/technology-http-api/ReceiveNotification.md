@@ -1,35 +1,35 @@
 # ReceiveNotification
 
-Метод предназначен для получения одного входящего уведомления из очереди уведомлений.
+The method is aimed for receiving one incoming notification from the notifications queue.
 
-> Метод ReceiveNotification ожидает получения уведомления в течение 20 сек. Вызов метода завершается с пустым ответом в случае достижения таймаута. Если в течение 20 сек в очереди появляется уведомление, то вызов метода завешается, и метод возвращает полученное уведомление. 
+> ReceiveNotification method waits for a notification receipt for 20 sec. The method call ends with an empty response if a timeout is reached. If a notification comes to the queue within 20 seconds, the method call is completed, and the method returns the received notification. 
 
-После получения и обработки входящего уведомления требуется удалить уведомление из очереди. Для этого требуется выполнить метод [DeleteNotification](DeleteNotification.md). После вызова метода [DeleteNotification](DeleteNotification.md) уведомление будет считаться принятым и обработанным и будет безвозвратно удалено из очереди. Таким образом следующий вызов метода [ReceiveNotification](#request) вернет следующее уведомление из очереди в порядке поступления уведомлений в очередь.
+After receiving and processing an incoming notification, you need to delete the notification from the queue. This requires you to run [DeleteNotification](DeleteNotification.md) method. After calling [DeleteNotification](DeleteNotification.md) method, the notification will be considered received and processed and will be permanently deleted from the queue. Therefore, the next call of [ReceiveNotification](#request) method will return the next notification from the queue in the order in which notifications come to the queue.
 
-> Срок хранения входящих уведомлений в очереди составляет 24 часа.
+> Incoming notifications are stored in the queue for 24 hours.
 
-> Уведомления отдаются из очереди в порядке [FIFO](https://ru.wikipedia.org/wiki/FIFO)
+> Notifications are sent from the queue in [FIFO](https://ru.wikipedia.org/wiki/FIFO) order
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения следующего входящего уведомления из очереди требуется выполнить запрос по адресу:
+To get the next incoming notification from the queue, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/ReceiveNotification/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../../before-start.md#parameters) section.
 
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`receiptId ` | **integer** | Идентификатор доставки для удаления входящего уведомления методом [DeleteNotification](DeleteNotification.md)
-`body ` | **object** | Входящее уведомление согласно [Формату входящих уведомлений](../notifications-format/index.md)  
+`receiptId ` | **integer** | Receipt Id for deleting an incoming notification by [DeleteNotification](DeleteNotification.md) method
+`body ` | **object** | Incoming notification in accordance with [Incoming notifications format](../notifications-format/index.md)  
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -58,16 +58,16 @@ GET https://api.green-api.com/waInstance{{idInstance}}/ReceiveNotification/{{api
 }
 ```
 
-### Ошибки ReceiveNotification {#errors}
+### ReceiveNotification errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error Id | Description
 ----- | ----- | -----
-400 | `Parameter idInstance not an integer` | Не задан параметр `idInstance` или содержит нецифровые символы
-400 | `Parameter apiTokenInstance not define` | Не задан параметр `apiTokenInstance`
+400 | `Parameter idInstance not an integer` | `idInstance` parameter is not specified or contains non-digit characters
+400 | `Parameter apiTokenInstance not define` | `apiTokenInstance` is not specified
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
@@ -82,4 +82,4 @@ response = requests.request("GET", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
 
-Пример кода получения уведомлений на [NodeJS](https://nodejs.org) можно посмотреть в файле [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js)
+You can see the example of notifications receipt code on [NodeJS](https://nodejs.org) in the file [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js)
