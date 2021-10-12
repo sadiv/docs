@@ -47,7 +47,7 @@ Parameter | Type | Description
     "messageData": {
         "typeMessage": "contactMessage",
         "contactMessageData": {
-            "displayName": "Виктор Андреевич",
+            "displayName": "Victor Andreevich",
             "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Andreevich;Victor;;;\nFN:Victor Andreevich\nORG:Image\nTITLE:\nitem1.TEL;waid=79001234569:+7 900 123-45-69\nitem1.X-ABLabel:Mobile\nEND:VCARD"
         }
     }
