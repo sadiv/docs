@@ -1,6 +1,6 @@
 # Messages sending delay
 
-When sending messages or files, all data are put in the send queue. All messages are sent from the queue sequentially in the order they come in the [FIFO](https://ru.wikipedia.org/wiki/FIFO) queue. This sets the message sending delay from the queue. To change the messages sending delay, use [SetSettings](account / SetSettings.md) method and `delaySendMessagesMilliseconds` parameter. 
+When sending messages or files, all data are put in the send queue. All messages are sent from the queue sequentially in the order they come in the [FIFO](https://ru.wikipedia.org/wiki/FIFO) queue. This sets the message sending delay from the queue. To change the messages sending delay, use [SetSettings](account/SetSettings.md) method and `delaySendMessagesMilliseconds` parameter. 
 
 The minimum message sending delay is 500 msec.
 
