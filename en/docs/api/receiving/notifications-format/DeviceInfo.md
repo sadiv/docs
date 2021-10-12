@@ -1,38 +1,38 @@
-# Статус устройства
+# Device status
 
-Входящее уведомление данного типа содержит данные об устройстве и уровне заряда батареи, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
+Incoming webhook of this type contains data on battery level and the device running [WhatsApp Business](https://www.whatsapp.com/business/) application
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `deviceInfo`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`deviceData` | **object** | Данные об устройстве
+`typeWebhook` | **string** | [Incoming webhook type](type-webhook.md). For webhooks of this type the parameter takes on the value `deviceInfo`
+`instanceData` | **object** | Account data
+`timestamp` | **integer** | Event timestamp in UNIX format
+`deviceData` | **object** | Device data
 
-Поля объекта `instanceData`
+`instanceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Account messenger type
 
-Поля объекта `deviceData`
+`deviceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`platform` | **string** | Операционная система устройства, на котором запущено приложение [WhatsApp Business](https://www.whatsapp.com/business/)
-`deviceManufacturer` | **string** | Производитель устройства
-`deviceModel` | **string** | Модель устройства
-`osVersion` | **string** | Версия операционной системы
-`waVersion` | **string** | Версия приложения [WhatsApp Business](https://www.whatsapp.com/business/) или [WhatsApp](https://www.whatsapp.com/)
-`battery` | **integer** | Уровень заряда батареи
+`platform` | **string** | Operating system of the device running [WhatsApp Business](https://www.whatsapp.com/business/) application
+`deviceManufacturer` | **string** | Device manufacturer
+`deviceModel` | **string** | Device model
+`osVersion` | **string** | Operating system version
+`waVersion` | **string** | Application version [WhatsApp Business](https://www.whatsapp.com/business/) or [WhatsApp](https://www.whatsapp.com/)
+`battery` | **integer** | Battery level
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
