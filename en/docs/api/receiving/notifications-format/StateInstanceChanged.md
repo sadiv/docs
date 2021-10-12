@@ -1,30 +1,30 @@
-# Статус аккаунта
+# Account status
 
-Входящее уведомление данного типа содержит данные о состоянии авторизации аккаунта
+Incoming webhook of this type contains the account authorization status data
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `stateInstanceChanged`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`stateInstance` | **string** | Состояние аккаунта. Принимает значения:
-| | `notAuthorized` - Аккаунт не авторизован. Для авторизации аккаунта обратитесь к разделу [Перед началом работы](../../../before-start.md#qr)
-| | `authorized` - Аккаунт авторизован
-| | `sleepMode` - Аккаунт ушел в спящий режим. Состояние возможно, когда выключен телефон. После включения телефона может потребоваться до 5 минут для перевода состояния аккаунта в значение `authorized`.
+`typeWebhook` | **string** | [Incoming webhook type](type-webhook.md). For webhooks of this type the parameter takes on the value `stateInstanceChanged`
+`instanceData` | **object** | Account data
+`timestamp` | **integer** | Event timestamp in UNIX format
+`stateInstance` | **string** | Account state. Have variants:
+| | `notAuthorized` - Account not authorized. For account authorization refer to [Before you start](../../../before-start.md#qr) section
+| | `authorized` - Account authorized
+| | `sleepMode` - Account is in sleep mode. The state is possible when the phone is switched off. After the phone is switched on, it may take up to 5 minutes for the account state to be changed to `authorized`.
 
-Поля объекта `instanceData`
+`instanceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Messenger type for the account
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
