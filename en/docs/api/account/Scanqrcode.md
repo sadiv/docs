@@ -1,62 +1,62 @@
-# Получить QR-код через websocket
+# Get QR code via websocket
 
-Наравне с получением QR-кода методом [QR](QR.md) существует возможность получить QR-код через websocket-соединение. Таймаут ожидания сканирования QR-кода составляет 100 сек. За это время QR-код должен быть отсканирован. Для получения QR-кода аккаунт должен быть в неавторизованном состоянии. Если аккаунт авторизован, то предварительно требуется разлогинить аккаунт методом [Logout](Logout.md).
+Along with getting a QR code using [QR](QR.md) method, it is possible to get a QR code via websocket connection. Timeout for scanning a QR code is 100 seconds. During this time, the QR code must be scanned. To get a QR code, the account must be in an unauthorized state. If the account is authorized, you have first to log out the account using [Logout](Logout.md) method.
 
-После успешного сканирования QR-кода и авторизации аккаунта формируется [входящее уведомление](../receiving/index.md) с видом [Статус аккаунта](../receiving/notifications-format/StateInstanceChanged.md).
+After successful scanning a QR code and authorizing the account, an [incoming notification](../receiving/index.md) in the form of [Account Status](../receiving/notifications-format/StateInstanceChanged.md) is generated.
 
-Для получения QR-кода требуется установить websocket-соединение по адресу: 
+To get QR code you have to establish a bsocket-connection at: 
 
 ```
 wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 ```
 
-## Ответ {#response}
+## Response {response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type | Description
 ----- | ----- | ----- 
-`type` | **string** | Тип сообщения, возможные значения `qrCode`, `error`, `accountData`, `alreadyLogged`, `timeoutExpired`
-`message` | **string** | Содержание сообщения. Принимает различные значения в зависимости от значения поля `type`
+`type` | **string** | Message type, possible variants `qrCode`, `error`, `accountData`, `alreadyLogged`, `timeoutExpired`
+`message` | **string** | Message content. Takes on different values depending on parameter `type`
 
 
-#### Получено изображение QR-кода {#response-type-qrCode}
+#### Got QR code {#response-type-qrCode}
 
-Поле | Тип |  Описание
+Parameter | Type |  Descroption
 ----- | ----- | ----- 
-`type` | **string** | `qrCode` - получено изображение QR-кода
-`message` | **string** | Изображение QR-кода в кодировке `base64`. Для вывода в браузере нужно добавить строку `data:image/png;base64, {message}`
+`type` | **string** | `qrCode` - got QR code image
+`message` | **string** | `base64` QR code image. To display in the browser, you need to add a string `data:image/png;base64, {message}`
 
 
-#### Возникла ошибка {#response-type-error}
+#### Error occurred {#response-type-error}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `error` - возникла ошибка
-`message` | **string** | Описание ошибки
+`type` | **string** | `error` - an error is occurred
+`message` | **string** | Error description
 
 
-#### Аккаунт уже авторизован {#response-type-alreadyLogged}
+#### Account already authorized {#response-type-alreadyLogged}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `alreadyLogged` - аккаунт уже авторизован. Для получения QR-кода требуется предварительно разлогинить аккаунт методом [Logout](Logout.md)
-`message` | **string** | Принимает значение `instance account already authorized`
+`type` | **string** | `alreadyLogged` - account is already authorized. To get a QR code, you have first to log out of your account using [Logout](Logout.md) method
+`message` | **string** | akes on the value `instance account already authorized`
 
 
-#### Истек таймаут ожидания сканирования QR-кода {#response-type-timeoutExpired}
+#### QR code scan timeout expired {#response-type-timeoutExpired}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `timeoutExpired` - истекло время, в течение которого QR-код должен быть отсканирован. Таймаут ожидания сканирования QR-кода составляет 100 сек.
-`message` | **string** | Принимает значение `timeoutExpired`
+`type` | **string** | `timeoutExpired` - the timeout within which a QR code must be scanned has expired. Timeout for scanning a QR code is 100 seconds.
+`message` | **string** | Takes on the value `timeoutExpired`
 
-#### Получены данные авторизованного аккаунта {#response-type-accountData}
+#### Authorized account data received {#response-type-accountData}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | `accountData` - получены данные аккаунта после успешной авторизации
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`pushname` | **string** | Имя аккаунта в WhatsApp
-`proxy` | **string** |  IP-адрес прокси, который назначен аккаунту
-`webhookUrl` | **string** | URL для получения входящих уведомлений
+`type` | **string** | `accountData` - received account data after successful authorization 
+`wid` | **string** | Account Id in WhatsApp format
+`pushname` | **string** | Account name in WhatsApp
+`proxy` | **string** |  Proxy IP address assigned to the account
+`webhookUrl` | **string** | Incoming webhooks URL
