@@ -4,37 +4,36 @@
 
 > Сервер Green API выполняет 5 попыток доставки уведомлений с увеличенным интервалом. Поэтому, настраивайте свой сервер таким образом, чтобы он всегда был доступен для обработки входящих уведомлений, либо воспользуйтесь технологией [Получение уведомлений через HTTP API](technology-http-api.md), в которой доставка входящих уведомлений гарантируется в течение 24 часов.
 
-## Настройка сервера
-
+## Server setting
 Для получения входящих уведомлений по технологии Webhook Endpoint потребуется выполнить следующие шаги:
 
-- опубликовать IP-адрес в Интернете
+- to publish the IP address on the internet
 - реализовать логику обработки входящих уведомлений на указанный IP-адрес
 - если тебуется для сервера, то установить Webhook URL Token
 
-### Публичный IP-адрес
+### Public IP address
 
-Для получения входящих уведомлений требуется наличие публичного IP-адреса (endpoint), который будет доступен из сети Интернет. Таким образом сервер Green API сможет выполнить вызов вашего сервера по указанному адресу и передать входящее уведомление.
+To receive incoming webhooks, a public IP address (endpoint) is required, which will be accessible from the Internet. Thus, the Green API server will be able to make a call to your server at the specified address and transmit an incoming webhook.
 
-### Обработка входящих уведомлений
+### Incoming webhooks processing
 
-После получения входящего вызова на IP-адрес вашего сервера потребуется выполнить обработку полученного уведомления. Пример кода обработки входящго уведомления на [NodeJS](https://nodejs.org) можно посмотреть в [файле](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js)
+After receiving an incoming call to the IP address of your server, you will need to process the received webhook. You can see the example of incoming webhook processing code on [NodeJS](https://nodejs.org) in [file](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js)
 
-## Настройка аккаунта {#webhookUrl}
+## Account setup {#webhookUrl}
 
-Перед получением входящих уведомлений требуется выполнить настройку аккаунта. Настройка аккаунта может быть выполнена [программно](#SetSettings) с использованием метода [SetSettings](../account/SetSettings.md), либо [интерактивно](#cabinet) в интерфейсе личного кабинета.
+Before receiving incoming webhooks, you need to set up your account. Account settings can be performed [in software](# SetSettings) using [SetSettings](../account/SetSettings.md) method, or [online](#cabinet) in your profile interface.
 
-### Настройка методом [SetSettings](../account/SetSettings.md) {#SetSettings}
+### Setting by [SetSettings](../account/SetSettings.md) {#SetSettings} method
 
-Для настройки получения входящих уведомлений по технологии Webhook Endpoint требуется указать в качестве параметра `webhookUrl` значение вашего IP-адреса или вашего доменного имени, и, если необходимо, `webhookUrlToken` для доступа на ваш сервер. Например:
+To set up receiving incoming webhooks using Webhook Endpoint technology, you need to specify your IP address or your domain name as the `webhookUrl` parameter, and, if necessary,` webhookUrlToken` to access your server. For example:
 
 ```
 https://84.211.100.201:3000/green-api/webhook/
 ```
 
-Также требуется указать какие виды уведомлений необходимо получать. Для включения входящих уведомлений по видам, а также для указания параметра `webhookUrl` и `webhookUrlToken` воспользуйтесь методом [SetSettings](../account/SetSettings.md).
+It is also required to specify what types of webhooks you need to receive. To enable incoming webhooks by type, as well as to specify `webhookUrl` and` webhookUrlToken` parameters, use [SetSettings](../account/SetSettings.md) method.
 
-#### Пример тела запроса метода [SetSettings](../account/SetSettings.md)
+#### Example of [SetSettings](../account/SetSettings.md) method request body
 
 ```json
 {
@@ -47,18 +46,18 @@ https://84.211.100.201:3000/green-api/webhook/
 }
 ```
 
-### Настройка в личном кабинете {#cabinet}
+### Setting up in your profile {#cabinet}
 
-Настройку получения входящих уведомлений можно также выполнить интерактивно. Для этого перейдите в [Личный кабинет](https://cabinet.green-api.com) и выберите требуемый аккаунт. Если аккаунт авторизован, то будут отображены настройки для получения входящих уведомлений см. рис. Укажите значение параметра `webhookUrl`, а также переключатели по видам уведомлений и, если необходима авторизация на вашем вебхук сервере, Webhook URL Token. Если аккаунт не авторизован и настройки уведомлений не отображаются, обратитесь к разделу [Перед началом работы](../../before-start.md#qr).
+You can also set up to receive incoming webhooks online. To do this, go to [My Profile](https://cabinet.green-api.com) and select the required account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types and, if you need authorization on your webhook server, specify Webhook URL Token. If the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
 
-![Настройки входящих уведомлений](../../assets/technology-webhook-endpoint.png "Настройки входящих уведомлений")
+![Incoming webhooks settings](../../assets/technology-webhook-endpoint.png "Incoming webhooks settings")
 
-## Получение входящих уведомлений
+## Receive incoming webhooks
 
-После выполнения настройки аккаунта можно приступать к получению уведомлений. Пример кода обработки входящго уведомления на [NodeJS](https://nodejs.org) можно посмотреть в [файле](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js).
+After setting up the account, you can start receiving webhooks. You can see the example of incoming webhook processing code on [NodeJS](https://nodejs.org) in [file](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js).
 
-## Отладка входящих уведомлений
+## Debug incoming webhooks
 
-Для отладки входящих уведомлений можно использовать любой бесплатный сервис в Интернет, например сервис [Webhook.Site](https://webhook.site/). Сервис выдает уникальный адрес (URL), который требуется [установить](#webhookUrl) в качестве значения параметра `webhookUrl`.
+You can use any free service on the Internet to debug incoming webhooks, for example, [Webhook.Site](https://webhook.site/) service. The service issues a unique address (URL), which is required to [set](# webhookUrl) as the `webhookUrl` parameter.
 
-Подробное описание формата входящих уведомлений представлено в разделе [Формат входящих уведомлений](notifications-format/index.md).
+A detailed description of incoming webhooks format is given in section [Incoming webhooks format](notifications-format/index.md) section.
