@@ -1,7 +1,7 @@
 # DeleteNotification
 
 The method is aimed for deleting an incoming notification from the notification queue. To specify what notification to delete, use `receiptId` parameter.
-After receiving and processing an incoming notification, you need to remove the notification from the queue. This requires you to run this method. After calling the method, the notification will be considered received and processed and will be permanently deleted from the queue. Therefore, the next call of [ReceiveNotification](ReceiveNotification.md) method will return the next notification from the queue in the order in which notifications come to the queue.
+After receiving and processing an incoming notification, you need to delete the notification from the queue. This requires you to run this method. After calling the method, the notification will be considered received and processed and will be permanently deleted from the queue. Therefore, the next call of [ReceiveNotification](ReceiveNotification.md) method will return the next notification from the queue in the order in which notifications come to the queue.
 
 > Incoming notifications are stored in the queue for 24 hours.
 
