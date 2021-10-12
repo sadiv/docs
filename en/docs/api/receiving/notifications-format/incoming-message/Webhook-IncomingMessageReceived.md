@@ -34,7 +34,7 @@ Parameter | Type | Description
 
 Parameter | Type | Description
 ----- | ----- | -----
-`chatId` | **string** | [Chat Id](../../../chat-id.md), where a message or fie has been received
+`chatId` | **string** | [Chat Id](../../../chat-id.md), where a message or file has been received
 `sender` | **string** | Message or file sender [Id](../../../chat-id.md#corr) 
 `senderName` | **string** | Sender name
 
