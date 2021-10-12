@@ -1,29 +1,29 @@
-# Входящий звонок
+# Incoming call
 
-Уведомление данного типа возникает при входящем звонке и содержит информацию об инициаторе и адресате звонка.
+A webhook of this type appears when there is an incoming call and contains information about the initiator and recipient of the call.
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`from` | **string** | [Идентификатор](../../../chat-id) инициатора звонка
-`typeWebhook` | **string** | [Тип входящего уведомления](type-webhook.md). Для уведомлений данного типа поле принимает значение `incomingCall`
-`instanceData` | **object** | Данные об аккаунте
-`timestamp` | **integer** | Время наступления события в UNIX-формате
-`idMessage` | **string** | Идентификатор входящего звонка
+`from` | **string** | Call initiator [Id](../../../chat-id) 
+`typeWebhook` | **string** | [Incoming webhook type](type-webhook.md). For webhooks of this type the parameter takes on the value `incomingCall`
+`instanceData` | **object** | Account data
+`timestamp` | **integer** | Event timestamp in UNIX format
+`idMessage` | **string** | Incoming call Id
 
 
-Поля объекта `instanceData`
+`instanceData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`idInstance` | **integer** | Идентификатор аккаунта
-`wid` | **string** | Идентификатор аккаунта в формате WhatsApp
-`typeInstance` | **string** | Тип мессенджера для аккаунта
+`idInstance` | **integer** | Account Id
+`wid` | **string** | Account Id in WhatsApp format
+`typeInstance` | **string** | Account messenger type 
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
