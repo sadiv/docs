@@ -1,8 +1,8 @@
-# Отправленное с телефона сообщение
+# Message sent from phone
 
-Формат сообщения, отправленного с телефона, идентичен формату [входящего сообщения](../incoming-message/Webhook-IncomingMessageReceived.md), при этом [тип входящего уведомления](../type-webhook.md) принимает значение `outgoingMessageReceived`.
+The format of a message sent fromphone is identical to [incoming message](../incoming-message/Webhook-IncomingMessageReceived.md) format, while [incoming webhook type](../type-webhook.md) takes on the value `outgoingMessageReceived`.
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -20,7 +20,7 @@
         "senderName": "Green API"
     },
     "messageData":{
-       // В зависимости от typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage
+       // Depending on typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage
        ...
        ...
        ...
