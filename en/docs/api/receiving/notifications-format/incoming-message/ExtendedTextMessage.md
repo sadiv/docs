@@ -1,34 +1,34 @@
-# Входящее текстовое сообщение с URL
+# Incoming text message with URL
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего текстового сообщение с URL. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming text message with URL. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `extendedTextMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `extendedTextMessage`
-`extendedTextMessageData` | **object** | Объект данных о принятой ссылке с метаданными
+`typeMessage` | **string** | Incoming mesage type. For messages of this type, the parameter takes on the value `extendedTextMessage`
+`extendedTextMessageData` | **object** | Data object on incoming link with meta-data
 
-Поля объекта `extendedTextMessageData`
+`extendedTextMessageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`text` | **string** | Текст ссылки
-`description` | **string** | Описание ссылки
-`title` | **string** | Заголовок ссылки
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`text` | **string** | Link text
+`description` | **string** | Link description
+`title` | **string** | Link title
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
