@@ -1,30 +1,30 @@
-# Формат входящих уведомлений
+# Incoming webhooks format
 
 В данном разделе представлено описание формата входящих уведомлений: сообщений, файлов, статусов отправленных сообщений, статуса аккаунта и устройства (телефона).
 
-## [Входящее сообщение](incoming-message/Webhook-IncomingMessageReceived.md)
+## [Incoming message](incoming-message/Webhook-IncomingMessageReceived.md)
 
-- [Входящее текстовое сообщение](incoming-message/TextMessage.md)
-- [Входящее текстовое сообщение с URL](incoming-message/ExtendedTextMessage.md)
-- [Входящее сообщение с изображением, видео, аудио, документом](incoming-message/ImageMessage.md)
-- [Входящее сообщение с геолокацией](incoming-message/LocationMessage.md)
-- [Входящее сообщение с контактом](incoming-message/ContactMessage.md)
-- [Входящее сообщение с цитированием](incoming-message/QuotedMessage.md)
+- [Incoming text message](incoming-message/TextMessage.md)
+- [Incoming text message with URL](incoming-message/ExtendedTextMessage.md)
+- [Incoming image, video, audio, document message](incoming-message/ImageMessage.md)
+- [Incoming location message](incoming-message/LocationMessage.md)
+- [Incoming contact message](incoming-message/ContactMessage.md)
+- [Incoming quoted message](incoming-message/QuotedMessage.md)
 
 
-## Отправленное сообщение
+## Outgoing message
 
-- [Отправленное с телефона сообщение](outgoing-message/OutgoingMessage.md)
-- [Статус отправленного сообщения](outgoing-message/OutgoingMessageStatus.md)
+- [Message sent from phone](outgoing-message/OutgoingMessage.md)
+- [Outgoing message status](outgoing-message/OutgoingMessageStatus.md)
 
-## Прочие
+## Others
 
-- [Статус аккаунта](StateInstanceChanged.md)
-- [Статус устройства](DeviceInfo.md)
-- [Ававтар контакта](AvatarInfo.md)
-- [Входящий звонок](IncomingCall.md)
-- [Статус доступности сокета](StatusInstanceChanged.md)
+- [Account status](StateInstanceChanged.md)
+- [Device status](DeviceInfo.md)
+- [Contact avatar](AvatarInfo.md)
+- [Incoming call](IncomingCall.md)
+- [Socket availability status](StatusInstanceChanged.md)
 
-## Объекты
+## Objects
 
-- [Типы входящих уведомлений](type-webhook.md)
+- [Incoming webhooks types](type-webhook.md)
