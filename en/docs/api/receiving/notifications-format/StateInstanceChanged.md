@@ -22,7 +22,7 @@ Parameter | Type | Description
 ----- | ----- | -----
 `idInstance` | **integer** | Account Id
 `wid` | **string** | Account Id in WhatsApp format
-`typeInstance` | **string** | Messenger type for the account
+`typeInstance` | **string** | Account messenger type 
 
 ### Webhook body example {#webhook-example-body}
 
