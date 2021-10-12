@@ -1,40 +1,40 @@
 # DeleteNotification
 
-Метод предназначен для удаления входящего уведомления из очереди уведомлений. Чтобы указать, какое уведомление следует удалить, используйте параметр `receiptId`.
-После получения и обработки входящего уведомления требуется удалить уведомление из очереди. Для этого требуется выполнить данный метод. После вызова метода уведомление будет считаться принятым и обработанным и будет безвозвратно удалено из очереди. Таким образом следующий вызов метода [ReceiveNotification](ReceiveNotification.md) вернет следующее уведомление из очереди в порядке поступления уведомлений в очередь.
+The method is aimed for deleting an incoming notification from the notification queue. To specify what notification to delete, use `receiptId` parameter.
+After receiving and processing an incoming notification, you need to remove the notification from the queue. This requires you to run this method. After calling the method, the notification will be considered received and processed and will be permanently deleted from the queue. Therefore, the next call of [ReceiveNotification](ReceiveNotification.md) method will return the next notification from the queue in the order in which notifications come to the queue.
 
-> Срок хранения входящих уведомлений в очереди составляет 24 часа.
+> Incoming notifications are stored in the queue for 24 hours.
 
-> Уведомления отдаются из очереди в порядке [FIFO](https://ru.wikipedia.org/wiki/FIFO)
+> Notifications are sent from the queue in [FIFO](https://ru.wikipedia.org/wiki/FIFO) order
 
-## Запрос {#request}
+## Request {#request}
 
-Для удаления входящего уведомления из очереди требуется выполнить запрос по адресу:
+To delete an incoming notification from the queue, you have to execute a request at:
 ```
 DELETE https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{apiTokenInstance}}/{{receiptId}}
 ```
 
-> Обратите внимание, что требуется использовать запрос вида `DELETE`
+> Note that you have to use a request of `DELETE` type
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`receiptId` | **integer** | Да | Идентификатор доставки для удаления входящего уведомления, полученный методом [ReceiveNotification](ReceiveNotification.md)
+`receiptId` | **integer** | Yes | Receipt Id for deleting an incoming notification received by [ReceiveNotification](ReceiveNotification.md) method 
 
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`result ` | **boolean** | Результат удаления входящего уведомления: `true` - входящее уведомление успешно удалено из очереди; `false` - уведомление не удалено - возможно, когда уведомление было удалено ранее, или `receiptId` не соответствует ранее полученному значению методом [ReceiveNotification](ReceiveNotification.md)
+`result ` | **boolean** | Incoming notification deleting result: `true` - incoming notification successfully deleted from the queue; `false` - notification is not deleted - possible, if the notification was deleted earlier or `receiptId` doesn't correspond to the value previously received by [ReceiveNotification](ReceiveNotification.md) method
 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -42,18 +42,18 @@ DELETE https://api.green-api.com/waInstance{{idInstance}}/DeleteNotification/{{a
 }
 ```
 
-### Ошибки DeleteNotification {#errors}
+### DeleteNotification errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error Id | Description
 ----- | ----- | -----
-400 | `Parameter receiptId must be a Number` | Не задан параметр `receiptId` или содержит нецифровые символы
-400 | `Parameter idInstance not an integer` | Не задан параметр `idInstance` или содержит нецифровые символы
-400 | `Parameter apiTokenInstance not define` | Не задан параметр `apiTokenInstance`
+400 | `Parameter receiptId must be a Number` | `receiptId` parameter is not specified or contains non-digit characters 
+400 | `Parameter idInstance not an integer` | `idInstance` parameter is not specified or contains non-digit characters 
+400 | `Parameter apiTokenInstance not define` | `apiTokenInstance` parameter is not specified
 
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
@@ -68,4 +68,4 @@ response = requests.request("DELETE", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
 
-Пример кода получения уведомлений на [NodeJS](https://nodejs.org) можно посмотреть в файле [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js)
+You can see the example of notifications receipt code on [NodeJS](https://nodejs.org) in the file [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js)
