@@ -1,33 +1,33 @@
-# Входящее сообщение с контактом
+# Incoming contact message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения с контактом. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming contact message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `contactMessage`
 
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `contactMessage`
-`contactMessageData` | **object** | Объект данных о принятом контакте.
+`typeMessage` | **string** | Incoming message type. For messages of this type the parameter takes on the value `contactMessage`
+`contactMessageData` | **object** | Incoming contact data object.
 
-Поля объекта `contactMessageData`
+`contactMessageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`displayName` | **string** | Отображаемое имя контакта
-`vcard` | **string** | Структура VCard (визитной карточки контакта)
+`displayName` | **string** | Displayed contact name
+`vcard` | **string** | VCard structure (contact visit card)
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -48,7 +48,7 @@
         "typeMessage": "contactMessage",
         "contactMessageData": {
             "displayName": "Виктор Андреевич",
-            "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Андреевич;Виктор;;;\nFN:Виктор Андреевич\nORG:Image\nTITLE:\nitem1.TEL;waid=79001234569:+7 900 123-45-69\nitem1.X-ABLabel:Мобильный\nEND:VCARD"
+            "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Andreevich;Victor;;;\nFN:Victor Andreevich\nORG:Image\nTITLE:\nitem1.TEL;waid=79001234569:+7 900 123-45-69\nitem1.X-ABLabel:Mobile\nEND:VCARD"
         }
     }
 }
