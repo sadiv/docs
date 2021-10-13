@@ -1,44 +1,44 @@
-# Как защитить номер от бана?
+# How to protect number from ban?
 
-Параметры, влияющие на устойчивость номера от блокировки:
+Parameters influencing number blocking resistance:
 
-1. [Возраст номера](#001)
-2. [Коэффициент ответов](#002)
-3. [Команда STOP](#003)
-4. [Обращение по имени](#004)
-5. [Вопрос в первом сообщении](#005)
-6. [Короткие сообщения](#006)
+1. [Number age](#001)
+2. [Response ratio](#002)
+3. [STOP command](#003)
+4. [Address by name](#004)
+5. [Question in the first message](#005)
+6. [Short messages](#006)
 
-## 1. Возраст номера (прогрев номера) {#001}
-Чем дольше номер зарегистрирован в WhatsApp, тем он более устойчив к блокировке.
-Если вы только что зарегистрировали новый номер, то он наиболее уязвим. Вам требуется быть особенно аккуратным первые 10 дней работы номера.
-Вы должны постепенно "прогревать" номер. В течение первых 10 дней работы номера рекомендуемый объем отправки - не более 20 новых получателей в сутки.
+## 1. Number age (number warm-up) {#001}
+The longer the number is registered with WhatsApp, the more resistant it is to blocking.
+If you have just registered a new number, then it is the most vulnerable. You need to be especially careful during the first 10 days of the number use.
+You should gradually "warm up" the number. During the first 10 days of the number use, the recommended sending volume is no more than 20 new recipients per day. 
 
-## 2. Коэффициент ответов (соотношение отправленных и полученных сообщений) {#002}
-Идеальным является случай, когда клиенты пишут вам первыми и добавляют вас в контакты. Однако, в большинстве случаев не получается добиться такого сценария. Часто требуется начинать диалог первым. Если вы слишком много отправляете сообщений и в ответ не получаете ни одного ответа, то вы рискуете получить бан. Стремитесь, чтобы на 100 отправленных сообщений приходило хотя бы 30 ответных сообщений от клиентов (30%). В этом случае, при 30% ответов, можно считать, что номер не рискует.
+## 2. Response ratio (incoming and outgoing messages ratio) {#002}
+The ideal case is when customers send messages to you first and add you to their contacts. However, in most cases this scenario cannot be achieved. It is often required to start the dialogue first. If you send too many messages and do not receive a single reply in response, then you run the risk of getting banned. Aim for at least 30 responses from customers (30%) for every 100 messages send. In this case, with 30% of replies, it can be assumed that the number is not at risk.
 
-## 3. Команда STOP {#003}
-У клиента всегда есть возможность забанить ваш номер, если вы будите ему докучать. Однако, если вы в конце рассылки добавите фразу "_напишите stop, чтобы отказаться от наших рассылок_", то клиенту будет удобнее написать "stop", чем отправлять жалобу в WhatsApp. Так вы отсеете недовольных клиентов и сохраните свой номер, а заодно повысите [коэффициент ответов](#002).
+## 3. STOP command {#003}
+The customer always has the opportunity to ban your number if you bother them. However, if you add the phrase "_send stop to unsubscribe from our postings_" at the end of the mailing, then it will be more convenient for the client to send "stop" than send a complaint to WhatsApp. In this way you will drop out dissatisfied customers and protect your number, and at the same time boost the [response ratio](#002).
 
-## 4. Обращение по имени {#004}
-Первый контакт с клиентом очень важен. Постарайтесь обращаться к клиенту по имени. Так Вы повысите конверсию ответов от клиентов. Дополнительно Вы делаете каждое сообщение уникальным, что положительным образом сказывается на устойчивости номера от блокировки.
+## 4. Address by name {#004}
+The first contact with the customer is very important. Try to address to the customer by name. Thus you will increase the conversion of customer responses. Additionally, you make each message unique, which has a positive effect on the number blocking resistance. 
 
-## 5. Вопрос в первом сообщении {#005}
-В самом первом сообщении запрашивайте явным образом разрешение на отправку сообщений клиенту. Здесь важно добиться того, чтобы клиент вступил в диалог с вашим номером (ботом) и хотя бы что-то ответил. Так вы добьётесь хорошего соотношения [коэффициента ответов](#002) и отсеете клиентов, настроенных негативно.
+## 5. Question in the first message {#005}
+In the very first message, explicitly request permission to send messages to the customer. It is important here to ensure that the customer enters into a dialogue with your number (bot) and at least replies something. This will help you achieve a good [response ratio](#002) and drop out negatively minded customers.
 
-## 6. Короткие сообщения {#006}
-Вместо одного громоздкого сообщения отправляйте несколько маленьких сообщений. Такой стиль более похож на реальное общение, чем на автоматизированную рассылку.
+## 6. Short messages {#006}
+Instead of one heavy message, send several small messages. This style is more like real communication than automated mailing.
 
 
 
-# Ниже приведены сценарии по степени риска блокировки
+# Below you can find scenarios by degree of risk of blocking 
 
-## (идеально) Вас никогда не забанят:
-- клиенты пишут вам первыми
-- клиенты добавляют ваш номер в контакты
-- клиенты могут написать stop, чтобы отписаться
+## (perfect) You will never be banned:
+- customers send you messages first
+- customers add your number to their contacts
+- customers can send "stop" to unsubscribe
 
-## (рекомендуется) Минимальный риск блокировки
+## (recommended) Минимальный риск блокировки
 - вы пишите первыми, постепенно наращивая базу клиентов на номере
 - при первом контакте с клиентом запрашиваете у него разрешение на общение
 - вы обращаетесь к клиенту по имени, персонализировано
@@ -50,5 +50,5 @@
 - вы пишите первым
 - сообщения однотипные, без персонализации
 - большое количество получателей
-- ответов от клиентов нет
+- no replies from customers
 - шлете рекламу, в которой клиент не заинтересован (спам)
