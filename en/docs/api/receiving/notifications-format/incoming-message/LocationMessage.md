@@ -1,33 +1,33 @@
-# Входящее сообщение с геолокацией
+# Incoming location message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения с геолокацией. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming location message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `locationMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `locationMessage`
-`locationMessageData` | **object** | Объект данных о принятой геолокации
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `locationMessage`
+`locationMessageData` | **object** | Received location data object
 
-Поля объекта `locationMessageData`
+`locationMessageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`latitude` | **double** | Широта локации
-`longitude` | **double** | Долгота локации
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`latitude` | **double** | Location latitude
+`longitude` | **double** | Location longitude
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
