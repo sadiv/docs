@@ -60,4 +60,4 @@ After setting up the account, you can start receiving webhooks. You can see the 
 
 You can use any free service on the Internet to debug incoming webhooks, for example, [Webhook.Site](https://webhook.site/) service. The service issues a unique address (URL), which is required to [set](# webhookUrl) as the `webhookUrl` parameter.
 
-A detailed description of incoming webhooks format is given in section [Incoming webhooks format](notifications-format/index.md) section.
+A detailed description of incoming webhooks format is given in [Incoming webhooks format](notifications-format/index.md) section.
