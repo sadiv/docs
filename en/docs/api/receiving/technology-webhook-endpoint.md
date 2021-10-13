@@ -1,4 +1,4 @@
-# Receiving webhooks via Webhook Endpoint
+# Receive webhooks via Webhook Endpoint
 
 Webhook Endpoint technology allows you to receive incoming webhooks directly to your server. This means that the Green API server will make a call to the method published on your server side. The advantage of this technology is the fastest possible receipt of incoming webhooks and high capacity, limited only by the rate of processing webhooks on your server side. The disadvantages include the implementation complexity. 
 
