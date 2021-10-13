@@ -1,52 +1,52 @@
-# Перед началом работы
+# Before you start
 
-Перед началом работы 1 с Green API требуется выполнить следующие шаги:
+Before you start working with Green API you are required to follow the below steps:
 
-1. [Создать учетную запись в Личном кабинете](#cabinet)
-2. [Создать Аккаунт](#account)
-3. [Установить мобильное приложение WhatsApp Business](#mobile)
-4. [Авторизовать Аккаунт](#qr)
-5. [Получить параметры доступа к Аккаунту](#parameters)
-6. [Настроить получение входящих данных](#receiving)
+1. [Create Account in Your profile](#cabinet)
+2. [Create User account](#account)
+3. [Install mobile app WhatsApp Business](#mobile)
+4. [Authorize User account](#qr)
+5. [Get access parameters to User account](#parameters)
+6. [Set receiving incoming data](#receiving)
 
-## 1. Создать учетную запись в Личном кабинете {#cabinet}
+## 1. Create account in Your profile {#cabinet}
 
-Для создания учетной записи перейдите в [Личный кабинет](https://cabinet.green-api.com). После авторизации в личном кабинете будет доступна возможность создания аккаунта. В личном кабинете можно создать несколько аккаунтов для одной учетной записи.
+To create Account go to [Your profile](https://cabinet.green-api.com). After authorization in your profile, you will be able to create a user account. In your profile you may create several user accounts for one account. 
 
-## 2. Создать Аккаунт {#account}
+## 2. Create  User account {#account}
 
-Аккаунт создается в личном кабинете и используется для организации HTTP API WhatsApp. Один аккаунт может одновременно обслуживать только один номер телефона (один аккаунт WhatsApp). При создании аккаунта требуется выбрать тариф.
+User account is created in your profile and is used to organize HTTP API WhatsApp. One user account may serve only one phone number at a time (one WhatApp account). When creating a user account you are to select a tariff. 
 
-## 3. Установить мобильное приложение WhatsApp Business {#mobile}
+## 3. Install mobile app WhatsApp Business {#mobile}
 
-Отправка и получение сообщений WhatsApp выполняется с вашего мобильного трелефона. На телефоне должно быть установлено официальное мобильное приложение [WhatsApp Business](https://www.whatsapp.com/business/). Допускается также использование мобильного приложения [WhatsApp](https://www.whatsapp.com/), если использование [WhatsApp Business](https://www.whatsapp.com/business/) по каким-либо причинам невозможно.
+Sending and receiving WhatsApp messages is done from your mobile phone. The phone must have the official [WhatsApp Business](https://www.whatsapp.com/business/) mobile app installed. It is also allowed to use the mobile application [WhatsApp](https://www.whatsapp.com/), if the use of [WhatsApp Business](https://www.whatsapp.com/business/) is impossible for any reason.
 
-> Рекомендуется заказать услугу **Хостинг трубки**. В этом случае наличие личного мобильного телефона не требуется. Отправка и получение сообщений WhatsApp будет выполняться с мобильного телефона, расположенного в дата-центре Green API.
+> It is recommended to order **Handset hosting** service. In this case, a personal mobile phone is not required. Sending and receiving WhatsApp messages will be carried out from a mobile phone located in the Green API data center. 
 
-## 4. Авторизовать Аккаунт {#qr}
+## 4. Authorize User account {#qr}
 
-В случае, если для работы с Green API используется личный мобильный телефон, требуется авторизовать аккаунт. Авторизация аккаунта выполняется в [Личном кабинете](https://cabinet.green-api.com) путем считывания QR-кода из мобильного приложения [WhatsApp Business](https://www.whatsapp.com/business/). Для этого откройте на своем мобильном телефоне приложение [WhatsApp Business](https://www.whatsapp.com/business/), перейдите в настройки приложения и считайте QR-код, который отображается в личном кабинете.
+If you use a personal mobile phone for work with Green API, you have to authorize User account. Account authorization is carried out in [Your profile](https://cabinet.green-api.com) by scanning QR code from [WhatsApp Business](https://www.whatsapp.com/business/) mobile app. To do this, open [WhatsApp Business](https://www.whatsapp.com/business/) application on your mobile phone, go to the application settings and scan the QR code displayed in your profile.
 
-- Android: `WhatsApp Business` -> `Выпадающее меню` -> `WhatsApp Web`
-- iPhone: `WhatsApp Business` -> `Настройки` -> `WhatsApp Web` -> `Сканировать QR-код`
+- Android: `WhatsApp Business` -> `Drop down menu` -> `WhatsApp Web`
+- iPhone: `WhatsApp Business` -> `Settings` -> `WhatsApp Web` -> `Scan QR code`
 
-> Отправка и получение сообщений выполняется с вашего мобильного телефона. Поэтому телефон должен быть всегда заряжен и подключен к сети Интернет.
+> Sending and receiving messages are carried out from your mobile phone. Therefore, the phone has to be always charged and connected to the Internet.
 
-## 5. Получить параметры доступа к Аккаунту {#parameters}
+## 5. Get access parameters to User account {#parameters}
 
-Для выполнения запросов HTTP API WhatsApp требуется использовать параметры доступа к Аккаунту. Параметры доступа публикуются в [Личном кабинете](https://cabinet.green-api.com):
+To execute HTTP API WhatsApp requests, you need to use the access parameters to User account. Access parameters are published in [Your profile](https://cabinet.green-api.com):
 
-- `idInstance` - уникальный номер аккаунта
-- `apiTokenInstance` - ключ доступа аккаунта
+- `idInstance` - account unique number
+- `apiTokenInstance` - account access key
 
-Ключ доступа аккаунта можно сменить при необходимости, например, в случае его компрометации.
+Account access key can be changed if necessary, for example, if it is compomised.
 
-## 6. Настроить получение входящих данных {#receiving}
+## 6. Set receiving incoming data {#receiving}
 
-Если требуется получать входящие данные (входящие сообщения, статусы ранее отправленных сообщений и др.), то предварительно необходимо выполнить [настройку аккаунта](api/receiving/index.md). Получать входящие уведомления можно [через HTTP API](api/receiving/technology-http-api.md) или [через Webhook Endpoint](api/receiving/technology-webhook-endpoint.md).
+If you need to receive incoming data (incoming messages, previously sent messages statuses, etc.), then you have first to make [account setup](api/receiving/index.md). You can get incoming webhooks via [HTTP API](api/receiving/technology-http-api.md) or [Webhook Endpoint](api/receiving/technology-webhook-endpoint.md).
 
-## Готово!
+## Done!
 
-Всё готово для начала отправки и получения сообщений WhatsApp! 
+Everything is ready to start sending and receiving WhatsApp messages! 
 
-Для отладки запросов к Green API рекомендуется использовать [Коллекцию Postman](postman-collection.md)
+To debug requests to the Green API, it is recommended to use [Postman collection](postman-collection.md)
