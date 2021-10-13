@@ -1,30 +1,30 @@
-# Коллекция Postman
+# Postman collection
 
-Для тестирования и отладки запросов к Green API рекомендуется использовать [Green API - Postman Collection](https://github.com/green-api/green-api-postman-collection)
+To test and debug requests to the Green API it is recommended to use [Green API - Postman Collection](https://github.com/green-api/green-api-postman-collection)
 
-[Postman](https://www.getpostman.com/) - популярный инструмент для тестирования и разработки API. Чтобы упростить разработчикам интеграцию с Green API, мы создали коллекцию Postman с полным набором необходимых API.
+[Postman](https://www.getpostman.com/) - a widespread tool for API testing and development. To make it easier for developers to integrate with the Green API, we have created a Postman collection with a complete set of required API.
 
-1. [Установка](#setup): установка коллекции
-2. [Конфигурирование](#configure): настройка переменных среды
-3. [Тестирование](#test): использование методов API
+1. [Setup](#setup): collection setup
+2. [Configure](#configure): environment setup
+3. [Test](#test): API methods use
 
-## Установка {#setup}
+## Setup {#setup}
 
-Чтобы приступить к работе, скачайте указанные ниже компоненты и установите Postman:
+To start, download the components below and install Postman:
 
-- Приложение [Postman](https://www.postman.com/downloads/) 
-- Коллекция [Green API - Postman Collection](https://github.com/green-api/green-api-postman-collection) (клонируйте репозиторий или скачайте пакет в виде ZIP-файла)
+- [Postman](https://www.postman.com/downloads/) application
+- [Green API - Postman Collection](https://github.com/green-api/green-api-postman-collection) collection (clone the repository or download the package as a ZIP file)
 
-После установки и запуска Postman, нажмите `Import` и выберите два JSON-файла `collection.json` и `environment.json` из пакета коллекции Postman на GitHub. После импорта вы увидите элемент `Green API` в разделе `Collections` и сможете выбрать пункт `Green API Developer` в качестве `Environment`.
+After installing and running Postman, click on `Import` and select the two JSON files `collection.json` and `environment.json` from the Postman collection package on GitHub. After importing, you will see a `Green API` item in `Collections` section and you can select `Green API Developer` as` Environment`.
 
-## Конфигурирование {#configure}
+## Configure {#configure}
 
-Настраиваемая среда Postman фактически представляет собой набор пар "ключ-значение". Вы можете создавать стандартные переменные, которые затем будут использоваться в разных запросах. [Подробнее о переменных среды Postman](https://learning.postman.com/docs/postman/variables-and-environments/managing-environments/).
+A custom Postman environment is actually a collection of  "key-value" pairs. You can create standard variables that will be then used in different requests. More on [Postman environment variables](https://learning.postman.com/docs/postman/variables-and-environments/managing-environments/).
 
-Заранее настроенная среда `Green API Developer` содержит полный набор переменных, на которые ссылается коллекция. Некоторые из этих переменных следует отредактировать и заменить собственными значениями. Чтобы открыть диалог редактирования, нажмите маленькую кнопку с изображением глаза рядом с раскрывающимся списком среды и выберите `Edit`.
+The pre-configured `Green API Developer` environment contains the complete set of variables, referened by the collection. Some of these variables should be edited and replaced with customer values. To open the edit dialog, click the little eye button next to the environment dropdown and select `Edit`.
 
-Задайте значения двух переменных `idInstance`и `apiTokenInstance`, которые были получены на этапе [Перед началом работы](before-start.md#parameters).
+Set values of the two variaables `idInstance`and `apiTokenInstance`, which were got at [Before you start](before-start.md#parameters) stage.
 
-## Тестирование {#test}
+## Test {#test}
 
-Теперь вы можете выбрать любой метод API в коллекции и приступать к отправке запросов. Все методы для удобства приведены в том же порядке, в каком они рассматриваются в [Документации API](api/index.md). Вы можете вносить в эти методы любые изменения, чтобы упростить их тестирование и обработку ответов.
+Now you can select any API method in the collection and start sending requests. For convenience, all methods are listed in the same order as they are reviewed in [API documents](api/index.md). You can make any changes to these methods to make it easier to test them and process responses. 
