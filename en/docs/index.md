@@ -1,15 +1,15 @@
-# Документация WhatsApp API
+# WhatsApp API documents
 
-## [Перед началом работы](before-start.md)
-Настройте окружение для начала использования API
+## [Before you start](before-start.md)
+Set up the environment to start using API
 
-## [Отладка методов API](postman-collection.md)
-Тестируйте методы API в программе Postman
+## [Debug API methods](postman-collection.md)
+Test API methods in Postman program
 
-## [Документация API](api/index.md)
-Полное описание методов Green API с примерами
+## [API documents](api/index.md)
+Full description of Green API methods with examples
 
-> Если требуется WhatsApp API без использования телефонного аппарата (без трубки), обратитесь к разделу [API v1](/docs-v1/index.html).
+> If WhatsApp API is required without using a telephone (without a handset), refer to [API v1](/docs-v1/index.html) section.
 
 ## [FAQ](faq/index.md)
-Подробные ответы с примерами на часто задаваемые вопросы
+Detailed responses with examples to frequently asked questions
