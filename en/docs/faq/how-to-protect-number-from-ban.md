@@ -31,24 +31,24 @@ Instead of one heavy message, send several small messages. This style is more li
 
 
 
-# Below you can find scenarios by degree of risk of blocking 
+# Below you can find scenarios by degree of risk to be blocked 
 
 ## (perfect) You will never be banned:
 - customers send you messages first
 - customers add your number to their contacts
 - customers can send "stop" to unsubscribe
 
-## (recommended) Минимальный риск блокировки
-- вы пишите первыми, постепенно наращивая базу клиентов на номере
-- при первом контакте с клиентом запрашиваете у него разрешение на общение
-- вы обращаетесь к клиенту по имени, персонализировано
-- на 100 отправленных сообщений вы получаете не менее 30 входящих сообщений от клиентов
-- клиенты всегда могут написать stop, чтобы отписаться
+## (recommended) Minimal risk of blocking
+- you send messages first, gradually boosting your customer base on the number 
+- at the first contact with a customer, you ask them for permission to communicate
+- you address to a customer by name, in the personalized way 
+- you receive at least 30 incoming messages from customers to 100 sent messages 
+- customers can always send "stop" to unsubscribe 
 
-## (не рекомендуется) Максимальный риск блокировки
-- номер зарегистрирован менее 10 дней назад
-- вы пишите первым
-- сообщения однотипные, без персонализации
-- большое количество получателей
+## (not recommended) Maximum risk of blocking
+- a number registered less than 10 days ago
+- you send messages first
+- same-type messages, no personalization
+- a large number of recipients
 - no replies from customers
-- шлете рекламу, в которой клиент не заинтересован (спам)
+- send advertising that the customer is not interested in (spam)
