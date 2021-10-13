@@ -15,20 +15,20 @@ The format of the personal chat Id is formed according to the template `00000000
 ```
 
 ## Group chat {#gus}
-Group chat Id Идентификатор группового чата представляет собой строку вида `00000000000-XXXXXXXXXX@g.us`. Example:
+Group chat Id presents a string of `00000000000-XXXXXXXXXX@g.us` form. Example:
 
 ```
 79001234567-1581234048@g.us
 ```
 
-Идентификатор группового чата может быть получен различными методами Green&nbsp;API, например:
+Group chat Id may be received by various Green&nbsp;API methods, for example:
 
 - [Create group](groups/CreateGroup.md)
-- [Получить журнал отправленных сообщений](journals/LastOutgoingMessages.md)
-- [Получить журнал входящих сообщений](journals/LastIncomingMessages.md)
-- [Входящее сообщение: Текст](receiving/notifications-format/incoming-message/TextMessage.md)
-- и др.
+- [Get outgoing messages journal](journals/LastOutgoingMessages.md)
+- [Get incoming messages journal](journals/LastIncomingMessages.md)
+- [Incoming message: Text](receiving/notifications-format/incoming-message/TextMessage.md)
+- etc.
 
 > **Important**
 >
-> Идентификатор группового чата **НЕ требуется** формировать самостоятельно. Он формируется системой автоматически и возвращается различными методами Green&nbsp;API.
+> You are **NOT required** to generate Group chat Id manually. It is generated automatically by the system and returned by various Green&nbsp;API methods.
