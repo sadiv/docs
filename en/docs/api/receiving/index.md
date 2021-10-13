@@ -1,12 +1,12 @@
-# Получение данных
+# Receive data
 
-Получение входящих данных в Green API реализовано через входящие уведомления. На каждое событие аккаунта формируется отдельное входящее уведомление. В качестве событий могут выступать: получение входящего сообщения, получение статуса ранее отправленного сообщения, входящий звонок и др. Подробнее о событиях аккаунта и типах входящих уведомлений смотрите в разделе [Типы входящих уведомлений](notifications-format/type-webhook.md). 
+Receiving incoming data in the Green API is implemented via incoming webhooks. A separate incoming webhook is generated for each account event. Events can be: incoming message, receiving a previously sent message status, an incoming call, etc. For more information about account events and incoming webhooks types, refer to [Incoming webhooks types](notifications-format/type-webhook.md) section. 
 
-Для получения входящих уведомлений в Green API предусмотрено две технологии:
+Green API provides two technologies for receiving incoming webhooks:
 
-- [Получение уведомлений через HTTP API](technology-http-api.md)
-- [Получение уведомлений через Webhook Endpoint](technology-webhook-endpoint.md)
+- [Receive webhooks via HTTP API](technology-http-api.md)
+- [Receive webhooks via Webhook Endpoint](technology-webhook-endpoint.md)
 
-Формат уведомлений подробно описан в разделе [Формат входящих уведомлений](notifications-format/index.md)
+A detailed description of webhooks format is given in [Incoming webhooks format](notifications-format/index.md) section
 
-Для скачивания файлов из входящих уведомлений обратитесь к разделу [Получение файлов](files/DownloadFile.md)
+To download files from incoming webhook refer to [Download files](files/DownloadFile.md) section
