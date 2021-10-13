@@ -1,15 +1,15 @@
-# Получение уведомлений через Webhook Endpoint
+# Receiving webhooks via Webhook Endpoint
 
-Технология Webhook Endpoint позволяет выполнять получение входящих уведомлений непосредственно на ваш сервер. Это означает, что сервер Green API будет выполнять вызов метода, опубликованного на стороне вашего сервера. Преимуществами данной технологии является максимально быстрое получение входящих уведомлений и высокая пропускная способность, ограниченная только скоростью обработки уведомлений на стороне вашего сервера. К недостаткам можно отнести сложность реализации. 
+Webhook Endpoint technology allows you to receive incoming webhooks directly to your server. This means that the Green API server will make a call to the method published on your server side. The advantage of this technology is the fastest possible receipt of incoming webhooks and high capacity, limited only by the rate of processing webhooks on your server side. The disadvantages include the implementation complexity. 
 
-> Сервер Green API выполняет 5 попыток доставки уведомлений с увеличенным интервалом. Поэтому, настраивайте свой сервер таким образом, чтобы он всегда был доступен для обработки входящих уведомлений, либо воспользуйтесь технологией [Получение уведомлений через HTTP API](technology-http-api.md), в которой доставка входящих уведомлений гарантируется в течение 24 часов.
+> The Green API server makes 5 attempts to deliver webhooks with an extended delay. Therefore, set up your server so that it is always available to process incoming webhooks, or use [Receive webhooks via HTTP API](technology-http-api.md) technology, where the delivery of incoming webhooks is guaranteed within 24 hours.
 
 ## Server setting
-Для получения входящих уведомлений по технологии Webhook Endpoint потребуется выполнить следующие шаги:
+To receive incoming webhooks using Webhook Endpoint technology, you will need to complete the below steps:
 
 - to publish the IP address on the internet
-- реализовать логику обработки входящих уведомлений на указанный IP-адрес
-- если тебуется для сервера, то установить Webhook URL Token
+- to implement the logic for processing incoming webhooks to the specified IP address
+- if required for the server, then set the Webhook URL Token 
 
 ### Public IP address
 
