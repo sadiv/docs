@@ -1,32 +1,32 @@
-# Входящее сообщение с изображением, видео, аудио, документом
+# Incoming image, video, audio, document message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения с изображением, видео, аудио или документом. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming image, video, audio or document message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `imageMessage` || `videoMessage` || `documentMessage` || `audioMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение: `imageMessage`, `videoMessage`, `documentMessage`, `audioMessage`
-`fileMessageData ` | **object** | Объект данных о принятом файле
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value: `imageMessage`, `videoMessage`, `documentMessage`, `audioMessage`
+`fileMessageData ` | **object** | Received file data object
 
-Поля объекта `fileMessageData` 
+`fileMessageData` object parameters 
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`downloadUrl` | **string** | Ссылка для скачивания файла
-`caption` | **string** | Описание под файлом
+`downloadUrl` | **string** | Link to download file
+`caption` | **string** | File caption
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -47,7 +47,7 @@
         "typeMessage":"imageMessage",
         "fileMessageData":{
             "downloadUrl":"https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF",
-            "caption":"Картинка"
+            "caption":"Image"
         }
     }
 }
