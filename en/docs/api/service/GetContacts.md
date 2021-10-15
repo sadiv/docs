@@ -1,62 +1,62 @@
 # GetContacts
 
-Метод предназначен для получения списка контактов текущего аккаунта.
+The method is aimed for getting a list of the current account contacts.
 
-Присылает контакты всех получателей, с кем была связь на аккаунте.
-Поле "имя контакта" 'name' принимает значение исходя из следующих условий:
-1) Если аккаунт записан в телефонную книгу, то получаем имя из книги;
-2) Если аккаунт не записан в телефонную книгу, то получаем имя из профиля WhatsApp;
-3) Если аккаунт не записан в телефонную книгу и не назначено имя профиля в WhatsApp, то получаем пустое поле.
+Sends contacts of all recipients whom the account connected with.
+Parameter "contact name" 'name' takes on a value based on the below criteria:
+1) If the account is recorded in the phonebook, then we get the name from the book;
+2) If the account is not recorded in the phonebook, then we get the name from WhatsApp account;
+3) If the account is not recorded in the phone book and WhatsApp account name is not assigned, then we get an empty field. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения списка контактов требуется выполнить запрос по адресу:
+To get contacts, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/GetContacts/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор корреспондента или группового чата](../chat-id.md)
-`name` | **string** | Имя контакта
-`type` | **string** | Тип контакта. Возможные значения:
-||`user` - контакт приналдежит корреспонденту
-||`group` - контакт является групповым чатом
+`id` | **string** | [User or group chat Id](../chat-id.md)
+`name` | **string** | Contact name
+`type` | **string** | Contact type. Possible variants:
+||`user` - contact belongs to a user
+||`group` - contact is a group chat 
 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 [
     {
         "id": "79001234567@c.us",
-        "name": "Иван Петров",
+        "name": "Ivan Petrov",
         "type": "user"
     },
     {
         "id": "79001234568@c.us",
-        "name": "Люся Сидорова",
+        "name": "Lyusya Sidorova",
         "type": "user"
     },
     {
         "id": "79001234569-1479621234@g.us",
-        "name": "Моя группа",
+        "name": "My group",
         "type": "group"
     }
 ]
 ```
 
-### Ошибки GetContacts {#errors}
+### GetContacts errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

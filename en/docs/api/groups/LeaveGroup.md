@@ -1,23 +1,23 @@
 # LeaveGroup
 
-Метод производит выход пользователя текущего аккаунта из группового чата.
+The method makes the current account user leave the group chat. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для выхода из группового чата требуется выполнить запрос по адресу:
+To leave a group chat, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus), из которого необходимо выйти.
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus), which you'd like to leave.
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,15 +25,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenIns
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`leaveGroup` | **boolean** | Флаг выхода из группы
+`leaveGroup` | **boolean** | Leave group flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -41,11 +41,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/LeaveGroup/{{apiTokenIns
 }
 ```
 
-### Ошибки LeaveGroup {#errors}
+### LeaveGroup errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

@@ -1,33 +1,33 @@
-# Входящее сообщение с цитатой
+# Incoming quoted message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения с цитатой. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming quoted message. ДFor a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `quotedMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `quotedMessage`
-`extendedTextMessageData` | **object** | Объект данных о текстовом сообщении
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `quotedMessage`
+`extendedTextMessageData` | **object** | Text message data object 
 
-Поля объекта `extendedTextMessageData`
+`extendedTextMessageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`text` | **string** | Текстовое сообщение под цитируемым
-`stanzaId` | **string** | ID цитируемого сообщения
-`participant` | **string** | ID чата получателя
+`text` | **string** | Text message below quoted 
+`stanzaId` | **string** | Quoted message ID
+`participant` | **string** | Recipient chat ID
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {

@@ -1,25 +1,25 @@
 # SetSystemProxy
 
-Метод предназначен для установки системного прокси. Используйте метод, когда требуется сбросить пользовательские настройки прокси на системные.
+The method is aimed for setting a system proxy. Use the method when you need to reset custom proxy settings to system ones.
 
-## Запрос {#request}
+## Request {#request}
 
-Для установки системного прокси требуется выполнить запрос по адресу:
+To set a system proxi, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/SetSystemProxy/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`setSystemProxy` | **boolean** | Флаг установки системного прокси: `true` - системный прокси установлен; `false` - не установлен
+`setSystemProxy` | **boolean** | System proxy setting flag: `true` - system proxy set; `false` - not set
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -27,11 +27,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/SetSystemProxy/{{apiToken
 }
 ```
 
-### Ошибки SetSystemProxy {#errors}
+### SetSystemProxy errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

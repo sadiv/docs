@@ -1,13 +1,13 @@
-# Группы
+# Groups
 
-В данном разделе представлены методы по работе с групповыми чатами
+This section presents methods for working with group chats.
 
-- [Создать группу](CreateGroup.md)
-- [Изменить имя группы](UpdateGroupName.md)
-- [Получить информацию о группе](GetGroupData.md)
-- [Добавить участника в группу](AddGroupParticipant.md)
-- [Удалить участника из группы](RemoveGroupParticipant.md)
-- [Назначить права администратора группы](SetGroupAdmin.md)
-- [Отозвать права администратора группы](RemoveAdmin.md)
-- [Установить аватар группы](SetGroupPicture.md)
-- [Выйти из группы](LeaveGroup.md)
+- [Create group](CreateGroup.md)
+- [Update group name](UpdateGroupName.md)
+- [Get group data](GetGroupData.md)
+- [Add group participant](AddGroupParticipant.md)
+- [Remove group participant](RemoveGroupParticipant.md)
+- [Set group admin rights](SetGroupAdmin.md)
+- [Remove group admin rights](RemoveAdmin.md)
+- [Set group picture](SetGroupPicture.md)
+- [Leave group](LeaveGroup.md)

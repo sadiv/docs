@@ -1,26 +1,26 @@
 # AddGroupParticipant
 
-Метод добавляет участника в групповой чат.
+The method adds a participant to a group chat.
 
-## Запрос {#request}
+## Request {#request}
 
-Для добавления участника в групповой чат требуется выполнить запрос по адресу:
+To add a participant to a group chat, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
-`participantChatId` | **string** | Да | [Идентификатор](../chat-id.md#corr) участника, добавляемого в групповой чат.
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
+`participantChatId` | **string** | Yes | [Id](../chat-id.md#corr) of a participant added to a group chat.
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Добавление участника в групповой чат:
+Adding a participant to a group chat:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
@@ -28,15 +28,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{ap
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`addParticipant` | **boolean** | Флаг добавления участника в групповой чат
+`addParticipant` | **boolean** | Adding a participant to a group chat flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -44,11 +44,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/AddGroupParticipant/{{ap
 }
 ```
 
-### Ошибки AddGroupParticipant {#errors}
+### AddGroupParticipant errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

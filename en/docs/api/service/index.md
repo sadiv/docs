@@ -1,8 +1,8 @@
-# Сервисные методы
+# Service methods
 
-В данном разделе представлены различные сервисные методы
+This section presents different service methods
 
-- [Проверить наличие WhatsApp](CheckWhatsapp.md)
-- [Получить аватар](GetAvatar.md)
-- [Получить аватар асинхронно](GetAvatarAsync.md)
-- [Получить контакты](GetContacts.md)
+- [Check WhatsApp availability](CheckWhatsapp.md)
+- [Get avatar](GetAvatar.md)
+- [Get avatar asynchronously](GetAvatarAsync.md)
+- [Get contacts](GetContacts.md)

@@ -1,58 +1,58 @@
 # GetAvatarAsync
 
-Метод возвращает аватар корреспондента или группового чата асинхронно. В отличие от метода [GetAvatar](GetAvatar) результат запроса возвращается в виде вебхука AvatarInfo
+The method returns asynchronously the avatar of a correspondent or a group chat. Unlike [GetAvatar](GetAvatar) method, the request result is returned as a webhook AvatarInfo
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения аватара требуется выполнить запрос по адресу:
+To get avatar, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatarAsync/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` or `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](../chat-id.md)
+`chatId` | **string** | Yes | [User or group chat Id](../chat-id.md)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Для получения своего аватара - укажите в chatId свой номер ("{ваш номер}@c.us").
+To get your avatar - specify your number in chatId ("{your number}@c.us").
 
-Получить аватар корреспондента:
+Get user avatar:
 ```json
 {
     "chatId": "79001234567@c.us"
 }
 ```
 
-Получить аватар группового чата:
+Get group chat avatar:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us"
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-Успешный запрос возвращает пустой ответ со статусом 200
+Successful request returns an empty response with status 200
 
-### Ошибки GetAvatar {#errors}
+### GetAvatar errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error Id | Description
 ----- | ----- | -----
-200|`bad request data`| Неверный формат номера телефона. Номер телефона должен содержать 11 или 12 цифр. Или идентификатора чата
+200|`bad request data`| Invalid phone number format. Telephone number must be 11 or 12 digits. Or chat Id
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
 
-url = "https://api.green-api.com/waInstance{{idInstance}}/getAvatarAsync/{{apiTokenInstance}}"
+url = "https://api.green-api.com/waInstance{{idInstance}}/getAvatarAsync/{{apiToFor a list of errors common to all methods, refer to kenInstance}}"
 
 payload = "{\r\n    \"chatId\": \"79001234567@c.us\"\r\n}"
 headers = {

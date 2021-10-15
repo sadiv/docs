@@ -1,31 +1,31 @@
 # SendMessage
 
-Метод предназначен для отправки текстового сообщения в личный или групповой чат.
-Сообщение будет добавлено в очередь на отправку. 
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for sending a text message to a personal or a group chat.
+The message will be added to the send queue. 
+The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
-## Запрос {#request}
+## Request {#request}
 
-Для отправки текстового сообщения требуется выполнить запрос по адресу:
+To send a text message, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`message` | **string** | Да | Текст сообщения. Поддерживаются символы emoji 😃 
-`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`message` | **string** | Yes | Message text. Emoji 😃 characters supported 
+`quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
 
-> Максимальная длина текстового сообщения составляет 4096 символов
+> The maximum length of a text message is 4096 characters
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Отправка сообщения в личный чат:
+Sending a message to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -33,7 +33,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 }
 ```
 
-Отправка сообщения в групповой чат:
+Sending a message to a group chat:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -41,7 +41,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 }
 ```
 
-Отправка сообщения с цитированием:
+Sending a quoted message:
 ```json
 {
     "chatId": "79001234567@с.us",
@@ -49,15 +49,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
     "quotedMessageId": "361B0E63F2FDF95903B6A9C9A102F34B"
 }
 ```
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`idMessage ` | **string** | Идентификатор отправленного сообщения 
+`idMessage ` | **string** | Sent message Id 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -65,16 +65,16 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 }
 ```
 
-### Ошибки SendMessage {#errors}
+### SendMessage errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
 
-url = "https://api.green-api.com/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}"
+url = "https://api.green-api.com/waInstance{{idInstance}}/sendMessage/For a list of errors common to all methods, refer to {{apiTokenInstance}}"
 
 payload = "{\r\n\t\"chatId\": \"79001234567@c.us\",\r\n\t\"message\": \"I use Green-API to send this message to you!\"\r\n}"
 headers = {

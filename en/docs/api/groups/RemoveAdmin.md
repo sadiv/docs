@@ -1,26 +1,26 @@
 # RemoveAdmin
 
-Метод лишает участника прав администрирования группового чата.
+The method removes a participant from group chat administartion rights. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для лишения участника прав администрирования группового чата требуется выполнить запрос по адресу:
+To remove a participant from group chat administartion rights, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
-`participantChatId` | **string** | Да | [Идентификатор](../chat-id.md#corr) участника группы, которого требуется лишить прав администрирования группы
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
+`participantChatId` | **string** | Yes | [Id](../chat-id.md#corr) of a group participant, who you'd like to remove from group administration rights
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Лишение участника прав администрирования группы:
+Removing a participant from group administration rights:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
@@ -28,15 +28,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenIn
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`removeAdmin` | **boolean** | Флаг лишения участника группы прав администратора
+`removeAdmin` | **boolean** | Flag of removing a group participant from administration rights 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -44,11 +44,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenIn
 }
 ```
 
-### Ошибки RemoveAdmin {#errors}
+### RemoveAdmin errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

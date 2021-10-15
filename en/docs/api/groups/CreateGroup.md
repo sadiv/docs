@@ -1,24 +1,24 @@
 # CreateGroup
 
-Метод предназначен для создания группового чата.
+The method is aimed for creating a group chat.
 
-## Запрос {#request}
+## Request {#request}
 
-Для создания группового чата требуется выполнить запрос по адресу:
+To create a group chat, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupName` | **string** | Да | Наименование нового группового чата
-`chatIds` | **array<string>** | Да | Коллекция [идентификаторов](../chat-id.md#corr) участников группы
+`groupName` | **string** | Yes | New group chat name
+`chatIds` | **array<string>** | Yes | Collection of group participants [Ids](../chat-id.md#corr) 
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -30,17 +30,17 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`created` | **boolean** | Флаг создания группы
-`chatId` | **string** | [Идентификатор группового чата](../chat-id.md#gus)
-`groupInviteLink` | **string** | Ссылка приглашения в группу
+`created` | **boolean** | Group creation flag
+`chatId` | **string** | [Group chat Id](../chat-id.md#gus)
+`groupInviteLink` | **string** | Group invitation link
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -50,11 +50,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 }
 ```
 
-### Ошибки CreateGroup {#errors}
+### CreateGroup errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

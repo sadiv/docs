@@ -1,28 +1,28 @@
 # GetChatHistory
 
-Метод возвращает историю сообщений чата.
+The method returns the chat message history.
 
-> **Важно:** История сообщений хранится и извлекается из телефонного аппарата, поэтому важно, чтобы телефон был доступен. В случае, если телефон потеряет связь, вызов метода может завешиться ошибкой HTTP `504`.
+> **Important:** Message history is stored and retrieved from the telephone, so it is important that the telephone is available. If the phone loses connection, the method request may end with an HTTP `504` error. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения истории сообщений требуется выполнить запрос по адресу:
+To get chat history, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameterss, please refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор личного или группового чата](../chat-id.md) историю сообщений которого требуется получить
-`count ` | **integer** | Нет | Количество сообщений для получения. Значение по умолчанию `100`  
+`chatId` | **string** | Yes | [Personal or chat Id](../chat-id.md) the message history of which you need to get
+`count ` | **integer** | No | The number of messages to get. The default is `100`  
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Запрос последних 10 сообщений:
+10 last messages request:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -30,70 +30,70 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-Ответ содержит список всех полученных и отправленных сообщений в чате. Сортировка по убыванию даты отправки сообщения.
+The response contains a list of all received and sent messages in the chat. Message time stamp descending-order sort.
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Массив объектов с полями:
+Array of objects with parameters:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`type` | **string** | Вид сообщения: `outgoing` - исходящее сообщение; `incoming` - входящее сообщение
-`timestamp` | **integer** | Время отправки сообщения в UNIX-формате
-`idMessage` | **string** | Идентификатор сообщения
-`statusMessage` | **string** | Статус исходящего сообщения. Присутствует только для `type` = `outgoing`. Возможные значения:
-| | `sent` - отправлено
-| | `delivered` - доставлено
-| | `read` - прочитано/просмотрено/прослушано
-`typeMessage` | **string** | Тип сообщения, возможные значения:
-| | `textMessage` - текстовое сообщение
-| | `imageMessage` - сообщение с изображением
-| | `videoMessage` - видео сообщение
-| | `documentMessage` - сообщение с файлом документа
-| | `audioMessage` - аудио сообщение
+`type` | **string** | Message type: `outgoing` - outgoing message; `incoming` - incoming message
+`timestamp` | **integer** | Time when the message has been sent in UNIX format
+`idMessage` | **string** | Message Id
+`statusMessage` | **string** | Outgoing message status. Present only for `type` = `outgoing`. Possible variants:
+| | `sent` - sent
+| | `delivered` - delivered
+| | `read` - read/seen/heard
+`typeMessage` | **string** | Message type, possible variants:
+| | `textMessage` - text message
+| | `imageMessage` - image message
+| | `videoMessage` - video message
+| | `documentMessage` - document file message
+| | `audioMessage` - audio message
 | | `locationMessage` - сообщение геолокации
-| | `contactMessage` - сообщение с контактом
-| | `extendedTextMessage` - сообщение со ссылкой и превью
-`chatId` | **string** | [Идентификатор чата](../chat-id.md)
-`senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя входящего сообщения. Присутствует только для `type` = `incoming`
-`senderName` | **string** | Имя отправителя входящего сообщения. Присутствует только для `type` = `incoming`
-`textMessage` | **string** | Текст сообщения, если `typeMessage`=`textMessage`
-`downloadUrl` | **string** | Ссылка на скачивание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
-`caption` | **string** | Описание файла, если `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`
-`location` | **object** | Объект о структуре локации, если `typeMessage`=`locationMessage`
-`contact` | **object** | Объект о структуре контакта, если `typeMessage`=`contactMessage`
-`extendedTextMessage` | **object** | Объект о структуре данных ссылки, если `typeMessage`=`extendedTextMessage`
+| | `contactMessage` - contact message
+| | `extendedTextMessage` - link and preview message
+`chatId` | **string** | [Chat Id](../chat-id.md)
+`senderId` | **string** | Incoming message sender [Id](../chat-id.md#corr). Present only for `type` = `incoming`
+`senderName` | **string** | Incoming message sender name. Present only for `type` = `incoming`
+`textMessage` | **string** | Message text, if `typeMessage`=`textMessage`
+`downloadUrl` | **string** | Link to download a file, if `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`/`audioMessage`
+`caption` | **string** |File caption, if `typeMessage` = `imageMessage`/`videoMessage`/`documentMessage`
+`location` | **object** | Location structure object, if `typeMessage`=`locationMessage`
+`contact` | **object** | Contact structure object, if `typeMessage`=`contactMessage`
+`extendedTextMessage` | **object** | Link data structure object, if `typeMessage`=`extendedTextMessage`
 
-Поля объекта `location`:
+Parameters of `location` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`nameLocation` | **string** | Название локации
-`address` | **string** | Адрес локации
-`latitude` | **double** | Широта локации
-`longitude` | **double** | Долгота локации
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`nameLocation` | **string** | Location name
+`address` | **string** | Location address
+`latitude` | **double** | Location latitude
+`longitude` | **double** | Location longitude
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-Поля объекта `contact`:
+Parameters of `contact` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`displayName` | **string** | Отображаемое имя контакта
-`vcard` | **string** | Структура VCard (визитной карточки контакта)
+`displayName` | **string** | Contact display name 
+`vcard` | **string** | VCard structure (contact visit card)
 
-Поля объекта `extendedTextMessage`:
+Parameters of `extendedTextMessage` object:
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`text` | **string** | Текст ссылки
-`description` | **string** | Описание ссылки
-`title` | **string** | Заголовок ссылки
-`previewType` | **string** | Тип превью ссылки
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`text` | **string** | Link text
+`description` | **string** | Link description
+`title` | **string** | Link title
+`previewType` | **string** | Link preview type
+`jpegThumbnail` | **string** | `base64`-coded image preview
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 [
@@ -130,11 +130,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetChatHistory/{{apiToke
 ]
 ```
 
-### Ошибки GetChatHistory {#errors}
+### GetChatHistory errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

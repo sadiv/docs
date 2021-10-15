@@ -1,23 +1,23 @@
-# GetGroupData
+# GetGro# GetGroupData
 
-Метод получает данные группового чата.
+The method gets group chat data. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения данных группового чата требуется выполнить запрос по адресу:
+To get group chat data, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance`, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,30 +25,30 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`groupId` | **string** | [Идентификатор группового чата](../chat-id.md#gus)
-`owner` | **string** | [Идентификатор](../chat-id.md#corr) владельца группы
-`subject` | **string** | Наименование группы
-`creation` | **integer** | Время создания группы в Unix-формате
-`participants` | **array** | Коллекция участников группы
-`subjectTime` | **integer** | Время создания наименования группы в Unix-формате
-`subjectOwner` | **string** | [Идентификатор](../chat-id.md#corr) пользователя создавшего наименование группы
-`groupInviteLink` | **string** | Ссылка приглашения в группу
+`groupId` | **string** | [Group chat Id](../chat-id.md#gus)
+`owner` | **string** | Group owner [Id](../chat-id.md#corr)
+`subject` | **string** | Group name
+`creation` | **integer** | Group creation time in Unix format 
+`participants` | **array** | Group participants collection
+`subjectTime` | **integer** | Group name creation time in Unix format
+`subjectOwner` | **string** | User [Id](../chat-id.md#corr) who created the group name 
+`groupInviteLink` | **string** | Group invitation link
 
-Поля объектов из массива `participants`
+`Participants`array subjects parameters
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`id` | **string** | [Идентификатор](../chat-id.md#corr) участника группового чата
-`isAdmin` | **boolean** | Флаг, является ли пользователь администратором группы
-`isSuperAdmin` | **boolean** | Флаг, является ли пользователь супер администратором группы
+`id` | **string** | Group chat participant [Id](../chat-id.md#corr)
+`isAdmin` | **boolean** | Flag whether the user is a group administrator
+`isSuperAdmin` | **boolean** | Flag whether the user is a group super administrator
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -79,11 +79,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 }
 ```
 
-### Ошибки GetGroupData {#errors}
+### GetGroupData errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests

@@ -1,19 +1,19 @@
-# Типы входящих уведомлений
+# Incoming webhooks types
 
-Входящие уведомления могут быть следующих типов:
+Incoming webhooks may be of the below types:
 
-- [incomingMessageReceived](incoming-message/Webhook-IncomingMessageReceived.md) - уведомление о входящих сообщениях и файлах
-- [outgoingMessageReceived](outgoing-message/OutgoingMessage.md) - уведомление о сообщении, отправленного с телефона
-- [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
-- [stateInstanceChanged](StateInstanceChanged.md) - уведомление об изменении состояния авторизации аккаунта
-- [statusInstanceChanged](StatusInstanceChanged.md) - уведомление об изменении состояния сокета аккаунта
-- [deviceInfo](DeviceInfo.md) - уведомление об устройстве (телефоне) и уровне заряда батареи
-- [incomingCall](IncomingCall.md) - уведомление о входящем звонке
+- [incomingMessageReceived](incoming-message/Webhook-IncomingMessageReceived.md) - incoming messages and files notification
+- [outgoingMessageReceived](outgoing-message/OutgoingMessage.md) - notification about a message sent from phone
+- [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - notification about outgoing messages sending/delivering/reading statuses
+- [stateInstanceChanged](StateInstanceChanged.md) - account authorization state change notification 
+- [statusInstanceChanged](StatusInstanceChanged.md) - account socket state change notification
+- [deviceInfo](DeviceInfo.md) - device (phone) and battery level notification 
+- [incomingCall](IncomingCall.md) - incoming call notification 
 
-## Получение уведомлений разных типов
-Для включения или отключения уведомлений по типам используйте метод [SetSettings](../../../api/account/SetSettings.md)
+## Get webhooks of different types
+To enable or disable webhooks by types, use [SetSettings](../../../api/account/SetSettings.md) method
 
-### Пример тела запроса метода [SetSettings](../../../api/account/SetSettings.md) {#request-example-body}
+### Method request body example [SetSettings](../../../api/account/SetSettings.md) {#request-example-body}
 
 ```json
 {

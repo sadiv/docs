@@ -1,25 +1,25 @@
 # Reboot
 
-Метод предназначен для перезапуска аккаунта.
+The method is aimed for rebooting an account.
 
-## Запрос {#request}
+## Request {#request}
 
-Для перезапуска аккаунта требуется выполнить запрос по адресу:
+To reboot the account, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/Reboot/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`isReboot` | **boolean** | Результат перезапуска аккаунта WhatsApp
+`isReboot` | **boolean** | Result of rebooting WhatsApp account
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -27,11 +27,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/Reboot/{{apiTokenInstance
 }
 ```
 
-### Ошибки Reboot {#errors}
+### Reboot errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

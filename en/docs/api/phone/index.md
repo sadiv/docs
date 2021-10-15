@@ -1,5 +1,5 @@
-# Устройство (телефон)
+# Device (phone)
 
-В данном разделе представлены методы по работе с устройством (телефоном)
+This section presents methods for working with the device (phone) 
 
-- [Получить информацию об устройстве](GetDeviceInfo.md)
+- [Get device information](GetDeviceInfo.md)

@@ -1,28 +1,28 @@
 # DownloadFile
 
-Метод предназначен для скачивания принятых и отправленных файлов.
-Ссылки на принятые файлы передаются во [Входящих сообщениях](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md), а также их можно получить методом [LastIncomingMessages](../../../api/journals/LastIncomingMessages.md).
-Ссылки на отправленные файлы можно получить методом [LastOutgoingMessages](../../../api/journals/LastOutgoingMessages.md).
+The method is aimed for downloading incoming and outgoing files.
+Links to incoming files are transmitted in [Incoming messages](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md), and you can also get them using [LastIncomingMessages](../../../api/journals/LastIncomingMessages.md) method.
+You can get links to outgoing files using [LastOutgoingMessages](../../../api/journals/LastOutgoingMessages.md) method.
 
-> Срок хранения файлов и соответственно возможность их скачивания ограничено 24 часами.
+> Files storage period and, accordingly, the capability to download them is limited to 24 hours.
 
-## Запрос {#request}
+## Request {#request}
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`idMessage` | **string** | Да | Идентификатор сообщения, передаваемый во [Входящих сообщениях](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) или при отправки файлов методами [SendFileByUrl](../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../api/sending/SendFileByUpload.md). Данный параметр передаётся как завершающая часть url запроса
+`idMessage` | **string** | Yes | Message Id transmitted in [Incoming messages](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) or when sending files using [SendFileByUrl](../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../api/sending/SendFileByUpload.md) methods. This parameter is transmitted as the final part of the url request
 
-## Ответ {#response}
+## Response {#response}
 
-Файл из сообщения
+File from message
 
-### Ошибки DownloadFile {#errors}
+### DownloadFile errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

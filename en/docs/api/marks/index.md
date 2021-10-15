@@ -1,5 +1,5 @@
-# Отметка прочтения
+# Read mark
 
-В данном разделе представлены методы по работе с отметкой прочтения чатов
+This section presents methods for working with chat read mark.
 
-- [Отметить чат прочитанным](ReadChat.md)
+- [Mark chat as read](ReadChat.md)

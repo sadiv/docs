@@ -1,6 +1,6 @@
-# Очереди
+# Queues
 
-В данном разделе представлены методы по работе с очередью сообщений к отправке
+This section presents methods for working with a messages queue. 
 
-- [Получить очередь сообщений к отправке](ShowMessagesQueue.md)
-- [Очистить очередь сообщений к отправке](ClearMessagesQueue.md)
+- [Show messages queue](ShowMessagesQueue.md)
+- [Clear messages queue](ClearMessagesQueue.md)

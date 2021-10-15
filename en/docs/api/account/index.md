@@ -1,17 +1,17 @@
-# Аккаунт
+# Account
 
-В данном разделе представлены методы по работе с Аккаунтом
+This section presents methods for working with the Account
 
-- [Получить настройки аккаунта](GetSettings.md)
-- [Установить настройки аккаунта](SetSettings.md)
-- [Установить системный прокси](SetSystemProxy.md)
-- [Получить состояние аккаунта](GetStateInstance.md)
-- [Получить состояние сокета аккаунта](GetStatusInstance.md)
-- [Перезапустить аккаунт](Reboot.md)
-- [Разлогинить аккаунт](Logout.md)
-- [Получить QR-код](QR.md)
-- [Получить QR-код через websocket](Scanqrcode.md)
-- [Установка аватара аккаунта](SetProfilePicture.md)
+- [Get settings](GetSettings.md)
+- [Set account settings](SetSettings.md)
+- [Set system proxy](SetSystemProxy.md)
+- [Get account state](GetStateInstance.md)
+- [Get account socket state](GetStatusInstance.md)
+- [Reboot account](Reboot.md)
+- [Logout account](Logout.md)
+- [Get QR code](QR.md)
+- [Get QR code via websocket](Scanqrcode.md)
+- [Set profile picture](SetProfilePicture.md)
 
 
 

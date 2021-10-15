@@ -1,7 +1,7 @@
-# Журналы
+# Journals
 
-В данном разделе представлены методы по работе с журналами входящих и отправленных сообщений
+This section presents methods for working with incoming and outgoing messages journals
 
-- [Получить историю сообщений чата](GetChatHistory.md)
-- [Получить журнал входящих сообщений](LastIncomingMessages.md)
-- [Получить журнал отправленных сообщений](LastOutgoingMessages.md)
+- [Get chat history](GetChatHistory.md)
+- [Get incoming messages journal](LastIncomingMessages.md)
+- [Get outgoing messages journal](LastOutgoingMessages.md)

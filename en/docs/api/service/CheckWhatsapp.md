@@ -1,23 +1,23 @@
 # CheckWhatsapp
 
-Метод проверяет наличие аккаунта WhatsApp на номере телефона.
+The method checks WhatsApp account availability on a phone number.
 
-## Запрос {#request}
+## Request {#request}
 
-Для проверки наличия аккаунта WhatsApp требуется выполнить запрос по адресу:
+To check WhatsApp account availability, you have to execute request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`phoneNumber` | **integer** | Да | Номер телефона получателя в международном формате: 11 или 12 цифр; Пример: `79001234567` или `380123456789`
+`phoneNumber` | **integer** | Yes | Recipient's phone number in international format: 11 or 12 digits; Example: `79001234567` or `380123456789`
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,15 +25,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`existsWhatsapp` | **boolean** | Флаг наличия WhatsApp на номере телефона
+`existsWhatsapp` | **boolean** | Flag of WhatsApp availability on a phone number 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -41,16 +41,16 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CheckWhatsapp/{{apiToken
 }
 ```
 
-### Ошибки CheckWhatsapp {#errors}
+### CheckWhatsapp errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error Id | Description
 ----- | ----- | -----
-400 | `bad phone number, valid 11 or 12 digits` | Неверный формат номера телефона, должен быть 11 или 12 цифр
-400 | `check phone number timeout limit exceeded` | Превышен лимит времени ожидания ответа о проверке номера телефона
+400 | `bad phone number, valid 11 or 12 digits` | Invalid phone number format, must be 11 or 12 digits
+400 | `check phone number timeout limit exceeded` | The timeout for a response to check a phone number has been exceeded
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

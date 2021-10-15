@@ -1,41 +1,41 @@
 # SetSettings
 
-Метод предназначен для установки настроек аккаунта. 
+The method is aimed for setting account settings. 
 
-> При вызове данного метода аккаунт перезапускается.
+> When this method is requested, the account is rebooted.
 
-## Запрос {#request}
+## Request {#request}
 
-Для установки настроек аккаунта требуется выполнить запрос по адресу:
+To set account settings, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Допускается указывать параметры выборочно. Хотя бы один параметр должен быть указан.
+Selective specification of parameters is allowed. At least one parameter must be specified.
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`countryInstance` | **string** | Нет | Код страны аккаунта по стандарту [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2)
-`webhookUrl` | **string** | Нет | URL для отправки уведомлений. Если требуется отключить получение уведомлений, то укажите пустую строку
-`webhookUrlToken` | **string** | Нет | Токен для доступа к вашему серверу уведомлений, если не требуется, то укажите пустую строку 
-`delaySendMessagesMilliseconds` | **integer** | Нет | [Интервал отправки сообщений](../send-messages-delay.md) в миллисекундах. Минимальное значение 500 мсек
-`markIncomingMessagesReaded` | **string** | Нет | Отмечать входящие сообщения прочитанными или нет, возможные значения: `yes`, `no`. Игнорируется, если markIncomingMessagesReadedOnReply в значении 'yes'.
-`markIncomingMessagesReadedOnReply` | **string** | Нет | Отмечать входящие сообщения прочитанными при отправке сообщения в чат через API, возможные значения: `yes`, `no`. Если в значении 'yes', то настройка markIncomingMessagesReaded игнорируется.
-`proxyInstance` | **string** | Нет | Прокси для аккаунта в формате `{ip}:{port}:{login}:{password}`, если вы хотите что бы аккаунт работал на вашем прокси, по умолчанию используются системные прокси
-`outgoingWebhook` | **string** | Нет |Получать уведомления о статусах отправки/доставки/прочтении исходящих сообщений, возможные значения: `yes`, `no`
-`outgoingMessageWebhook` | **string** | Нет |Получать уведомления о сообщениях, отправленных с телефона, возможные значения: `yes`, `no`
-`stateWebhook` | **string** | Нет |Получать уведомления об изменении состояния авторизации аккаунта, возможные значения: `yes`, `no`
-`incomingWebhook` | **string** | Нет |Получать уведомления о входящих сообщениях и файлах, возможные значения: `yes`, `no`
-`deviceWebhook` | **string** | Нет |Получать уведомления об устройстве (телефоне) и уровне заряда батареи, возможные значения: `yes`, `no`
-`statusInstanceWebhook` | **string** | Нет | Получать уведомления об изменении состояния сокет соединения аккаунта, возможные значения: `yes`, `no`
-`sendFromUTC` | **string** | Нет | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ОТ указанного (Внимание, время указано в UTC), обязателен, если указано `sendToUTC`, возможные значения: `09:00`
-`sendToUTC` | **string** |  Нет | Установить настройку аккаунта интервал отправки из очереди в промежуток времени ДО указанного (Внимание, время указано в UTC), обязателен, если указано `sendFromUTC`, возможные значения: `12:00`
+`countryInstance` | **string** | No | Account country code in accordance with [ISO 3166-2](https://ru.wikipedia.org/wiki/ISO_3166-2) standard
+`webhookUrl` | **string** | No | URL for sending notifications. If it is required to disable getting notifications, then specify an empty string
+`webhookUrlToken` | **string** | No | Token to access your notification server, if not required, then specify an empty string 
+`delaySendMessagesMilliseconds` | **integer** | No | [Message sending delay](../send-messages-delay.md) is in milliseconds. Minimum value is 500 msec
+`markIncomingMessagesReaded` | **string** | No | Mark incoming messages as read or not, possible variants: `yes`,` no`. Ignored if markIncomingMessagesReadedOnReply is 'yes'.
+`markIncomingMessagesReadedOnReply` | **string** | No | Mark incoming messages as read when posting a message to the chat via API, possible variants: `yes`,` no`. If it is 'yes', then the markIncomingMessagesReaded setting is ignored.
+`proxyInstance` | **string** | No | Proxy for the account in the format {ip}:{port}:{login}:{password}, if you want the account to work on your proxy; system proxies are used by default
+`outgoingWebhook` | **string** | No |Get notifications about outgoing messages sending/delivering/reading statuses, possible variants: `yes`,` no`
+`outgoingMessageWebhook` | **string** | No |Get notifications about messages sent from the phone, possible variants: `yes`,` no`
+`stateWebhook` | **string** | No |Get notifications about the account authorization state change, possible variants: `yes`,` no`
+`incomingWebhook` | **string** | No |Get notifications about incoming messages and files, possible variants: `yes`,` no`
+`deviceWebhook` | **string** | No |Get notifications about the device (phone) and battery level, possible variants: `yes`,` no`
+`statusInstanceWebhook` | **string** | No | Get notifications about the account socket connection status change, possible variants: `yes`,` no`
+`sendFromUTC` | **string** | No | Set the account setting - the delay of sending from the queue within the time interval AFTER the specified one (Attention, the time is indicated in UTC), mandatory if specified `sendToUTC`, possible variants: `09:00`
+`sendToUTC` | **string** |  No | Set the account setting - the delay of sending from the queue within the time interval BEFORE the specified one (Attention, the time is indicated in UTC), mandatory if specified `sendFromUTC`, possible variants: `12:00`
 
-### Пример тела запроса общий {#request-example-body}
+### General request body example {#request-example-body}
 
 ```json
 {
@@ -54,10 +54,10 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
     "statusInstanceWebhook": "yes" 
 }
 ```
-### Пример тела запроса для установки временного интервала {#request-example-body-time-interval}
+### Request body example for setting time interval {#request-example-body-time-interval}
 
-Обязательно указывать параметры sendFromUTC и sendToUTC вместе, в противном случае возникнет ошибка.
-Если требуется отправлять сообщения только в интервале с 12:00 до 18:00 по мск, то требуется указать такие значения параметров:
+It is mandatory to specify sendFromUTC and sendToUTC parameters together, otherwise an error will occur.
+If you need to send messages only in the interval from 12:00 to 18:00 Moscow time, then you have to specify the following parameter values:
 
 ```json
 {
@@ -66,15 +66,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`saveSettings` | **boolean** | Флаг, что настройки сохранены
+`saveSettings` | **boolean** | Flag that the settings are saved
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -82,11 +82,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 }
 ```
 
-### Ошибки SetSettings {#errors}
+### SetSettings errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests

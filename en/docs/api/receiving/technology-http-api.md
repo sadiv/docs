@@ -1,26 +1,26 @@
-# Получение уведомлений через HTTP API
+# Receive webhooks via HTTP API
 
-Получать входящие уведомления (сообщения, статусы) можно через HTTP API запросы по аналогии, как реализованы остальные методы Green API. При этом гарантируется хронологический порядок следования уведомлений в той последовательности, в которой они были получены [FIFO](https://ru.wikipedia.org/wiki/FIFO). Все входящие уведомления сохраняются в очереди и ожидают своего получения в течение 24 часов.
+You can get incoming webhooks (messages, statuses) via HTTP API requests in the similar way as the rest of the Green API methods are implemented. Herewith, the chronological order of the webhooks following is guaranteed in the sequence in which they were received [FIFO](https://ru.wikipedia.org/wiki/FIFO). All incoming webhooks are stored in the queue and are expected to be received within 24 hours.
 
-Для получения входящих уведомлений требуется выполнить последовательно вызов двух методов [ReceiveNotification](technology-http-api/ReceiveNotification.md) и [DeleteNotification](technology-http-api/DeleteNotification.md). Метод [ReceiveNotification](technology-http-api/ReceiveNotification.md) выполняет получение входящего уведомления. Метод [DeleteNotification](technology-http-api/DeleteNotification.md) подтверждает успешное получение и обработку уведомления. Подробнее о методах смотрите в соответствующих разделах [ReceiveNotification](technology-http-api/ReceiveNotification.md) и [DeleteNotification](technology-http-api/DeleteNotification.md).
+To get incoming webhooks, you have to sequentially call two methods [ReceiveNotification](technology-http-api/ReceiveNotification.md) and [DeleteNotification](technology-http-api/DeleteNotification.md). [ReceiveNotification](technology-http-api/ReceiveNotification.md) method receives an incoming webhook. [DeleteNotification](technology-http-api/DeleteNotification.md) method confirms successful webhook receipt and processing. To learn more about the methods, refer to respective [ReceiveNotification](technology-http-api/ReceiveNotification.md) and [DeleteNotification](technology-http-api/DeleteNotification.md) sections.
 
-> Срок хранения входящих уведомлений составляет 24 часа.
+> Incoming webhooks are stored for 24 hours.
 
-## Настройка аккаунта
+## Account setup
 
-Перед получением входящих уведомлений требуется выполнить настройку аккаунта. Настройка аккаунта может быть выполнена [программно](#SetSettings) с использованием метода [SetSettings](../account/SetSettings.md), либо [интерактивно](#cabinet) в интерфейсе личного кабинета.
+Before receiving incoming webhooks, you need to set up your account. Account settings can be performed [in software](#SetSettings) using [SetSettings](../account/SetSettings.md) method, or [online](#cabinet) in your profile interface.
 
-### Настройка методом [SetSettings](../account/SetSettings.md) {#SetSettings}
+### Setup by [SetSettings](../account/SetSettings.md) {#SetSettings} method
 
-Для настройки получения входящих уведомлений по технологии HTTP API требуется указать в качестве параметра `webhookUrl` значение:
+To set up receiving incoming webhooks using HTTP API technology, you need to specify the below value as `webhookUrl` parameter:
 
 ```
 https://webhook.green-api.com
 ```
 
-Также требуется указать какие виды уведомлений необходимо получать. Для включения входящих уведомлений по видам, а также для указания параметра `webhookUrl` воспользуйтесь методом [SetSettings](../account/SetSettings.md).
+It is also required to specify what types of webhooks you need to receive. To enable incoming webhooks by type, as well as to specify `webhookUrl` parameter, use [SetSettings](../account/SetSettings.md) method.
 
-#### Пример тела запроса метода [SetSettings](../account/SetSettings.md)
+#### Example of [SetSettings](../account/SetSettings.md) method request body
 
 ```json
 {
@@ -32,14 +32,14 @@ https://webhook.green-api.com
 }
 ```
 
-### Настройка в личном кабинете {#cabinet}
+### Setup in your profile {#cabinet}
 
-Настройку получения входящих уведомлений можно также выполнить интерактивно. Для этого перейдите в [Личный кабинет](https://cabinet.green-api.com) и выберите требуемый аккаунт. Если аккаунт авторизован, то будут отображены настройки для получения входящих уведомлений см. рис. Укажите значение параметра `webhookUrl`, а также переключатели по видам уведомлений. Если аккаунт не авторизован и настройки уведомлений не отображаются, обратитесь к разделу [Перед началом работы](../../before-start.md#qr).
+You can also set up to receive incoming webhooks online. To do this, go to [Your profile](https://cabinet.green-api.com) and select the required user account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types. f the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
 
-![Настройки входящих уведомлений](../../assets/technology-http-api.png "Настройки входящих уведомлений")
+![Incoming webhooks settings](../../assets/technology-http-api.png "Incoming webhooks settings")
 
-## Получение входящих уведомлений
+## Receive incoming webhooks
 
-После выполнения настройки аккаунта можно приступать к получению уведомлений методами [ReceiveNotification](technology-http-api/ReceiveNotification.md) и [DeleteNotification](technology-http-api/DeleteNotification.md). Пример кода получения уведомлений на [NodeJS](https://nodejs.org) можно посмотреть в файле [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js).
+After setting up the account, you can start receiving webhooks by [ReceiveNotification](technology-http-api/ReceiveNotification.md) and [DeleteNotification](technology-http-api/DeleteNotification.md) methods. You can see the example of incoming webhook processing code on [NodeJS](https://nodejs.org) in [ReceiveNotifications](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveNotifications.js) file.
 
-Подробное описание формата входящих уведомлений представлено в разделе [Формат входящих уведомлений](notifications-format/index.md).
+A detailed description of incoming webhooks format is given in [Incoming webhooks format](notifications-format/index.md).

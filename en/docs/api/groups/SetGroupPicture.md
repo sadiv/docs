@@ -1,24 +1,24 @@
 # SetGroupPicture
 
-Метод устанавливает аватар группы.
+The method sets a group picture.
 
-## Запрос {#request}
+## Request {#request}
 
-Для установки аватара группового чата требуется выполнить запрос по адресу:
+To set a group chat picture, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setGroupPicture/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`file` | **file** | Да | Отправляемый файл в формате *.jpg
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
+`file` | **file** | Yes | Sent file in *.jpg
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests
@@ -38,17 +38,17 @@ response = requests.request("POST", url, headers=headers, data = payload, files=
 print(response.text.encode('utf8'))
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`setGroupPicture` | **boolean** | флаг результата установки аватара группы
-`urlAvatar` | **string** | url  на установленное изображение
-`reason` | **string** | причина почему аватар не был установлен
+`setGroupPicture` | **boolean** | group picture setting result flag
+`urlAvatar` | **string** | set picture url
+`reason` | **string** | reason why the picture hasn't been set
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -59,7 +59,7 @@ print(response.text.encode('utf8'))
 
 ```
 
-### Ошибки SetGroupPicture {#errors}
+### SetGroupPicture errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 

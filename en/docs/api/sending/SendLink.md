@@ -1,31 +1,31 @@
 # SendLink
 
-Метод предназначен для отправки сообщения со ссылкой, по которой будут добавлены превью изображения, заголовок и описание.
-Картинка, заголовок и описание получаются из [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) разметки страницы, на которую указывает ссылка.
-Сообщение будет добавлено в очередь на отправку. Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for sending a message with a link, by which an image preview, title and description will be added. 
+Image, title and description are obtained from [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) page template being linked to.
+The message will be added to the send queue. The rate at which messages are sent from the queue is managed by [Messages sending delay](../send-messages-delay.md) parameter.
 
-## Запрос {#request}
+## Request {#request}
 
-Для отправки сообщения со ссылкой требуется выполнить запрос по адресу:
+To send a link message, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`urlLink` | **string** | Да | Адрес ссылки
-`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`urlLink` | **string** | Yes | Link address
+`quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
 
-> Рекомендуется, чтобы страница, на которую указыает ссылка `urlLink` содержала разметку [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol). В этом случае сообщение будет дополнено картинкой, заголовком и кратким описанием.
+> It is recommended that the page referred to with `urlLink` contains [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) template. In this case, the message will be supplemented with an image, a title and a short description.
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Отправка сообщения в личный чат:
+Sending a message to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -33,7 +33,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInsta
 }
 ```
 
-Отправка сообщения в групповой чат:
+Sending a message to a group chat:
 ```json
 {
     "chatId": "79001234567-1581234048@g.us",
@@ -41,7 +41,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInsta
 }
 ```
 
-Отправка сообщения в личный чат:
+Sending a message to a personal chat:
 ```json
 {
     "chatId": "79001234567@c.us",
@@ -50,15 +50,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInsta
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`idMessage ` | **string** | Идентификатор отправленного сообщения 
+`idMessage ` | **string** | Outgoing message Id 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -66,11 +66,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLink/{{apiTokenInsta
 }
 ```
 
-### Ошибки SendLink {#errors}
+### SendLink errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

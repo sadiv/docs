@@ -1,26 +1,26 @@
 # SetGroupAdmin
 
-Метод назначает участника группового чата администратором.
+The method sets a group chat participant as an administrator. 
 
-## Запрос {#request}
+## Request {#request}
 
-Для назначения участника группового чата администратором требуется выполнить запрос по адресу:
+To set a group chat participant as an administrator, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`groupId` | **string** | Да | [Идентификатор группового чата](../chat-id.md#gus)
-`participantChatId` | **string** | Да | [Идентификатор](../chat-id.md#corr) участника группы, назначаемого в качестве администратора
+`groupId` | **string** | Yes | [Group chat Id](../chat-id.md#gus)
+`participantChatId` | **string** | Yes | [Id](../chat-id.md#corr) of a group participant set as an administartor
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Назначение участника группового чата администратором:
+Setting a group chat participants as an administrator:
 ```json
 {
     "groupId": "79001234567-1587570015@g.us",
@@ -28,15 +28,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`setGroupAdmin` | **boolean** | Флаг назначения участника группы администратором
+`setGroupAdmin` | **boolean** | Setting a group participant as an administartor flag
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -44,11 +44,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetGroupAdmin/{{apiToken
 }
 ```
 
-### Ошибки SetGroupAdmin {#errors}
+### SetGroupAdmin errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests

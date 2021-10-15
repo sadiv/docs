@@ -1,28 +1,28 @@
 # GetStateInstance
 
-Метод предназначен для получения состояния аккаунта.
+The method is aimed for getting the account state.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения состояния аккаунта требуется выполнить запрос по адресу:
+To get the account state, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/getStateInstance/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to section [Before you start](../../before-start.md#parameters).
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`stateInstance` | **string** | Состояние аккаунта. Принимает значения:
-| | `notAuthorized` - Аккаунт не авторизован. Для авторизации аккаунта обратитесь к разделу [Перед началом работы](../../before-start.md#qr)
-| | `authorized` - Аккаунт авторизован
-| | `sleepMode` - Аккаунт ушел в спящий режим. Состояние возможно, когда выключен телефон. После включения телефона может потребоваться до 5 минут для перевода состояния аккаунта в значение `authorized`.
+`stateInstance` | **string** | Account state. Have variants:
+| | `notAuthorized` - Account is not authorized. For account authorization refer to [Before you start](../../before-start.md#qr) section
+| | `authorized` - Account is authorized
+| | `sleepMode` - Account is in sleep mode. The state is possible when the phone is switched off. After the phone is switched on, it may take up to 5 minutes for the account state to be changed to `authorized`.
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -30,11 +30,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getStateInstance/{{apiTok
 }
 ```
 
-### Ошибки GetStateInstance {#errors}
+### Errors GetStateInstance {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example {#request-example-python}
 
 ```python
 import requests

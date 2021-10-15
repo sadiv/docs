@@ -1,25 +1,25 @@
 # SetProfilePicture
 
-Метод предназначен для установки аватара аккаунта.
+The method is aimed for setting an account picture.
 
-## Запрос {#request}
+## Request {#request}
 
-Для установки аватара аккаунта требуется выполнить запрос по адресу:
+To set an account picture, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setProfilePicture/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`file` | **file** | Да | Отправляемый файл в формате *.jpg
+`file` | **file** | Yes | Sent file in *.jpg 
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
-Пример кода на Python
+Python request example
 
 ```python
 import requests
@@ -37,19 +37,19 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 print(response.text)
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`setProfilePicture` | **boolean** | флаг результата установки аватара 
-`urlAvatar` | **string** | url установленного аватара 
-`reason` | **string** | Причина почему аватар не был установлен 
+`setProfilePicture` | **boolean** | Picture setting result flag 
+`urlAvatar` | **string** | Set picture url  
+`reason` | **string** | Reason why the picture hasn't been set  
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
-В случае успеха, в ответ на запрос, отдается JSON строка следующего вида с HTTP статусом 200:
+If successful, in response to the request, a JSON string of the below form with HTTP status 200 is returned: 
 
 ```json
 {
@@ -58,6 +58,6 @@ print(response.text)
 }
 ```
 
-### Ошибки SetProfilePicture {#errors}
+### SetProfilePicture errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section

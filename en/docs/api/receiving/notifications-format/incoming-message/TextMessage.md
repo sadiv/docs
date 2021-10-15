@@ -1,31 +1,31 @@
-# Входящее текстовое сообщение
+# Incoming text message 
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего текстового сообщения. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+This section describes `messageData` object incoming webhook format for incoming text message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `textMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Descriptionе
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `textMessage`
-`textMessageData` | **object** | Объект данных о текстовом сообщении
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `textMessage` 
+`textMessageData` | **object** | Text message data object 
 
-Поля объекта `textMessageData`
+`textMessageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | type | Description
 ----- | ----- | -----
-`textMessage` | **string** | Текстовое сообщение
+`textMessage` | **string** | Text message
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {

@@ -1,22 +1,22 @@
-# Интервал отправки сообщений
+# Messages sending delay
 
-При отправке сообщений или файлов все данные помещаются в очередь на отправку. Все сообщения отправляются из очереди последовательно в порядке поступления в очередь [FIFO](https://ru.wikipedia.org/wiki/FIFO). При этом устанавливается интервал между отправкой сообщений из очереди. Для изменения интервала отправки сообщений предназначен метод [SetSettings](account/SetSettings.md) и параметр `delaySendMessagesMilliseconds`.
+When sending messages or files, all data are put in the send queue. All messages are sent from the queue sequentially in the order they come in the [FIFO](https://ru.wikipedia.org/wiki/FIFO) queue. This sets the message sending delay from the queue. To change the messages sending delay, use [SetSettings](account/SetSettings.md) method and `delaySendMessagesMilliseconds` parameter. 
 
-Минимальный интервал отправки сообщений составляет 500 мсек.
+The minimum message sending delay is 500 msec.
 
-Посмотреть текущий интервал отправки можно методом [GetSettings](account/GetSettings.md), параметр `delaySendMessagesMilliseconds`.
+To check the current sending delay, use [GetSettings](account/GetSettings.md) method, `delaySendMessagesMilliseconds` parameter.
 
-## Изменение интервала отправки сообщений
+## Messages sending delay change
 
-Для изменения интервала отправки сообщений требуется выполнить запрос по адресу:
+To change messages sending delay, you have to execute a request at:
 
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenInstance}}
 ```
 
-В теле запроса требуется указать только один параметр `delaySendMessagesMilliseconds`. 
+You have to specify the only parameter `delaySendMessagesMilliseconds` in the request body. 
 
-### Пример тела запроса для установки интервала отправки 5 сек
+### Request body example to set 5 second messages sending delay 
 
 ```json
 {
@@ -24,7 +24,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SetSettings/{{apiTokenIn
 }
 ```
 
-### Пример кода на Python  {#request-example-python}
+### Python request example  {#request-example-python}
 
 ```python
 import requests

@@ -1,27 +1,27 @@
-# Выполнение запросов
+# Execute requests
 
-Для выполнения запроса к Green API необходимо выполнить GET или POST запрос на адрес 
+To execute a request to the Green API, you have to execute GET or POST request at  
 
 ```
 https://api.green-api.com/waInstance{{idInstance}}/{{method}}/{{apiTokenInstance}}
 ```
 
-Адрес запроса формируется из номера аккаунта `idInstance` и ключа доступа `apiTokenInstance`, которые требуется предварительно получить в [Личном кабинете](https://cabinet.green-api.com) согласно разделу [Перед началом работы](before-start.md#parameters).
+The request address is generated from the account number `idInstance` and the access key` apiTokenInstance`, which must be obtained in advance in [Your profile](https://cabinet.green-api.com) in accordance with [Before you start](before-start.md#parameters) section.
 
-В качестве параметра `method` используется требуемый метод API, описанный в [Документации API](api/index.md).
+The required API method, described in [API documents](api/index.md) is used as `method` parameter. 
 
-Пример запроса для отправки сообщения методом [SendMessage](api/sending/SendMessage.md):
+Example of a request to send a message by [SendMessage](api/sending/SendMessage.md) method:
 ```
 https://api.green-api.com/waInstance1234/SendMessage/bde035edae3fc00bc116bd112297908d8145e5ba8decc5d884
 ```
 
-## Заголовки запроса
-Большинство запросов должны содержать стандартные заголовки:
+## Request titles
+Most requests should contain standard titles:
 
 - `Content-Type` - `application/json`
 
-В некоторых случаях заголовки могут отличаться, например, для метода отправки файла [SendFileByUpload](api/sending/SendFileByUpload.md) 
+In some cases titles may differ, for example, for [SendFileByUpload](api/sending/SendFileByUpload.md) file sending method  
 
-## Отладка запросов
+## Debug requests
 
-Для отладки запросов к Green API рекомендуется использовать [Коллекцию Postman](postman-collection.md)
+To debug requests to the Green API it is recommended to use [Postman collection](postman-collection.md)
