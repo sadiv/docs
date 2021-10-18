@@ -2,14 +2,14 @@
 
 [![build_site](https://github.com/green-api/docs/workflows/build_site/badge.svg)](https://github.com/green-api/docs/actions/workflows/build_site.yml)
 
-Добро пожаловать в репозиторий [документации](https://green-api.com/docs) GREEN API.
+Welcome to GREEN API [docs](https://green-api.com/docs) repository. 
 
-## Про документацию
+## About documentation
 
-Документация разработана с использованием [MkDocs](https://github.com/mkdocs/mkdocs/).
+Documentation is developed with [MkDocs](https://github.com/mkdocs/mkdocs/).
 
-## Как предложить правки
+## How to help
 
-Если вы заметили опечатку или ошибку в документации или хотите дополнить какой-то раздел, создайте pull request (PR) с правками через GitHub.
+If you noticed error or having any ideas about specific topics then you are welcome. Just create an issue describing a problem or a pull request with your changes.
 
-© GREEN API, 2020
+© GREEN API
