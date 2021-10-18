@@ -1,4 +1,4 @@
-# Документация GREEN API
+# GREEN API Documentation
 
 [![build_site](https://github.com/green-api/docs/workflows/build_site/badge.svg)](https://github.com/green-api/docs/actions/workflows/build_site.yml)
 
@@ -6,7 +6,7 @@ Welcome to GREEN API [docs](https://green-api.com/docs) repository.
 
 ## About documentation
 
-Documentation is developed with [MkDocs](https://github.com/mkdocs/mkdocs/).
+Documentation is based on [MkDocs](https://github.com/mkdocs/mkdocs/).
 
 ## How to help
 
