@@ -6,113 +6,113 @@ site_dir: build
 site_url: https://green-api.com
 
 nav:
-  - "Главная":
-    - Главная: "/"
-  - "Блог":
-    - Блог: "/blog/index.html"
-  - "Документация": 
-    - 'Оглавление': 'index.md'
-    - 'Быстрый старт':
-        - 'Перед началом работы': 'before-start.md'
-        - 'Выполнение запросов': 'request-format.md'
-        - 'Коллекция Postman': 'postman-collection.md'
-    #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
-    #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
-    #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
+  - "Home":
+    - Home: "/"
+  - "Blog":
+    - Blog: "/blog/index.html"
+  - "Documents": 
+    - 'Index': 'index.md'
+    - 'Quick start':
+        - 'Before you start': 'before-start.md'
+        - 'Execute requests': 'request-format.md'
+        - 'Postman collection': 'postman-collection.md'
+    #     - 'Send text message': 'api/sending/SendMessage.md'
+    #     - 'Send image': 'api/sending/SendMessage.md'
+    #     - 'Get outgoing message status': 'api/sending/SendMessage.md'
     #     - 'Как написать чат-бота': 'api/sending/SendMessage.md'
-    - 'Документация API':
-        - 'Обзор': 'api/index.md'
-        - 'Аккаунт':
-            - 'Аккаунт обзор': 'api/account/index.md'
-            - 'Получить настройки аккаунта': 'api/account/GetSettings.md'
-            - 'Установить настройки аккаунта': 'api/account/SetSettings.md'
-            - 'Установить системный прокси': 'api/account/SetSystemProxy.md'
-            - 'Получить состояние аккаунта': 'api/account/GetStateInstance.md'
-            - 'Получить состояние соединения аккаунта': 'api/account/GetStatusInstance.md'
-            - 'Перезапустить аккаунт': 'api/account/Reboot.md'
-            - 'Разлогинить аккаунт': 'api/account/Logout.md'
-            - 'Получить QR-код': 'api/account/QR.md'
-            - 'Получить QR-код через websocket': 'api/account/Scanqrcode.md'
-            - 'Установить аватар аккаунта': 'api/account/SetProfilePicture.md'
-        - 'Отправка':
-            - 'Отправка обзор': 'api/sending/index.md'
-            - 'Отправить текст': 'api/sending/SendMessage.md'
-            - 'Отправить видео, аудио, изображение, документ': 'api/sending/SendFileByUpload.md'
-            - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/SendFileByUrl.md'
-            - 'Отправить геолокацию': 'api/sending/SendLocation.md'
-            - 'Отправить контакт': 'api/sending/SendContact.md'
-            - 'Отправить ссылку': 'api/sending/SendLink.md'
-        - 'Получение':
-            - 'Концепция': 'api/receiving/index.md'
+    - 'API documents':
+        - 'Overview': 'api/index.md'
+        - 'Account':
+            - 'Account - overview': 'api/account/index.md'
+            - 'Get account settings': 'api/account/GetSettings.md'
+            - 'Set account settings': 'api/account/SetSettings.md'
+            - 'Set system proxy': 'api/account/SetSystemProxy.md'
+            - 'Get account state': 'api/account/GetStateInstance.md'
+            - 'Get account connection status': 'api/account/GetStatusInstance.md'
+            - 'Reboot account': 'api/account/Reboot.md'
+            - 'Logout account': 'api/account/Logout.md'
+            - 'Get QR code': 'api/account/QR.md'
+            - 'Get QR code via websocket': 'api/account/Scanqrcode.md'
+            - 'Set profile picture': 'api/account/SetProfilePicture.md'
+        - 'Sending':
+            - 'Sending - overview': 'api/sending/index.md'
+            - 'Send text': 'api/sending/SendMessage.md'
+            - 'Send video, audio, image, document': 'api/sending/SendFileByUpload.md'
+            - 'Send video, audio, image, document via URL': 'api/sending/SendFileByUrl.md'
+            - 'Send location': 'api/sending/SendLocation.md'
+            - 'Send contact': 'api/sending/SendContact.md'
+            - 'Send link': 'api/sending/SendLink.md'
+        - 'Receiving':
+            - 'Conception': 'api/receiving/index.md'
             - 'HTTP API':
-                - 'Технология HTTP API': 'api/receiving/technology-http-api.md'
-                - 'Получить уведомление': 'api/receiving/technology-http-api/ReceiveNotification.md'
-                - 'Удалить уведомление': 'api/receiving/technology-http-api/DeleteNotification.md'
+                - 'HTTP API technology': 'api/receiving/technology-http-api.md'
+                - 'Receive notification': 'api/receiving/technology-http-api/ReceiveNotification.md'
+                - 'Delete notification': 'api/receiving/technology-http-api/DeleteNotification.md'
             - 'Webhook Endpoint':
-                - 'Технология Webhook Endpoint': 'api/receiving/technology-webhook-endpoint.md'
-            - 'Формат входящих уведомлений':
-                - 'Обзор': 'api/receiving/notifications-format/index.md'
-                - 'Входящее сообщение':
-                    - 'Входящие сообщения': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
-                    - 'Текст': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
-                    - 'Текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
-                    - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
-                    - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
-                    - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
-                    - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
-                - 'Отправленное сообщение':
-                    - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
-                    - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
-                - 'Прочие':
-                    - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
-                    - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
-                    - 'Аватар контакта': 'api/receiving/notifications-format/AvatarInfo.md'
-                    - 'Статус сокета аккаунта': 'api/receiving/notifications-format/StatusInstanceChanged.md'
-                    - 'Входящий звонок': 'api/receiving/notifications-format/IncomingCall.md'
-                - 'Объекты':
-                    - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
-            - 'Получение файлов':
-                - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
-        - 'Журналы':
-            - 'Журналы обзор': 'api/journals/index.md'
-            - 'Получить историю сообщений чата': 'api/journals/GetChatHistory.md'
-            - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
-            - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
-        - 'Очереди':
-            - 'Очереди обзор': 'api/queues/index.md'
-            - 'Получить очередь сообщений к отправке': 'api/queues/ShowMessagesQueue.md'
-            - 'Очистить очередь сообщений к отправке': 'api/queues/ClearMessagesQueue.md'
-        - 'Группы':
-            - 'Группы обзор': 'api/groups/index.md'
-            - 'Создать группу': 'api/groups/CreateGroup.md'
-            - 'Изменить имя группы': 'api/groups/UpdateGroupName.md'
-            - 'Получить информацию о группе': 'api/groups/GetGroupData.md'
-            - 'Добавить участника в группу': 'api/groups/AddGroupParticipant.md'
-            - 'Удалить участника из группы': 'api/groups/RemoveGroupParticipant.md'
-            - 'Назначить права администратора группы': 'api/groups/SetGroupAdmin.md'
-            - 'Отозвать права администратора группы': 'api/groups/RemoveAdmin.md'
-            - 'Установить Аватар группы': 'api/groups/SetGroupPicture.md'
-            - 'Выйти из группы': 'api/groups/LeaveGroup.md'
-        - 'Отметка прочтения':
-            - 'Отметка прочтения обзор': 'api/marks/index.md'
-            - 'Отметить чат прочитанным': 'api/marks/ReadChat.md'
-        - 'Устройство (телефон)':
-            - 'Устройство обзор': 'api/phone/index.md'
-            - 'Получить информацию об устройстве': 'api/phone/GetDeviceInfo.md'
-        - 'Сервисные методы':
-            - 'Сервисные методы обзор': 'api/service/index.md'
-            - 'Проверить наличие WhatsApp': 'api/service/CheckWhatsapp.md'
-            - 'Получить аватар': 'api/service/GetAvatar.md'
-            - 'Получить аватар асинхронно': 'api/service/GetAvatarAsync.md'
-            - 'Получить контакты': 'api/service/GetContacts.md'
-        - 'Прочее':
-            - 'Идентификатор чата': 'api/chat-id.md'
-            - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
-            - 'Стандартные ошибки': 'api/common-errors.md'
+                - 'Webhook Endpoint' technology: 'api/receiving/technology-webhook-endpoint.md'
+            - 'Incoming notifications format':
+                - 'Overview': 'api/receiving/notifications-format/index.md'
+                - 'Incoming mesage':
+                    - 'Incoming messages': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
+                    - 'Text': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
+                    - 'Text with URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
+                    - 'Video, audio, image, document': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
+                    - 'Location': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
+                    - 'Contact': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
+                    - 'Quoted message': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
+                - 'Outgoing message':
+                    - 'Message sent from phone': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
+                    - 'Outgoing message status': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
+                - 'Others':
+                    - 'Account status': 'api/receiving/notifications-format/StateInstanceChanged.md'
+                    - 'Device status': 'api/receiving/notifications-format/DeviceInfo.md'
+                    - 'Contact avatar': 'api/receiving/notifications-format/AvatarInfo.md'
+                    - 'Account socket status': 'api/receiving/notifications-format/StatusInstanceChanged.md'
+                    - 'Incoming call': 'api/receiving/notifications-format/IncomingCall.md'
+                - 'Objects':
+                    - 'Incoming webhooks types': 'api/receiving/notifications-format/type-webhook.md'
+            - 'Get files':
+                - 'Download file from incoming message': 'api/receiving/files/DownloadFile.md'
+        - 'Journals':
+            - 'Journals - review': 'api/journals/index.md'
+            - 'Get chat history': 'api/journals/GetChatHistory.md'
+            - 'Get incoming messages journal': 'api/journals/LastIncomingMessages.md'
+            - 'Get outgoing messages journal': 'api/journals/LastOutgoingMessages.md'
+        - 'Queues':
+            - 'Queues - overview': 'api/queues/index.md'
+            - 'Show messages queue': 'api/queues/ShowMessagesQueue.md'
+            - 'Clear messages queue': 'api/queues/ClearMessagesQueue.md'
+        - 'Groups':
+            - 'Groups - overview': 'api/groups/index.md'
+            - 'Create group': 'api/groups/CreateGroup.md'
+            - 'Change group name': 'api/groups/UpdateGroupName.md'
+            - 'Get group data': 'api/groups/GetGroupData.md'
+            - 'Add group participant': 'api/groups/AddGroupParticipant.md'
+            - 'Delete group participant': 'api/groups/RemoveGroupParticipant.md'
+            - 'Set group admin rights': 'api/groups/SetGroupAdmin.md'
+            - 'Remove group admin rights': 'api/groups/RemoveAdmin.md'
+            - 'Set group picture': 'api/groups/SetGroupPicture.md'
+            - 'Leave group': 'api/groups/LeaveGroup.md'
+        - 'Read mark':
+            - 'Read mark - overview': 'api/marks/index.md'
+            - 'Mark chat as read': 'api/marks/ReadChat.md'
+        - 'Device (phone)':
+            - 'Device - overview': 'api/phone/index.md'
+            - 'Get device info': 'api/phone/GetDeviceInfo.md'
+        - 'Service methods':
+            - 'Service methods - overview': 'api/service/index.md'
+            - 'Check WhatsApp availability': 'api/service/CheckWhatsapp.md'
+            - 'Get avatar': 'api/service/GetAvatar.md'
+            - 'Get avatar asynchronously': 'api/service/GetAvatarAsync.md'
+            - 'Get contacts': 'api/service/GetContacts.md'
+        - 'Others':
+            - 'Chat Id': 'api/chat-id.md'
+            - 'Messages sending delay': 'api/send-messages-delay.md'
+            - 'Common errors': 'api/common-errors.md'
     - 'FAQ':
-        - 'Все вопросы': 'faq/index.md'
-        - 'Как защитить номер от бана?': 'faq/how-to-protect-number-from-ban.md'
-    # - 'Интеграция':
+        - 'FAQ': 'faq/index.md'
+        - 'How to protect number from ban?': 'faq/how-to-protect-number-from-ban.md'
+    # - 'Integration':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
     #     - 'HTML': 'api/sending/SendMessage.md'
