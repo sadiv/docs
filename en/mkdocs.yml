@@ -49,7 +49,7 @@ nav:
                 - 'Receive notification': 'api/receiving/technology-http-api/ReceiveNotification.md'
                 - 'Delete notification': 'api/receiving/technology-http-api/DeleteNotification.md'
             - 'Webhook Endpoint':
-                - 'Webhook Endpoint' technology: 'api/receiving/technology-webhook-endpoint.md'
+                - 'Webhook Endpoint technology': 'api/receiving/technology-webhook-endpoint.md'
             - 'Incoming notifications format':
                 - 'Overview': 'api/receiving/notifications-format/index.md'
                 - 'Incoming mesage':

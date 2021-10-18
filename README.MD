@@ -1,5 +1,7 @@
 # Документация GREEN API
 
+[![build_site](https://github.com/green-api/docs/workflows/build_site/badge.svg)](https://github.com/green-api/docs/actions/workflows/build_site.yml)
+
 Добро пожаловать в репозиторий [документации](https://green-api.com/docs) GREEN API.
 
 ## Про документацию
