@@ -6,21 +6,21 @@ site_dir: build
 site_url: https://green-api.com
 
 nav:
-  - "Главная":
-    - Главная: "/"
-  - "Блог":
-    - Блог: "/blog/index.html"
-  - "Документация": 
-    - 'Оглавление': 'index.md'
-    - 'Быстрый старт':
-        - 'Перед началом работы': 'before-start.md'
+  - "Home":
+    - Home: "/"
+  - "Blog":
+    - Blog: "/blog/index.html"
+  - "Documents": 
+    - 'Index': 'index.md'
+    - 'Quick start':
+        - 'Before you start': 'before-start.md'
         - 'Выполнение запросов': 'request-format.md'
         - 'Коллекция Postman': 'postman-collection.md'
     #     - 'Как отправить текстовое сообщение': 'api/sending/SendMessage.md'
     #     - 'Как отправить картинку': 'api/sending/SendMessage.md'
     #     - 'Как получить статус отправленного сообщения': 'api/sending/SendMessage.md'
     #     - 'Как написать чат-бота': 'api/sending/SendMessage.md'
-    - 'Документация API':
+    - 'API documents':
         - 'Обзор': 'api/index.md'
         - 'Аккаунт':
             - 'Аккаунт обзор': 'api/account/index.md'
@@ -65,24 +65,24 @@ nav:
                     - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
                 - 'Прочие':
                     - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
-                    - 'Статус устройства': 'api/receiving/notifications-format/DeviceInfo.md'
+                    - 'Device status': 'api/receiving/notifications-format/DeviceInfo.md'
                     - 'Аватар контакта': 'api/receiving/notifications-format/AvatarInfo.md'
-                    - 'Статус сокета аккаунта': 'api/receiving/notifications-format/StatusInstanceChanged.md'
-                    - 'Входящий звонок': 'api/receiving/notifications-format/IncomingCall.md'
-                - 'Объекты':
+                    - 'Account socket status': 'api/receiving/notifications-format/StatusInstanceChanged.md'
+                    - 'Incoming call': 'api/receiving/notifications-format/IncomingCall.md'
+                - 'Objects':
                     - 'Типы входящих уведомлений': 'api/receiving/notifications-format/type-webhook.md'
             - 'Получение файлов':
                 - 'Скачать файл из входящего сообщения': 'api/receiving/files/DownloadFile.md'
-        - 'Журналы':
+        - 'Journals':
             - 'Журналы обзор': 'api/journals/index.md'
             - 'Получить историю сообщений чата': 'api/journals/GetChatHistory.md'
             - 'Получить журнал входящих сообщений': 'api/journals/LastIncomingMessages.md'
             - 'Получить журнал отправленных сообщений': 'api/journals/LastOutgoingMessages.md'
-        - 'Очереди':
+        - 'Queues':
             - 'Очереди обзор': 'api/queues/index.md'
             - 'Получить очередь сообщений к отправке': 'api/queues/ShowMessagesQueue.md'
             - 'Очистить очередь сообщений к отправке': 'api/queues/ClearMessagesQueue.md'
-        - 'Группы':
+        - 'Groups':
             - 'Группы обзор': 'api/groups/index.md'
             - 'Создать группу': 'api/groups/CreateGroup.md'
             - 'Изменить имя группы': 'api/groups/UpdateGroupName.md'
@@ -105,14 +105,14 @@ nav:
             - 'Получить аватар': 'api/service/GetAvatar.md'
             - 'Получить аватар асинхронно': 'api/service/GetAvatarAsync.md'
             - 'Получить контакты': 'api/service/GetContacts.md'
-        - 'Прочее':
-            - 'Идентификатор чата': 'api/chat-id.md'
-            - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
-            - 'Стандартные ошибки': 'api/common-errors.md'
+        - 'Others':
+            - 'Chat Id': 'api/chat-id.md'
+            - 'Messages sending delay': 'api/send-messages-delay.md'
+            - 'Common errors': 'api/common-errors.md'
     - 'FAQ':
-        - 'Все вопросы': 'faq/index.md'
-        - 'Как защитить номер от бана?': 'faq/how-to-protect-number-from-ban.md'
-    # - 'Интеграция':
+        - 'FAQ': 'faq/index.md'
+        - 'How to protect number from ban?': 'faq/how-to-protect-number-from-ban.md'
+    # - 'Integration':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
     #     - 'HTML': 'api/sending/SendMessage.md'
