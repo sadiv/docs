@@ -23,7 +23,7 @@ nav:
     - 'API documents':
         - 'Overview': 'api/index.md'
         - 'Account':
-            - 'Аккаунт обзор': 'api/account/index.md'
+            - 'Account - overview': 'api/account/index.md'
             - 'Get account settings': 'api/account/GetSettings.md'
             - 'Set account settings': 'api/account/SetSettings.md'
             - 'Set system proxy': 'api/account/SetSystemProxy.md'
