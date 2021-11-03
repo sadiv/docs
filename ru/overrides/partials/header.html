@@ -1,15 +1,40 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
 
-<!-- Application header -->
-<header class="md-header sg-header" data-md-component="header">
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-  <!-- Top-level navigation -->
-  <nav class="md-header-nav md-grid" aria-label="{{ lang.t('header.title') }}">
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-    <!-- Link to home -->
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
 
+<!-- Determine class according to configuration -->
+{% set class = "md-header sg-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--lifted" %}
+{% endif %}
+
+<!-- Header -->
+<header class="{{ class }}" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="{{ lang.t('header.title') }}"
+  >
 
     <!-- Button to open drawer -->
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       {% include ".icons/material/menu" ~ ".svg" %}
     </label>
 
@@ -18,13 +43,77 @@
     </a>
 
     <!-- Header title -->
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
+    <div class="md-header__title" data-md-component="header-title">
     </div>
 
-    <!-- Button to open search dialogue -->
+    <!-- Color palette -->
+    {% if not config.theme.palette is mapping %}
+      <form class="md-header__option" data-md-component="palette">
+        {% for option in config.theme.palette %}
+          {% set primary = option.primary | replace(" ", "-") | lower %}
+          {% set accent  = option.accent  | replace(" ", "-") | lower %}
+          <input
+            class="md-option"
+            data-md-color-media="{{ option.media }}"
+            data-md-color-scheme="{{ option.scheme }}"
+            data-md-color-primary="{{ primary }}"
+            data-md-color-accent="{{ accent }}"
+            {% if option.toggle %}
+              aria-label="{{ option.toggle.name }}"
+            {% else  %}
+              aria-hidden="true"
+            {% endif %}
+            type="radio"
+            name="__palette"
+            id="__palette_{{ loop.index }}"
+          />
+          {% if option.toggle %}
+            <label
+              class="md-header__button md-icon"
+              title="{{ option.toggle.name }}"
+              for="__palette_{{ loop.index0 or loop.length }}"
+              hidden
+            >
+              {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
+            </label>
+          {% endif %}
+        {% endfor %}
+      </form>
+    {% endif %}
+
+    <!-- Site language selector -->
+    {% if config.extra.alternate %}
+      <div class="md-header__option"></form>
+        <div class="md-select">
+          {% set icon = config.theme.icon.alternate or "material/translate" %}
+          <button
+            class="md-header__button md-icon"
+            aria-label="{{ lang.t('select.language.title') }}"
+          >
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              {% for alt in config.extra.alternate %}
+                <li class="md-select__item">
+                  <a
+                    href="{{ alt.link | url }}"
+                    hreflang="{{ alt.lang }}"
+                    class="md-select__link"
+                  >
+                    {{ alt.name }}
+                  </a>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Button to open search modal -->
     {% if "search" in config["plugins"] %}
-      <label class="md-header-nav__button md-icon" for="__search">
+      <label class="md-header__button md-icon" for="__search">
         {% include ".icons/material/magnify.svg" %}
       </label>
 
@@ -32,68 +121,18 @@
       {% include "partials/search.html" %}
     {% endif %}
 
-    <!-- Repository containing source -->
+    <!-- Repository information -->
     {% if config.repo_url %}
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         {% include "partials/source.html" %}
       </div>
     {% endif %}
   </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
 </header>
-
-<!-- Statistics counters put here below -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164700000-1"></script>
-
-<script>
-
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() { dataLayer.push(arguments); }
-
-    gtag('js', new Date());
-
-
-
-    gtag('config', 'UA-164700000-1');
-    gtag('config', 'AW-668133471');
-
-</script>    
-
-<!-- Yandex.Metrika counter -->
-
-<script type="text/javascript">
-
-    (function (m, e, t, r, i, k, a) {
-
-    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-
-        m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-
-    })
-
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-
-
-    ym(62362687, "init", {
-
-        clickmap: true,
-
-        trackLinks: true,
-
-        accurateTrackBounce: true
-
-    });
-
-</script>
-
-<noscript>
-
-    <div><img src="https://mc.yandex.ru/watch/62362687" style="position:absolute; left:-9999px;" alt="" /></div>
-
-</noscript>
-
-<!-- /Yandex.Metrika counter -->

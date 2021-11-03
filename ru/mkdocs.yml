@@ -128,7 +128,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: ru
   features:
-    - tabs
+    - navigation.tabs
   palette:
     scheme: default
     primary: green
