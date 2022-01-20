@@ -10,6 +10,10 @@ To get QR code you have to establish a bsocket-connection at:
 wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 ```
 
+## Example of getting a QR code in a browser {#request-example-js}
+
+You can see an example of getting a QR code throu wedsocket in the file [websocketExampleQRcode](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExampleQRCodeWebsocket.html) 
+
 ## Response {response}
 
 ### Response parameters {#response-parameters}

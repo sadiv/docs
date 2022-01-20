@@ -9,6 +9,9 @@
 ```
 wss://api.green-api.com/waInstance{{idInstance}}/scanqrcode/{{apiTokenInstance}
 ```
+## Пример получения QR-кода через websocket {#request-example-js}
+
+Пример получения QR-кода через wesocket можно посмотреть в файле [websocketExampleQRcode](https://github.com/green-api/whatsapp-api-client/blob/master/examples/browserExampleQRCodeWebsocket.html) 
 
 ## Ответ {#response}
 
