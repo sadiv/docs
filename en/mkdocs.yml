@@ -7,9 +7,9 @@ site_url: https://green-api.com
 
 nav:
   - "Home":
-    - Home: "/"
+    - Home: "/en"
   - "Blog":
-    - Blog: "/blog/index.html"
+    - Blog: "/en/blog/index.html"
   - "Documents": 
     - 'Index': 'index.md'
     - 'Quick start':
