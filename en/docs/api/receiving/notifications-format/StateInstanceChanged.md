@@ -14,6 +14,7 @@ Parameter | Type | Description
 `stateInstance` | **string** | Account state. Have variants:
 | | `notAuthorized` - Account not authorized. For account authorization refer to [Before you start](../../../before-start.md#qr) section
 | | `authorized` - Account authorized
+| | `blocked` - Account banned
 | | `sleepMode` - Account is in sleep mode. The state is possible when the phone is switched off. After the phone is switched on, it may take up to 5 minutes for the account state to be changed to `authorized`.
 
 `instanceData` object parameters
