@@ -20,7 +20,7 @@ Parameter | Type | Mandatory | Description
 `chatId` | **string** | Yes | [Chat Id](../chat-id.md)
 `message` | **string** | Yes | Message text. Emoji 😃 characters supported 
 `quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
-`archiveChat` | **boolean** | No | Archives or unarchives the chat to which the message was sent. Takes value: true|false
+`archiveChat` | **boolean** | No | Archives the chat to which the message was sent. Takes value: true|false
 
 > The maximum length of a text message is 4096 characters
 
