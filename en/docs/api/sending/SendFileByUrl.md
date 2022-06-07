@@ -29,6 +29,7 @@ Parameter | Type | Mandatory | Description
 `fileName` | **string** | Yes | File name. Must contain the file extension
 `caption` | **string** | No | File caption. Caption added to video, images.
 `quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
+`archiveChat` | **boolean** | No | Archives the chat to which the message was sent. Takes value: true|false
 
 ### Request body example {#request-example-body}
 
