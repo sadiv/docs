@@ -61,3 +61,12 @@ After setting up the account, you can start receiving webhooks. You can see the 
 You can use any free service on the Internet to debug incoming webhooks, for example, [Webhook.Site](https://webhook.site/) service. The service issues a unique address (URL), which is required to [set](# webhookUrl) as the `webhookUrl` parameter.
 
 A detailed description of incoming webhooks format is given in [Incoming webhooks format](notifications-format/index.md) section.
+
+
+Http request example that send by green-api:
+
+```
+curl --request POST 'your-webhook-url-address' \
+--header 'Content-Type: application/json; charset=utf-8' \
+--data-raw '{"typeWebhook":"statusInstanceChanged","instanceData":{"idInstance":000001,"wid":"7123456789@c.us","typeInstance":"whatsapp"},"timestamp":1654553712,"statusInstance":"online"}'
+```
