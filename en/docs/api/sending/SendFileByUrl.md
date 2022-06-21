@@ -1,7 +1,7 @@
 # SendFileByUrl
 
 The method is aimed for sending a file uploaded by Url.
-The message will be added to the send queue.
+The message will be added to the send queue. Linked device not required when sending. Messages will be kept for 24 hours in the queue until account will be authorized 
 The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
 Video, audio and image files available for viewing and listening to are sent as in native-mode WhatsApp.

@@ -6,7 +6,7 @@ To execute a request to the Green API, you have to execute GET or POST request a
 https://api.green-api.com/waInstance{{idInstance}}/{{method}}/{{apiTokenInstance}}
 ```
 
-The request address is generated from the account number `idInstance` and the access key` apiTokenInstance`, which must be obtained in advance in [Your profile](https://cabinet.green-api.com) in accordance with [Before you start](before-start.md#parameters) section.
+The request address is generated from the account number `idInstance` and the access key` apiTokenInstance`, which must be obtained in advance in [Your profile](https://console.green-api.com) in accordance with [Before you start](before-start.md#parameters) section.
 
 The required API method, described in [API documents](api/index.md) is used as `method` parameter. 
 

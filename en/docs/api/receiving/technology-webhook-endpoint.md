@@ -48,7 +48,7 @@ It is also required to specify what types of webhooks you need to receive. To en
 
 ### Setup in your profile {#cabinet}
 
-You can also set up to receive incoming webhooks online. To do this, go to [My Profile](https://cabinet.green-api.com) and select the required user account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types and, if you need authorization on your webhook server, specify Webhook URL Token. If the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
+You can also set up to receive incoming webhooks online. To do this, go to [My Profile](https://console.green-api.com) and select the required user account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types and, if you need authorization on your webhook server, specify Webhook URL Token. If the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
 
 ![Incoming webhooks settings](../../assets/technology-webhook-endpoint.png "Incoming webhooks settings")
 

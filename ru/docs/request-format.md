@@ -6,7 +6,7 @@
 https://api.green-api.com/waInstance{{idInstance}}/{{method}}/{{apiTokenInstance}}
 ```
 
-Адрес запроса формируется из номера аккаунта `idInstance` и ключа доступа `apiTokenInstance`, которые требуется предварительно получить в [Личном кабинете](https://cabinet.green-api.com) согласно разделу [Перед началом работы](before-start.md#parameters).
+Адрес запроса формируется из номера аккаунта `idInstance` и ключа доступа `apiTokenInstance`, которые требуется предварительно получить в [Личном кабинете](https://console.green-api.com) согласно разделу [Перед началом работы](before-start.md#parameters).
 
 В качестве параметра `method` используется требуемый метод API, описанный в [Документации API](api/index.md).
 

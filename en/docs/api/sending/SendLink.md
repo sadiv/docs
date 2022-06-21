@@ -1,6 +1,6 @@
 # SendLink
 
-The method is aimed for sending a message with a link, by which an image preview, title and description will be added. 
+The method is aimed for sending a message with a link, by which an image preview, title and description will be added. Linked device not required when sending. Messages will be kept for 24 hours in the queue until account will be authorized 
 Image, title and description are obtained from [Open Graph](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) page template being linked to.
 The message will be added to the send queue. The rate at which messages are sent from the queue is managed by [Messages sending delay](../send-messages-delay.md) parameter.
 

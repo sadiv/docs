@@ -11,7 +11,7 @@ Before you start working with Green API you are required to follow the below ste
 
 ## 1. Create account in Your profile {#cabinet}
 
-To create Account go to [Your profile](https://cabinet.green-api.com). After authorization in your profile, you will be able to create a user account. In your profile you may create several user accounts for one account. 
+To create Account go to [Your profile](https://console.green-api.com). After authorization in your profile, you will be able to create a user account. In your profile you may create several user accounts for one account. 
 
 ## 2. Create  User account {#account}
 
@@ -25,7 +25,7 @@ Sending and receiving WhatsApp messages is done from your mobile phone. The phon
 
 ## 4. Authorize User account {#qr}
 
-If you use a personal mobile phone for work with Green API, you have to authorize User account. Account authorization is carried out in [Your profile](https://cabinet.green-api.com) by scanning QR code from [WhatsApp Business](https://www.whatsapp.com/business/) mobile app. To do this, open [WhatsApp Business](https://www.whatsapp.com/business/) application on your mobile phone, go to the application settings and scan the QR code displayed in your profile.
+If you use a personal mobile phone for work with Green API, you have to authorize User account. Account authorization is carried out in [Your profile](https://console.green-api.com) by scanning QR code from [WhatsApp Business](https://www.whatsapp.com/business/) mobile app. To do this, open [WhatsApp Business](https://www.whatsapp.com/business/) application on your mobile phone, go to the application settings and scan the QR code displayed in your profile.
 
 - Android: `WhatsApp Business` -> `Drop down menu` -> `WhatsApp Web`
 - iPhone: `WhatsApp Business` -> `Settings` -> `WhatsApp Web` -> `Scan QR code`
@@ -34,7 +34,7 @@ If you use a personal mobile phone for work with Green API, you have to authoriz
 
 ## 5. Get access parameters to User account {#parameters}
 
-To execute HTTP API WhatsApp requests, you need to use the access parameters to User account. Access parameters are published in [Your profile](https://cabinet.green-api.com):
+To execute HTTP API WhatsApp requests, you need to use the access parameters to User account. Access parameters are published in [Your profile](https://console.green-api.com):
 
 - `idInstance` - account unique number
 - `apiTokenInstance` - account access key
