@@ -18,6 +18,9 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 ## [Отправка](./sending/index.md) {#sending}
 
 - [Отправить текст](./sending/SendMessage.md)
+- [Отправить обычные кнопки](./sending/SendButtons.md)
+- [Отправить шаблонные кнопки](./sending/SendTemplateButtons.md)
+- [Отправить список выбора](./sending/SendListMessage.md)
 - [Отправить видео, аудио, изображение, документ](./sending/SendFileByUpload.md)
 - [Отправить видео, аудио, изображение, документ по URL](./sending/SendFileByUrl.md)
 - [Отправить геолокацию](./sending/SendLocation.md)
@@ -37,6 +40,9 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 #### [Входящее сообщение](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
 
 - [Входящее текстовое сообщение](./receiving/notifications-format/incoming-message/TextMessage.md)
+- [Нажатие пользователя на обычную кнопку](./receiving/notifications-format/incoming-message/ButtonsResponseMessage.md)
+- [Нажатие пользователя на шаблонную кнопку](./receiving/notifications-format/incoming-message/TemplateButtonsReplyMessage.md)
+- [Нажатие пользователя на значение списка выбора](./receiving/notifications-format/incoming-message/ListResponseMessage.md)
 - [Входящее текстовое сообщение с URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
 - [Входящее сообщение с изображением, видео, аудио, документом](./receiving/notifications-format/incoming-message/ImageMessage.md)
 - [Входящее сообщение с геолокацией](./receiving/notifications-format/incoming-message/LocationMessage.md)
@@ -45,6 +51,7 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 #### Отправленное сообщение {#receiving-outgoing-message}
 
 - [Отправленное с телефона сообщение](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
+- [Отправленное сообщение через API](./receiving/notifications-format/outgoing-message/OutgoingApiMessage.md)
 - [Статус отправленного сообщения](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
 #### Прочие {#receiving-dif}
