@@ -37,6 +37,9 @@ nav:
         - 'Отправка':
             - 'Отправка обзор': 'api/sending/index.md'
             - 'Отправить текст': 'api/sending/SendMessage.md'
+            - 'Отправить обычные кнопки': 'api/sending/SendButtons.md'
+            - 'Отправить шаблонные кнопки': 'api/sending/SendTemplateButtons.md'
+            - 'Отправить список выбора': 'api/sending/SendListMessage.md'
             - 'Отправить видео, аудио, изображение, документ': 'api/sending/SendFileByUpload.md'
             - 'Отправить видео, аудио, изображение, документ по URL': 'api/sending/SendFileByUrl.md'
             - 'Отправить геолокацию': 'api/sending/SendLocation.md'
@@ -55,6 +58,9 @@ nav:
                 - 'Входящее сообщение':
                     - 'Входящие сообщения': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
                     - 'Текст': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
+                    - 'Нажатие пользователя на обычную кнопку': 'api/receiving/notifications-format/incoming-message/ButtonsResponseMessage.md'
+                    - 'Нажатие пользователя на шаблонную кнопку': 'api/receiving/notifications-format/incoming-message/TemplateButtonsReplyMessage.md'
+                    - 'Нажатие пользователя на значение списка выбора': 'api/receiving/notifications-format/incoming-message/ListResponseMessage.md'
                     - 'Текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
                     - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
@@ -62,6 +68,7 @@ nav:
                     - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
                 - 'Отправленное сообщение':
                     - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
+                    - 'Отправленное сообщение через API': 'api/receiving/notifications-format/outgoing-message/OutgoingApiMessage.md'
                     - 'Статус отправленного сообщения': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
                 - 'Прочие':
                     - 'Статус аккаунта': 'api/receiving/notifications-format/StateInstanceChanged.md'
