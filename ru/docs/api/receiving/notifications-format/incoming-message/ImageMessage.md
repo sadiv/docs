@@ -18,6 +18,7 @@
 ----- | ----- | -----
 `typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение: `imageMessage`, `videoMessage`, `documentMessage`, `audioMessage`
 `fileMessageData ` | **object** | Объект данных о принятом файле
+`quotedMessage` | **object** | Объект данных о цитируемом сообщении. Присутствует только, если само сообщение является цитатой
 
 Поля объекта `fileMessageData` 
 

@@ -32,7 +32,13 @@ GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{ap
 | | `locationMessage` - сообщение геолокации
 | | `contactMessage` - сообщение с контактом
 | | `extendedTextMessage` - сообщение со ссылкой и превью
-| | `quotedMessage` - сообщение с цитированием
+| | `quotedMessage` - сообщение с цитированием (УСТАРЕЛО)
+| | `buttonsMessage` - сообщение с кнопками
+| | `templateMessage` - сообщение с шаблонными кнопками
+| | `listMessage` - сообщение с кнопкой со списком
+| | `buttonsResponseMessage` - ответ с кнопками
+| | `templateButtonsReplyMessage` - ответ с фигурными кнопками
+| | `listResponseMessage` - ответ со списком
 `chatId` | **string** | [Идентификатор чата](../chat-id.md), в котором получено сообщение
 `senderId` | **string** | [Идентификатор](../chat-id.md#corr) отправителя сообщения
 `senderName` | **string** | Имя отправителя сообщения
@@ -41,7 +47,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{ap
 `caption` | **string** | Описание файла
 `location` | **object** | Объект о структуре локации
 `contact` | **object** | Объект о структуре контакта
-`extendedTextMessage` | **object** | Объект о структуре данных ссылки
+`extendedTextMessage` | **object** | Объект с текстовым сообщением (расширенный)
+`quotedMessage` | **object** | Объект данных о цитируемом сообщении. Присутствует только, если само сообщение является цитатой
 
 Поля объекта `location`:
 
