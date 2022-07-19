@@ -5,9 +5,9 @@
 Система предусматривает получение уведомлений о входящих сообщениях следующих видов:
 
 - [Входящее текстовое сообщение](TextMessage.md)
-- [Нажатие пользователя на обычную кнопку](ButtonsResponseMessage.md)
-- [Нажатие пользователя на шаблонную кнопку](TemplateButtonsReplyMessage.md)
-- [Нажатие пользователя на значение списка выбора](ListResponseMessage.md)
+- [Выбор обычной кнопки](/docs/api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md)
+- [Выбор шаблонной кнопки](/docs/api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md)
+- [Выбор элемента списка](/docs/api/receiving/notifications-format/selected-buttons/ListResponseMessage.md)
 - [Входящее текстовое сообщение с URL](ExtendedTextMessage.md)
 - [Входящее сообщение с изображением, видео, аудио, документом](ImageMessage.md)
 - [Входящее сообщение с геолокацией](LocationMessage.md)

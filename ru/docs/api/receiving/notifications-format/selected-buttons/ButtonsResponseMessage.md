@@ -1,6 +1,6 @@
-# Нажатие пользователя на обычную кнопку
+# Выбор обычной кнопки
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для обычных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+В данном разделе описывается формат входящего уведомления объекта `messageData` для обычных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md). 
 
 ## Уведомление {#webhook}
 
@@ -19,6 +19,7 @@
 ----- | ----- | -----
 `selectedButtonId` | **string** | идентификатор нажатой кнопки
 `selectedButtonText` | **string** | текст нажатой кнопки
+`stanzaId` | **string** | ID сообщения с кнопками
 
 ### Пример тела уведомления {#webhook-example-body}
 
@@ -40,6 +41,7 @@
     "messageData": {
         "typeMessage": "buttonsResponseMessage",
         "buttonsResponseMessage": {
+            "stanzaId": "BAE53AFDD5F0C137",
             "selectedButtonId": "1",
             "selectedButtonText": "Green"
         }

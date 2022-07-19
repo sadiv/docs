@@ -24,10 +24,10 @@
 
 Параметр | Тип | Описание
 ----- | ----- | -----
-`text` | **string** | Текст ссылки
-`description` | **string** | Описание ссылки
-`title` | **string** | Заголовок ссылки
-`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке
+`text` | **string** | Текст ссылки или обычный текст
+`description` | **string** | Описание ссылки, может быть пустым
+`title` | **string** | Заголовок ссылки, может быть пустым
+`jpegThumbnail` | **string** | Превью изображения в `base64` кодировке, может отсутствовать
 
 ### Пример тела уведомления {#webhook-example-body}
 
@@ -55,5 +55,75 @@
             "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYG=="
         }
     }
+}
+```
+
+### Пример тела уведомления входящего сообщения с ссылкой или текстом и цитатой контакта {#webhook-example-body}
+
+```json
+{
+  "typeWebhook": "incomingMessageReceived",
+  "instanceData": {
+    "idInstance": 1234,
+    "wid": "79001234567@c.us",
+    "typeInstance": "whatsapp"
+  },
+  "timestamp": 1588091580,
+  "idMessage": "F7AEC1B7086ECDC7E6E45923F5EDB825",
+  "senderData": {
+    "chatId": "79001234568@c.us",
+    "sender": "79001234568@c.us",
+    "senderName": "Green API"
+  },
+  "messageData": {
+    "typeMessage": "quotedMessage",
+    "extendedTextMessageData": {
+      "text": "https://yandex.ru/former&utm_source=home&utm_content=main_informer&utm_term=main_number",
+      "stanzaId": "0EA554E587820E35309858AE265BE7EA",
+      "participant": "79001230000@c.us"
+    },
+    "quotedMessage": {
+      "participant": "79061230000@c.us",
+      "typeMessage": "contactMessage",
+      "contact": {
+        "displayName": "Green-Api",
+        "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Green-Api\nitem1.TEL;waid=79001230000\nitem1.X-ABLabel:Мобильный\nEND:VCARD"
+      }
+    }
+  }
+}
+```
+
+### Пример тела уведомления входящего сообщения с ссылкой и цитатой изображения {#webhook-example-body}
+
+```json
+{
+  "typeWebhook": "incomingMessageReceived",
+  "instanceData": {
+    "idInstance": 1234,
+    "wid": "79001234567@c.us",
+    "typeInstance": "whatsapp"
+  },
+  "timestamp": 1588091580,
+  "idMessage": "F7AEC1B7086ECDC7E6E45923F5EDB825",
+  "senderData": {
+    "chatId": "79001234568@c.us",
+    "sender": "79001234568@c.us",
+    "senderName": "Green API"
+  },
+  "messageData": {
+    "typeMessage": "quotedMessage",
+    "extendedTextMessageData": {
+      "text": "https://yandex.ru/pogoda/?utm_medium=source=home&utm_content=main_informer&utm_term=main_number",
+      "stanzaId": "B4AA239D112CB2576897B3910FEDE26E",
+      "participant": "79001230000@c.us"
+    },
+    "quotedMessage": {
+      "participant": "79061230000@c.us",
+      "typeMessage": "imageMessage",
+      "downloadUrl": "",
+      "caption": ""
+    }
+  }
 }
 ```
