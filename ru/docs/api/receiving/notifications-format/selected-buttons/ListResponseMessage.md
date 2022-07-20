@@ -1,6 +1,7 @@
-# Нажатие пользователя на значение списка выбора
+# Выбор элемента списка
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для списка выбора. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+
+В данном разделе описывается формат входящего уведомления объекта `messageData` для списка выбора. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md). 
 
 ## Уведомление {#webhook}
 
@@ -21,6 +22,8 @@
 `title` | **string** | текст выбранного значения
 `listType` | **string** | тип списка. 1 - выбор одного значения
 `singleSelectReply` | **string** | id выбранного значения
+`stanzaId` | **string** | ID сообщения с кнопками
+
 
 ### Пример тела уведомления {#webhook-example-body}
 
@@ -42,6 +45,7 @@
     "messageData": {
         "typeMessage": "listResponseMessage",
         "listResponseMessage": {
+            "stanzaId": "BAE53AFDD5F0C137",
             "title": "Вариант 2",
             "listType": 1,
             "singleSelectReply": "option2"

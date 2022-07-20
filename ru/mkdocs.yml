@@ -58,14 +58,15 @@ nav:
                 - 'Входящее сообщение':
                     - 'Входящие сообщения': 'api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md'
                     - 'Текст': 'api/receiving/notifications-format/incoming-message/TextMessage.md'
-                    - 'Нажатие пользователя на обычную кнопку': 'api/receiving/notifications-format/incoming-message/ButtonsResponseMessage.md'
-                    - 'Нажатие пользователя на шаблонную кнопку': 'api/receiving/notifications-format/incoming-message/TemplateButtonsReplyMessage.md'
-                    - 'Нажатие пользователя на значение списка выбора': 'api/receiving/notifications-format/incoming-message/ListResponseMessage.md'
-                    - 'Текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
+                    - 'Текст или текст с URL': 'api/receiving/notifications-format/incoming-message/ExtendedTextMessage.md'
                     - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
                     - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
                     - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
+                - 'Выбор кнопок':
+                    - 'Выбор обычной кнопки': 'api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md'
+                    - 'Выбор шаблонной кнопки': 'api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md'
+                    - 'Выбор элемента списка': 'api/receiving/notifications-format/selected-buttons/ListResponseMessage.md'
                 - 'Отправленное сообщение':
                     - 'Отправленное с телефона сообщение': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
                     - 'Отправленное сообщение через API': 'api/receiving/notifications-format/outgoing-message/OutgoingApiMessage.md'

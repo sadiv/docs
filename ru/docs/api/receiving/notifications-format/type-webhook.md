@@ -4,6 +4,7 @@
 
 - [incomingMessageReceived](incoming-message/Webhook-IncomingMessageReceived.md) - уведомление о входящих сообщениях и файлах
 - [outgoingMessageReceived](outgoing-message/OutgoingMessage.md) - уведомление о сообщении, отправленного с телефона
+- [outgoingAPIMessageReceived](outgoing-message/OutgoingApiMessage.md) - уведомление о сообщении, отправленного из API
 - [outgoingMessageStatus](outgoing-message/OutgoingMessageStatus.md) - уведомление о статусах отправки/доставки/прочтении исходящих сообщений
 - [stateInstanceChanged](StateInstanceChanged.md) - уведомление об изменении состояния авторизации аккаунта
 - [statusInstanceChanged](StatusInstanceChanged.md) - уведомление об изменении состояния сокета аккаунта

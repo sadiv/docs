@@ -1,4 +1,4 @@
-# Входящее сообщение с цитатой (УСТАРЕВШЕЕ)
+# Устаревшее. Входящее сообщение с цитатой
 
 * Данное сообщение устарело и оставлено для обратной совместимости. Для замены смотрите поле ```quotedMessage``` в других типах входящих сообщений
 
@@ -47,8 +47,8 @@
         "senderName": "Green API"
     },
     "messageData": {
-        "typeMessage": "quotedMessage",
-        "extendedTextMessageData": {
+            "typeMessage": "quotedMessage",
+          "extendedTextMessageData": {
             "text": "Цитируем это",
             "stanzaId": "3EB0D7D028C312EB513C",
             "participant": "70009876543@c.us"
