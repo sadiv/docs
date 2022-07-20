@@ -26,6 +26,16 @@
 | ------------- | ---------- | ------------------- |
 | `textMessage` | **string** | Текстовое сообщение |
 
+Поля объекта `quotedMessage`
+
+| Параметр      | Тип        | Описание            |
+| ------------- | ---------- | ------------------- |
+| `stanzaId` | **string** | id цитируемого сообщения |
+| `participant` | **string** | id отправителя цитируемого сообщения |
+| `typeMessage` | **string** | Тип цитируемого сообщения |
+
+Остальные поля заполняются в зависимости от типа цитируемого сообщения и идентичны полям входящих сообщений описаннных в разделе [Входящие сообщения](Webhook-IncomingMessageReceived.md)
+
 ### Пример тела уведомления {#webhook-example-body}
 
 ```json
@@ -77,6 +87,7 @@
       "participant": "79001234568@c.us"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79001234568@c.us",
       "typeMessage": "textMessage",
       "textMessage": "Привет"
@@ -110,6 +121,7 @@
       "participant": "79001230000@c.us"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79061230000@c.us",
       "typeMessage": "imageMessage",
       "downloadUrl": "",
@@ -144,6 +156,7 @@
       "participant": "79001230000@c.us"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79061230000@c.us",
       "typeMessage": "contactMessage",
       "contact": {
@@ -180,6 +193,7 @@
       "participant": "79001230000@c.us"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79060002233@c.us",
       "typeMessage": "locationMessage",
       "location": {
@@ -219,6 +233,7 @@
       "participant": "79000000000@c.us"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79000000000@c.us",
       "typeMessage": "extendedTextMessage",
       "textMessage": "https://api.green-api.com/send/?phone=7000000000&text&type=phone_number&app_absent=0",

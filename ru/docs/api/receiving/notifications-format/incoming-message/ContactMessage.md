@@ -27,6 +27,16 @@
 | `displayName` | **string** | Отображаемое имя контакта                    |
 | `vcard`       | **string** | Структура VCard (визитной карточки контакта) |
 
+Поля объекта `quotedMessage`
+
+| Параметр      | Тип        | Описание                             |
+| ------------- | ---------- | ------------------------------------ |
+| `stanzaId`    | **string** | id цитируемого сообщения             |
+| `participant` | **string** | id отправителя цитируемого сообщения |
+| `typeMessage` | **string** | Тип цитируемого сообщения            |
+
+Остальные поля заполняются в зависимости от типа цитируемого сообщения и идентичны полям входящих сообщений описаннных в разделе [Входящие сообщения](Webhook-IncomingMessageReceived.md)
+
 ### Пример тела уведомления {#webhook-example-body}
 
 ```json
@@ -78,6 +88,7 @@
       "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Антиспам;;;\nFN:Антиспам\nitem1.TEL:*9035936232#\nitem1.X-ABLabel:Мобильный\nEND:VCARD"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79001235696@c.us",
       "typeMessage": "textMessage",
       "textMessage": "Привет"
@@ -111,7 +122,8 @@
     },
     },
     "quotedMessage": {
-          "participant": "79061230000@c.us",
+         "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
+         "participant": "79061230000@c.us",
          "typeMessage": "imageMessage",
          "downloadUrl": "",
           "caption": ""
@@ -119,7 +131,7 @@
   }
 ```
 
-### Пример тела уведомления входящего сообщения с контактом и цитатой контакт {#webhook-example-body}
+### Пример тела уведомления входящего сообщения с контактом и цитатой контакта {#webhook-example-body}
 
 ```json
 {
@@ -143,6 +155,7 @@
       "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Фонд;\nitem1.TEL;waid=79001203030:/em1.X-ABLabel:Новый тип\nEND:VCARD"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79061230000@c.us",
       "typeMessage": "contactMessage",
       "contact": {
@@ -177,6 +190,7 @@
       "vcard": "BEGIN:VCARD\nVERSION:3.0\nFN:2 Сердца\nitem1.TEL;waid=79200000102\nitem1.X-ABLabel:Новый тип\nEND:VCARD"
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79060002233@c.us",
       "typeMessage": "locationMessage",
       "location": {

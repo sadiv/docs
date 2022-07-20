@@ -28,6 +28,16 @@
 | `longitude`     | **double** | Долгота локации                         |
 | `jpegThumbnail` | **string** | Превью изображения в `base64` кодировке |
 
+Поля объекта `quotedMessage`
+
+| Параметр      | Тип        | Описание                             |
+| ------------- | ---------- | ------------------------------------ |
+| `stanzaId`    | **string** | id цитируемого сообщения             |
+| `participant` | **string** | id отправителя цитируемого сообщения |
+| `typeMessage` | **string** | Тип цитируемого сообщения            |
+
+Остальные поля заполняются в зависимости от типа цитируемого сообщения и идентичны полям входящих сообщений описаннных в разделе [Входящие сообщения](Webhook-IncomingMessageReceived.md)
+
 ### Пример тела уведомления {#webhook-example-body}
 
 ```json
@@ -83,6 +93,7 @@
       "longitude": 59.6645355
     },
     "quotedMessage": {
+      "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79001230022@c.us",
       "typeMessage": "textMessage",
       "textMessage": "Привет"
