@@ -16,9 +16,10 @@
 | | `sent` - сообщение отправлено
 | | `delivered` - сообщение доставлено до получателя
 | | `read` - сообщение прочитано/просмотрено/прослушано получателем
-| | `fail` - произошла ошибка при отправке сообщения на сервер WhatsApp
+| | `failed` - произошла ошибка при отправке сообщения на сервер WhatsApp
 | | `noAccount` - на номере телефона получателя не зарегистрирован аккаунт WhatsApp
 | | `notInGroup` - отправитель не является участником группового чата, в который выполняется отправка сообщения
+`sendByApi` | **boolean** | Флаг указывает отправлено сообщение из API или нет, принимает значения: true , false
 
 Поля объекта `instanceData`
 
@@ -33,13 +34,15 @@
 ```json
 {
     "typeWebhook": "outgoingMessageStatus",
-    "timestamp": 1586700802,
+    "chatId": "79001234567890@c.us",
     "instanceData": {
         "idInstance": 1234,
         "wid": "79001234567@c.us",
         "typeInstance": "whatsapp"
     },
+    "timestamp": 1586700802,
     "idMessage": "3EB0608D6A2901063D63",
-    "status": "noAccount"
+    "status": "noAccount",
+    "sendByApi": true
 }
 ```
