@@ -120,6 +120,11 @@ nav:
     - 'FAQ':
         - 'Все вопросы': 'faq/index.md'
         - 'Как защитить номер от бана?': 'faq/how-to-protect-number-from-ban.md'
+  - Релизы: 
+        - "Оглавление": 'release/index.md'
+        - 'Список релизов': 
+          - '5.43.16.63 от 09.08.2022': 'release/5.43.16.63.md'
+    #      - '5.43.16.64 от 03.08.2022': 'release/5.43.16.64.md'
     # - 'Интеграция':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
