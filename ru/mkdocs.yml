@@ -62,7 +62,7 @@ nav:
                     - 'Видео, аудио, изображение, документ': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Геопозиция': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
                     - 'Контакт': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
-                    - 'Сообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
+                    - 'Устаревшее. Cообщение с цитатой': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
                 - 'Выбор кнопок':
                     - 'Выбор обычной кнопки': 'api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md'
                     - 'Выбор шаблонной кнопки': 'api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md'
