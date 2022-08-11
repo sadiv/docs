@@ -6,3 +6,4 @@
 - [Получить аватар](GetAvatar.md)
 - [Получить аватар асинхронно](GetAvatarAsync.md)
 - [Получить контакты](GetContacts.md)
+- [Удалить сообщение](deleteMessage.md)

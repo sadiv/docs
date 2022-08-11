@@ -113,6 +113,7 @@ nav:
             - 'Получить аватар': 'api/service/GetAvatar.md'
             - 'Получить аватар асинхронно': 'api/service/GetAvatarAsync.md'
             - 'Получить контакты': 'api/service/GetContacts.md'
+            - 'Удалить сообщение': 'api/service/deleteMessage.md'
         - 'Прочее':
             - 'Идентификатор чата': 'api/chat-id.md'
             - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
