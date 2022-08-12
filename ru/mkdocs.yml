@@ -116,6 +116,7 @@ nav:
             - 'Удалить сообщение': 'api/service/deleteMessage.md'
             - 'Архивировать чат': 'api/service/archiveChat.md'
             - 'Разархивировать чат': 'api/service/unarchiveChat.md'
+            - 'Получить информацию о контакте': 'api/service/GetContactInfo.md'
         - 'Прочее':
             - 'Идентификатор чата': 'api/chat-id.md'
             - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
