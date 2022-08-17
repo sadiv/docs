@@ -43,6 +43,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 `name` | **string** | Имя контакта
 `email` | **string** | Электронная почта контакта
 `category` | **string** | Категория бизнес контакта
+`description` | **string** | Описание бизнес контакта
 `products` | **object** | Карточки товаров контакта
 
 Поля объекта `products`
