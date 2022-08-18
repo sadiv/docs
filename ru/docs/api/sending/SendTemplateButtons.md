@@ -88,7 +88,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendTemplateButtons/{{ap
 }
 ```
 
-### Ошибки SendMessage {#errors}
+### Ошибки SendTemplateButtons {#errors}
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 

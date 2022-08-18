@@ -102,7 +102,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendListMessage/{{apiTok
 }
 ```
 
-### Ошибки SendMessage {#errors}
+### Ошибки SendListMessage {#errors}
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
