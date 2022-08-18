@@ -1,31 +1,31 @@
-# Выбор элемента списка
+# List element selection
 
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для списка выбора. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/../docs/api/receiving/notifications-format/). 
+This section describes `messageData` object incoming webhook format for selection list. For a description of the general format of incoming webhooks, refer to [Incoming messages](/../docs/api/receiving/notifications-format/) section. 
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `listResponseMessage`
-`listResponseMessage` | **object** | Объект данных о нажатии пользователя на значение списка
-`quotedMessage` | **object** | Объект данных о цитируемом сообщении. Присутствует только, если само сообщение является цитатой
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `listResponseMessage`
+`listResponseMessage` | **object** | Data object on the user's selection of a list value
+`quotedMessage` | **object** | Quoted message data object. Present only if the message itself is a quote
 
-Поля объекта `listResponseMessage`
+`listResponseMessage` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`title` | **string** | текст выбранного значения
-`listType` | **string** | тип списка. 1 - выбор одного значения
-`singleSelectReply` | **string** | id выбранного значения
-`stanzaId` | **string** | ID сообщения с кнопками
+`title` | **string** | selected value text
+`listType` | **string** | list type. 1 - single value selection
+`singleSelectReply` | **string** | selected value id
+`stanzaId` | **string** | button message ID
 
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -46,7 +46,7 @@
         "typeMessage": "listResponseMessage",
         "listResponseMessage": {
             "stanzaId": "BAE53AFDD5F0C137",
-            "title": "Вариант 2",
+            "title": "Option 2",
             "listType": 1,
             "singleSelectReply": "option2"
         }
