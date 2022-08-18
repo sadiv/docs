@@ -48,7 +48,7 @@ Parameter | Type | Description
     "messageData": {
         "typeMessage": "quotedMessage",
         "extendedTextMessageData": {
-            "text": "Цитируем это",
+            "text": "Quoting this",
             "stanzaId": "3EB0D7D028C312EB513C",
             "participant": "70009876543@c.us"
         }
