@@ -125,7 +125,8 @@
       "participant": "79061230000@c.us",
       "typeMessage": "imageMessage",
       "downloadUrl": "",
-      "caption": ""
+      "caption": "",
+      "jpegThumbnail": ""
     }
   }
 }

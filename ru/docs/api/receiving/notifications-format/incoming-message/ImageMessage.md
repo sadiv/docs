@@ -27,7 +27,7 @@
 | `downloadUrl` | **string** | Ссылка для скачивания файла |
 | `caption`     | **string** | Описание под картинкой или видео |
 | `fileName` | **string** | Название файла |
-| `titleFile` | **string** | Заголовок файла |
+| `jpegThumbnail` | **string** | Предпросмотр изображения в base64 |
 
 Поля объекта `quotedMessage`
 
@@ -60,7 +60,8 @@
     "typeMessage": "imageMessage",
     "fileMessageData": {
       "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF",
-      "caption": "Картинка"
+      "caption": "Картинка",
+      "jpegThumbnail": ""
     }
   }
 }
@@ -120,17 +121,18 @@
   "messageData": {
     "typeMessage": "audioMessage",
     "fileMessageData": {
-      "downloadUrl": "https://s/990173687/801078ab-3340-4e4aa5.jpeg",
+      "downloadUrl": "https://s/990173687/801078ab-3340-4e4aa5.ogg",
       "caption": "",
-      "fileName": "801078ab-3340-4f78-е9978be4aa5.jpeg",
-      "titleFile": ""
+      "fileName": "801078ab-3340-4f78-е9978be4aa5.ogg",
+      "jpegThumbnail": ""
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79001234568@c.us",
       "typeMessage": "imageMessage",
       "downloadUrl": "",
-      "caption": ""
+      "caption": "",
+      "jpegThumbnail": ""
     }
   }
 }
@@ -159,7 +161,7 @@
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/0b-9784-483b-8426-e8d871d6de9f.jpeg",
       "caption": "",
       "fileName": "d417740b483b-8426-e8d871d6de9f.jpeg",
-      "titleFile": ""
+      "jpegThumbnail": ""
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -200,7 +202,7 @@
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/542ad819-166b-40a4-b0e1-279069cd03bb.jpeg",
       "caption": "",
       "fileName": "542ad819-166b-b0e1-279069cd03bb.jpeg",
-      "titleFile": ""
+      "jpegThumbnail": ""
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
