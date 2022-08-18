@@ -25,9 +25,9 @@ Parameter | Type | Description
 Parameter | Type | Description
 ----- | ----- | -----
 `text` | **string** | Link text or ordinary text
-`description` | **string** | Link description, can be empty
-`title` | **string** | Link title, can be empty
-`jpegThumbnail` | **string** | `base64`-coded image preview, can be absent
+`description` | **string** | Link description, may be empty
+`title` | **string** | Link title, may be empty
+`jpegThumbnail` | **string** | `base64`-coded image preview, may be absent
 
 `quotedMessage` object parameters
 
