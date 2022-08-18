@@ -8,7 +8,7 @@
 
 Для отправки требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
@@ -82,7 +82,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 ## Пример curl
 
 ```
-curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}' \
+curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenInstance}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "chatId": "79001234567@c.us",
