@@ -18,7 +18,7 @@ To get incoming webhooks of this type, two conditions must be true:
 | -------------------- | ---------- | ----------------------------------------------------------------------------------------------- |
 | `typeMessage`        | **string** | Incoming message type. For messages of this type the parameter takes on the value `contactMessage`    |
 | `contactMessageData` | **object** | Incoming contact data object.                                                              |
-| `quotedMessage`      | **object** | Qouted message data object. Present only if the message itself is a quote |Parameter | Type | Description
+| `quotedMessage`      | **object** | Quoted message data object. Present only if the message itself is a quote |Parameter | Type | Description
 
 `contactMessageData` object parameters
 
