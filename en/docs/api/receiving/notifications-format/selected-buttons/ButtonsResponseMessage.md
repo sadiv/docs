@@ -1,27 +1,27 @@
-# Выбор обычной кнопки
+# Simple button selection
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для обычных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/../docs/api/receiving/notifications-format/). 
+This section describes  `messageData` object incoming webhook format for simple buttons. For a description of the general format of incoming webhooks, refer to [Incoming messages](/../docs/api/receiving/notifications-format/) section. 
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `buttonsResponseMessage`
-`buttonsResponseMessage` | **object** | Объект данных о нажатии пользователя на кнопку
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `buttonsResponseMessage`
+`buttonsResponseMessage` | **object** | Data object on the user button selection data
 
-Поля объекта `buttonsResponseMessage`
+`buttonsResponseMessage` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`selectedButtonId` | **string** | идентификатор нажатой кнопки
-`selectedButtonText` | **string** | текст нажатой кнопки
-`stanzaId` | **string** | ID сообщения с кнопками
+`selectedButtonId` | **string** | selected button identifier
+`selectedButtonText` | **string** | selected button text
+`stanzaId` | **string** | button message ID
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
