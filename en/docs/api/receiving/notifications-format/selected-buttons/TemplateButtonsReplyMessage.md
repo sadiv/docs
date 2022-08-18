@@ -1,28 +1,28 @@
-# Выбор шаблонной кнопки
+# Template button selection
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для шаблонных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/../docs/api/receiving/notifications-format/). 
+This section describes `messageData` object incoming webhook format for template buttons. For a description of the general format of incoming webhooks, refer to [Incoming messages](/../docs/api/receiving/notifications-format/) section. 
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData`object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`typeMessage` | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `templateButtonsReplyMessage`
-`templateButtonReplyMessage` | **object** | Объект данных о нажатии пользователя на кнопку
+`typeMessage` | **string** | Received message type. For messages of this type, the parameter takes on the value `templateButtonsReplyMessage`
+`templateButtonReplyMessage` | **object** | Data object on the user's button selection
 
-Поля объекта `templateButtonReplyMessage`
+`templateButtonReplyMessage` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`selectedIndex` | **string** | числовой индекс нажатой кнопки
-`selectedId` | **string** | идентификатор нажатой кнопки
-`selectedDisplayText` | **string** | текст нажатой кнопки
-`stanzaId` | **string** | ID сообщения с кнопками
+`selectedIndex` | **string** | selected button digital index
+`selectedId` | **string** | selected button identifier
+`selectedDisplayText` | **string** | selected button text
+`stanzaId` | **string** | button message ID
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
