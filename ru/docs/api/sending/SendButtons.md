@@ -13,6 +13,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenIn
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
+### Особенности при работе с кнопками {#features}
+
+- в названии кнопки может быть не более 25 символов;
+- может быть не более 3 кнопок такого вида;
+- кнопку можно нажать только 1 раз.
+
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
@@ -74,6 +80,9 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenIn
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Пример отображения у получателя {#recieve-example}
+
+![Пример отображения кнопок](../../assets/press-button.jpg 'Пример отображения кнопок')
 
 ### Ошибки SendButtons {#errors}
 

@@ -13,6 +13,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendListMessage/{{apiTok
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
 
+### Особенности при работе с кнопками {#features}
+
+- число кнопок может быть от 3 до 10 включительно;
+- длина названия кнопки до 24 символов;
+- названия пунктов меню могут повторяться.
+
 ### Параметры запроса {#request-parameters}
 
 Параметр | Тип | Обязательный | Описание
@@ -101,6 +107,9 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendListMessage/{{apiTok
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Пример отображения у получателя {#recieve-example}
+
+![Пример списка выбора](../../assets/list-of-action.jpeg 'Пример списка выбора')
 
 ### Ошибки SendListMessage {#errors}
 
