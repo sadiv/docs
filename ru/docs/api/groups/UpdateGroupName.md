@@ -22,7 +22,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/UpdateGroupName/{{apiTok
 
 ```json
 {
-    "groupId": "79001234567-1587570015@g.us",
+    "groupId": "120363043968066561@g.us",
     "groupName": "Group created by Green API+"
 }
 ```
@@ -54,7 +54,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"12345678910-1112131415@g.us\",\r\n    \"groupName\":\"Group created by Green API\"\r\n}"
+payload = "{\r\n    \"groupId\": \"120363043968066561@g.us\",\r\n    \"groupName\":\"Group created by Green API\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

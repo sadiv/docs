@@ -51,7 +51,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendContact/{{apiTokenIn
 Отправка сообщения в групповой чат:
 ```json
 {
-    "chatId": "79001234567-1581234048@g.us",
+    "chatId": "120363043968066561@g.us",
     "contact": {
         "phoneContact": 79001234568,
         "firstName": "Артем",

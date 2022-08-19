@@ -23,7 +23,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/RemoveAdmin/{{apiTokenIn
 Лишение участника прав администрирования группы:
 ```json
 {
-    "groupId": "79001234567-1587570015@g.us",
+    "groupId": "120363043968066561@g.us",
     "participantChatId": "79001234565@c.us"
 }
 ```
@@ -55,7 +55,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/removeAdmin/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"79001234567-1587570015@g.us\",\r\n    \"participantChatId\": \"79001234568@c.us\",\r\n}"
+payload = "{\r\n    \"groupId\": \"120363043968066561@g.us\",\r\n    \"participantChatId\": \"79001234568@c.us\",\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }

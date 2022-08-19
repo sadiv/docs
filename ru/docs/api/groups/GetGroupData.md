@@ -21,7 +21,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 ```json
 {
-    "groupId": "79001234567-1587570015@g.us"
+    "groupId": "120363043968066561@g.us"
 }
 ```
 
@@ -52,7 +52,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetGroupData/{{apiTokenI
 
 ```json
 {
-	"groupId": "79001234567-1587570015@g.us",
+	"groupId": "120363043968066561@g.us",
 	"owner": "79001234567@c.us",
 	"subject": "Green API Group",
 	"creation": 1587570015,
@@ -90,7 +90,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/getGroupData/{{apiTokenInstance}}"
 
-payload = "{\r\n\t\"groupId\": \"79001234567-1587570015@g.us\"\r\n}"
+payload = "{\r\n\t\"groupId\": \"120363043968066561@g.us\"\r\n}"
 headers = {
   'Content-Type': 'application/json'
 }
