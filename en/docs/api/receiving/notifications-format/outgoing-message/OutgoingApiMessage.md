@@ -1,6 +1,6 @@
-# Sent message via API
+# Message sent via API
 
-The format of a message, sent via API, is the same as for an [incoming message](../incoming-message/Webhook-IncomingMessageReceived.md), and [Incoming webhooks type(../type-webhook.md) takes on the value `outgoingAPIMessageReceived`.
+The format of a message, sent via API, is the same as for an [incoming message](../incoming-message/Webhook-IncomingMessageReceived.md), and [Incoming webhooks type](../type-webhook.md) takes on the value `outgoingAPIMessageReceived`.
 
 ### Webhook body example {#webhook-example-body}
 
