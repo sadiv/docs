@@ -67,7 +67,7 @@ It is also required to specify what types of webhooks you need to receive. To en
 
 You can also set up to receive incoming webhooks online. To do this, go to [My Profile](https://console.green-api.com) and select the required user account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types and, if you need authorization on your webhook server, specify Webhook URL Token. If the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
 
-![Настройки входящих уведомлений](ru/docs/assets/technology-webhook-endpoint.png)
+![Настройки входящих уведомлений](https://github.com/mashaped/docs/blob/0530bf38b15078c6739705093a7ef81c641a3ca0/ru/docs/assets/technology-webhook-endpoint.png))
 
 ## Receive incoming webhooks
 
