@@ -1,8 +1,8 @@
-# Отправленное сообщение через API
+# Sent message via API
 
-Формат сообщения, отправленного с API, идентичен формату [входящего сообщения](../incoming-message/Webhook-IncomingMessageReceived.md), при этом [тип входящего уведомления](../type-webhook.md) принимает значение `outgoingAPIMessageReceived`.
+The format of a message, sent via API, is the same as for an [incoming message](../incoming-message/Webhook-IncomingMessageReceived.md), and [Incoming webhooks type(../type-webhook.md) takes on the value `outgoingAPIMessageReceived`.
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -20,7 +20,7 @@
         "senderName": "Green API"
     },
     "messageData":{
-       // В зависимости от typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage
+       // Depending on typeMessage = textMessage || imageMessage || videoMessage || documentMessage || audioMessage || locationMessage || contactMessage || extendedTextMessage
        ...
        ...
        ...
