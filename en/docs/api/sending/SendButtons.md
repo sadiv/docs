@@ -22,7 +22,7 @@ Parameter | Type | Mandatory | Description
 `footer` | **string** | No | Message footer. Useful for visually highlighting text related to buttons.
 `buttons` | **array** | Yes | Message buttons
 `quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
-`archiveChat` | **boolean** | No | Archives the chat to which the message was sent. Takes value: true: true|false
+`archiveChat` | **boolean** | No | Archives the chat to which the message was sent. Takes value: true.
 
 `buttons` array parameters
 
