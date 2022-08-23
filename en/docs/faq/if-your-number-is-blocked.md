@@ -1,53 +1,53 @@
-# Если ваш номер заблокирован
+# If your number is blocked
 
-Инструкция по действию в случае блокировки номера в Вотсапе.
+Action guide in case when your number is blocked in WhatsApp.
 
-1. [Письмо на электронную почту](#001)
-2. [Запрос через форму на сайте](#002)
-3. [Как часто можно запрашивать снятие бана](#003)
-4. [В каких случаях отказывают в снятии бана](#004)
-5. [Если письмо о принятой заявке не приходит](#005)
-6. [Пример письма](#006)
+1. [Message to e-mail](#001)
+2. [Request via the form on the website](#002)
+3. [How often you can request for a ban removal](#003)
+4. [In what cases the removal of the ban is denied](#004)
+5. [If you don't receive a message on the accepted request](#005)
+6. [Sample message](#006)
 
-## 1. Письмо на электронную почту {#001}
-Вы можете восстановить доступ к своему аккаунту вотсап через электронную почту.
-Для этого вам потребуется:
+## 1. Message to e-mail {#001}
+You may restore access to your WhatsApp account via email.
+You have to:
 
-1. Сформировать письмо согласно [Примеру письма](#006), подставив свои данные.
-2. Составить заголовок письма следующего содержания: "Прошу разблокировать номер 79001234567"
-3. Отправить письмо на почтовый ящик support@support.whatsapp.com
-4. Ожидать ответ от вотсапа 
+1. Generate a message according to [Sample message](#006), substiting your data.
+2. Make the message title with the following content: "I kindly ask you to unblock number 79001234567"
+3. Send the message to support@support.whatsapp.com
+4. Wait for the reply from WhatsApp 
 
-Приходит 2 письма: первое о принятии заявки, второе о снятии или отказе в снятии блокировки с номера.
+Usually you are to get 2 messages: the first one about the request acceptance, the other one about removal or refusal to remove ban from the number.
 
-## 2. Запрос через форму на сайте {#002}
-Вы можете восстановить доступ к своему аккаунту вотсап оставив запрос на сайте.
-Для этого вам потребуется:
+## 2. Request via the form on the website {#002}
+You may restore access to your WhatsApp account leaving a request on the website.
+You have to:
 
-1. Перейти на страницу https://www.whatsapp.com/contact/?subject=messenger
-2. Указать свой номер телефона, код страны выбрать из выпадающего списка.
-3. Заполнить поле почтового ящика.
-4. Выбрать использование WhatsApp для компьютеров
-5. Составить заголовок письма следующего содержания: "Прошу разблокировать номер 790012345671"
-6. Сформировать письмо согласно [Примеру письма](#006), подставив свои данные.
-7. Ожидать ответ от вотсапа
+1. Go to https://www.whatsapp.com/contact/?subject=messenger
+2. Specify your phone number, select a country code out of the dropdown list.
+3. Fill in the mailbox fielfd.
+4. Select WhatsApp for computers
+5. Make the message title with the following content: "I kindly ask you to unblock number 790012345671"
+6. Generate a message according to [Sample message](#006), substiting your data.
+7. Wait for the reply from WhatsApp.
 
-Приходит 2 письма: первое о принятии заявки, второе о снятии или отказе в снятии блокировки с номера.
+There usually comes 2 messages:  the first one about the request acceptance, the other one about removal or refusal to remove ban from the number.
 
-## 3. Как часто можно запрашивать снятие бана {#003}
-Снятие блокировки можно запрашивать только 1 раз, далее необходимо ожидать ответ от вотсапа. Если ваш номер заблокирован несколько раз подряд, то необходимо сделать перерыв в несколько дней. 
-В случае, если вам отказали в снятии блокировки - повторить запрос желательно не ранее, чем через 1 месяц.
+## 3. How often you can request for a ban removal {#003}
+Unblocking can be requested only once, then you have to wait for a response from WhatsApp. If your number is blocked several times in a row, then you need to take a break for several days.
+In case you were refused to remove the ban, you are advised to repeat the request no earlier than in a month.
 
-## 4. В каких случаях отказывают в снятии бана {#004}
-Отказ в снятии блокировки чаще всего приходит по причине жалоб пользователей на ваш аккаунт или при чрезмерном использовании  определённых методов без эмуляции действий пользователя(например, постоянная проверка наличия вотсапа без отправки сообщений).
+## 4. In what cases the removal of the ban is denied {#004}
+The refusal to remove the ban most often comes due to users' complaints about your account or when certain methods are used excessively without emulating user actions (for example, constantly checking for WhatsApp availability without sending messages).
 
-## 5. Если письмо о принятой заявке не приходит {#005}
-Мы заметили, что при отправке запросов о снятии блокировки на почтовые ящики зоны ru, популярных почтовых сервисов, чаще всего не приходят ответные письма от вотсапа. В этом случае попробуйте отправить запрос на другой почтовый ящик или изменить доменное имя зоны почтового ящика.
+## 5. If you don't receive a message on the accepted request {#005}
+We have noticed that when sending unblock requests using mailboxes in the ru zone, popular mail services, most often no response letters from WhatsApp are received. In this case, try sending the request using another mailbox or change the domain name of the mailbox zone.
 
-## 6. Пример письма {#006}
+## 6. Sample message {#006}
 ```
-Добрый день!
-Прошу снять блокировку с номера 790012345671
-Номер используется в вотсап-бизнес нашей компанией для общения с клиентами.
-Спасибо!
+Hello!
+I kindly ask you to unblock number 790012345671
+The number is used in the WhatsApp Business by our company to communicate with customers.
+Thank you!
 ```
