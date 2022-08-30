@@ -10,7 +10,7 @@
 
 Для отправки требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendTemplateButtons/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/sendTemplateButtons/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
@@ -95,6 +95,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendTemplateButtons/{{ap
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Пример отображения у получателя {#recieve-example}
+Кнопка с обратным звонком
+![Пример отображения кнопок](../../assets/button_call.jpeg 'Пример отображения кнопок')
+
+Кнопка с ссылкой
+![Пример отображения кнопок](../../assets/button_url.jpeg 'Пример отображения кнопок')
+
+Кнопка с быстрым ответом
+![Пример отображения кнопок](../../assets/button_response.jpeg 'Пример отображения кнопок')
 
 ### Ошибки SendTemplateButtons {#errors}
 

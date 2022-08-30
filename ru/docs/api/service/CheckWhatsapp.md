@@ -57,7 +57,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/checkWhatsapp/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"phoneNumber\": 79001234567\r\n}"
+payload = "{phoneNumber: 79001234567}"
 headers = {
   'Content-Type': 'application/json'
 }
