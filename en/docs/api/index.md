@@ -18,6 +18,9 @@ Make sure you have completed all the steps in [Before you start](../before-start
 ## [Sending](./sending/index.md) {#sending}
 
 - [Send text message](./sending/SendMessage.md)
+- [Send ordinary buttons](./sending/SendButtons.md)
+- [Send template buttons](./sending/SendTemplateButtons.md)
+- [Send list message](./sending/SendListMessage.md)
 - [Send video, audio, image, document](./sending/SendFileByUpload.md)
 - [Send video, audio, image, document by URL](./sending/SendFileByUrl.md)
 - [Send location](./sending/SendLocation.md)
@@ -37,6 +40,9 @@ Make sure you have completed all the steps in [Before you start](../before-start
 #### [Incoming message](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
 
 - [Incoming text message](./receiving/notifications-format/incoming-message/TextMessage.md)
+- [Ordinary button selection](./receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md)
+- [Template button selection](./receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md)
+- [List element selection](./receiving/notifications-format/selected-buttons/ListResponseMessage.md)
 - [Incoming text message with URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
 - [Incoming image, video, audio, document message](./receiving/notifications-format/incoming-message/ImageMessage.md)
 - [Incoming location message](./receiving/notifications-format/incoming-message/LocationMessage.md)
@@ -44,8 +50,9 @@ Make sure you have completed all the steps in [Before you start](../before-start
 
 #### Outgoing message {#receiving-outgoing-message}
 
-- [Outgoing message](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
-- [Outgoing message status](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
+- [Message sent from phone](./receiving/notifications-format/outgoing-message/OutgoingMessage.md)
+- [Message sent via API](./receiving/notifications-format/outgoing-message/OutgoingApiMessage.md)
+- [Sent message status](./receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md)
 
 #### Others {#receiving-dif}
 

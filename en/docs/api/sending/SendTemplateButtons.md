@@ -1,64 +1,64 @@
 # SendTemplateButtons
 
-Метод предназначен для отправки сообщения с интерактивными кнопками из перечня шаблонов в личный или групповой чат.
-Сообщение будет добавлено в очередь на отправку.  Проверка авторизации whatsapp-а на телефоне (т.е. наличие в связанных устройствах) не выполняется. Сообщение на отправку хранится 24 часа в очереди и будет отправлено сразу же после авторизации телефона. 
-Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
+The method is aimed for sending a message with template list interacrive buttons to a personal or a group chat.
+The message will be added to the send queue. Checking whatsapp authorization on the phone (i.e. availability in linked devices) is not performed. The message will be kept for 24 hours in the queue and will be sent immediately after phone authorization.
+The rate at which messages are sent from the queue is managed by [Message sending delay](../send-messages-delay.md) parameter.
 
-## Запрос {#request}
+## Request {#request}
 
-Для отправки требуется выполнить запрос по адресу:
+To send a message, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор чата](../chat-id.md)
-`message` | **string** | Да | Текст сообщения. Поддерживаются символы emoji 😃 
-`footer` | **string** | Нет | Подвал сообщения. Удобен для визуального выделения текста, который относится к кнопкам
-`templateButtons` | **array** | Да | Интерактивные кнопки сообщения
-`quotedMessageId` | **string** | Нет | Идентификатор цитируемого сообщения,если указан то сообщение отправится с цитированием указанного сообщения чата
-`archiveChat` | **boolean** | Нет | Помещает в архив чат, в который отправлено сообщение. Принимает значания: true|false
+`chatId` | **string** | Yes | [Chat Id](../chat-id.md)
+`message` | **string** | Yes | Message text. Emoji 😃 characters supported
+`footer` | **string** | No | Message footer. Useful for visually highlighting text related to buttons.
+`templateButtons` | **array** | Yes | Message template buttons
+`quotedMessageId` | **string** | No | Quoted message ID. If present, the message will be sent quoting the specified chat message
+`archiveChat` | **boolean** | No | Archives the chat to which the message was sent. Takes value: true|false
 
-Поля массива `templateButtons`
+`templateButtons` array parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`index` | **integer** | Идентификатор кнопки
-`urlButton` | **object** | кнопка с ссылкой
-`callButton` | **object** | кнопка вызова
-`quickReplyButton` | **object** | обычная кнопка 
+`index` | **integer** | Button Id
+`urlButton` | **object** | Url button
+`callButton` | **object** | Call button
+`quickReplyButton` | **object** | Plain button 
 
-Поля объекта `urlButton`
+`urlButton` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`displayText` | **string** | Текст ссылки
-`url` | **string** | веб ссылка
+`displayText` | **string** | Link text
+`url` | **string** | Web link
 
-Поля объекта `callButton`
+`callButton` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`displayText` | **string** | Текст ссылки
-`phoneNumber` | **string** | номер телефона
+`displayText` | **string** | Link text
+`phoneNumber` | **string** | Telephone number
 
-Поля объекта `quickReplyButton`
+`quickReplyButton` object parameters
 
-Параметр | Тип | Описание
+Parameter | Type | Description
 ----- | ----- | -----
-`displayText` | **string** | Текст на кнопке
-`id` | **string** | идентификатор кнопки
+`displayText` | **string** | Button text
+`id` | **string** | Button Id
 
-> Максимальная длина текстового сообщения составляет 4096 символов
+> The maximum length of a text message is 4096 characters
 
-### Пример тела запроса {#request-example-body}
+### Rquest body example {#request-example-body}
 
-Отправка сообщения в личный чат:
+Sending a message to a personal chat:
 ```json
 {
 	"chatId": "79001234567@c.us",
@@ -72,15 +72,15 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response paramters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | -----
-`idMessage ` | **string** | Идентификатор отправленного сообщения 
+`idMessage ` | **string** | Sent message Id 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -88,11 +88,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 }
 ```
 
-### Ошибки SendMessage {#errors}
+### SendMessage errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример curl
+## curl example
 
 ```
 curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}' \
