@@ -37,6 +37,9 @@ nav:
         - 'Sending':
             - 'Sending - overview': 'api/sending/index.md'
             - 'Send text': 'api/sending/SendMessage.md'
+            - 'Send Buttons': 'api/sending/SendButtons.md'
+            - 'Send Template Buttons': 'api/sending/SendTemplateButtons.md'
+            - 'Send List Message': 'api/sending/SendListMessage.md'
             - 'Send video, audio, image, document': 'api/sending/SendFileByUpload.md'
             - 'Send video, audio, image, document via URL': 'api/sending/SendFileByUrl.md'
             - 'Send location': 'api/sending/SendLocation.md'
@@ -59,9 +62,14 @@ nav:
                     - 'Video, audio, image, document': 'api/receiving/notifications-format/incoming-message/ImageMessage.md'
                     - 'Location': 'api/receiving/notifications-format/incoming-message/LocationMessage.md'
                     - 'Contact': 'api/receiving/notifications-format/incoming-message/ContactMessage.md'
-                    - 'Quoted message': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
+                    - '(deprecated) Quoted message': 'api/receiving/notifications-format/incoming-message/QuotedMessage.md'
+                - 'Selecting buttons':
+                    - 'Simple button selection ': 'api/receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md'
+                    - 'Template button selection': 'api/receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md'
+                    - 'List element selection': 'api/receiving/notifications-format/selected-buttons/ListResponseMessage.md'                
                 - 'Outgoing message':
                     - 'Message sent from phone': 'api/receiving/notifications-format/outgoing-message/OutgoingMessage.md'
+                    - 'Message sent via API': 'api/receiving/notifications-format/outgoing-message/OutgoingApiMessage.md'
                     - 'Outgoing message status': 'api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus.md'
                 - 'Others':
                     - 'Account status': 'api/receiving/notifications-format/StateInstanceChanged.md'
@@ -103,7 +111,7 @@ nav:
             - 'Service methods - overview': 'api/service/index.md'
             - 'Check WhatsApp availability': 'api/service/CheckWhatsapp.md'
             - 'Get avatar': 'api/service/GetAvatar.md'
-            - 'Get avatar asynchronously': 'api/service/GetAvatarAsync.md'
+            - '(deprecated) Get avatar asynchronously': 'api/service/GetAvatarAsync.md'
             - 'Get contacts': 'api/service/GetContacts.md'
         - 'Others':
             - 'Chat Id': 'api/chat-id.md'
@@ -112,6 +120,12 @@ nav:
     - 'FAQ':
         - 'FAQ': 'faq/index.md'
         - 'How to protect number from ban?': 'faq/how-to-protect-number-from-ban.md'
+        - 'If your number is blocked': 'faq/if-your-number-is-blocked.md'
+  - Releases: 
+        - "Overview": 'release/index.md'
+        - 'GREEN-API releases': 
+    #      - '5.43.17.130 от 23.08.2022': 'release/5.43.17.130.md'
+          - '5.43.16.63 dd. 09.08.2022': 'release/5.43.16.63.md'
     # - 'Integration':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'

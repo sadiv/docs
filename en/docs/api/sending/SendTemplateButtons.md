@@ -1,4 +1,5 @@
 # SendTemplateButtons
+> Temporarily not working. Are not displayed in the recipient's phone.
 
 The method is aimed for sending a message with template list interacrive buttons to a personal or a group chat.
 The message will be added to the send queue. Checking whatsapp authorization on the phone (i.e. availability in linked devices) is not performed. The message will be kept for 24 hours in the queue and will be sent immediately after phone authorization.

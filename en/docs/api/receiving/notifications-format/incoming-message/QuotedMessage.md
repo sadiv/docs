@@ -1,4 +1,4 @@
-# Deprecated. Quoted message
+# (deprecated) Quoted message
 > This message is deprecated and is kept for the backward compatibility. For replacement see field ```quotedMessage``` in other types of incoming messages
 
 This section describes `messageData` object incoming webhook format for incoming quoted message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section. 
