@@ -23,7 +23,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 `archiveChat` | **boolean** | Нет | Помещает в архив чат, в который отправлено сообщение. Принимает значания: true|false
 
 
-> Максимальная длина текстового сообщения составляет 4096 символов
+> Максимальная длина текстового сообщения составляет 10000 символов
 
 ### Пример тела запроса {#request-example-body}
 
