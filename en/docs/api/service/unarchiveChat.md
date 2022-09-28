@@ -35,7 +35,7 @@ For a list of errors common to all methods, refer to [Common errors](../common-e
 
 HTTP code | Error identifier | Description
 ----- | ----- | -----
-400 | `"ArchiveChatError: cannot archive chat cause last message not found in chat"` | chatID не верен или в чате нет сообщений
+400 | `"ArchiveChatError: cannot archive chat cause last message not found in chat"` | chatID is false or there is no message in the chat
 
 ## Python request example  {#request-example-python}
 
