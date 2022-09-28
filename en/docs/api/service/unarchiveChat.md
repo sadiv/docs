@@ -1,21 +1,21 @@
 # UnarchiveChat
-Метод разархивирует чат.
-## Запрос {#request}
+The method unarchives a chat.
+## Request {#request}
 
-Для разархивации чата требуется выполнить запрос по адресу:
+To unarchive a chat, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/unarchiveChat/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](../chat-id.md)
+`chatId` | **string** | Yes | [User or group chat Id](../chat-id.md)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -23,21 +23,21 @@ POST https://api.green-api.com/waInstance{{idInstance}}/unarchiveChat/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Тело ответа пустое. При успехе ответ сервера 200.
+The response body is empty. If successful, the server response is 200.
 
-### Ошибки unarchiveChat {#errors}
+### UnarchiveChat errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error identifier | Description
 ----- | ----- | -----
 400 | `"ArchiveChatError: cannot archive chat cause last message not found in chat"` | chatID не верен или в чате нет сообщений
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
