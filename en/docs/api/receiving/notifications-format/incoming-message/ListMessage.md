@@ -50,7 +50,7 @@ To get incoming webhooks of this type, two conditions must be true:
 
 | Parameter     | Type       | Description             |
 | ------------- | ---------- | ------------------- |
-| `stanzaId` | **string** | id цитируемого сообщения |
+| `stanzaId` | **string** | Quoted message id |
 | `participant` | **string** | Quoted message sender's id |
 | `typeMessage` | **string** | Quoted message type |
 
