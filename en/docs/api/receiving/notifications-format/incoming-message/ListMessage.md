@@ -25,7 +25,7 @@ To get incoming webhooks of this type, two conditions must be true:
 | Parameter      | Type        | Description          |
 | ------------- | ---------- | ------------------- |
 | `contentText` | **string** | Buttons body text message|
-|`title` | **string** | Нет | Message title|
+|`title` | **string** | No | Message title|
 | `footer` | **string** | Buttons footer text message|
 | `listMessage` | **object** | Buttons data object |
 |`buttonText` | **string** | No | selection list button text|
