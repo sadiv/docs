@@ -1,8 +1,8 @@
 # deleteMessage
-The method deletes a message from the chat.
+The method deletes a message from a chat.
 ## Request {#request}
 
-To delete a message, you have to execute a request at::
+To delete a message, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}
 ```
