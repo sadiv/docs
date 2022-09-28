@@ -15,10 +15,11 @@ The format of the personal chat Id is formed according to the template `00000000
 ```
 
 ## Group chat {#gus}
-Group chat Id presents a string of `00000000000-XXXXXXXXXX@g.us` form. Example:
+Group chat Id presents a string of `00000000000-XXXXXXXXXX@g.us` or `XXXXXXXXXXXXXXXXX@g.us` form. Example:
 
 ```
 79001234567-1581234048@g.us
+120363043968066561@g.us
 ```
 
 Group chat Id may be received by various Green&nbsp;API methods, for example:
