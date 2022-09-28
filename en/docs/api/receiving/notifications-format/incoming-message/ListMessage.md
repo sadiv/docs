@@ -42,9 +42,9 @@ To get incoming webhooks of this type, two conditions must be true:
 
 |Parameter | Type       | Description                     |
 | -------- | ---------- | ----------------------------- |
-| `title`  | **string** | list value text         |
-| `rowId`  | **string** | list value identifier |
-| `description` | **string** | list value description |
+| `title`  | **string** | List value text         |
+| `rowId`  | **string** | List value identifier |
+| `description` | **string** | List value description |
 
 `quotedMessage` object parameters
 
