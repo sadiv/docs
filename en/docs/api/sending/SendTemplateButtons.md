@@ -82,7 +82,7 @@ Sending a message to a personal chat:
 
 ## Response {#response}
 
-### Response paramters {#response-parameters}
+### Response parameters {#response-parameters}
 
 Parameter | Type |  Description
 ----- | ----- | -----
@@ -95,7 +95,7 @@ Parameter | Type |  Description
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
-### Пример отображения у получателя {#recieve-example}
+### Recipient display example {#recieve-example}
 Callback button
 ![Пример отображения кнопок](../../assets/button_call.jpeg 'Пример отображения кнопок')
 
