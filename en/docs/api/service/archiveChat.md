@@ -37,7 +37,7 @@ HTTP code | Error identifier | Description
 ----- | ----- | -----
 400 | `"ArchiveChatError: cannot archive chat cause last message not found in chat"` | chatID is false or there is no message in the chat
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
