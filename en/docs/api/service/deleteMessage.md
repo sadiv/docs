@@ -1,22 +1,22 @@
 # deleteMessage
-Метод удаляет сообщение из чата.
-## Запрос {#request}
+The method deletes a message from the chat.
+## Request {#request}
 
-Для удаления сообщения из чата требуется выполнить запрос по адресу:
+To delete a message, you have to execute a request at::
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента или группового чата](../chat-id.md)
-`idMessage` | **string** | Да | ID удаляемого сообщения
+`chatId` | **string** | Yes | [User or group chat Id](../chat-id.md)
+`idMessage` | **string** | Yes | Deleted message ID 
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,22 +25,22 @@ POST https://api.green-api.com/waInstance{{idInstance}}/deleteMessage/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Тело ответа пустое. При успехе ответ сервера 200.
+The response body is empty. If successful, the server response is 200.
 
-### Ошибки deleteMessage {#errors}
+### DeleteMessage errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-Код HTTP | Идентификатор ошибки | Описание
+HTTP code | Error identifier | Description
 ----- | ----- | -----
-400 | `chatId not found` | chatID не найдено
-400 | `ID message notfound` | IDMessage не найдено
+400 | `chatId not found` | chatID is not found
+400 | `ID message notfound` | IDMessage is not found
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
