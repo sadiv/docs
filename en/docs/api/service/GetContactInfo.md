@@ -36,7 +36,7 @@ Parameter | Type |  Description
 `email` | **string** | Contact e-mail
 `category` | **string** | Business contact category
 `description` | **string** | Business contact description
-`products` | **object** | Карточки товаров контакта
+`products` | **object** | Contact products cards
 
 The "contact name" 'name' parameter takes on a value based on the following conditions:
 
@@ -54,7 +54,7 @@ The "contact name" 'name' parameter takes on a value based on the following cond
 | `id`    | **string** | Prodict id            |
 | `imageUrls` | **object** | Product images urls |
 | `availability` | **string** | Product availability            |
-| `reviewStatus` | **object** | Статус валидации товара |
+| `reviewStatus` | **object** | Product review status |
 | `name` | **string** | Product name
 | `description` | **string** | Product description
 | `price` | **string** | Product price
