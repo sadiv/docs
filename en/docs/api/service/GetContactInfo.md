@@ -82,7 +82,7 @@ The "contact name" 'name' parameter takes on a value based on the following cond
             },
             "availability": "in stock",
             "name": "Replacement",
-            "description": "От 1000 р.",
+            "description": "From 1000 RUB",
             "price": null,
             "isHidden": false
         },
