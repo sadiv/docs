@@ -38,13 +38,13 @@ Parameter | Type |  Description
 `description` | **string** | Business contact description
 `products` | **object** | Карточки товаров контакта
 
-Поле "имя контакта" 'name' принимает значение исходя из следующих условий:
+The "contact name" 'name' parameter takes on a value based on the following conditions:
 
-1. Если аккаунт записан в телефонную книгу, то имя аккаунта берётся из телефонной книги;
+1. If the account is added to the phone book, then the account name is taken from the phone book;
 
-2. Если аккаунт не записан в телефонную книгу, то используется значение, указанное в профиле аккаунта WhatsApp;
+2. If the account is not added to the phone book, then the name specified in the WhatsApp account profile is used;
 
-3. Если аккаунт не записан в телефонную книгу и если не задано имя в профиле аккаунта WhatsApp, то возвращается пустая строка.
+3. If the account is not added to the phone book, and if no name is set in the WhatsApp account profile, then an empty string is returned.
 
 
 `products` object parameters
