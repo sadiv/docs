@@ -15,7 +15,7 @@ For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you
 
 Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Yes | [User id](../chat-id.md)
+`chatId` | **string** | Yes | [Correspondent id](../chat-id.md)
 
 ### Request body example {#request-example-body}
 
@@ -31,11 +31,11 @@ Parameter | Type | Mandatory | Description
 
 Parameter | Type |  Description
 ----- | ----- | ----- 
-`avatar` | **string** | ссылка на аватар
-`name` | **string** | Имя контакта
-`email` | **string** | Электронная почта контакта
-`category` | **string** | Категория бизнес контакта
-`description` | **string** | Описание бизнес контакта
+`avatar` | **string** | Avatar url
+`name` | **string** | Contact name
+`email` | **string** | Contact e-mail
+`category` | **string** | Business contact category
+`description` | **string** | Business contact description
 `products` | **object** | Карточки товаров контакта
 
 Поле "имя контакта" 'name' принимает значение исходя из следующих условий:
@@ -51,14 +51,14 @@ Parameter | Type |  Description
 
 | Parameter      | Type       | Description                             |
 | ------------- | ---------- | ------------------------------------ |
-| `id`    | **string** | id товара            |
-| `imageUrls` | **object** | Ссылки на изображения товара |
-| `availability` | **string** | Доступность товара            |
+| `id`    | **string** | Prodict id            |
+| `imageUrls` | **object** | Product images urls |
+| `availability` | **string** | Product availability            |
 | `reviewStatus` | **object** | Статус валидации товара |
-| `name` | **string** | Название товара
-| `description` | **string** | Описание товара
-| `price` | **string** | Цена товара
-| `isHidden` | **boolean** | Состояние товара
+| `name` | **string** | Product name
+| `description` | **string** | Product description
+| `price` | **string** | Product price
+| `isHidden` | **boolean** | Product condition
 
 
 ### Response body example {#response-example-body}
