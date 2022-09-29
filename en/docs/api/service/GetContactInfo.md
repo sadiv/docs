@@ -1,23 +1,23 @@
 # GetContactInfo
 
-Метод предназначен для получения информации о контакте.
+The method is aimed for getting information on a contact.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения списка контактов требуется выполнить запрос по адресу:
+To get contacts list, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента](../chat-id.md)
+`chatId` | **string** | Yes | [User id](../chat-id.md)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,11 +25,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
 `avatar` | **string** | ссылка на аватар
 `name` | **string** | Имя контакта
@@ -47,9 +47,9 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 3. Если аккаунт не записан в телефонную книгу и если не задано имя в профиле аккаунта WhatsApp, то возвращается пустая строка.
 
 
-Поля объекта `products`
+`products` object parameters
 
-| Параметр      | Тип        | Описание                             |
+| Parameter      | Type       | Description                             |
 | ------------- | ---------- | ------------------------------------ |
 | `id`    | **string** | id товара            |
 | `imageUrls` | **object** | Ссылки на изображения товара |
@@ -61,7 +61,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 | `isHidden` | **boolean** | Состояние товара
 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -69,7 +69,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
     "name": "Dealer",
     "email": "24service@tt.tt",
     "category": "Automotive Dealership",
-    "description": "Официальный сервис",
+    "description": "Oficial service",
     "products": [
         {
             "id": "42079728159",
@@ -81,7 +81,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
                 "whatsapp": "APPROVED"
             },
             "availability": "in stock",
-            "name": "Замена",
+            "name": "Replacement",
             "description": "От 1000 р.",
             "price": null,
             "isHidden": false
@@ -96,7 +96,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
                 "whatsapp": "APPROVED"
             },
             "availability": "in stock",
-            "name": "Техническое обслуживание",
+            "name": "Technical maintenance",
             "price": null,
             "isHidden": false
         }
@@ -104,11 +104,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 }
 ```
 
-### Ошибки GetContactInfo {#errors}
+### GetContactInfo errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
