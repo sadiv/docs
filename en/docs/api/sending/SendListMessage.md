@@ -13,6 +13,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendListMessage/{{apiTok
 
 For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
+### Features when working with buttons {#features}
+
+- there can be from 3 to 10 inclusive;
+- button title length is up to 24 characters;
+- menu item titles may be repeated.
+
 ### Request parameters {#request-parameters}
 
 Parameter | Type | Mndatory | Description
@@ -101,6 +107,9 @@ Parameter | Type |  Description
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Recipient display example {#recieve-example}
+
+![Пример списка выбора](../../assets/list-of-action.jpeg 'Пример списка выбора')
 
 ### SendMessage errors {#errors}
 

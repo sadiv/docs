@@ -1,62 +1,62 @@
-# Входящее сообщение со списком выбора
+# Selection list incoming message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения со списком выбора. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md).
+This section describes `messageData` object incoming webhook format for selection list incoming message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section.
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `listMessage`
 
-## Уведомление {#webhook}
+## Webkhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-| Параметр| Тип | Описание  |
+| Parameter| Type | Description  |
 | ----------------- | ---------- | ------------ |
-| `typeMessage`     | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `listMessage`       |
-| `listMessage` | **object** | Объект данных со списком |
-| `quotedMessage`   | **object** | Объект данных о цитируемом сообщении. Присутствует только, если само сообщение является цитатой |
+| `typeMessage`     | **string** | Incoming message type. For messages of this type the parameter takes on the value `listMessage`       |
+| `listMessage` | **object** | List data object |
+| `quotedMessage`   | **object** | Quoted message data object. Present only if the message itself is a quote |
 
-Поля объекта `listMessage`
+`listMessage` data object
 
-| Параметр      | Тип        | Описание            |
+| Parameter      | Type        | Description          |
 | ------------- | ---------- | ------------------- |
-| `contentText` | **string** | Текстовое сообщение тела кнопок|
-|`title` | **string** | Нет | Заголовок сообщения|
-| `footer` | **string** | Текстовое сообщение подвала кнопок|
-| `listMessage` | **object** | Объект данных с кнопками |
-|`buttonText` | **string** | Нет | надпись на кнопке списка выбора|
-|`sections` | **array** | Да | значения списка выбора|
+| `contentText` | **string** | Buttons body text message|
+|`title` | **string** | No | Message title|
+| `footer` | **string** | Buttons footer text message|
+| `listMessage` | **object** | Buttons data object |
+|`buttonText` | **string** | No | selection list button text|
+|`sections` | **array** | Yes | selection list values|
 
-Поля массива `sections`
+`sections` array parameters
 
-| Параметр | Тип        | Описание                |
+| Parameter | Type       | Description              |
 | -------- | ---------- | ----------------------- |
-| `title`  | **string** | заголовок списка выбора |
-| `rows`   | **array**  | значения списка выбора  |
+| `title`  | **string** | Selection list title |
+| `rows`   | **array**  | Selection list values  |
 
-Поля массива `rows`
+`rows` array parameters
 
-| Параметр | Тип        | Описание                      |
+|Parameter | Type       | Description                     |
 | -------- | ---------- | ----------------------------- |
-| `title`  | **string** | текст значения списка         |
-| `rowId`  | **string** | идентификатор значения списка |
-| `description` | **string** | описание значения списка |
+| `title`  | **string** | List value text         |
+| `rowId`  | **string** | List value identifier |
+| `description` | **string** | List value description |
 
-Поля объекта `quotedMessage`
+`quotedMessage` object parameters
 
-| Параметр      | Тип        | Описание            |
+| Parameter     | Type       | Description             |
 | ------------- | ---------- | ------------------- |
-| `stanzaId` | **string** | id цитируемого сообщения |
-| `participant` | **string** | id отправителя цитируемого сообщения |
-| `typeMessage` | **string** | Тип цитируемого сообщения |
+| `stanzaId` | **string** | Quoted message id |
+| `participant` | **string** | Quoted message sender's id |
+| `typeMessage` | **string** | Quoted message type |
 
-Остальные поля заполняются в зависимости от типа цитируемого сообщения и идентичны полям входящих сообщений описаннных в разделе [Входящие сообщения](Webhook-IncomingMessageReceived.md)
+The rest of the fields are filled depending on the type of the quoted message and are identical to the fields of incoming messages described in [Incoming messages](Webhook-IncomingMessageReceived.md) section
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {
@@ -77,35 +77,35 @@
         "typeMessage": "listMessage",
         "listMessage": {
             "contentText": "Hello",
-            "title": "заголовок",
+            "title": "title",
             "footer": "Hello",
-            "buttonText": "Список действий",
+            "buttonText": "Action list",
             "sections": [
                 {
-                    "title": "Секция 1",
+                    "title": "Section 1",
                     "rows": [
                         {
-                            "title": "Вариант 1",
+                            "title": "Option 1",
                             "rowId": "option1"
                         },
                         {
-                            "title": "Вариант 2",
+                            "title": "Option 2",
                             "rowId": "option2",
-                            "description": "Пояснение"
+                            "description": "Clarification"
                         }
                     ]
                 },
                 {
-                    "title": "Секция 2",
+                    "title": "Section 2",
                     "rows": [
                         {
-                            "title": "Опция 3",
+                            "title": "Option 3",
                             "rowId": "option3"
                         },
                         {
-                            "title": "Опция 4",
+                            "title": "Option 4",
                             "rowId": "option4",
-                            "description": "Пояснение"
+                            "description": "Clarification"
                 }
             ]
         }

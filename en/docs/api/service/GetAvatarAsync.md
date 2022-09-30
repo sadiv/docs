@@ -1,7 +1,5 @@
-# GetAvatarAsync
-
+# (not used) GetAvatarAsync
 The method returns asynchronously the avatar of a correspondent or a group chat. Unlike [GetAvatar](GetAvatar) method, the request result is returned as a webhook AvatarInfo
-
 ## Request {#request}
 
 To get avatar, you have to execute a request at:

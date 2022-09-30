@@ -32,7 +32,7 @@ Parameter | Type | Description
 | Parameter      | Type        | Description                             |
 | ------------- | ---------- | ------------------------------------ |
 | `stanzaId`    | **string** | quoted message id             |
-| `participant` | **string** | qouted message sender's id |
+| `participant` | **string** | quoted message sender's id |
 | `typeMessage` | **string** | quoted message type            |
 
 The rest of the fields are filled depending on the type of the quoted message and are identical to the fields of incoming messages described in [Incoming messages](Webhook-IncomingMessageReceived.md) section

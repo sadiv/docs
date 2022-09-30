@@ -1,4 +1,5 @@
 # SendTemplateButtons
+
 > Temporarily not working. Are not displayed in the recipient's phone.
 
 The method is aimed for sending a message with template list interacrive buttons to a personal or a group chat.
@@ -13,6 +14,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 ```
 
 For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
+
+### Features when working with buttons {#features}
+
+- url buttons are compatible with telephone number buttons, but not with reply buttons;
+- telephone number buttons кнопки  are compatible with url buttons, but not with reply buttons;
+- quick reply buttons are not compatible with telephone numbers buttons and url buttons.
 
 ### Request parameters {#request-parameters}
 
@@ -75,7 +82,7 @@ Sending a message to a personal chat:
 
 ## Response {#response}
 
-### Response paramters {#response-parameters}
+### Response parameters {#response-parameters}
 
 Parameter | Type |  Description
 ----- | ----- | -----
@@ -88,6 +95,15 @@ Parameter | Type |  Description
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Recipient display example {#recieve-example}
+Callback button
+![Пример отображения кнопок](../../assets/button_call.jpeg 'Пример отображения кнопок')
+
+Url button
+![Пример отображения кнопок](../../assets/button_url.jpeg 'Пример отображения кнопок')
+
+Quick reply button
+![Пример отображения кнопок](../../assets/button_response.jpeg 'Пример отображения кнопок')
 
 ### SendMessage errors {#errors}
 

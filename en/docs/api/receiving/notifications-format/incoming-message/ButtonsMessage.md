@@ -1,51 +1,51 @@
-# Входящее сообщение с кнопками
+# Incoming buttons message
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для входящего сообщения с кнопками. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md).
+This section describes `messageData` object incoming webhook format for incoming buttons message. For a description of the general format of incoming webhooks, refer to [Incoming messages](Webhook-IncomingMessageReceived.md) section.
 
-Для получения входящих уведомлений данного вида требуется выполнение двух условий:
+To get incoming webhooks of this type, two conditions must be true:
 
 `typeWebhook` = `incomingMessageReceived`
 
 `messageData.typeMessage` = `buttonsMessage`
 
-## Уведомление {#webhook}
+## Webhook {#webhook}
 
-### Формат уведомления {#webhook-parameters}
+### Webhook parameters {#webhook-parameters}
 
-Поля объекта `messageData`
+`messageData` object parameters
 
-| Параметр          | Тип        | Описание                                                                                        |
+| Parameter          | Type        | Description                                                                                     |
 | ----------------- | ---------- | ----------------------------------------------------------------------------------------------- |
-| `typeMessage`     | **string** | Тип принятого сообщения. Для сообщений данного типа поле принимает значение `buttonsMessage`       |
-| `buttonsMessage` | **object** | Объект данных с кнопками                                                           |
-| `quotedMessage`   | **object** | Объект данных о цитируемом сообщении. Присутствует только, если само сообщение является цитатой |
+| `typeMessage`     | **string** | Incoming message type. For messages of this type the parameter takes on the value `buttonsMessage`       |
+| `buttonsMessage` | **object** | Buttons data object                                                           |
+| `quotedMessage`   | **object** | Quoted message data object. Present only if the message itself is a quote |
 
-Поля объекта `buttonsMessage`
+`buttonsMessage` object parameters
 
-| Параметр      | Тип        | Описание            |
+| Parameter      | Type      | Description          |
 | ------------- | ---------- | ------------------- |
-| `contentText` | **string** | Текстовое сообщение тела кнопок|
-| `footer` | **string** | Текстовое сообщение подвала кнопок|
-| `buttons`   | **object** | Объект данных с кнопками |
+| `contentText` | **string** | Buttons body text message|
+| `footer` | **string** | Buttons footer text message|
+| `buttons`   | **object** | Buttons data object |
 
-Поля объекта `buttons`
+`buttons` object parameters
 
-| Параметр      | Тип        | Описание            |
+| Parameter      | Type       | Description        |
 | ------------- | ---------- | ------------------- |
-| `buttonId` | **string** | id кнопки |
-| `buttonText` | **string** | Текст кнопки |
+| `buttonId` | **string** | Button id |
+| `buttonText` | **string** | Button text |
 
-Поля объекта `quotedMessage`
+`quotedMessage` object parameters
 
-| Параметр      | Тип        | Описание            |
+| Parameter     | Type        | Description           |
 | ------------- | ---------- | ------------------- |
-| `stanzaId` | **string** | id цитируемого сообщения |
-| `participant` | **string** | id отправителя цитируемого сообщения |
-| `typeMessage` | **string** | Тип цитируемого сообщения |
+| `stanzaId` | **string** | Quoted message id |
+| `participant` | **string** | Quoted message sender's id |
+| `typeMessage` | **string** | Quoted message type |
 
-Остальные поля заполняются в зависимости от типа цитируемого сообщения и идентичны полям входящих сообщений описаннных в разделе [Входящие сообщения](Webhook-IncomingMessageReceived.md)
+The rest of the fields are filled depending on the type of the quoted message and are identical to the fields of incoming messages described in [Incoming messages](Webhook-IncomingMessageReceived.md) section
 
-### Пример тела уведомления {#webhook-example-body}
+### Webhook body example {#webhook-example-body}
 
 ```json
 {

@@ -2,8 +2,6 @@
 
 The method returns the chat message history.
 
-> **Important:** Message history is stored and retrieved from the telephone, so it is important that the telephone is available. If the phone loses connection, the method request may end with an HTTP `504` error. 
-
 ## Request {#request}
 
 To get chat history, you have to execute a request at:

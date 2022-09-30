@@ -13,6 +13,12 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 
 For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
+### Features when working with buttons {#features}
+
+- button title length may be up to 25 characters;
+- there can be no more than 3 buttons of this type;
+- the button can only be selected once.
+
 ### Request parameters {#request-parameters}
 
 Parameter | Type | Mandatory | Description
@@ -74,6 +80,9 @@ Parameter | Type |  Description
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Recipient display example {#recieve-example}
+
+![Пример отображения кнопок](../../assets/press-button.jpg 'Пример отображения кнопок')
 
 ### SendMessage errors {#errors}
 

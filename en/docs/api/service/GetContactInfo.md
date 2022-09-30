@@ -1,23 +1,23 @@
 # GetContactInfo
 
-Метод предназначен для получения информации о контакте.
+The method is aimed for getting information on a contact.
 
-## Запрос {#request}
+## Request {#request}
 
-Для получения списка контактов требуется выполнить запрос по адресу:
+To get contacts list, you have to execute a request at:
 ```
 GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента](../chat-id.md)
+`chatId` | **string** | Yes | [Correspondent id](../chat-id.md)
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -25,43 +25,43 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`avatar` | **string** | ссылка на аватар
-`name` | **string** | Имя контакта
-`email` | **string** | Электронная почта контакта
-`category` | **string** | Категория бизнес контакта
-`description` | **string** | Описание бизнес контакта
-`products` | **object** | Карточки товаров контакта
+`avatar` | **string** | Avatar url
+`name` | **string** | Contact name
+`email` | **string** | Contact e-mail
+`category` | **string** | Business contact category
+`description` | **string** | Business contact description
+`products` | **object** | Contact products cards
 
-Поле "имя контакта" 'name' принимает значение исходя из следующих условий:
+The "contact name" 'name' parameter takes on a value based on the following conditions:
 
-1. Если аккаунт записан в телефонную книгу, то имя аккаунта берётся из телефонной книги;
+1. If the account is added to the phone book, then the account name is taken from the phone book;
 
-2. Если аккаунт не записан в телефонную книгу, то используется значение, указанное в профиле аккаунта WhatsApp;
+2. If the account is not added to the phone book, then the name specified in the WhatsApp account profile is used;
 
-3. Если аккаунт не записан в телефонную книгу и если не задано имя в профиле аккаунта WhatsApp, то возвращается пустая строка.
+3. If the account is not added to the phone book, and if no name is set in the WhatsApp account profile, then an empty string is returned.
 
 
-Поля объекта `products`
+`products` object parameters
 
-| Параметр      | Тип        | Описание                             |
+| Parameter      | Type       | Description                             |
 | ------------- | ---------- | ------------------------------------ |
-| `id`    | **string** | id товара            |
-| `imageUrls` | **object** | Ссылки на изображения товара |
-| `availability` | **string** | Доступность товара            |
-| `reviewStatus` | **object** | Статус валидации товара |
-| `name` | **string** | Название товара
-| `description` | **string** | Описание товара
-| `price` | **string** | Цена товара
-| `isHidden` | **boolean** | Состояние товара
+| `id`    | **string** | Prodict id            |
+| `imageUrls` | **object** | Product images urls |
+| `availability` | **string** | Product availability            |
+| `reviewStatus` | **object** | Product review status |
+| `name` | **string** | Product name
+| `description` | **string** | Product description
+| `price` | **string** | Product price
+| `isHidden` | **boolean** | Product condition
 
 
-### Пример тела ответа {#response-example-body}
+### Response body example {#response-example-body}
 
 ```json
 {
@@ -69,7 +69,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
     "name": "Dealer",
     "email": "24service@tt.tt",
     "category": "Automotive Dealership",
-    "description": "Официальный сервис",
+    "description": "Oficial service",
     "products": [
         {
             "id": "42079728159",
@@ -81,8 +81,8 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
                 "whatsapp": "APPROVED"
             },
             "availability": "in stock",
-            "name": "Замена",
-            "description": "От 1000 р.",
+            "name": "Replacement",
+            "description": "From 1000 RUB",
             "price": null,
             "isHidden": false
         },
@@ -96,7 +96,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
                 "whatsapp": "APPROVED"
             },
             "availability": "in stock",
-            "name": "Техническое обслуживание",
+            "name": "Technical maintenance",
             "price": null,
             "isHidden": false
         }
@@ -104,11 +104,11 @@ GET https://api.green-api.com/waInstance{{idInstance}}/getContactInfo/{{apiToken
 }
 ```
 
-### Ошибки GetContactInfo {#errors}
+### GetContactInfo errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md) section
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```python
 import requests
