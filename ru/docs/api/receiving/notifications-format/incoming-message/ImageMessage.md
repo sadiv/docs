@@ -28,6 +28,7 @@
 | `caption`     | **string** | Описание под картинкой или видео |
 | `fileName` | **string** | Название файла |
 | `jpegThumbnail` | **string** | Предпросмотр изображения в base64 |
+| `mimeType` | **string** | Тип файла, согласно класификации [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) |
 
 Поля объекта `quotedMessage`
 
@@ -61,7 +62,8 @@
     "fileMessageData": {
       "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF",
       "caption": "Картинка",
-      "jpegThumbnail": ""
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     }
   }
 }
@@ -89,7 +91,8 @@
     "fileMessageData": {
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/9901742665/39c20293-eb8d-abdd-5fdd1b83820a.mpga",
       "fileName": "39c20293-eb8d-abdd-5fdd1b83820a.mpga",
-      "titleFile": ""
+      "titleFile": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -124,7 +127,8 @@
       "downloadUrl": "https://s/990173687/801078ab-3340-4e4aa5.ogg",
       "caption": "",
       "fileName": "801078ab-3340-4f78-е9978be4aa5.ogg",
-      "jpegThumbnail": ""
+      "jpegThumbnail": "",
+      "mimeType": "audio/ogg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -161,7 +165,8 @@
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/0b-9784-483b-8426-e8d871d6de9f.jpeg",
       "caption": "",
       "fileName": "d417740b483b-8426-e8d871d6de9f.jpeg",
-      "jpegThumbnail": ""
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -202,7 +207,8 @@
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/542ad819-166b-40a4-b0e1-279069cd03bb.jpeg",
       "caption": "",
       "fileName": "542ad819-166b-b0e1-279069cd03bb.jpeg",
-      "jpegThumbnail": ""
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
