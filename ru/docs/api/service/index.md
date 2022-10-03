@@ -10,3 +10,4 @@
 - [Удалить сообщение](deleteMessage.md)
 - [Архивировать чат](archiveChat.md)
 - [Разархивировать чат](unarchiveChat.md)
+- [Изменить настройки исчезающих сообщений чата](SetDisappearingChat.md)

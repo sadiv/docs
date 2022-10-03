@@ -120,6 +120,7 @@ nav:
             - 'Удалить сообщение': 'api/service/deleteMessage.md'
             - 'Архивировать чат': 'api/service/archiveChat.md'
             - 'Разархивировать чат': 'api/service/unarchiveChat.md'
+            - 'Изменить настройки исчезающих сообщений чата ': 'api/service/SetDisappearingChat.md'
         - 'Прочее':
             - 'Идентификатор чата': 'api/chat-id.md'
             - 'Интервал отправки сообщений': 'api/send-messages-delay.md'
