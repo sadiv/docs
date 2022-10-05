@@ -109,7 +109,7 @@ Make sure you have completed all the steps in [Before you start](../before-start
 - [Delete message](./service/deleteMessage.md)
 - [Archive chat](./service/archiveChat.md)
 - [Unarchive chat](./service/unarchiveChat.md)
-- [Change chat disappering chat messages settings](./service/SetDisappearingChat.md)
+- [Change chat disappering messages settings](./service/SetDisappearingChat.md)
 
 ## Other {#dif}
 
