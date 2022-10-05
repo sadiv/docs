@@ -103,7 +103,13 @@ Make sure you have completed all the steps in [Before you start](../before-start
 
 - [Check WhatsApp availability](./service/CheckWhatsapp.md)
 - [Get avatar](./service/GetAvatar.md)
+- [Get avatar asynchronously](./service/GetAvatarAsync.md)
 - [Get contacts](./service/GetContacts.md)
+- [Get contact info](./service/GetContactInfo.md)
+- [Delete message](./service/deleteMessage.md)
+- [Archive chat](./service/archiveChat.md)
+- [Unarchive chat](./service/unarchiveChat.md)
+- [Change chat disappering chat messages settings](./service/SetDisappearingChat.md)
 
 ## Other {#dif}
 
