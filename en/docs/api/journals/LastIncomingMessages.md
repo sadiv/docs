@@ -1,8 +1,6 @@
 # LastIncomingMessages
 
-The method returns the last incoming messages of the account.
-
-> Incoming messages are stored on the server for 24 hours.
+The method returns the last incoming messages of the account. In the default mode the incoming messages for 24 hours are returned.
 
 ## Request {#request}
 
@@ -12,6 +10,12 @@ GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{ap
 ```
 
 For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
+
+### URL request parameters {#request-parameters}
+
+Parameter | Type | Mandatory | Description
+----- | ----- | ----- | -----
+`minutes` | **integer** | No | time in minutes for which the messages should be displayed (default is 1440 minutes)
 
 ## Response {#response}
 
@@ -33,6 +37,12 @@ Parameter | Type|  Description
 | | `contactMessage` - contact message
 | | `extendedTextMessage` - link and preview message
 | | `quotedMessage` - quoted message 
+| | `buttonsMessage` - buttons message
+| | `templateMessage` - template buttons message
+| | `listMessage` - list button message
+| | `buttonsResponseMessage` - buttons response
+| | `templateButtonsReplyMessage` - template buttons response
+| | `listResponseMessage` - list response
 `chatId` | **string** | [Chat Id](../chat-id.md), where the message has been received
 `senderId` | **string** | Message sender [Id](../chat-id.md#corr) 
 `senderName` | **string** | Message sender name
@@ -42,6 +52,7 @@ Parameter | Type|  Description
 `location` | **object** | Location structure object
 `contact` | **object** | Contact structure object
 `extendedTextMessage` | **object** | Link data structure object
+`quotedMessage` | **object** | Quoted message data object. Present only if the message itself is a quote
 
 Parameters of `location` object:
 
