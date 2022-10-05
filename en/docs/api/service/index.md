@@ -10,3 +10,4 @@ This section presents different service methods
 - [Delete message](deleteMessage.md)
 - [Archive a chat](archiveChat.md)
 - [Unarchive a chat](unarchiveChat.md)
+- [Change chat disappearing messages settings](SetDisappearingChat.md)
