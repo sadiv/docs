@@ -52,14 +52,25 @@ POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{ap
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
-## Пример кода на curl  {#request-example-curl}
+## Пример кода на Python  {#request-example-python}
 
-```curl
-curl --location --request POST 'https://api.green-api.com/waInstance{idInstance}/setDisappearingChat/{tokenInstance}' \
---header 'Content-Type: application/json' \
---data-raw '{
-"chatId": "712345678910@c.us",
-"ephemeralExpiration": 86400
-}'
+```
+
+import requests
+import json
+
+url = "https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}
+"
+payload = json.dumps({
+  "chatId": "712345678910@c.us",
+  "ephemeralExpiration": 0
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
 
 ```

@@ -31,6 +31,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 `statusMessage` | **string** | Статус исходящего сообщения, возможные значения:
 | | `noAccount` - нет аккаунта WhatsApp на номере телефона
 | | `notInGroup` - не состоите в данной группе
+| | `pending` - сообщение отправляется
 | | `sent` - отправлено
 | | `delivered` - доставлено
 | | `read` - прочитано/просмотрено/прослушано
