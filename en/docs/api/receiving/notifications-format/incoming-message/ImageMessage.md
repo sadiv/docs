@@ -28,6 +28,7 @@ Parameter | Type | Description
 `caption` | **string** | File caption
 | `fileName` | **string** | File name |
 | `titleFile` | **string** | File title |
+| `mimeType` | **string** | File type according to the classification [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) |
 
 `quotedMessage` object parameters
 
@@ -60,12 +61,13 @@ The rest of the fields are filled depending on the type of the quoted message an
     "typeMessage": "imageMessage",
     "fileMessageData": {
       "downloadUrl": "https://api.green-api.com/waInstance1234/downloadFile/19136A974392FA8CF584D70DD0E1AEDF",
-      "caption": "Image"
+      "caption": "Image",
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     }
   }
 }
 ```
-
 
 ### Audio and text quote incoming message webhook body example {#webhook-example-body}
 
@@ -89,7 +91,8 @@ The rest of the fields are filled depending on the type of the quoted message an
     "fileMessageData": {
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/9901742665/39c20293-eb8d-abdd-5fdd1b83820a.mpga",
       "fileName": "39c20293-eb8d-abdd-5fdd1b83820a.mpga",
-      "titleFile": ""
+      "titleFile": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -123,15 +126,17 @@ The rest of the fields are filled depending on the type of the quoted message an
     "fileMessageData": {
       "downloadUrl": "https://s/990173687/801078ab-3340-4e4aa5.jpeg",
       "caption": "",
-      "fileName": "801078ab-3340-4f78-е9978be4aa5.jpeg",
-      "titleFile": ""
+      "fileName": "801078ab-3340-4f78-е9978be4aa5.ogg",
+      "jpegThumbnail": "",
+      "mimeType": "audio/ogg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
       "participant": "79001234568@c.us",
       "typeMessage": "imageMessage",
       "downloadUrl": "",
-      "caption": ""
+      "caption": "",
+      "jpegThumbnail": ""
     }
   }
 }
@@ -160,7 +165,8 @@ The rest of the fields are filled depending on the type of the quoted message an
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/0b-9784-483b-8426-e8d871d6de9f.jpeg",
       "caption": "",
       "fileName": "d417740b483b-8426-e8d871d6de9f.jpeg",
-      "titleFile": ""
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
@@ -201,7 +207,8 @@ The rest of the fields are filled depending on the type of the quoted message an
       "downloadUrl": "https://sw-media.storage.yandexcloud.net/542ad819-166b-40a4-b0e1-279069cd03bb.jpeg",
       "caption": "",
       "fileName": "542ad819-166b-b0e1-279069cd03bb.jpeg",
-      "titleFile": ""
+      "jpegThumbnail": "",
+      "mimeType": "image/jpeg"
     },
     "quotedMessage": {
       "stanzaId": "9A73322488DCB7D9689A6112F2528C9D",
