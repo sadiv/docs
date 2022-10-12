@@ -4,7 +4,7 @@ The method is aimed for changing settings of disappearing messages in chats. The
 
 ## Request {#request}
 
-To set settings, you have to execute a request at::
+To set settings, you have to execute a request at:
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}
 ```
