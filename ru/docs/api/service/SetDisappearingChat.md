@@ -35,7 +35,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{ap
 ----- | ----- | ----- 
 `chatId` | **string** | Да | [Идентификатор корреспондента](../chat-id.md)
 `disappearingMessagesInChat` | **boolean** | Состояние чата (исчезающий или обычный) принимает значения: true, false
-`ephemeralExpiration` | **integer** | Время жизни сообщений в чате, принимает значения: 0, 86400, 604800, 7776000
+`ephemeralExpiration` | **integer** | Время жизни сообщений в чате, принимает значения в секундах: 0, 86400, 604800, 7776000
 
 
 ### Пример тела ответа {#response-example-body}

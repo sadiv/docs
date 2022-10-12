@@ -1,10 +1,12 @@
 # Set Disappearing Chat
 
+
 The method is aimed for changing settings of disappearing messages in chats. The standard settings of the application are used: 0 (off), 86400 (24 hours), 604800 (7 days), 7776000 (90 days).
 
 ## Request {#request}
 
 To set settings, you have to execute a request at:
+
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}
 ```
@@ -37,8 +39,8 @@ Parameter | Type |  Description
 `disappearingMessagesInChat` | **boolean** | Chat state (disappearing or plain), takes on the values: true, false
 `ephemeralExpiration` | **integer** | Messages lifetime in chats, takes on the values: 0, 86400, 604800, 7776000
 
-
 ### Response body example {#response-example-body}
+
 
 ```json
 {
@@ -73,4 +75,6 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 print(response.text)
 
+
 ```
+
