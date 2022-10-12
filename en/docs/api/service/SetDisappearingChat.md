@@ -1,24 +1,26 @@
 # Set Disappearing Chat
 
-Метод предназначен для изменения настроек исчезающих сообщений в чатах. Используются стандартные настройки приложения: 0 (выключено), 86400 (24 часа), 604800 (7 дней), 7776000 (90 дней).
 
-## Запрос {#request}
+The method is aimed for changing settings of disappearing messages in chats. The standard settings of the application are used: 0 (off), 86400 (24 hours), 604800 (7 days), 7776000 (90 days).
 
-Для установки настроек требуется выполнить запрос по адресу:
+## Request {#request}
+
+To set settings, you have to execute a request at:
+
 ```
 POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{apiTokenInstance}}
 ```
 
-Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
 
-### Параметры запроса {#request-parameters}
+### Request parameters {#request-parameters}
 
-Параметр | Тип | Обязательный | Описание
+Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Идентификатор корреспондента](../chat-id.md)
-`ephemeralExpiration` | **integer** | Нет | Время жизни сообщений в секундах, принимает значения: 0, 86400, 604800, 7776000
+`chatId` | **string** | Yes | [Correspondent id](../chat-id.md)
+`ephemeralExpiration` | **integer** | No | Messages lifetime in seconds, takes on the values: 0, 86400, 604800, 7776000
 
-### Пример тела запроса {#request-example-body}
+### Request body example {#request-example-body}
 
 ```json
 {
@@ -27,18 +29,18 @@ POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{ap
 }
 ```
 
-## Ответ {#response}
+## Response {#response}
 
-### Поля ответа {#response-parameters}
+### Response parameters {#response-parameters}
 
-Поле | Тип |  Описание
+Parameter | Type |  Description
 ----- | ----- | ----- 
-`chatId` | **string** | Да | [Идентификатор корреспондента](../chat-id.md)
-`disappearingMessagesInChat` | **boolean** | Состояние чата (исчезающий или обычный) принимает значения: true, false
-`ephemeralExpiration` | **integer** | Время жизни сообщений в чате, принимает значения в секундах: 0, 86400, 604800, 7776000
+`chatId` | **string** | yes | [Correspondent id](../chat-id.md)
+`disappearingMessagesInChat` | **boolean** | Chat state (disappearing or plain), takes on the values: true, false
+`ephemeralExpiration` | **integer** | Messages lifetime in chats, takes on the values: 0, 86400, 604800, 7776000
 
+### Response body example {#response-example-body}
 
-### Пример тела ответа {#response-example-body}
 
 ```json
 {
@@ -48,11 +50,11 @@ POST https://api.green-api.com/waInstance{{idInstance}}/setDisappearingChat/{{ap
 }
 ```
 
-### Ошибки SetDisappearingChat {#errors}
+### SetDisappearingChat errors {#errors}
 
-Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
+For a list of errors common to all methods, refer to [Common errors](../common-errors.md)
 
-## Пример кода на Python  {#request-example-python}
+## Python request example  {#request-example-python}
 
 ```
 
@@ -73,4 +75,6 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 print(response.text)
 
+
 ```
+
