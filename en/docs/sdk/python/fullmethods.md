@@ -1,4 +1,4 @@
-# Полный список методов библиотеки
+# The full list of the library methods
 
 Method | Description |  Documentation
 ----- | ----- | ----- 
@@ -38,14 +38,14 @@ Method | Description |  Documentation
 `sending.sendLocation` | The method is aimed for sending a location message | [SendLocation.md](https://github.com/green-api/docs/blob/master/ru/docs/api/sending/SendLocation.md)
 `sending.sendMessage` | The method is aimed for sending a text message to a personal or a group chat | [SendMessage.md](https://github.com/green-api/docs/blob/master/ru/docs/api/sending/SendMessage.md)
 `sending.sendTemplateButtons` | The method is aimed for sending a message with template list interacrive buttons to a personal or a group chat | [SendTemplateButtons.md](https://github.com/green-api/docs/blob/master/ru/docs/api/sending/SendTemplateButtons.md)
-`serviceMethods.checkWhatsapp` | Метод проверяет наличие аккаунта WhatsApp на номере телефона | [CheckWhatsapp.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/CheckWhatsapp.md)
-`serviceMethods.getAvatar` | Метод возвращает аватар корреспондента или группового чата | [GetAvatar.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetAvatar.md)
-`serviceMethods.getContactInfo` | Метод предназначен для получения информации о контакте | [GetContactInfo.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetContactInfo.md)
-`serviceMethods.getContacts` | Метод предназначен для получения списка контактов текущего аккаунта | [GetContacts.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetContacts.md)
-`serviceMethods.setDisappearingChat` | Метод предназначен для изменения настроек исчезающих сообщений в чатах. Нужно использовать стандартные настройки приложения: 0 (выключено), 86400 (24 часа), 604800 (7 дней), 7776000 (90 дней) | [SetDisappearingChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)
-`serviceMethods.archiveChat` | Метод архивирует чат. Архивировать можно чаты, в которых есть хотя бы одно входящее сообщение | [ArchiveChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/ArchiveChat.md)
-`serviceMethods.deleteMessage` | Метод удаляет сообщение из чата | [DeleteMessage.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/deleteMessage.md)
-`serviceMethods.unarchiveChat` | Метод разархивирует чат | [UnarchiveChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/UnarchiveChat.md)
-`serviceMethods.setDisappearingChat` | Метод предназначен для изменения настроек исчезающих сообщений в чатах | [SetDisappearingChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)
-`webhooks.startReceivingNotifications` | Метод предназначен для запуска получения вебхуков | <библиотечный метод>
-`webhooks.stopReceivingNotifications` | Метод предназначен для остановки получения вебхуков | <библиотечный метод>
+`serviceMethods.checkWhatsapp` | The method checks WhatsApp account availability on a phone number | [CheckWhatsapp.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/CheckWhatsapp.md)
+`serviceMethods.getAvatar` | The method returns a user or a group chat avatar | [GetAvatar.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetAvatar.md)
+`serviceMethods.getContactInfo` | The method is aimed for getting information on a contact | [GetContactInfo.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetContactInfo.md)
+`serviceMethods.getContacts` | The method is aimed for getting a list of the current account contacts | [GetContacts.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/GetContacts.md)
+`serviceMethods.setDisappearingChat` | The method is aimed for changing settings of disappearing messages in chats. The standard settings of the application are to be used: 0 (off), 86400 (24 hours), 604800 (7 days), 7776000 (90 days) | [SetDisappearingChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)
+`serviceMethods.archiveChat` | The method archives a chat. One can archive chats that have at least one incoming message | [ArchiveChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/ArchiveChat.md)
+`serviceMethods.deleteMessage` | The method deletes a message from a chat | [DeleteMessage.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/deleteMessage.md)
+`serviceMethods.unarchiveChat` | The method unarchives a chat | [UnarchiveChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/UnarchiveChat.md)
+`serviceMethods.setDisappearingChat` | The method is aimed for changing settings of disappearing messages in chats | [SetDisappearingChat.md](https://github.com/green-api/docs/blob/master/ru/docs/api/service/SetDisappearingChat.md)
+`webhooks.startReceivingNotifications` | The method is aimed for starting to receive webhooks | <library method>
+`webhooks.stopReceivingNotifications` | The method is aimed for stopping to receive webhooks | <library method>
