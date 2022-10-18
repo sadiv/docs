@@ -7,7 +7,7 @@ pip install whatsapp-api-client-python
 ```
 from whatsapp_api_client_python import API
 ```
-### Примеры
+### Examples
 You may see the full example at: [receiveNotification.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/receiveNotification.py)
 
 #### How to initialize an object
