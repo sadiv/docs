@@ -11,7 +11,7 @@ You can find REST API documentation by [url](https://green-api.com/docs/api/). T
 
 #### Authorization
 
-To send a message or to exacute some other Green-API method, you have to have the WhatsApp account in the phone application to be authorized. To authorize your account please go to the [personal area](https://console.green-api.com) and scan a QR-code using the WhatsApp application.
+To send a message or to execute some other Green-API method, you have to have the WhatsApp account in the phone application to be authorized. To authorize your account please go to the [personal area](https://console.green-api.com) and scan a QR-code using the WhatsApp application.
 
 #### [How to send a text message](sendmessage.md)
 #### [How to send a file by URL](sendfilebyurl.md)
