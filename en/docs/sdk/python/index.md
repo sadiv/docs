@@ -3,11 +3,11 @@
 [![Python application](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-app.yml)
 [![Upload Python Package](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-publish.yml)
 
-[Python library](https://github.com/green-api/whatsapp-api-client-python) for integration with WhatsAPP messanger via API of [green-api.com](https://green-api.com) service. To use the library you have to get a registration token and an account id in the [personal area](https://console.green-api.com). There is a free developer account tariff plan.
+[Python library](https://github.com/green-api/whatsapp-api-client-python) for integration with WhatsAPP messanger via API of [green-api.com](https://green-api.com/en) service. To use the library you have to get a registration token and an account id in the [personal area](https://console.green-api.com). There is a free developer account tariff plan.
 
 #### API
 
-You can find REST API documentation by [url](https://green-api.com/docs/api/). The library is a wrapper for REST API, so the documentation at the above url applies to the library as well.
+You can find REST API documentation by [url](https://green-api.com/en/docs/api/). The library is a wrapper for REST API, so the documentation at the above url applies to the library as well.
 
 #### Authorization
 
@@ -21,7 +21,7 @@ To send a message or to execute some other Green-API method, you have to have th
 
 #### Service methods documentation
 
-[https://green-api.com/docs/api/](https://green-api.com/docs/api/)
+[Service methods documentation](https://green-api.com/docs/api/)
 
 #### External products
 
