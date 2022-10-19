@@ -1,6 +1,6 @@
-# Нажатие пользователя на шаблонную кнопку
+# Выбор шаблонной кнопки
 
-В данном разделе описывается формат входящего уведомления объекта `messageData` для шаблонных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](Webhook-IncomingMessageReceived.md). 
+В данном разделе описывается формат входящего уведомления объекта `messageData` для шаблонных кнопок. Для получения описания общего формата входящих уведомлений обратитесь к разделу [Входящие сообщения](/../docs/api/receiving/notifications-format/). 
 
 ## Уведомление {#webhook}
 
@@ -20,6 +20,7 @@
 `selectedIndex` | **string** | числовой индекс нажатой кнопки
 `selectedId` | **string** | идентификатор нажатой кнопки
 `selectedDisplayText` | **string** | текст нажатой кнопки
+`stanzaId` | **string** | ID сообщения с кнопками
 
 ### Пример тела уведомления {#webhook-example-body}
 
@@ -41,6 +42,7 @@
     "messageData": {
         "typeMessage": "templateButtonReplyMessage",
         "templateButtonReplyMessage": {
+            "stanzaId": "BAE53AFDD5F0C137",
             "selectedIndex": 2,
             "selectedId": "id1",
             "selectedDisplayText": "red"

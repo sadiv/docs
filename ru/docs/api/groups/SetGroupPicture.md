@@ -25,7 +25,7 @@ import requests
 
 url = "https://api.green-api.com/waInstance{{idInstance}}/setGroupPicture/{{apiTokenInstance}}"
 
-payload = "{\r\n    \"groupId\": \"12345678910-1112131415@g.us\",\r\n}"
+payload = "{\r\n    \"groupId\": \"120363043968066561@g.us\",\r\n}"
 files=[
   ('file',('{{file}}.jpeg',open('/C:/{{file}}.jpeg','rb'),'image/jpeg'))
 ]

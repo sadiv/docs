@@ -31,7 +31,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/GetAvatar/{{apiTokenInst
 Получить аватар группового чата:
 ```json
 {
-    "chatId": "79001234567-1581234048@g.us"
+    "chatId": "120363043968066561@g.us"
 }
 ```
 

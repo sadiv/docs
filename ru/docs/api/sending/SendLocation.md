@@ -40,7 +40,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/sendLocation/{{apiTokenI
 Отправка сообщения в групповой чат:
 ```json
 {
-    "chatId": "79001234567-1581234048@g.us",
+    "chatId": "120363043968066561@g.us",
     "nameLocation": "Restaurant",
     "address": "123456, Perm",
     "latitude": 12.3456789,

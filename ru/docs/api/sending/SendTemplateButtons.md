@@ -1,5 +1,7 @@
 # SendTemplateButtons
 
+>Временно не работает. Не отображаются в телефоне получателя.
+
 Метод предназначен для отправки сообщения с интерактивными кнопками из перечня шаблонов в личный или групповой чат.
 Сообщение будет добавлено в очередь на отправку.  Проверка авторизации whatsapp-а на телефоне (т.е. наличие в связанных устройствах) не выполняется. Сообщение на отправку хранится 24 часа в очереди и будет отправлено сразу же после авторизации телефона. 
 Скорость отправки сообщений из очереди регулирует параметр [Интервал отправки сообщений](../send-messages-delay.md).
@@ -8,10 +10,16 @@
 
 Для отправки требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/sendTemplateButtons/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+
+### Особенности при работе с кнопками {#features}
+
+- кнопки-ссылки совместимы с кнопками номерами, но не совместимы с кнопками-ответами;
+- кнопки с телефонным номером совместимы с кнопками ссылками, но не совместимы с кнопками-ответами;
+- кнопки с быстрыми ответами не совместимы с кнопками номерами и кнопками ссылками.
 
 ### Параметры запроса {#request-parameters}
 
@@ -87,15 +95,24 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Пример отображения у получателя {#recieve-example}
+Кнопка с обратным звонком
+![Пример отображения кнопок](../../assets/button_call.jpeg 'Пример отображения кнопок')
 
-### Ошибки SendMessage {#errors}
+Кнопка с ссылкой
+![Пример отображения кнопок](../../assets/button_url.jpeg 'Пример отображения кнопок')
+
+Кнопка с быстрым ответом
+![Пример отображения кнопок](../../assets/button_response.jpeg 'Пример отображения кнопок')
+
+### Ошибки SendTemplateButtons {#errors}
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример curl
 
 ```
-curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}' \
+curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/SendTemplateButtons/{{apiTokenInstance}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"chatId": "79001234567@c.us",

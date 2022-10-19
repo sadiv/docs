@@ -45,7 +45,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/CreateGroup/{{apiTokenIn
 ```json
 {
     "created": true,
-    "chatId": "79001234567-1587570015@g.us",
+    "chatId": "120363043968066561@g.us",
     "groupInviteLink": "https://chat.whatsapp.com/xxxxxxxxxxxxxxxxxxxxxx"
 }
 ```

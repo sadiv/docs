@@ -26,6 +26,7 @@ Parameter | Type | Mandatory | Description
 ----- | ----- | ----- | -----
 `chatId` | **string** | Yes | [Chat Id](../chat-id.md)
 `file` | **file** | Yes | Outgoing file
+`fileName` | **string** | No| File name. Must contain file extension.
 `caption` | **string** | No | File caption. Caption added to video, images. 
 `quotedMessageId` | **string** | No | Quoted message Id. If present, the message will be sent quoting the specified chat message.
 
@@ -39,7 +40,7 @@ import requests
 url = "https://api.green-api.com/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}"
 
 payload = {'chatId': '79001234567@c.us',
-'caption': 'Caption'}
+'caption': 'Description'}
 files = [
   ('file', open('/C:/window.jpg','rb'))
 ]
@@ -56,7 +57,7 @@ print(response.text.encode('utf8'))
 
 Parameter | Type |  Description
 ----- | ----- | ----- 
-`idMessage ` | **string** | Outgoing message Id 
+`idMessage ` | **string** | Sent message Id 
 
 ### Response body example {#response-example-body}
 

@@ -5,6 +5,7 @@ Webhook Endpoint technology allows you to receive incoming webhooks directly to 
 > The Green API server makes 5 attempts to deliver webhooks with an extended delay. Therefore, set up your server so that it is always available to process incoming webhooks, or use [Receive webhooks via HTTP API](technology-http-api.md) technology, where the delivery of incoming webhooks is guaranteed within 24 hours.
 
 ## Server setting
+
 To receive incoming webhooks using Webhook Endpoint technology, you will need to complete the below steps:
 
 - to publish the IP address on the internet
@@ -15,6 +16,22 @@ To receive incoming webhooks using Webhook Endpoint technology, you will need to
 
 To receive incoming webhooks, a public IP address (endpoint) is required, which will be accessible from the Internet. Thus, the Green API server will be able to make a call to your server at the specified address and transmit an incoming webhook.
 
+### Our public IP-addresses which we sent webhooks from
+
+You may specify the below IP addresses from which webhooks from us are received, in your server's security settings:
+
+```
+51.250.84.44
+51.250.94.65
+51.250.91.13
+51.250.93.251
+51.250.76.115
+51.250.69.65
+51.250.68.181
+51.250.69.45
+51.250.74.200
+51.250.87.205
+```
 ### Incoming webhooks processing
 
 After receiving an incoming call to the IP address of your server, you will need to process the received webhook. You can see the example of incoming webhook processing code on [NodeJS](https://nodejs.org) in [file](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js)
@@ -50,7 +67,7 @@ It is also required to specify what types of webhooks you need to receive. To en
 
 You can also set up to receive incoming webhooks online. To do this, go to [My Profile](https://console.green-api.com) and select the required user account. If the account is authorized, the settings for receiving incoming webhooks will be displayed, see fig. Specify the `webhookUrl` parameter, as well as the switches by webhooks types and, if you need authorization on your webhook server, specify Webhook URL Token. If the account is not authorized and the webhooks settings are not displayed, refer to [Before you start](../../before-start.md#qr) section.
 
-![Incoming webhooks settings](../../assets/technology-webhook-endpoint.png "Incoming webhooks settings")
+![Setup in your profile](../../assets/technology-webhook-endpoint.png)
 
 ## Receive incoming webhooks
 
@@ -61,7 +78,6 @@ After setting up the account, you can start receiving webhooks. You can see the 
 You can use any free service on the Internet to debug incoming webhooks, for example, [Webhook.Site](https://webhook.site/) service. The service issues a unique address (URL), which is required to [set](# webhookUrl) as the `webhookUrl` parameter.
 
 A detailed description of incoming webhooks format is given in [Incoming webhooks format](notifications-format/index.md) section.
-
 
 Http request example that send by green-api:
 

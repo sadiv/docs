@@ -1,17 +1,22 @@
 # LastOutgoingMessages
 
-Метод возвращает крайние отправленные сообщения аккаунта.
-
-> Срок хранения отправленных сообщений на сервере составляет 24 часа.
+Метод возвращает крайние отправленные сообщения аккаунта. По умолчанию возвращаются последние сообщения за 24 часа.
 
 ## Запрос {#request}
 
 Для получения отправленных сообщений требуется выполнить запрос по адресу:
 ```
-GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{apiTokenInstance}}
+GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{apiTokenInstance}}?minutes={{minutes_count}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+
+### Параметры URL запроса {#request-parameters}
+
+Параметр | Тип | Обязательный | Описание
+----- | ----- | ----- | -----
+`minutes` | **integer** | нет | время в минутах, за которое требуется показать сообщения (по умолчанию равно 1440 минут)
+
 
 ## Ответ {#response}
 
@@ -26,6 +31,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 `statusMessage` | **string** | Статус исходящего сообщения, возможные значения:
 | | `noAccount` - нет аккаунта WhatsApp на номере телефона
 | | `notInGroup` - не состоите в данной группе
+| | `pending` - сообщение отправляется
 | | `sent` - отправлено
 | | `delivered` - доставлено
 | | `read` - прочитано/просмотрено/прослушано

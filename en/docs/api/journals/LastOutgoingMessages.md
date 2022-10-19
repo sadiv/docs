@@ -1,8 +1,6 @@
 # LastOutgoingMessages
 
-The method returns the last outgoing messages of the account.
-
-> Outgoing messages are stored on the server for 24 hours.
+The method returns the last outgoing messages of the account. In the default mode the last messages for 24 hours are returned.
 
 ## Request {#request}
 
@@ -12,6 +10,13 @@ GET https://api.green-api.com/waInstance{{idInstance}}/LastOutgoingMessages/{{ap
 ```
 
 For `idInstance` and `apiTokenInstance` request parameters, refer to [Before you start](../../before-start.md#parameters) section.
+
+### Параметры URL запроса {#request-parameters}
+
+Parameter | Type | Mandatory | Description
+----- | ----- | ----- | -----
+`minutes` | **integer** | No | time in minutes for which the messages should be displayed (default is 1440 minutes)
+
 
 ## Response {#response}
 

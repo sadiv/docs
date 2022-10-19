@@ -40,9 +40,9 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 #### [Входящее сообщение](receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) {#receiving-incoming-message}
 
 - [Входящее текстовое сообщение](./receiving/notifications-format/incoming-message/TextMessage.md)
-- [Нажатие пользователя на обычную кнопку](./receiving/notifications-format/incoming-message/ButtonsResponseMessage.md)
-- [Нажатие пользователя на шаблонную кнопку](./receiving/notifications-format/incoming-message/TemplateButtonsReplyMessage.md)
-- [Нажатие пользователя на значение списка выбора](./receiving/notifications-format/incoming-message/ListResponseMessage.md)
+- [Выбор обычной кнопки](./receiving/notifications-format/selected-buttons/ButtonsResponseMessage.md)
+- [Выбор шаблонной кнопки](./receiving/notifications-format/selected-buttons/TemplateButtonsReplyMessage.md)
+- [Выбор элемента списка](./receiving/notifications-format/selected-buttons/ListResponseMessage.md)
 - [Входящее текстовое сообщение с URL](./receiving/notifications-format/incoming-message/ExtendedTextMessage.md)
 - [Входящее сообщение с изображением, видео, аудио, документом](./receiving/notifications-format/incoming-message/ImageMessage.md)
 - [Входящее сообщение с геолокацией](./receiving/notifications-format/incoming-message/LocationMessage.md)
@@ -103,7 +103,13 @@ Green API предоставляет HTTP API WhatsApp для отправки �
 
 - [Проверить наличие WhatsApp](./service/CheckWhatsapp.md)
 - [Получить аватар](./service/GetAvatar.md)
+- [Получить аватар асинхронно](./service/GetAvatarAsync.md)
 - [Получить контакты](./service/GetContacts.md)
+- [Получить информацию о контакте](./service/GetContactInfo.md)
+- [Удалить сообщение](./service/deleteMessage.md)
+- [Архивировать чат](./service/archiveChat.md)
+- [Разархивировать чат](./service/unarchiveChat.md)
+- [Изменить настройки исчезающих сообщений чата](./service/SetDisappearingChat.md)
 
 ## Прочее {#dif}
 

@@ -8,10 +8,16 @@
 
 Для отправки требуется выполнить запрос по адресу:
 ```
-POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenInstance}}
+POST https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenInstance}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+
+### Особенности при работе с кнопками {#features}
+
+- в названии кнопки может быть не более 25 символов;
+- может быть не более 3 кнопок такого вида;
+- кнопку можно нажать только 1 раз.
 
 ### Параметры запроса {#request-parameters}
 
@@ -74,15 +80,18 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
     "idMessage": "3EB0C767D097B7C7C030"
 }
 ```
+### Пример отображения у получателя {#recieve-example}
 
-### Ошибки SendMessage {#errors}
+![Пример отображения кнопок](../../assets/press-button.jpg 'Пример отображения кнопок')
+
+### Ошибки SendButtons {#errors}
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../common-errors.md)
 
 ## Пример curl
 
 ```
-curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}' \
+curl --location --request POST 'https://api.green-api.com/waInstance{{idInstance}}/SendButtons/{{apiTokenInstance}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "chatId": "79001234567@c.us",

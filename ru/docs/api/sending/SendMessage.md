@@ -23,7 +23,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 `archiveChat` | **boolean** | Нет | Помещает в архив чат, в который отправлено сообщение. Принимает значания: true|false
 
 
-> Максимальная длина текстового сообщения составляет 4096 символов
+> Максимальная длина текстового сообщения составляет 10000 символов
 
 ### Пример тела запроса {#request-example-body}
 
@@ -38,7 +38,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/SendMessage/{{apiTokenIn
 Отправка сообщения в групповой чат:
 ```json
 {
-    "chatId": "79001234567-1581234048@g.us",
+    "chatId": "120363043968066561@g.us",
     "message": "I use Green-API to send this message to you!"
 }
 ```

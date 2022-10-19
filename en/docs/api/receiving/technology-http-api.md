@@ -12,19 +12,14 @@ Before receiving incoming webhooks, you need to set up your account. Account set
 
 ### Setup by [SetSettings](../account/SetSettings.md) {#SetSettings} method
 
-To set up receiving incoming webhooks using HTTP API technology, you need to specify the below value as `webhookUrl` parameter:
-
-```
-https://webhook.green-api.com
-```
-
+To set up receiving incoming webhooks using HTTP API technology, you need to fill the setting blank the  value as `webhookUrl` parameter.
 It is also required to specify what types of webhooks you need to receive. To enable incoming webhooks by type, as well as to specify `webhookUrl` parameter, use [SetSettings](../account/SetSettings.md) method.
 
 #### Example of [SetSettings](../account/SetSettings.md) method request body
 
 ```json
 {
-    "webhookUrl": "https://webhook.green-api.com",
+    "webhookUrl": "",
     "outgoingWebhook": "yes",
     "stateWebhook": "yes",
     "incomingWebhook": "yes",

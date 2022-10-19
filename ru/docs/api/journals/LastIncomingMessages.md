@@ -1,17 +1,21 @@
 # LastIncomingMessages
 
-Метод возвращает крайние входящие сообщения аккаунта.
-
-> Срок хранения входящих сообщений на сервере составляет 24 часа.
+Метод возвращает крайние входящие сообщения аккаунта. По умолчанию возвращаются последние сообщения за 24 часа.
 
 ## Запрос {#request}
 
 Для получения входящих сообщений требуется выполнить запрос по адресу:
 ```
-GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}
+GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}?minutes={{minutes_count}}
 ```
 
 Для получения параметров запроса `idInstance` и `apiTokenInstance` обратитесь к разделу [Перед началом работы](../../before-start.md#parameters).
+
+### Параметры URL запроса {#request-parameters}
+
+Параметр | Тип | Обязательный | Описание
+----- | ----- | ----- | -----
+`minutes` | **integer** | нет | время в минутах, за которое требуется показать сообщения (по умолчанию равно 1440 минут)
 
 ## Ответ {#response}
 
@@ -169,7 +173,7 @@ GET https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{ap
 ```python
 import requests
 
-url = "https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}"
+url = "https://api.green-api.com/waInstance{{idInstance}}/lastIncomingMessages/{{apiTokenInstance}}?minutes=3240"
 
 payload = {}
 headers= {}
