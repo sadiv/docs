@@ -22,7 +22,7 @@
 
 #### Документация по методам сервиса
 
-[https://green-api.com/docs/api/](https://green-api.com/docs/api/)
+[Документация по методам сервиса](https://green-api.com/docs/api/)
 
 #### Сторонние продукты
 

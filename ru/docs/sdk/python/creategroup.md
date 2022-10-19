@@ -5,7 +5,7 @@ pip install whatsapp-api-client-python
 ```
 ### Import 
 ```
-from whatsapp_api_client_python import API
+from whatsapp_api_client_python import greenAPI
 ```
 ### Примеры
 Полный пример можно посмотреть по ссылке: [createGroupAndSendMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
@@ -13,9 +13,7 @@ from whatsapp_api_client_python import API
 #### Как инициализировать объект
 
 ```
-restApi = API.RestApi('https://api.green-api.com', 
-                        ID_INSTANCE, 
-                        API_TOKEN_INSTANCE)
+restApi = API.RestApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 ```
 Обратите внимание, что ключи можно получать из переменных среды:
 ```
@@ -46,7 +44,7 @@ if resultCreate.code == 200:
 
 Описание |  Модуль
 ----- | ----- 
-Пример отправки текста | [sendText.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendText.py)
+Пример отправки текста | [sendTextMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
 Пример отправки картинки по URL | [sendPictureByLink.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
 Пример отправки картинки загрузкой с диска | [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
 Пример создание группы и отправка сообщения в группу | [createGroupAndSendMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)

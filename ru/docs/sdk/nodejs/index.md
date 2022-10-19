@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/green-api/whatsapp-api-client/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/green-api/whatsapp-api-client.svg)](https://github.com/green-api/whatsapp-api-client/releases)
 
-[Javascript библиотека](https://github.com/green-api/whatsapp-api-client-js) для интеграции с мессенджером WhatsAPP через API сервиса [green-api.com](https://green-api.com). Чтобы воспользоваться библиотекой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://cabinet.green-api.com). Есть бесплатный тариф аккаунта разработчика.
+[Javascript библиотека](https://github.com/green-api/whatsapp-api-client-js) для интеграции с мессенджером WhatsAPP через API сервиса [green-api.com](https://green-api.com). Чтобы воспользоваться библиотекой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://console.green-api.com). Есть бесплатный тариф аккаунта разработчика.
 
 #### API
 
@@ -35,7 +35,7 @@ npm run build
 ```
 #### Документация по методам сервиса
 
-[https://green-api.com/docs/api/](https://green-api.com/docs/api/)
+[Документация по методам сервиса](https://green-api.com/docs/api/)
 
 #### Сторонние продукты
 
