@@ -132,7 +132,7 @@ nav:
   - Releases: 
         - "Overview": 'release/index.md'
         - 'GREEN-API releases': 
-          - '5.44.19.39 dd. 18.10.2022': 'release/5.44.19.39.md'
+          - '5.44.19.39 dd. 19.10.2022': 'release/5.44.19.39.md'
           - '5.44.18.74 dd. 20.09.2022': 'release/5.44.18.74.md'
           - '5.44.18.28 dd. 13.09.2022': 'release/5.44.18.28.md'
           - '5.43.17.130 dd. 23.08.2022': 'release/5.43.17.130.md'

@@ -1,4 +1,4 @@
-# Как отправить текстовое сообщение
+# Как принять и обработать уведомление
 ### Установка
 ```
 npm i @green-api/whatsapp-api-client
@@ -14,7 +14,7 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 import whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 Используя typescript 
-```
+```ы
 import * as whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 #### Как инициализировать объект
@@ -32,24 +32,42 @@ const restAPI = whatsAppClient.restAPI(({
 ```
 ### Примеры
 
-Полный пример можно посмотреть по ссылке: [SendWhatsAppMessageAsync.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppMessageAsync.js)
+Полный пример можно посмотреть по ссылке: [StartReceivingNotifications.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/StartReceivingNotifications.js)
 
-#### Как отправить текстовое сообщения на номер WhatsApp
+#### Как принять и обработать уведомление
 
-Используя common js
 ``` js
-const whatsAppClient = require('@green-api/whatsapp-api-client')
+import whatsAppClient from '@green-api/whatsapp-api-client'
 
-const restAPI = whatsAppClient.restAPI(({
-    idInstance: YOUR_ID_INSTANCE,
-    apiTokenInstance: YOUR_API_TOKEN_INSTANCE
-}))
+(async () => {
 
-restAPI.message.sendMessage("79999999999@c.us", null, "hello world")
-.then((data) => {
-    console.log(data);
-}) ;
+    let restAPI = whatsAppClient.restAPI(({
+        idInstance: process.env.ID_INSTANCE,
+        apiTokenInstance: process.env.API_TOKEN_INSTANCE
+    }))
+
+    try {
+        // Receive WhatsApp notifications.
+        console.log( "Waiting incoming notifications...")
+        await restAPI.webhookService.startReceivingNotifications()
+        restAPI.webhookService.onReceivingMessageText((body) => {
+            console.log(body)
+            restAPI.webhookService.stopReceivingNotifications();
+            //console.log("Notifications is about to stop in 20 sec if no messages will be queued...")
+        })
+        restAPI.webhookService.onReceivingDeviceStatus((body) => {
+            console.log(body)
+        })
+        restAPI.webhookService.onReceivingAccountStatus((body) => {
+            console.log(body)
+        })
+    } catch (ex) {
+        console.error(ex.toString())
+    }
+
+})();
 ```
+
 ### Полный список примеров
 
 Описание |  Модуль

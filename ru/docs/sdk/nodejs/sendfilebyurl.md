@@ -1,4 +1,4 @@
-# Как отправить текстовое сообщение
+# Как отправить файл по ссылке
 ### Установка
 ```
 npm i @green-api/whatsapp-api-client
@@ -14,7 +14,7 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 import whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 Используя typescript 
-```
+```ы
 import * as whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 #### Как инициализировать объект
@@ -32,23 +32,20 @@ const restAPI = whatsAppClient.restAPI(({
 ```
 ### Примеры
 
-Полный пример можно посмотреть по ссылке: [SendWhatsAppMessageAsync.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppMessageAsync.js)
+Полный пример можно посмотреть по ссылке: [SendWhatsAppFileUrl.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppFileUrl.js)
 
-#### Как отправить текстовое сообщения на номер WhatsApp
+#### Как отправить файл по ссылке
 
-Используя common js
 ``` js
-const whatsAppClient = require('@green-api/whatsapp-api-client')
+import whatsAppClient from '@green-api/whatsapp-api-client'
 
-const restAPI = whatsAppClient.restAPI(({
-    idInstance: YOUR_ID_INSTANCE,
-    apiTokenInstance: YOUR_API_TOKEN_INSTANCE
-}))
-
-restAPI.message.sendMessage("79999999999@c.us", null, "hello world")
-.then((data) => {
-    console.log(data);
-}) ;
+(async () => {
+    const restAPI = whatsAppClient.restAPI(({
+        idInstance: YOUR_ID_INSTANCE,
+        apiTokenInstance: YOUR_API_TOKEN_INSTANCE
+    }))
+    const response = await restAPI.file.sendFileByUrl("79999999999@c.us", null, 'https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375', 'horse.png', 'horse');
+})();
 ```
 ### Полный список примеров
 

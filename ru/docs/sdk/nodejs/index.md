@@ -1,4 +1,4 @@
-# NodeJs WhatsApp library
+# NodeJs WhatsApp Library
 * [![build](https://github.com/green-api/whatsapp-api-client/workflows/build_library/badge.svg)](https://github.com/green-api/whatsapp-api-client/actions/workflows/build_library.yml)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/green-api/whatsapp-api-client/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/green-api/whatsapp-api-client.svg)](https://github.com/green-api/whatsapp-api-client/releases)
@@ -16,17 +16,31 @@
 #### [Как отправить текстовое сообщение](sendmessage.md)
 #### [Как отправить файл по ссылке](sendfilebyurl.md)
 #### [Как отправить файл загрузкой с диска](sendfilebyupload.md)
-#### [Как создать группу и отправить в неё сообщение](creategroup.md)
-#### [Как получить и обработать уведомление](receiveNotification.md)
-#### [Полный список методов библиотеки](fullmethods.md)
+#### [Как принять и обработать уведомление](receiveNotification.md)
+#### [Как принять и обработать уведомления используя сервер](receiveNotificationserver.md)
+#### [Как получить QR код](getqr.md)
 
+#### Разворачивание окружения разработки
+
+1. Склонируйте репозиторий через ``git clone``
+2. Установите зависимости через ``npm install``
+3. Установите глобально библиотеку ``rollup`` для сборки.
+4. Для вебхуков добавьте `express` как новую зависимость через npm
+5. Создайте файл `.env` в рутовом каталоге и пропишите переменные окружения. Образец переменных в файле [env.example](https://github.com/green-api/whatsapp-api-client-js/blob/master/env.example)
+
+#### Сборка
+Скомпилировать как browser, так и node/webpack версии либы можно одной командой
+```
+npm run build
+```
 #### Документация по методам сервиса
 
 [https://green-api.com/docs/api/](https://green-api.com/docs/api/)
 
 #### Сторонние продукты
 
-- [requests](https://requests.readthedocs.io) - для http запросов
+* [axios](https://github.com/axios/axios) - для http запросов
+* [express](https://www.npmjs.com/package/express) - сервер приложений для вебхуков
 
 #### Лицензия
 

@@ -1,4 +1,4 @@
-# Как отправить текстовое сообщение
+# Как принять и обработать уведомления используя сервер
 ### Установка
 ```
 npm i @green-api/whatsapp-api-client
@@ -14,7 +14,7 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 import whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 Используя typescript 
-```
+```ы
 import * as whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 #### Как инициализировать объект
@@ -32,23 +32,52 @@ const restAPI = whatsAppClient.restAPI(({
 ```
 ### Примеры
 
-Полный пример можно посмотреть по ссылке: [SendWhatsAppMessageAsync.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppMessageAsync.js)
+Полный пример можно посмотреть по ссылке: [ReceiveWebhook.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/ReceiveWebhook.js)
 
-#### Как отправить текстовое сообщения на номер WhatsApp
+#### Как принять и обработать уведомления используя сервер
+Работает только в node js с на базе express
 
-Используя common js
 ``` js
-const whatsAppClient = require('@green-api/whatsapp-api-client')
+import whatsAppClient from '@green-api/whatsapp-api-client'
+import express from "express";
+import bodyParser from 'body-parser';
 
-const restAPI = whatsAppClient.restAPI(({
-    idInstance: YOUR_ID_INSTANCE,
-    apiTokenInstance: YOUR_API_TOKEN_INSTANCE
-}))
+(async () => {
+    try {
 
-restAPI.message.sendMessage("79999999999@c.us", null, "hello world")
-.then((data) => {
-    console.log(data);
-}) ;
+        // Устанавливаем http url ссылку, куда будут отправляться вебхуки. 
+        // Ссылка должна иметь публичный адрес.
+        await restAPI.settings.setSettings({
+            webhookUrl: 'MY_HTTP_SERVER:3000/webhooks'
+        });
+
+        const app = express();
+        app.use(bodyParser.json());
+        const webHookAPI = whatsAppClient.webhookAPI(app, '/webhooks')
+
+        // Подписываемся на событие вебхука при получении сообщения
+        webHookAPI.onIncomingMessageText((data, idInstance, idMessage, sender, typeMessage, textMessage) => {
+            console.log(`outgoingMessageStatus data ${data.toString()}`)
+        });
+
+        // Запускаем веб сервер, имеющий публичный адрес
+        app.listen(3000, async () => {
+            console.log(`Started. App listening on port 3000!`)
+
+            const restAPI = whatsAppClient.restAPI(({
+                idInstance: MY_ID_INSTANCE,
+                apiTokenInstance: MY_API_TOKEN_INSTANCE
+            }));
+            // Отправляем тестовое сообщение, для того чтобы сработали события вебхуков
+            const response = await restAPI.message.sendMessage("79999999999@c.us", null, "hello world");
+    
+        });
+    } catch (error) {
+        console.error(error);
+        process.exit(1);
+    }
+})();
+
 ```
 ### Полный список примеров
 

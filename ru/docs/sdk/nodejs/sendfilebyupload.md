@@ -1,4 +1,4 @@
-# Как отправить текстовое сообщение
+# Как отправить файл загрузкой с диска
 ### Установка
 ```
 npm i @green-api/whatsapp-api-client
@@ -14,7 +14,7 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 import whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 Используя typescript 
-```
+```ы
 import * as whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 #### Как инициализировать объект
@@ -32,23 +32,27 @@ const restAPI = whatsAppClient.restAPI(({
 ```
 ### Примеры
 
-Полный пример можно посмотреть по ссылке: [SendWhatsAppMessageAsync.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppMessageAsync.js)
+Полный пример можно посмотреть по ссылке: [SendWhatsAppFileUpload.js](https://github.com/green-api/whatsapp-api-client-js/blob/master/examples/SendWhatsAppFileUpload.js)
 
-#### Как отправить текстовое сообщения на номер WhatsApp
+#### Как отправить файл загрузкой с диска
 
-Используя common js
 ``` js
-const whatsAppClient = require('@green-api/whatsapp-api-client')
+import whatsAppClient from '@green-api/whatsapp-api-client'
+import FormData from 'form-data'
+import * as fs from 'fs'
 
-const restAPI = whatsAppClient.restAPI(({
-    idInstance: YOUR_ID_INSTANCE,
-    apiTokenInstance: YOUR_API_TOKEN_INSTANCE
-}))
-
-restAPI.message.sendMessage("79999999999@c.us", null, "hello world")
-.then((data) => {
-    console.log(data);
-}) ;
+(async () => {
+    const restAPI = whatsAppClient.restAPI(({
+        idInstance: process.env.ID_INSTANCE,
+        apiTokenInstance: process.env.API_TOKEN_INSTANCE
+    }))
+    const data = new FormData();
+    data.append('chatId', '7xxxxxxxxxx@c.us');
+    data.append('caption', 'My file');
+    data.append('file', fs.createReadStream('hello.txt'));
+    const response = await restAPI.file.sendFileByUpload(data)
+    console.log(`file uploaded ${response.idMessage}`)
+})();
 ```
 ### Полный список примеров
 
