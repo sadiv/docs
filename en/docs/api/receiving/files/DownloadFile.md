@@ -27,7 +27,7 @@ File from message
 
 For a list of errors common to all methods, refer to [Common errors](../../common-errors.md) section
 
-## Curl example  {#request-example-python}
+## curl example  {#request-example-curl}
 ```
 curl --location -g --request POST '{{host}}/waInstance{{idInstance}}/downloadEncFile/{{apiTokenInstance}}' \
 --header 'Content-Type: application/json' \
@@ -35,4 +35,26 @@ curl --location -g --request POST '{{host}}/waInstance{{idInstance}}/downloadEnc
     "chatId": "79000001234@c.us",
     "idMessage": "A322F800D3F12CD4858CC947DAFB77A2"
 }'
+```
+
+## Python example  {#request-example-python}
+
+```
+import requests
+import json
+
+url = "{{host}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}"
+
+payload = json.dumps({
+  "chatId": "790000312312@c.us",
+  "idMessage": "A322F800D3F12CD4858CC947DAFB77A2"
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
 ```

@@ -27,7 +27,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/downloadFile/{{apiTokenI
 
 Перечень общих для всех методов ошибок смотрите в разделе [Стандартные ошибки](../../common-errors.md)
 
-## Пример кода на curl  {#request-example-python}
+## Пример кода на curl  {#request-example-curl}
 
 ```
 curl --location -g --request POST '{{host}}/waInstance{{idInstance}}/downloadEncFile/{{apiTokenInstance}}' \
@@ -36,4 +36,26 @@ curl --location -g --request POST '{{host}}/waInstance{{idInstance}}/downloadEnc
     "chatId": "79000001234@c.us",
     "idMessage": "A322F800D3F12CD4858CC947DAFB77A2"
 }'
+```
+
+## Пример кода на python  {#request-example-python}
+
+```
+import requests
+import json
+
+url = "{{host}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}"
+
+payload = json.dumps({
+  "chatId": "790000312312@c.us",
+  "idMessage": "A322F800D3F12CD4858CC947DAFB77A2"
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
 ```
