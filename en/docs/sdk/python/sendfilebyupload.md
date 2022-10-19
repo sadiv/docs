@@ -1,5 +1,5 @@
-# Как отправить файл загрузкой с диска
-### Установка
+# How to send a file by uploading from the disk
+### Installation
 ```
 pip install whatsapp-api-client-python
 ```
@@ -7,17 +7,17 @@ pip install whatsapp-api-client-python
 ```
 from whatsapp_api_client_python import API
 ```
-### Примеры
-Полный пример можно посмотреть по ссылке: [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
+### Examples
+You may see the full example at: [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
 
-#### Как инициализировать объект
+#### How to initialize an object
 
 ```
 restApi = API.RestApi('https://api.green-api.com', 
                         ID_INSTANCE, 
                         API_TOKEN_INSTANCE)
 ```
-Обратите внимание, что ключи можно получать из переменных среды:
+Please note that keys can be obtained from environment variables:
 ```
 from os import environ
 
@@ -25,19 +25,19 @@ ID_INSTANCE = environ['ID_INSTANCE']
 API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 ```
 
-#### Как отправить файл загрузкой с диска
+####  How to send a file by uploading from the disk
 
 ```
 result = restApi.sending.sendFileByUpload('120363025955348359@g.us', 
         'C:\Games\PicFromDisk.png', 
         'PicFromDisk.png', 'Picture from disk')
 ```
-### Полный список примеров
+### The full list of examples
 
-Описание |  Модуль
+Description |  Module
 ----- | ----- 
-Пример отправки текста | [sendText.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendText.py)
-Пример отправки картинки по URL | [sendPictureByLink.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
-Пример отправки картинки загрузкой с диска | [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
-Пример создание группы и отправка сообщения в группу | [createGroupAndSendMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
-Пример получения входящих уведомлений | [receiveNotification.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/receiveNotification.py)
+Example of sending text | [sendText.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendText.py)
+Example of sending a picture by URL | [sendPictureByLink.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByLink.py)
+Example of sending a picture by uploading from the disk | [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
+Example of a group creation and sending a message to the group | [createGroupAndSendMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
+Example of incoming webhooks receiving | [receiveNotification.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/receiveNotification.py)

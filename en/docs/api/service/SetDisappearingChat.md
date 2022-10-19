@@ -1,7 +1,7 @@
 # Set Disappearing Chat
 
 
-The method is aimed for changing settings of disappearing messages in chats. The standard settings of the application are used: 0 (off), 86400 (24 hours), 604800 (7 days), 7776000 (90 days).
+The method is aimed for changing settings of disappearing messages in chats. The standard settings of the application are to be used: 0 (off), 86400 (24 hours), 604800 (7 days), 7776000 (90 days).
 
 ## Request {#request}
 

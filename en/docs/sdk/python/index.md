@@ -3,30 +3,30 @@
 [![Python application](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-app.yml/badge.svg)](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-app.yml)
 [![Upload Python Package](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/green-api/whatsapp-api-client-python/actions/workflows/python-publish.yml)
 
-[Python библиотека](https://github.com/green-api/whatsapp-api-client-python) для интеграции с мессенджером WhatsAPP через API сервиса [green-api.com](https://green-api.com). Чтобы воспользоваться библиотекой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://console.green-api.com). Есть бесплатный тариф аккаунта разработчика.
+[Python library](https://github.com/green-api/whatsapp-api-client-python) for integration with WhatsAPP messanger via API of [green-api.com](https://green-api.com) service. To use the library you have to get a registration token and an account id in the [personal area](https://console.green-api.com). There is a free developer account tariff plan.
 
 #### API
 
-Документация к REST API находится по [ссылке](https://green-api.com/docs/api/). Библиотека является оберткой к REST API, поэтому документация по ссылке выше применима и к самой библиотеке.
+You can find REST API documentation by [url](https://green-api.com/docs/api/). The library is a wrapper for REST API, so the documentation at the above url applies to the library as well.
 
-#### Авторизация 
+#### Authorization
 
-Чтобы отправить сообщение или выполнить другой метод Green-API, аккаунт WhatsApp в приложении телефона должен быть в авторизованном состоянии. Для авторизации аккаунта перейдите в [личный кабинет](https://console.green-api.com) и сканируйте QR-код с использованием приложения WhatsApp.
+To send a message or to execute some other Green-API method, you have to have the WhatsApp account in the phone application to be authorized. To authorize your account please go to the [personal area](https://console.green-api.com) and scan a QR-code using the WhatsApp application.
 
-#### [Как отправить текстовое сообщение](sendmessage.md)
-#### [Как отправить файл по ссылке](sendfilebyurl.md)
-#### [Как отправить файл загрузкой с диска](sendfilebyupload.md)
-#### [Как получить и обработать уведомление](receiveNotification.md)
-#### [Полный список методов библиотеки](fullmethods.md)
+#### [How to send a text message](sendmessage.md)
+#### [How to send a file by URL](sendfilebyurl.md)
+#### [How to send a file by uploading from the disk](sendfilebyupload.md)
+#### [How to receive and process a notification](receiveNotification.md)
+#### [The full list of the library methods](fullmethods.md)
 
-#### Документация по методам сервиса
+#### Service methods documentation
 
 [https://green-api.com/docs/api/](https://green-api.com/docs/api/)
 
-#### Сторонние продукты
+#### External products
 
-- [requests](https://requests.readthedocs.io) - для http запросов
+- [requests](https://requests.readthedocs.io) - for http requests
 
-#### Лицензия
+#### Lisence
 
-Лицензировано на условиях MIT. Смотрите файл [LICENSE](https://github.com/green-api/whatsapp-api-client-js/blob/master/LICENSE)
+Licensed under MIT terms. Please see file [LICENSE](https://github.com/green-api/whatsapp-api-client-js/blob/master/LICENSE)

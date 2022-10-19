@@ -1,5 +1,5 @@
 # ArchiveChat
-The method archives a chat. You can archive chats that have at least one incoming message.
+The method archives a chat. One can archive chats that have at least one incoming message.
 ## Request {#request}
 
 To archive a chat, you have to execute a request at:
