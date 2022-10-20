@@ -156,6 +156,14 @@ nav:
             - 'sdk/nodejs/receiveNotification.md'
             - 'sdk/nodejs/receiveNotificationserver.md'
             - 'sdk/nodejs/getqr.md'
+          - 'HTML5 WhatsApp Library': 
+            - 'Обзор': 'sdk/html5/index.md'
+            - 'sdk/html5/sendmessage.md'
+          - '1С WhatsApp Обработка':
+            - 'Обзор': 'sdk/1c/index.md'
+            - 'sdk/1c/sendmessage.md'
+            - 'sdk/1c/sendmessagegroup.md'
+            - 'sdk/1c/receivenotification.md'
     # - 'Интеграция':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
