@@ -16,7 +16,7 @@ POST https://api.green-api.com/waInstance{{idInstance}}/downloadFile/{{apiTokenI
 
 Параметр | Тип | Обязательный | Описание
 ----- | ----- | ----- | -----
-`chatId` | **string** | Да | [Chat id](../chat-id.md),  for example 7900023125@c.us 
+`chatId` | **string** | Да | [Chat id](/../../chat-id.md),  for example 7900023125@c.us 
 `idMessage` | **string** | Yes | Message Id transmitted in [Incoming messages](../notifications-format/incoming-message/Webhook-IncomingMessageReceived.md) or when sending files using [SendFileByUrl](../../../api/sending/SendFileByUrl.md), [SendFileByUpload](../../../api/sending/SendFileByUpload.md) methods. This parameter is transmitted as the final part of the url request
 
 ## Response {#response}

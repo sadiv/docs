@@ -13,3 +13,9 @@ Full description of Green API methods with examples
 
 ## [FAQ](faq/index.md)
 Detailed responses with examples to frequently asked questions
+
+## [Releases](release/index.md)
+Releases
+
+## [SDK](sdk/index.md)
+SDK

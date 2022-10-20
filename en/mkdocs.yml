@@ -137,7 +137,18 @@ nav:
           - '5.44.18.28 dd. 13.09.2022': 'release/5.44.18.28.md'
           - '5.43.17.130 dd. 23.08.2022': 'release/5.43.17.130.md'
           - '5.43.16.63 dd. 09.08.2022': 'release/5.43.16.63.md'
-              # - 'Integration':
+  - SDK: 
+        - "Overview": 'sdk/index.md'
+        - 'GREEN-API SDK': 
+          - 'Python WhatsApp Library': 
+            - 'Overview': 'sdk/python/index.md'
+            - 'sdk/python/sendmessage.md'
+            - 'sdk/python/sendfilebyurl.md'
+            - 'sdk/python/sendfilebyupload.md'
+            - 'sdk/python/creategroup.md'
+            - 'sdk/python/receiveNotification.md'
+            - 'sdk/python/fullmethods.md'    
+      # - 'Integration':
     #     - '1С': 'api/sending/SendMessage.md'
     #     - 'NodeJS': 'api/sending/SendMessage.md'
     #     - 'HTML': 'api/sending/SendMessage.md'
