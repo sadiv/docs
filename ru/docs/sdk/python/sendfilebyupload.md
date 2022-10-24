@@ -5,7 +5,7 @@ pip install whatsapp-api-client-python
 ```
 ### Import 
 ```
-from whatsapp_api_client_python import greenAPI
+from whatsapp_api_client_python import API
 ```
 ### Примеры
 Полный пример можно посмотреть по ссылке: [sendPictureByUpload.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendPictureByUpload.py)
@@ -13,7 +13,7 @@ from whatsapp_api_client_python import greenAPI
 #### Как инициализировать объект
 
 ```
-restApi = API.RestApi(ID_INSTANCE, API_TOKEN_INSTANCE)
+greenAPI = API.GreenApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 ```
 Обратите внимание, что ключи можно получать из переменных среды:
 ```
@@ -26,7 +26,7 @@ API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 #### Как отправить файл загрузкой с диска
 
 ```
-result = restApi.sending.sendFileByUpload('120363025955348359@g.us', 
+result = greenAPI.sending.sendFileByUpload('120363025955348359@g.us', 
         'C:\Games\PicFromDisk.png', 
         'PicFromDisk.png', 'Picture from disk')
 ```
