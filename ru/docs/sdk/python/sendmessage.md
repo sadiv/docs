@@ -5,7 +5,7 @@ pip install whatsapp-api-client-python
 ```
 ### Import 
 ```
-from whatsapp_api_client_python import greenAPI
+from whatsapp_api_client_python import API
 ```
 ### Примеры
 Пример отправки текста | [sendTextMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/sendTextMessage.py)
@@ -13,7 +13,7 @@ from whatsapp_api_client_python import greenAPI
 #### Как инициализировать объект
 
 ```
-restApi = API.RestApi(ID_INSTANCE, API_TOKEN_INSTANCE)
+greenApi = API.GreenApi(ID_INSTANCE, API_TOKEN_INSTANCE)
 ```
 Обратите внимание, что ключи можно получать из переменных среды:
 ```
@@ -25,7 +25,7 @@ API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 #### Как отправить текстовое сообщения на номер WhatsApp
 
 ```
-result = restApi.sending.sendMessage('79001234567@g.us', 'Message text')
+result = greenApi.sending.sendMessage('79001234567@g.us', 'Message text')
 ```
 ### Полный список примеров
 
