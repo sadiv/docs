@@ -5,7 +5,7 @@ pip install whatsapp-api-client-python
 ```
 ### Import 
 ```
-from whatsapp_api_client_python import greenAPI
+from whatsapp_api_client_python import API
 ```
 ### Examples
 You may see the full example at: [createGroupAndSendMessage.py](https://github.com/green-api/whatsapp-api-client-python/blob/master/examples/createGroupAndSendMessage.py)
