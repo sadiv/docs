@@ -63,7 +63,7 @@ section {
 .mdl-mega-footer__middle-section {
     display: block;
     width: 100%;
-    height: 120px;
+    /*height: 120px;*/
 }
 
 .mdl-mega-footer__right-section {
