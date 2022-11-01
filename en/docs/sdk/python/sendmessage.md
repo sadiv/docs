@@ -26,7 +26,7 @@ API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 #### How to send a text message to a WhatsApp number
 
 ```
-result = restApi.sending.sendMessage('79001234567@u.us', 'Message text')
+result = restApi.sending.sendMessage('79001234567@c.us', 'Message text')
 ```
 ### The full list of examples
 
