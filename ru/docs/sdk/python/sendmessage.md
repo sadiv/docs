@@ -25,7 +25,7 @@ API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 #### Как отправить текстовое сообщения на номер WhatsApp
 
 ```
-result = greenAPI.sending.sendMessage('79001234567@g.us', 'Message text')
+result = greenAPI.sending.sendMessage('79001234567@c.us', 'Message text')
 ```
 ### Полный список примеров
 

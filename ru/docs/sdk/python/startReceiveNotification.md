@@ -1,4 +1,4 @@
-# Как принять и обработать уведомление
+# Как обрабатывать входящие уведомления
 ### Установка
 ```
 pip install whatsapp-api-client-python
@@ -23,11 +23,24 @@ ID_INSTANCE = environ['ID_INSTANCE']
 API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 ```
 
-#### Как принять и обработать уведомление
+#### Получение входящих сообщений через HTTP API
+
+Общая концепция получения данных в Green API описана [здесь](https://green-api.com/docs/api/receiving/)
+Для старта получения сообщений через HTTP API требуется выполнить метод библиотеки:
 
 ```
-resultReceive = greenAPI.receiving.receiveNotification()
+greenApi.webhooks.startReceivingNotifications(onEvent)
 ```
+
+onEvent - ваш метод, который должен содержать параметры:
+Параметр |  Описание
+----- | -----
+typeWebhook | тип полученного сообщения (строка)
+body | тело сообщения (json)
+
+Типы и форматы тел сообщений [здесь](https://green-api.com/docs/api/receiving/notifications-format/)
+
+Этот метод будет вызываться при получении входящего сообщения. Далее обрабатываете сообщения согласно бизнес-логике вашей системы.
 
 ### Полный список примеров
 

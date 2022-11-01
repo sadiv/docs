@@ -30,4 +30,4 @@
 
 #### Лицензия
 
-Лицензировано на условиях MIT. Смотрите файл [LICENSE](https://github.com/green-api/whatsapp-api-client-js/blob/master/LICENSE)
+Лицензировано на условиях MIT. Смотрите файл [LICENSE](https://github.com/green-api/whatsapp-api-client-python/blob/master/LICENSE)
