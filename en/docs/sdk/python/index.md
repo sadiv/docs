@@ -16,7 +16,7 @@ To send a message or to execute some other Green-API method, you have to have th
 #### [How to send a text message](sendmessage.md)
 #### [How to send a file by URL](sendfilebyurl.md)
 #### [How to send a file by uploading from the disk](sendfilebyupload.md)
-#### [How to receive and process a notification](receiveNotification.md)
+#### [How to handle incoming notifications](startReceiveNotification.md)
 #### [The full list of the library methods](fullmethods.md)
 
 #### Service methods documentation
