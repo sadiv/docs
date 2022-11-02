@@ -1,4 +1,4 @@
-# How to receive and process a notification
+# How to handle incoming notifications
 ### Installation
 ```
 pip install whatsapp-api-client-python
@@ -23,11 +23,24 @@ ID_INSTANCE = environ['ID_INSTANCE']
 API_TOKEN_INSTANCE = environ['API_TOKEN_INSTANCE']
 ```
 
-#### How to receive and process a notification
+#### Receiving incoming messages by HTTP API
+
+The general concept of receiving data in the Green API is described [here](https://green-api.com/docs/api/receiving/)
+To start receiving messages by the HTTP API, you need to execute the library method:
 
 ```
-resultReceive = restApi.receiving.receiveNotification()
+greenApi.webhooks.startReceivingNotifications(onEvent)
 ```
+
+onEvent - your method which should contain parameters:
+Parameter | Description
+----- | -----
+typewebhook | received message type (string)
+body | message body (json)
+
+Message body types and formats [here](https://green-api.com/docs/api/receiving/notifications-format/)
+
+This method will be called when an incoming message is received. Next, process messages according to the business logic of your system.
 
 ### The full list of examples
 

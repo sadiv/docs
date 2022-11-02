@@ -146,7 +146,7 @@ nav:
             - 'sdk/python/sendfilebyurl.md'
             - 'sdk/python/sendfilebyupload.md'
             - 'sdk/python/creategroup.md'
-            - 'sdk/python/receiveNotification.md'
+            - 'sdk/python/startReceiveNotification.md'
             - 'sdk/python/fullmethods.md'
           - 'NodeJs WhatsApp Library': 
             - 'Обзор': 'sdk/nodejs/index.md'
