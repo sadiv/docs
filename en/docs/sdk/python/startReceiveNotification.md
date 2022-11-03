@@ -33,6 +33,7 @@ greenApi.webhooks.startReceivingNotifications(onEvent)
 ```
 
 onEvent - your method which should contain parameters:
+
 Parameter | Description
 ----- | -----
 typewebhook | received message type (string)
