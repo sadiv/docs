@@ -2,6 +2,14 @@
 
 [1C обработка](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/GreenAPI.epf) для интеграции 1С с мессенджером WhatsAPP через API сервиса [green-api.com](https://green-api.com), можно так же воспользоваться [исходниками конфигурации в формате выгрузки xml](https://github.com/green-api/whatsapp-api-client-1c). Чтобы воспользоваться обработкой нужно получить регистрационный токен и id аккаунта в [личном кабинете](https://console.green-api.com). Есть бесплатный тариф аккаунта разработчика.
 
+#### Скачать обработку
+
+Обработкe можно скачать здесь [![Скачать](../../assets/button_download.svg)](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/GreenAPI.epf)
+
+После запуска обработки в 1С потребуется ввести идентификатор инстанса и токен авторизации
+
+![`Скриншот`](https://github.com/green-api/whatsapp-api-client-1c/blob/master/media/Screenshort.png?raw=true)
+
 #### Требования
 Платформа 1С не ниже версии 8.3.10
 

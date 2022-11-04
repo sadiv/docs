@@ -1,0 +1,7 @@
+<!-- License: GPL. Made by coreui: https://github.com/coreui/coreui-icons/ -->
+<svg width="124px" height="38px" viewBox="0 0 124 38" xmlns="http://www.w3.org/2000/svg">
+  <g class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect slongate-button-send-send">
+    <rect fill="var(--md-primary-fg-color, currentColor)" x="0" y="0" width="124" height="38" stroke="var(--md-primary-fg-color, currentColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <text fill="white" x="30" y="25" font-family="Roboto,Helvetica,Arial,sans-serif" font-size="14px">DOWNLOAD</text>
+  </g>
+</svg>
