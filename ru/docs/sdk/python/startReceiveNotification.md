@@ -33,6 +33,7 @@ greenApi.webhooks.startReceivingNotifications(onEvent)
 ```
 
 onEvent - ваш метод, который должен содержать параметры:
+
 Параметр |  Описание
 ----- | -----
 typeWebhook | тип полученного сообщения (строка)
