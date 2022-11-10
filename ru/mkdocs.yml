@@ -152,6 +152,7 @@ nav:
             - 'Обзор': 'sdk/pythonWebhookServer/index.md'
             - 'sdk/pythonWebhookServer/serverUbuntu.md'
             - 'sdk/pythonWebhookServer/serverWindows.md'
+            - 'sdk/pythonWebhookServer/serverDocker.md'
           - 'NodeJs WhatsApp Library': 
             - 'Обзор': 'sdk/nodejs/index.md'
             - 'sdk/nodejs/sendmessage.md'
