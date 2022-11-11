@@ -5,21 +5,21 @@
 
 #### Настройка
 
-#### [Настройка личного кабинета](../../../api/receiving/technology-webhook-endpoint.md#cabinet)
+- [Настройка личного кабинета](../../../api/receiving/technology-webhook-endpoint.md#cabinet)
 
 #### Запуск сервера из библиотеки
 
 ##### Подготовка среды
 
-#### [Пример подготовки среды сервера на операционной системе Ubuntu](serverUbuntu.md)
+- [Пример подготовки среды сервера на операционной системе Ubuntu](serverUbuntu.md)
 
-#### [Пример подготовки среды сервера на операционной системе Windows](serverWindows.md)
+- [Пример подготовки среды сервера на операционной системе Windows](serverWindows.md)
 
 ##### Библиотека
 
-#### [Библиотека whatsapp-api-webhook-server-python](serverLibrary.md)
+- [Библиотека whatsapp-api-webhook-server-python](serverLibrary.md)
 
-##### Запуск сервера в Docker
+#### Запуск сервера в Docker
 
-#### [Пример разворачивания сервера в контейнере Docker](serverDocker.md)
-#### [Пример разворачивания сервера через Docker Compose](serverDockerCompose.md)
+- [Пример разворачивания сервера в контейнере Docker](serverDocker.md)
+- [Пример разворачивания сервера через Docker Compose](serverDockerCompose.md)
