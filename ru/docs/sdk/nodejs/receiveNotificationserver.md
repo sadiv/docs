@@ -14,7 +14,7 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 import whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 Используя typescript 
-```ы
+```
 import * as whatsAppClient from "@green-api/whatsapp-api-client";
 ```
 #### Как инициализировать объект

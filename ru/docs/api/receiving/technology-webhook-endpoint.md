@@ -71,7 +71,11 @@ https://84.211.100.201:3000/green-api/webhook/
 
 ## Получение входящих уведомлений
 
-После выполнения настройки аккаунта можно приступать к получению уведомлений. Пример кода обработки входящго уведомления на [NodeJS](https://nodejs.org) можно посмотреть в [файле](https://github.com/green-api/whatsapp-api-client/blob/master/examples/ReceiveWebhook.js).
+После выполнения настройки аккаунта можно приступать к получению уведомлений. Примеры кода обработки входящих уведомлений:
+
+- На [NodeJS](https://nodejs.org) можно посмотреть [здесь](../../sdk/nodejs/receiveNotificationserver.md#_5). 
+
+- На [Python](https://python.org) можно посмотреть [здесь](../../sdk/python/pythonWebhookServer/index.md).
 
 ## Отладка входящих уведомлений
 
