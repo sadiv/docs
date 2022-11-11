@@ -140,19 +140,23 @@ nav:
   - SDK: 
         - "Оглавление": 'sdk/index.md'
         - 'Список SDK': 
-          - 'Python WhatsApp Library': 
+          - 'Python WhatsApp Library':
             - 'Обзор': 'sdk/python/index.md'
-            - 'sdk/python/sendmessage.md'
-            - 'sdk/python/sendfilebyurl.md'
-            - 'sdk/python/sendfilebyupload.md'
-            - 'sdk/python/creategroup.md'
-            - 'sdk/python/startReceiveNotification.md'
-            - 'sdk/python/fullmethods.md'
-          - 'Python Webhook server Library': 
-            - 'Обзор': 'sdk/pythonWebhookServer/index.md'
-            - 'sdk/pythonWebhookServer/serverUbuntu.md'
-            - 'sdk/pythonWebhookServer/serverWindows.md'
-            - 'sdk/pythonWebhookServer/serverDocker.md'
+            - 'Python WhatsApp Library': 
+              - 'Обзор': 'sdk/python/pythonClient/index.md'
+              - 'sdk/python/pythonClient/sendmessage.md'
+              - 'sdk/python/pythonClient/sendfilebyurl.md'
+              - 'sdk/python/pythonClient/sendfilebyupload.md'
+              - 'sdk/python/pythonClient/creategroup.md'
+              - 'sdk/python/pythonClient/startReceiveNotification.md'
+              - 'sdk/python/pythonClient/fullmethods.md'
+            - 'Python Webhook server Library': 
+              - 'Обзор': 'sdk/python/pythonWebhookServer/index.md'
+              - 'sdk/python/pythonWebhookServer/serverUbuntu.md'
+              - 'sdk/python/pythonWebhookServer/serverWindows.md'
+              - 'sdk/python/pythonWebhookServer/serverLibrary.md'
+              - 'sdk/python/pythonWebhookServer/serverDocker.md'
+              - 'sdk/python/pythonWebhookServer/serverDockerCompose.md'
           - 'NodeJs WhatsApp Library': 
             - 'Обзор': 'sdk/nodejs/index.md'
             - 'sdk/nodejs/sendmessage.md'
