@@ -141,6 +141,7 @@ nav:
         - "Оглавление": 'sdk/index.md'
         - 'Список SDK': 
           - 'Python WhatsApp Library':
+            - 'Обзор': 'sdk/python/index.md'
             - 'Python WhatsApp Library': 
               - 'Обзор': 'sdk/python/pythonClient/index.md'
               - 'sdk/python/pythonClient/sendmessage.md'
@@ -153,7 +154,9 @@ nav:
               - 'Обзор': 'sdk/python/pythonWebhookServer/index.md'
               - 'sdk/python/pythonWebhookServer/serverUbuntu.md'
               - 'sdk/python/pythonWebhookServer/serverWindows.md'
+              - 'sdk/python/pythonWebhookServer/serverLibrary.md'
               - 'sdk/python/pythonWebhookServer/serverDocker.md'
+              - 'sdk/python/pythonWebhookServer/serverDockerCompose.md'
           - 'NodeJs WhatsApp Library': 
             - 'Обзор': 'sdk/nodejs/index.md'
             - 'sdk/nodejs/sendmessage.md'
