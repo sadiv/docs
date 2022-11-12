@@ -4,7 +4,7 @@
 
 #### Скачать обработку
 
-Обработкe можно скачать здесь [![Скачать](../../assets/button_download.svg)](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/GreenAPI.epf)
+Обработку можно скачать здесь [![Скачать](../../assets/button_download.svg)](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/GreenAPI.epf)
 
 После запуска обработки в 1С потребуется ввести идентификатор инстанса и токен авторизации
 
